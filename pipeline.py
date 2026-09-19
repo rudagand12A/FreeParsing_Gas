@@ -100,19 +100,44 @@ class VPNAggregator:
             pass
         return None
 
-    def process_tags(self):
-        print("🔧 Модификация тегов (добавление флага и меток)...")
+    def process_and_filter(self):
+        print("🔧 Запуск фильтрации и модификации тегов...")
+        filtered_obs = []
+        seen_ips = set()
+
         for ob in self.outbounds:
             old_tag = ob.get("tag", "")
-            base_name = "🇷🇺 LTE(пинг долгий)"
+            address = ob['settings']['vnext'][0]['address']
+
+            # 🔥 ГЕО-ФИЛЬТР: Проверяем, есть ли признаки RU/России в старом теге. 
+            # Если там есть флаги/упоминания EU, Европы или других стран (кроме RU), либо тег пустой/неизвестный — УДАЛЯЕМ.
+            is_russian = any(w in old_tag.upper() for w in ["🇷🇺", "RU", "РОССИЯ", "RUSSIA", "YANDEX", "ЯНДЕКС"])
+            is_foreign = any(w in old_tag.upper() for w in ["🇪🇺", "EU", "ЕВРОПА", "EUROPE", "DE", "ГЕРМАНИЯ", "FR", "ФРАНЦИЯ", "US", "США", "NL", "НИДЕРЛАНДЫ"])
             
-            # Проверка на безлимит и LTE
+            # Условие удаления: если это явно заграничный конфиг ИЛИ в нем нет четкого указания на RU (неизвестный)
+            if is_foreign or not is_russian:
+                continue
+
+            # Защита от дубликатов по IP/домену
+            if address in seen_ips:
+                continue
+            seen_ips.add(address)
+
+            # Формирование топового имени
+            base_name = "🇷🇺 YandexTCP Тест"
             new_remarks = f"{base_name} Безлимит" if "безлимит" in old_tag.lower() else base_name
+            
+            # Пометка LTE с долгим пингом
             if any(w in old_tag.upper() for w in ["LTE", "ЛТЕ"]):
                 new_remarks += " (Долгий пинг)"
 
-            ob["tag"] = f"{new_remarks} [{ob['settings']['vnext'][0]['address']}]"
+            ob["tag"] = f"{new_remarks} [{address}]"
             ob["remarks"] = new_remarks
+            filtered_obs.append(ob)
+
+        # Перезаписываем список отфильтрованными данными
+        print(f"🗑 Удалено неизвестных и EU конфигов. Осталось валидных RU серверов: {len(filtered_obs)}")
+        self.outbounds = filtered_obs
 
     def save_final_config(self):
         # Ограничение тарифа в 3000 конфигов
@@ -150,16 +175,16 @@ class VPNAggregator:
                 "pingConfig": {"destination": "http://gstatic.com", "interval": "2m", "sampling": 3, "timeout": "3s"},
                 "subjectSelector": tags
             },
-            "remarks": "🇸🇴 YandexTCP Тест",
+            "remarks": "🇸🇴 LTE(долгий пинг)",
             "last_update": datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         }
 
         with open(FINAL_OUTPUT_FILE, "w", encoding="utf-8") as f:
             json.dump(final_json, f, indent=2, ensure_ascii=False)
-        print(f"🎉 Конфиг sub_1212.json успешно обновлен в папке output/. Добавлено серверов: {len(tags)}")
+        print(f"🎉 Топовый конфиг sub_1212.json сохранен в output/. Финальное количество RU серверов: {len(tags)}")
 
 if __name__ == "__main__":
     aggregator = VPNAggregator()
     aggregator.load_and_download()
-    aggregator.process_tags()
+    aggregator.process_and_filter()
     aggregator.save_final_config()
