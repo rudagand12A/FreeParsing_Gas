@@ -1,0 +1,15 @@
+https://cdn.jsdelivr.net/gh/igareck/vpn-configs-for-russia@main/Vless-Reality-White-Lists-Rus-Mobile.txt
+https://cdn.jsdelivr.net/gh/igareck/vpn-configs-for-russia@main/WHITE-CIDR-RU-checked.txt
+https://cdn.jsdelivr.net/gh/igareck/vpn-configs-for-russia@main/WHITE-CIDR-RU-all.txt
+https://cdn.jsdelivr.net/gh/igareck/vpn-configs-for-russia@main/WHITE-SNI-RU-all.txt
+https://raw.githubusercontent.com/hiztin/VLESS-PO-GRIBI/refs/heads/main/deploy/sub.txt
+https://cdn.jsdelivr.net/gh/sakha1370/OpenRay@main/configs.txt
+https://cdn.jsdelivr.net/gh/roosterkid/openproxylist@main/proxies.txt
+https://cdn.jsdelivr.net/gh/Pawdroid/Free-servers@main/sub/vless.txt
+https://raw.githubusercontent.com/prominbro/sub/refs/heads/main/212.txt
+https://subrostunnel.vercel.app/lte.txt
+https://raw.githubusercontent.com/OceaniaVPN/StekloVPN/main/configs/whitelist.txt
+https://raw.githubusercontent.com/RKPchannel/RKP_bypass_configs/refs/heads/main/whitelist.txt
+https://raw.githubusercontent.com/zieng2/wl/refs/heads/main/vless_universal.txt
+https://raw.githubusercontent.com/OceaniaVPN/StekloVPN/main/configs/whitelist.txt
+https://raw.githubusercontent.com/RKPchannel/RKP_bypass_configs/refs/heads/main/whitelist.txt
