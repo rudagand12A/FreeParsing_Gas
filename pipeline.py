@@ -69,7 +69,6 @@ class VPNAggregator:
     def decode_base64(self, text: str) -> str:
         try:
             c = ''.join(text.split())
-            # Корректный паддинг: добавляет 0..3 '=' в зависимости от остатка
             c += '=' * (-len(c) % 4)
             return base64.b64decode(c).decode('utf-8', errors='ignore')
         except Exception:
@@ -97,7 +96,6 @@ class VPNAggregator:
                         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
                                       "AppleWebKit/537.36 (KHTML, like Gecko) "
                                       "Chrome/122.0.0.0 Safari/537.36",
-                        # Просим сервер отдавать без сжатия, чтобы не ловить бинарь
                         "Accept-Encoding": "identity",
                     },
                 )
@@ -111,7 +109,6 @@ class VPNAggregator:
                             pass
                     content = raw.decode('utf-8', errors='ignore').strip()
 
-                # Если это не плейн-текст со ссылками — пробуем base64
                 if not content.startswith(('vless://', 'vmess://', 'trojan://', 'ss://')):
                     content = self.decode_base64(content)
 
@@ -124,36 +121,31 @@ class VPNAggregator:
                         self.outbounds.append(ob)
 
             except Exception as e:
-                print(f"⚠️ Ошибка сети при скачивании ссылки: {e}")
+                print(f"⚠️ Ошибка сети при скачивании ссылки {url}: {e}")
 
     # ---------------------------------------------------------------- parser
     def parse_uri(self, uri: str):
         if not uri.startswith("vless://"):
             return None
         try:
-            # Отрезаем схему
             rest = uri[len("vless://"):]
 
-            # Fragment (tag) — всё после первого '#'
             if "#" in rest:
                 rest, fragment = rest.split("#", 1)
                 tag = urllib.parse.unquote(fragment)
             else:
                 tag = ""
 
-            # Query — всё после первого '?'
             if "?" in rest:
                 rest, query = rest.split("?", 1)
                 params = dict(urllib.parse.parse_qsl(query))
             else:
                 params = {}
 
-            # Осталось: uuid@host:port
             if "@" not in rest:
                 return None
             user_info, host_port = rest.rsplit("@", 1)
 
-            # Парсим host:port, учитывая IPv6 в [ ]
             if host_port.startswith("["):
                 m = re.match(r"^\[(.+)\]:(\d+)$", host_port)
                 if not m:
@@ -170,7 +162,10 @@ class VPNAggregator:
             if not user_info or not address:
                 return None
 
-            # --- streamSettings ---
+            # Фильтр пустых и фейковых адресов
+            if address in ("0.0.0.0", "127.0.0.1", "localhost") or user_info.lower() == "dummy":
+                return None
+
             network = params.get("type", "raw")
             security = params.get("security", "none")
 
@@ -179,7 +174,6 @@ class VPNAggregator:
                 "security": security,
             }
 
-            # TCP/raw + headerType=http иногда требует явного указания
             if network in ("tcp", "raw") and params.get("headerType") == "http":
                 stream["tcpSettings"] = {
                     "header": {
@@ -191,21 +185,18 @@ class VPNAggregator:
                     }
                 }
 
-            # WebSocket
             if network == "ws":
                 stream["wsSettings"] = {
                     "path": params.get("path", "/"),
                     "headers": {"Host": params.get("host", address)},
                 }
 
-            # gRPC
             if network == "grpc":
                 stream["grpcSettings"] = {
                     "serviceName": params.get("serviceName", ""),
                     "multiMode": params.get("mode", "") == "multi",
                 }
 
-            # XHTTP / HTTPUpgrade (новые типы Xray)
             if network == "xhttp":
                 stream["xhttpSettings"] = {
                     "path": params.get("path", "/"),
@@ -218,16 +209,14 @@ class VPNAggregator:
                     "host": params.get("host", address),
                 }
 
-            # TLS / Reality
             if security == "tls":
-                stream["tlsSettings"] = {
+                tls_settings = {
                     "serverName": params.get("sni", address),
                     "allowInsecure": params.get("allowInsecure", "0") == "1",
                     "fingerprint": params.get("fp", "chrome"),
                     "alpn": [a for a in params.get("alpn", "").split(",") if a] or None,
                 }
-                # Убираем None-поля
-                stream["tlsSettings"] = {k: v for k, v in stream["tlsSettings"].items() if v is not None}
+                stream["tlsSettings"] = {k: v for k, v in tls_settings.items() if v is not None}
 
             if security == "reality":
                 stream["realitySettings"] = {
@@ -238,7 +227,6 @@ class VPNAggregator:
                     "spiderX": params.get("spx", ""),
                 }
 
-            # --- user ---
             user = {
                 "id": user_info,
                 "encryption": "none",
@@ -265,16 +253,19 @@ class VPNAggregator:
 
     # ---------------------------------------------------------------- filter
     def process_and_filter(self):
-        print("🔧 Запуск гео-фильтрации (оставляем только RU, удаляем EU/мусор)...")
+        print("🔧 Запуск гео-фильтрации (оставляем только явные RU-серверы)...")
         filtered_obs = []
         seen_addresses = set()
 
         for ob in self.outbounds:
             try:
                 old_tag = ob.get("tag", "")
-                # ВАЖНО: vnext — это список
                 address = ob["settings"]["vnext"][0]["address"]
             except (KeyError, IndexError, TypeError):
+                continue
+
+            # Дополнительная проверка на мертвый хост
+            if address in ("0.0.0.0", "127.0.0.1"):
                 continue
 
             tag_upper = old_tag.upper()
@@ -286,14 +277,13 @@ class VPNAggregator:
             if is_foreign or not is_russian:
                 continue
 
-            # Дедупликация по хосту
+            # Дедупликация по IP / Хосту
             if address in seen_addresses:
                 continue
             seen_addresses.add(address)
 
             base_name = "🇷🇺 YandexTCP Тест"
             new_remarks = f"{base_name} Безлимит" if "безлимит" in old_tag.lower() else base_name
-
             if _has_word(tag_upper, ["LTE", "ЛТЕ"]):
                 new_remarks += " (Долгий пинг)"
 
@@ -301,15 +291,16 @@ class VPNAggregator:
             ob["remarks"] = new_remarks
             filtered_obs.append(ob)
 
-        print(f"🗑 Фильтр завершён. Чистых RU серверов в базе: {len(filtered_obs)}")
+        print(f"🗑 Фильтр завершён. Найдено чистых RU серверов: {len(filtered_obs)}")
         self.outbounds = filtered_obs
 
     # ---------------------------------------------------------------- saver
     def save_final_config(self):
-        selected_obs = self.outbounds[:3000]
+        # Увеличили лимит до 100 тысяч, чтобы ничего не резалось
+        selected_obs = self.outbounds[:100000]
         tags = [o["tag"] for o in selected_obs]
 
-        # Служебные outbounds
+        # Служебные выходы
         selected_obs.append({
             "protocol": "freedom",
             "settings": {"domainStrategy": "UseIP"},
@@ -344,24 +335,29 @@ class VPNAggregator:
             "outbounds": selected_obs,
             "routing": {
                 "domainStrategy": "IPIfNonMatch",
-                "balancers": [{
-                    "tag": "Auto_Balancer",
-                    "selector": tags,
-                    "strategy": {
-                        "type": "leastLoad",
-                        "settings": {
-                            "baselines": ["200ms", "500ms"],
-                            "expected": 2,
-                            "maxRTT": "1500ms",
-                            "tolerance": 0,
+                "balancers": [
+                    {
+                        "tag": "Auto_Balancer",
+                        "selector": tags,
+                        "strategy": {
+                            "type": "leastLoad",
+                            "settings": {
+                                "baselines": ["200ms", "500ms"],
+                                "expected": 2,
+                                "maxRTT": "1500ms",
+                                "tolerance": 0,
+                            },
                         },
-                    },
-                }] if tags else [],
+                    }
+                ] if tags else [],
                 "rules": [
+                    # Торренты качаем напрямую
                     {"type": "field", "protocol": ["bittorrent"], "outboundTag": "direct"},
-                    {"type": "field", "domain": ["geosite:category-ru", "domain:ru", "domain:su"], "outboundTag": "direct"},
-                    {"type": "field", "ip": ["geoip:private", "geoip:ru"], "outboundTag": "direct"},
-                ] + ([{"type": "field", "balancerTag": "Auto_Balancer", "network": "tcp,udp"}] if tags else []),
+                    # Локальную сеть открываем напрямую
+                    {"type": "field", "ip": ["geoip:private"], "outboundTag": "direct"},
+                    # ИСПРАВЛЕНО: Всё остальное (включая RU домены и IP) отправляем в балансировщик!
+                    {"type": "field", "balancerTag": "Auto_Balancer", "network": "tcp,udp"},
+                ],
             },
             "burstObservatory": {
                 "pingConfig": {
@@ -376,8 +372,10 @@ class VPNAggregator:
 
         with open(FINAL_OUTPUT_FILE, "w", encoding="utf-8") as f:
             json.dump(final_json, f, indent=2, ensure_ascii=False)
-        print(f"🎉 Итоговый конфиг записан: {FINAL_OUTPUT_FILE} "
-              f"(серверов: {len(tags)}, обновлён: {datetime.now():%Y-%m-%d %H:%M:%S})")
+
+        print(f"🎉 Итоговый конфиг успешно сохранен: {FINAL_OUTPUT_FILE} "
+              f"(Всего рабочих серверов добавлено: {len(tags)}, "
+              f"дата обновления: {datetime.now():%Y-%m-%d %H:%M:%S})")
 
 
 if __name__ == "__main__":
