@@ -10,18 +10,16 @@ import urllib.request
 import ssl
 from datetime import datetime
 
-# Определение абсолютного пути к корню репозитория на сервере GitHub
+# Определение путей специально под окружение GitHub Actions
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 URL_FILE = os.path.join(BASE_DIR, "url.txt")
 OUTPUT_DIR = os.path.join(BASE_DIR, "output")
 FINAL_OUTPUT_FILE = os.path.join(OUTPUT_DIR, "sub_1212.json")
 
-# Создаем папку для вывода, если её нет на сервере
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 class VPNAggregator:
     def __init__(self):
-        # Отключаем строгую проверку SSL, так как у некоторых источников могут быть просрочены сертификаты
         self.ssl_ctx = ssl.create_default_context()
         self.ssl_ctx.check_hostname = False
         self.ssl_ctx.verify_mode = ssl.CERT_NONE
@@ -39,10 +37,9 @@ class VPNAggregator:
 
     def load_and_download(self):
         if not os.path.exists(URL_FILE):
-            print(f"❌ ОШИБКА: Файл не найден по пути {URL_FILE}")
-            # Создаем пустой файл, чтобы процесс не падал аварийно в будущем
+            print(f"⚠️ Файл не найден: {URL_FILE}")
             with open(URL_FILE, "w") as f:
-                f.write("# Вставьте сюда ссылки\n")
+                f.write("# Вставьте ссылки сюда\n")
             return
 
         with open(URL_FILE, "r", encoding="utf-8") as f:
@@ -53,12 +50,10 @@ class VPNAggregator:
         for url in urls:
             try:
                 print(f"🛰 Скачивание источника: {url}")
-                # Имитируем реальный браузер (User-Agent), чтобы серверы не блокировали робота GitHub
                 req = urllib.request.Request(
                     url, 
                     headers={
-                        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-                        "Accept": "*/*"
+                        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
                     }
                 )
                 with urllib.request.urlopen(req, timeout=15, context=self.ssl_ctx) as r:
@@ -76,24 +71,28 @@ class VPNAggregator:
                     if ob:
                         self.outbounds.append(ob)
             except Exception as e:
-                print(f"⚠️ Пропущена ссылка из-за ошибки сети: {e}")
+                print(f"⚠️ Ошибка сети при скачивании ссылки: {e}")
 
     def parse_uri(self, uri):
         try:
             if uri.startswith("vless://"):
                 url = uri.replace("vless://", "")
                 tag = ""
-                if "#" in url: url, tag = url.split("#", 1)
+                if "#" in url: 
+                    url, tag = url.split("#", 1)
                 tag = urllib.parse.unquote(tag)
                 
                 params = {}
                 if "?" in url: 
                     url, ps = url.split("?", 1) 
                     params = dict(urllib.parse.parse_qsl(ps))
-                if "@" not in url: return None
+                
+                if "@" not in url: 
+                    return None
                 
                 uuid, hp = url.split("@", 1)
-                if ":" not in hp: return None
+                if ":" not in hp: 
+                    return None
                 address, port = hp.split(":", 1)
                 port = int(re.sub(r'[\/?#].*$', '', port))
 
@@ -117,7 +116,7 @@ class VPNAggregator:
         return None
 
     def process_and_filter(self):
-        print("🔧 Запуск фильтрации...")
+        print("🔧 Фильтрация зарубежных (EU) и неизвестных локаций...")
         filtered_obs = []
         seen_ips = set()
 
@@ -125,14 +124,15 @@ class VPNAggregator:
             old_tag = ob.get("tag", "")
             address = ob['settings']['vnext']['address']
 
-            # Жесткий гео-фильтр: оставляем только RU
+            # Проверка геолокации по тегам
             is_russian = any(w in old_tag.upper() for w in ["🇷🇺", "RU", "РОССИЯ", "RUSSIA", "YANDEX", "ЯНДЕКС"])
             is_foreign = any(w in old_tag.upper() for w in ["🇪🇺", "EU", "ЕВРОПА", "EUROPE", "DE", "ГЕРМАНИЯ", "FR", "ФРАНЦИЯ", "US", "США", "NL", "НИДЕРЛАНДЫ"])
             
+            # Если это EU или локация вообще неизвестна (нет RU меток) — удаляем
             if is_foreign or not is_russian:
                 continue
 
-            # Исключаем дубликаты
+            # Убираем дубликаты серверов
             if address in seen_ips:
                 continue
             seen_ips.add(address)
@@ -147,14 +147,13 @@ class VPNAggregator:
             ob["remarks"] = new_remarks
             filtered_obs.append(ob)
 
-        print(f"🗑 Фильтр завершен. Валидных RU серверов: {len(filtered_obs)}")
+        print(f"🗑 Очистка завершена. Чистых RU серверов осталось: {len(filtered_obs)}")
         self.outbounds = filtered_obs
 
     def save_final_config(self):
         selected_obs = self.outbounds[:3000]
         tags = [o["tag"] for o in selected_obs]
 
-        # Добавляем системные правила маршрутизации
         selected_obs.append({"protocol": "freedom", "settings": {"domainStrategy": "UseIP"}, "tag": "direct"})
         selected_obs.append({"protocol": "blackhole", "settings": {"response": {"type": "http"}}, "tag": "block"})
 
@@ -190,10 +189,9 @@ class VPNAggregator:
             "last_update": datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         }
 
-        # Сохраняем по строгому абсолютному пути
         with open(FINAL_OUTPUT_FILE, "w", encoding="utf-8") as f:
             json.dump(final_json, f, indent=2, ensure_ascii=False)
-        print(f"🎉 Файл sub_1212.json успешно записан по пути: {FINAL_OUTPUT_FILE}")
+        print(f"🎉 Топовый файл успешно сохранен: {FINAL_OUTPUT_FILE}")
 
 if __name__ == "__main__":
     aggregator = VPNAggregator()
