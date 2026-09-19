@@ -8,9 +8,13 @@ import base64
 import urllib.parse
 import urllib.request
 import ssl
+import sys
 from datetime import datetime
 
-# Определение путей специально под окружение GitHub Actions
+# Форсируем построчный вывод логов, чтобы видеть ошибки в реальном времени на GitHub
+sys.stdout.reconfigure(line_buffering=True)
+
+# Автоматическое определение путей под архитектуру виртуальной машины GitHub
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 URL_FILE = os.path.join(BASE_DIR, "url.txt")
 OUTPUT_DIR = os.path.join(BASE_DIR, "output")
@@ -37,24 +41,22 @@ class VPNAggregator:
 
     def load_and_download(self):
         if not os.path.exists(URL_FILE):
-            print(f"⚠️ Файл не найден: {URL_FILE}")
+            print(f"⚠️ Файл источников не найден по пути {URL_FILE}. Создаю пустой...")
             with open(URL_FILE, "w") as f:
-                f.write("# Вставьте ссылки сюда\n")
+                f.write("# Вставьте ваши ссылки ниже\n")
             return
 
         with open(URL_FILE, "r", encoding="utf-8") as f:
             urls = [line.strip() for line in f if line.strip() and not line.startswith("#")]
 
-        print(f"📥 Загрузка ссылок из url.txt: {len(urls)}")
+        print(f"📥 Загружено источников из url.txt: {len(urls)}")
         
         for url in urls:
             try:
-                print(f"🛰 Скачивание источника: {url}")
+                print(f"🛰 Скачивание провайдера: {url}")
                 req = urllib.request.Request(
                     url, 
-                    headers={
-                        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
-                    }
+                    headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"}
                 )
                 with urllib.request.urlopen(req, timeout=15, context=self.ssl_ctx) as r:
                     content = r.read().decode('utf-8', errors='ignore').strip()
@@ -74,49 +76,83 @@ class VPNAggregator:
                 print(f"⚠️ Ошибка сети при скачивании ссылки: {e}")
 
     def parse_uri(self, uri):
+        if not uri.startswith("vless://"):
+            return None
         try:
-            if uri.startswith("vless://"):
-                url = uri.replace("vless://", "")
-                tag = ""
-                if "#" in url: 
-                    url, tag = url.split("#", 1)
-                tag = urllib.parse.unquote(tag)
-                
-                params = {}
-                if "?" in url: 
-                    url, ps = url.split("?", 1) 
-                    params = dict(urllib.parse.parse_qsl(ps))
-                
-                if "@" not in url: 
-                    return None
-                
-                uuid, hp = url.split("@", 1)
-                if ":" not in hp: 
-                    return None
-                address, port = hp.split(":", 1)
-                port = int(re.sub(r'[\/?#].*$', '', port))
+            # Отрезаем протокол vless://
+            rest = uri[len("vless://"):]
 
-                stream = {"network": params.get("type", "raw"), "security": params.get("security", "none")}
-                if stream["security"] == "reality":
-                    stream["realitySettings"] = {
-                        "publicKey": params.get("pbk") or params.get("publicKey", ""),
-                        "shortId": params.get("sid", ""),
-                        "serverName": params.get("sni", address),
-                        "fingerprint": params.get("fp", "chrome")
-                    }
-                
-                return {
-                    "protocol": "vless",
-                    "tag": tag or f"VLESS-[{address}]",
-                    "settings": {"vnext": [{"address": address, "port": port, "users": [{"id": uuid, "encryption": "none", "level": 8}]}]},
-                    "streamSettings": stream
+            # Отделяем fragment (tag) — всё после первого '#'
+            if "#" in rest:
+                rest, fragment = rest.split("#", 1)
+                tag = urllib.parse.unquote(fragment)
+            else:
+                tag = ""
+
+            # Отделяем query параметры — всё после первого '?'
+            if "?" in rest:
+                rest, query = rest.split("?", 1)
+                params = dict(urllib.parse.parse_qsl(query))
+            else:
+                params = {}
+
+            # rest теперь имеет вид: uuid@host:port
+            if "@" not in rest:
+                return None
+            user_info, host_port = rest.rsplit("@", 1)
+
+            # Разбираем хост и порт (с учетом IPv6 в квадратных скобках [])
+            if host_port.startswith("["):
+                m = re.match(r"^\[(.+)\]:(\d+)$", host_port)
+                if not m:
+                    return None
+                address, port = m.group(1), int(m.group(2))
+            else:
+                if ":" not in host_port:
+                    return None
+                address, port_str = host_port.rsplit(":", 1)
+                if not port_str.isdigit():
+                    return None
+                port = int(port_str)
+
+            if not user_info or not address:
+                return None
+
+            stream = {
+                "network": params.get("type", "raw"),
+                "security": params.get("security", "none")
+            }
+
+            if stream["security"] == "reality":
+                stream["realitySettings"] = {
+                    "publicKey": params.get("pbk") or params.get("publicKey", ""),
+                    "shortId": params.get("sid", ""),
+                    "serverName": params.get("sni", address),
+                    "fingerprint": params.get("fp", "chrome")
                 }
-        except:
-            pass
-        return None
+
+            return {
+                "protocol": "vless",
+                "tag": tag or f"VLESS-[{address}]",
+                "settings": {
+                    "vnext": [{
+                        "address": address,
+                        "port": port,
+                        "users": [{
+                            "id": user_info,
+                            "encryption": "none",
+                            "level": 8
+                        }]
+                    }]
+                },
+                "streamSettings": stream
+            }
+        except Exception as e:
+            print(f"❌ Ошибка разбора строки VLESS: {e}")
+            return None
 
     def process_and_filter(self):
-        print("🔧 Фильтрация зарубежных (EU) и неизвестных локаций...")
+        print("🔧 Запуск гео-фильтрации (удаление EU и мусора)...")
         filtered_obs = []
         seen_ips = set()
 
@@ -124,15 +160,15 @@ class VPNAggregator:
             old_tag = ob.get("tag", "")
             address = ob['settings']['vnext']['address']
 
-            # Проверка геолокации по тегам
+            # Проверка флагов и названий локаций
             is_russian = any(w in old_tag.upper() for w in ["🇷🇺", "RU", "РОССИЯ", "RUSSIA", "YANDEX", "ЯНДЕКС"])
             is_foreign = any(w in old_tag.upper() for w in ["🇪🇺", "EU", "ЕВРОПА", "EUROPE", "DE", "ГЕРМАНИЯ", "FR", "ФРАНЦИЯ", "US", "США", "NL", "НИДЕРЛАНДЫ"])
             
-            # Если это EU или локация вообще неизвестна (нет RU меток) — удаляем
+            # Фильтр: если это EU или локация неизвестна (нет RU флагов) — отсекаем
             if is_foreign or not is_russian:
                 continue
 
-            # Убираем дубликаты серверов
+            # Исключаем дубликаты серверов с одинаковыми IP/хостами
             if address in seen_ips:
                 continue
             seen_ips.add(address)
@@ -147,10 +183,11 @@ class VPNAggregator:
             ob["remarks"] = new_remarks
             filtered_obs.append(ob)
 
-        print(f"🗑 Очистка завершена. Чистых RU серверов осталось: {len(filtered_obs)}")
+        print(f"🗑 Удалено неизвестных и EU конфигов. Чистых RU серверов в базе: {len(filtered_obs)}")
         self.outbounds = filtered_obs
 
     def save_final_config(self):
+        # Загружаем срез тарифа на 3000 серверов
         selected_obs = self.outbounds[:3000]
         tags = [o["tag"] for o in selected_obs]
 
@@ -191,7 +228,7 @@ class VPNAggregator:
 
         with open(FINAL_OUTPUT_FILE, "w", encoding="utf-8") as f:
             json.dump(final_json, f, indent=2, ensure_ascii=False)
-        print(f"🎉 Топовый файл успешно сохранен: {FINAL_OUTPUT_FILE}")
+        print(f"🎉 Топовый файл успешно создан и записан: {FINAL_OUTPUT_FILE}")
 
 if __name__ == "__main__":
     aggregator = VPNAggregator()
