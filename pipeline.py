@@ -133,7 +133,6 @@ class VPNAggregator:
 
     # ---------------------------------------------------------------- parser
     def parse_uri(self, uri: str):
-        """Возвращает ТОЛЬКО outbound-объект (без обёрток конфига)."""
         if not uri.startswith("vless://"):
             return None
         try:
@@ -243,7 +242,6 @@ class VPNAggregator:
             if params.get("flow"):
                 user["flow"] = params["flow"]
 
-            # 🔑 Возвращаем ТОЛЬКО outbound-объект, а не целый конфиг.
             return {
                 "protocol": "vless",
                 "tag": tag or f"VLESS-[{address}:{port}]",
@@ -290,18 +288,21 @@ class VPNAggregator:
                 continue
             seen_keys.add(key)
 
+            # 🛠 Сохраняем признак безлимита во временное поле объекта
+            ob["_is_unlimited"] = "безлимит" in old_tag.lower()
+
             orig = old_tag.strip()
             if orig:
                 new_remarks = f"🇷🇺 {orig}"
             else:
                 new_remarks = f"🇷🇺 RU [{address}]"
 
-            if "безлимит" in old_tag.lower():
+            if ob["_is_unlimited"]:
                 new_remarks += " [Безлимит]"
+
             if _has_word(tag_upper, ["LTE", "4G", "ЛТЕ"]):
                 new_remarks += " (Долгий пинг)"
 
-            # Уникальный тег — обязательно с портом
             ob["tag"] = f"{new_remarks} [{address}:{port}]"
             filtered_obs.append(ob)
 
@@ -309,20 +310,12 @@ class VPNAggregator:
               f"(отсеяно: {total_before - len(filtered_obs)})")
         self.outbounds = filtered_obs
 
-    # ---------------------------------------------------------------- saver
-    def save_final_config(self):
-        """
-        🔧 Собирает ОДИН корректный Xray-конфиг:
-        - один log
-        - один inbounds
-        - массив outbounds (ноды + direct + block)
-        - один routing с balancer по тегам нод
-        - burstObservatory с subjectSelector по тегам нод
-        """
-        nodes = self.outbounds[:100000]
-        tags = [o["tag"] for o in nodes]
+    # ---------------------------------------------------------------- генератор одиночного конфига
+    def build_single_config(self, nodes_list, config_name):
+        """Собирает один изолированный объект Xray-конфига со своими балансировщиками и нодами."""
+        tags = [o["tag"] for o in nodes_list]
 
-        outbounds = list(nodes)
+        outbounds = list(nodes_list)
         outbounds.append({
             "protocol": "freedom",
             "settings": {"domainStrategy": "UseIP"},
@@ -334,7 +327,8 @@ class VPNAggregator:
             "tag": "block",
         })
 
-        final_json = {
+        return {
+            "remarks": config_name,  # Имя конфигурации, которое отобразит Happ
             "log": {"loglevel": "warning"},
             "inbounds": [
                 {
@@ -389,11 +383,35 @@ class VPNAggregator:
             },
         }
 
-        with open(FINAL_OUTPUT_FILE, "w", encoding="utf-8") as f:
-            json.dump(final_json, f, indent=2, ensure_ascii=False)
+    # ---------------------------------------------------------------- saver
+    def save_final_config(self):
+        # 1. Разделяем ноды по группам (Безлимитные и Стандартные)
+        unlimited_nodes = [o for o in self.outbounds if o.get("_is_unlimited", False)]
+        standard_nodes = [o for o in self.outbounds if not o.get("_is_unlimited", False)]
 
-        print(f"🎉 Итоговый конфиг сохранён: {FINAL_OUTPUT_FILE} "
-              f"(нод: {len(tags)}, дата: {datetime.now():%Y-%m-%d %H:%M:%S})")
+        # Удаляем служебный ключ, чтобы не засорять итоговый файл
+        for o in self.outbounds:
+            o.pop("_is_unlimited", None)
+
+        # Ограничиваем лимиты на каждую группу, если серверов слишком много
+        unlimited_nodes = unlimited_nodes[:50000]
+        standard_nodes = standard_nodes[:50000]
+
+        # 2. Создаем две независимые конфигурационные структуры
+        config_unlimited = self.build_single_config(unlimited_nodes, "🇷🇺 RU - Безлимитные")
+        config_standard = self.build_single_config(standard_nodes, "🇷🇺 RU - Стандарт")
+
+        # 3. Помещаем их в единый JSON-массив (теперь они не склеиваются)
+        final_array = [config_unlimited, config_standard]
+
+        # 4. Записываем получившийся массив файлов в результирующий подписочный файл
+        with open(FINAL_OUTPUT_FILE, "w", encoding="utf-8") as f:
+            json.dump(final_array, f, indent=2, ensure_ascii=False)
+
+        print(f"🎉 Итоговый файл успешно обновлен: {FINAL_OUTPUT_FILE}\n"
+              f"   - Конфиг 'Безлимитные': {len(unlimited_nodes)} нод\n"
+              f"   - Конфиг 'Стандарт': {len(standard_nodes)} нод\n"
+              f"   - Дата генерации: {datetime.now():%Y-%m-%d %H:%M:%S}")
 
 
 if __name__ == "__main__":
