@@ -12,10 +12,8 @@ import ssl
 import sys
 from datetime import datetime
 
-# Построчный вывод логов — чтобы видеть прогресс в реальном времени на GitHub Actions
 sys.stdout.reconfigure(line_buffering=True)
 
-# Автоопределение путей под окружение GitHub Actions
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 URL_FILE = os.path.join(BASE_DIR, "url.txt")
 OUTPUT_DIR = os.path.join(BASE_DIR, "output")
@@ -24,14 +22,11 @@ FINAL_OUTPUT_FILE = os.path.join(OUTPUT_DIR, "sub_1212.json")
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 
-# --- Гео-словари (регулярки по границам слов, чтобы "RU" не ловило "BRUSSELS" и т.п.) ---
+# --- Гео-словари ---
 RU_WORDS = [
-    # Страна / провайдеры
     "RU", "RUS", "RUSSIA", "РОССИЯ", "РОССИИ",
     "YANDEX", "ЯНДЕКС",
-    # Сети / теги скорости
     "LTE", "4G", "TCP",
-    # Бренды / тарифы
     "MAX", "МАКС",
 ]
 RU_FLAGS = ["🇷🇺"]
@@ -59,7 +54,6 @@ FOREIGN_FLAGS = ["🇪🇺", "🇩🇪", "🇫🇷", "🇺🇸", "🇳🇱", "�
 
 
 def _has_word(text_upper: str, words) -> bool:
-    """Проверяет вхождение слов как отдельных токенов (по границам слов)."""
     for w in words:
         if re.search(rf"(?<![A-Z0-9]){re.escape(w)}(?![A-Z0-9])", text_upper):
             return True
@@ -71,7 +65,7 @@ class VPNAggregator:
         self.ssl_ctx = ssl.create_default_context()
         self.ssl_ctx.check_hostname = False
         self.ssl_ctx.verify_mode = ssl.CERT_NONE
-        self.outbounds = []
+        self.outbounds = []   # только outbound-объекты (ноды)
 
     # ---------------------------------------------------------------- utils
     def decode_base64(self, text: str) -> str:
@@ -139,6 +133,7 @@ class VPNAggregator:
 
     # ---------------------------------------------------------------- parser
     def parse_uri(self, uri: str):
+        """Возвращает ТОЛЬКО outbound-объект (без обёрток конфига)."""
         if not uri.startswith("vless://"):
             return None
         try:
@@ -176,7 +171,6 @@ class VPNAggregator:
             if not user_info or not address:
                 return None
 
-            # Фильтр пустых и фейковых адресов
             if address in ("0.0.0.0", "127.0.0.1", "localhost"):
                 return None
 
@@ -249,9 +243,10 @@ class VPNAggregator:
             if params.get("flow"):
                 user["flow"] = params["flow"]
 
+            # 🔑 Возвращаем ТОЛЬКО outbound-объект, а не целый конфиг.
             return {
                 "protocol": "vless",
-                "tag": tag or f"VLESS-[{address}]",
+                "tag": tag or f"VLESS-[{address}:{port}]",
                 "settings": {
                     "vnext": [{
                         "address": address,
@@ -281,25 +276,20 @@ class VPNAggregator:
             except (KeyError, IndexError, TypeError):
                 continue
 
-            # Дополнительная проверка на мертвый хост
             if address in ("0.0.0.0", "127.0.0.1"):
                 continue
 
             tag_upper = old_tag.upper()
 
             is_foreign = _has_word(tag_upper, FOREIGN_WORDS) or any(f in old_tag for f in FOREIGN_FLAGS)
-
-            # Режем только явных иностранцев. Всё остальное (RU + нейтральные) оставляем.
             if is_foreign:
                 continue
 
-            # Дедупликация по (address, port) — разные порты одного IP = разные ноды
             key = (address, port)
             if key in seen_keys:
                 continue
             seen_keys.add(key)
 
-            # Собираем новое имя: сохраняем оригинал + добавляем 🇷🇺
             orig = old_tag.strip()
             if orig:
                 new_remarks = f"🇷🇺 {orig}"
@@ -311,9 +301,8 @@ class VPNAggregator:
             if _has_word(tag_upper, ["LTE", "4G", "ЛТЕ"]):
                 new_remarks += " (Долгий пинг)"
 
-            # Тег делаем уникальным — с портом, иначе Xray ругается на дубли тегов
+            # Уникальный тег — обязательно с портом
             ob["tag"] = f"{new_remarks} [{address}:{port}]"
-            ob["remarks"] = new_remarks
             filtered_obs.append(ob)
 
         print(f"🗑 Фильтр завершён. Было: {total_before}, стало: {len(filtered_obs)} "
@@ -322,17 +311,24 @@ class VPNAggregator:
 
     # ---------------------------------------------------------------- saver
     def save_final_config(self):
-        # Увеличили лимит до 100 тысяч, чтобы ничего не резалось
-        selected_obs = self.outbounds[:100000]
-        tags = [o["tag"] for o in selected_obs]
+        """
+        🔧 Собирает ОДИН корректный Xray-конфиг:
+        - один log
+        - один inbounds
+        - массив outbounds (ноды + direct + block)
+        - один routing с balancer по тегам нод
+        - burstObservatory с subjectSelector по тегам нод
+        """
+        nodes = self.outbounds[:100000]
+        tags = [o["tag"] for o in nodes]
 
-        # Служебные выходы
-        selected_obs.append({
+        outbounds = list(nodes)
+        outbounds.append({
             "protocol": "freedom",
             "settings": {"domainStrategy": "UseIP"},
             "tag": "direct",
         })
-        selected_obs.append({
+        outbounds.append({
             "protocol": "blackhole",
             "settings": {"response": {"type": "http"}},
             "tag": "block",
@@ -344,7 +340,7 @@ class VPNAggregator:
                 {
                     "port": 10808,
                     "protocol": "socks",
-                    "settings": {"auth": "noauth", "udp": True},
+                    "settings": {"auth": "noauth", "udp": True, "userLevel": 8},
                     "sniffing": {
                         "enabled": True,
                         "destOverride": ["http", "tls", "quic"],
@@ -358,7 +354,7 @@ class VPNAggregator:
                     "tag": "http-in",
                 },
             ],
-            "outbounds": selected_obs,
+            "outbounds": outbounds,
             "routing": {
                 "domainStrategy": "IPIfNonMatch",
                 "balancers": [
@@ -377,11 +373,8 @@ class VPNAggregator:
                     }
                 ] if tags else [],
                 "rules": [
-                    # Торренты качаем напрямую
                     {"type": "field", "protocol": ["bittorrent"], "outboundTag": "direct"},
-                    # Локальную сеть открываем напрямую
                     {"type": "field", "ip": ["geoip:private"], "outboundTag": "direct"},
-                    # Всё остальное (включая RU домены и IP) отправляем в балансировщик
                     {"type": "field", "balancerTag": "Auto_Balancer", "network": "tcp,udp"},
                 ],
             },
@@ -399,9 +392,8 @@ class VPNAggregator:
         with open(FINAL_OUTPUT_FILE, "w", encoding="utf-8") as f:
             json.dump(final_json, f, indent=2, ensure_ascii=False)
 
-        print(f"🎉 Итоговый конфиг успешно сохранен: {FINAL_OUTPUT_FILE} "
-              f"(Всего рабочих серверов добавлено: {len(tags)}, "
-              f"дата обновления: {datetime.now():%Y-%m-%d %H:%M:%S})")
+        print(f"🎉 Итоговый конфиг сохранён: {FINAL_OUTPUT_FILE} "
+              f"(нод: {len(tags)}, дата: {datetime.now():%Y-%m-%d %H:%M:%S})")
 
 
 if __name__ == "__main__":
