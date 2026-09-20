@@ -1,0 +1,3057 @@
+[
+  {
+    "remarks": "🇷🇺 RU Конфиг - Часть 1 (75 серв.)",
+    "log": {
+      "loglevel": "warning"
+    },
+    "inbounds": [
+      {
+        "port": 10808,
+        "protocol": "socks",
+        "settings": {
+          "auth": "noauth",
+          "udp": true,
+          "userLevel": 8
+        },
+        "sniffing": {
+          "enabled": true,
+          "destOverride": [
+            "http",
+            "tls",
+            "quic"
+          ]
+        },
+        "tag": "socks-in"
+      },
+      {
+        "port": 10809,
+        "protocol": "http",
+        "settings": {},
+        "tag": "http-in"
+      }
+    ],
+    "outbounds": [
+      {
+        "protocol": "vless",
+        "tag": "🇷🇺 Russia [*CIDR] Beeline [66.90.90.13:8443]",
+        "settings": {
+          "vnext": [
+            {
+              "address": "66.90.90.13",
+              "port": 8443,
+              "users": [
+                {
+                  "id": "151077fd-f4a0-4622-bfd2-1ee2c121a544",
+                  "encryption": "none",
+                  "level": 8,
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "tls",
+          "tlsSettings": {
+            "serverName": "dsapi-v2-6aaeee8a.adhil.uk",
+            "allowInsecure": false,
+            "fingerprint": "chrome"
+          }
+        },
+        "_is_unlimited": false
+      },
+      {
+        "protocol": "vless",
+        "tag": "🇷🇺 [VL] Россия #3354 | РосТуннель t.me/rjsxrd [186.246.12.242:2053]",
+        "settings": {
+          "vnext": [
+            {
+              "address": "186.246.12.242",
+              "port": 2053,
+              "users": [
+                {
+                  "id": "9a47a8ff-8cdd-4a35-b765-fbad6d40e0a0",
+                  "encryption": "none",
+                  "level": 8
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "ws",
+          "security": "tls",
+          "wsSettings": {
+            "path": "/",
+            "headers": {
+              "Host": "186.246.12.242"
+            }
+          },
+          "tlsSettings": {
+            "serverName": "bz9.wba-pn.ru",
+            "allowInsecure": false,
+            "fingerprint": "firefox"
+          }
+        },
+        "_is_unlimited": false
+      },
+      {
+        "protocol": "vless",
+        "tag": "🇷🇺 The Netherlands | [SNI-RU] eh.vk.com t.me/rjsxrd [93.89.220.7:8443]",
+        "settings": {
+          "vnext": [
+            {
+              "address": "93.89.220.7",
+              "port": 8443,
+              "users": [
+                {
+                  "id": "6eefb4c5-96c2-4b41-a8e3-3dd13e8e09d0",
+                  "encryption": "none",
+                  "level": 8
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "reality",
+          "realitySettings": {
+            "serverName": "eh.vk.com",
+            "fingerprint": "android",
+            "publicKey": "GzQr6fDhigtRAr0n2Y7Nk3snhdytYyOvaYo9zYe1Xn4",
+            "shortId": "b3a1cc510a2001c6",
+            "spiderX": ""
+          }
+        },
+        "_is_unlimited": false
+      },
+      {
+        "protocol": "vless",
+        "tag": "🇷🇺 [VL] Россия #3368 | РосТуннель t.me/rjsxrd [144.31.48.225:25947]",
+        "settings": {
+          "vnext": [
+            {
+              "address": "144.31.48.225",
+              "port": 25947,
+              "users": [
+                {
+                  "id": "a9c66e1a-798e-437f-b0bf-f06c32a9666a",
+                  "encryption": "none",
+                  "level": 8
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "reality",
+          "realitySettings": {
+            "serverName": "vk.com",
+            "fingerprint": "firefox",
+            "publicKey": "CQlKsUxdTGqcS0I4ZZUzUzIvWzOowSeaPbWk0IKaxC0",
+            "shortId": "650ae4b84a581e1c",
+            "spiderX": ""
+          }
+        },
+        "_is_unlimited": false
+      },
+      {
+        "protocol": "vless",
+        "tag": "🇷🇺 Russia | TG: @HardVpn_robot t.me/rjsxrd [31.130.155.114:443]",
+        "settings": {
+          "vnext": [
+            {
+              "address": "31.130.155.114",
+              "port": 443,
+              "users": [
+                {
+                  "id": "6ed6162d-fc15-447c-b04c-5d6975d2231d",
+                  "encryption": "none",
+                  "level": 8,
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "reality",
+          "realitySettings": {
+            "serverName": "api.max.ru",
+            "fingerprint": "chrome",
+            "publicKey": "aySWi4vGm4__zU_RFNtym1AyjtfY0AX9WoigfVG7hWA",
+            "shortId": "6c183039c8fe2676",
+            "spiderX": ""
+          }
+        },
+        "_is_unlimited": false
+      },
+      {
+        "protocol": "vless",
+        "tag": "🇷🇺 [VL] Россия #3418 | РосТуннель t.me/rjsxrd [176.108.246.110:9830]",
+        "settings": {
+          "vnext": [
+            {
+              "address": "176.108.246.110",
+              "port": 9830,
+              "users": [
+                {
+                  "id": "5d16ac22-6eea-426f-b778-6f4c2961faef",
+                  "encryption": "none",
+                  "level": 8
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "grpc",
+          "security": "reality",
+          "grpcSettings": {
+            "serviceName": "grpc-tunnel",
+            "multiMode": false
+          },
+          "realitySettings": {
+            "serverName": "dl.google.com",
+            "fingerprint": "chrome",
+            "publicKey": "bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU",
+            "shortId": "",
+            "spiderX": ""
+          }
+        },
+        "_is_unlimited": false
+      },
+      {
+        "protocol": "vless",
+        "tag": "🇷🇺 [VL] Россия #3417 | РосТуннель t.me/rjsxrd [213.171.25.178:9830]",
+        "settings": {
+          "vnext": [
+            {
+              "address": "213.171.25.178",
+              "port": 9830,
+              "users": [
+                {
+                  "id": "5d16ac22-6eea-426f-b778-6f4c2961faef",
+                  "encryption": "none",
+                  "level": 8
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "grpc",
+          "security": "reality",
+          "grpcSettings": {
+            "serviceName": "grpc-tunnel",
+            "multiMode": false
+          },
+          "realitySettings": {
+            "serverName": "dl.google.com",
+            "fingerprint": "chrome",
+            "publicKey": "bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU",
+            "shortId": "aabb",
+            "spiderX": ""
+          }
+        },
+        "_is_unlimited": false
+      },
+      {
+        "protocol": "vless",
+        "tag": "🇷🇺 [VL] Россия #3428 | РосТуннель t.me/rjsxrd [188.225.24.201:443]",
+        "settings": {
+          "vnext": [
+            {
+              "address": "188.225.24.201",
+              "port": 443,
+              "users": [
+                {
+                  "id": "026f58a9-b36e-4204-8f8d-54c5374163da",
+                  "encryption": "none",
+                  "level": 8,
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "raw",
+          "security": "reality",
+          "realitySettings": {
+            "serverName": "app11.betust.net",
+            "fingerprint": "firefox",
+            "publicKey": "XhzNlmMTdYr2pYTqiNNP6qWe7BkAgVHU-kZWXc9u9hY",
+            "shortId": "91c2269c",
+            "spiderX": ""
+          }
+        },
+        "_is_unlimited": false
+      },
+      {
+        "protocol": "vless",
+        "tag": "🇷🇺 [VL] Россия #3391 | РосТуннель t.me/rjsxrd [176.108.246.58:9881]",
+        "settings": {
+          "vnext": [
+            {
+              "address": "176.108.246.58",
+              "port": 9881,
+              "users": [
+                {
+                  "id": "5d16ac22-6eea-426f-b778-6f4c2961faef",
+                  "encryption": "none",
+                  "level": 8
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "grpc",
+          "security": "reality",
+          "grpcSettings": {
+            "serviceName": "grpc-tunnel",
+            "multiMode": false
+          },
+          "realitySettings": {
+            "serverName": "dl.google.com",
+            "fingerprint": "qq",
+            "publicKey": "ycPIUcY6ci2yi7YA_OHc20e4gzxEdJTqpmeShxSuHRU",
+            "shortId": "",
+            "spiderX": ""
+          }
+        },
+        "_is_unlimited": false
+      },
+      {
+        "protocol": "vless",
+        "tag": "🇷🇺 [VL] Россия #3427 | РосТуннель t.me/rjsxrd [188.225.77.241:443]",
+        "settings": {
+          "vnext": [
+            {
+              "address": "188.225.77.241",
+              "port": 443,
+              "users": [
+                {
+                  "id": "026f58a9-b36e-4204-8f8d-54c5374163da",
+                  "encryption": "none",
+                  "level": 8,
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "raw",
+          "security": "reality",
+          "realitySettings": {
+            "serverName": "api.betust.net",
+            "fingerprint": "firefox",
+            "publicKey": "YczbievYAOeZIypa58aRpil6XbfdyifK_0cFJWn8-yg",
+            "shortId": "d6c172d3",
+            "spiderX": ""
+          }
+        },
+        "_is_unlimited": false
+      },
+      {
+        "protocol": "vless",
+        "tag": "🇷🇺 [VL] Россия #3425 | РосТуннель t.me/rjsxrd [188.225.57.78:443]",
+        "settings": {
+          "vnext": [
+            {
+              "address": "188.225.57.78",
+              "port": 443,
+              "users": [
+                {
+                  "id": "026f58a9-b36e-4204-8f8d-54c5374163da",
+                  "encryption": "none",
+                  "level": 8,
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "raw",
+          "security": "reality",
+          "realitySettings": {
+            "serverName": "app4.betust.net",
+            "fingerprint": "firefox",
+            "publicKey": "NCW-zK60GXsiDdlbxww18Pqp4kz3zTG1URHWS_bnfDk",
+            "shortId": "3f7e0363",
+            "spiderX": ""
+          }
+        },
+        "_is_unlimited": false
+      },
+      {
+        "protocol": "vless",
+        "tag": "🇷🇺 [VL] Россия #3424 | РосТуннель t.me/rjsxrd [188.225.44.89:443]",
+        "settings": {
+          "vnext": [
+            {
+              "address": "188.225.44.89",
+              "port": 443,
+              "users": [
+                {
+                  "id": "026f58a9-b36e-4204-8f8d-54c5374163da",
+                  "encryption": "none",
+                  "level": 8,
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "raw",
+          "security": "reality",
+          "realitySettings": {
+            "serverName": "app12.betust.net",
+            "fingerprint": "firefox",
+            "publicKey": "Fgd7fSq-ZXnAZd3GUYGEfTyiz9wno4IWVIcs7-Narwg",
+            "shortId": "f73ac93d",
+            "spiderX": ""
+          }
+        },
+        "_is_unlimited": false
+      },
+      {
+        "protocol": "vless",
+        "tag": "🇷🇺 The Netherlands — #77 [Verified RU] t.me/rjsxrd [188.225.35.207:443]",
+        "settings": {
+          "vnext": [
+            {
+              "address": "188.225.35.207",
+              "port": 443,
+              "users": [
+                {
+                  "id": "026f58a9-b36e-4204-8f8d-54c5374163da",
+                  "encryption": "none",
+                  "level": 8,
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "raw",
+          "security": "reality",
+          "realitySettings": {
+            "serverName": "demo.betust.net",
+            "fingerprint": "firefox",
+            "publicKey": "-lLmJilTNFk_DYxnbvWJH_swC9a5JRheZrN1KPVMjCc",
+            "shortId": "219a891b",
+            "spiderX": ""
+          }
+        },
+        "_is_unlimited": false
+      },
+      {
+        "protocol": "vless",
+        "tag": "🇷🇺 The Netherlands — #79 [Verified RU] t.me/rjsxrd [188.225.58.238:443]",
+        "settings": {
+          "vnext": [
+            {
+              "address": "188.225.58.238",
+              "port": 443,
+              "users": [
+                {
+                  "id": "026f58a9-b36e-4204-8f8d-54c5374163da",
+                  "encryption": "none",
+                  "level": 8,
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "raw",
+          "security": "reality",
+          "realitySettings": {
+            "serverName": "app5.betust.net",
+            "fingerprint": "firefox",
+            "publicKey": "laDuxd6kFSPv2nWTy9LUjMGVRZM949R82alkZpMAqlk",
+            "shortId": "e84029c5",
+            "spiderX": ""
+          }
+        },
+        "_is_unlimited": false
+      },
+      {
+        "protocol": "vless",
+        "tag": "🇷🇺 The Netherlands — #84 [Verified RU] t.me/rjsxrd [188.225.25.142:443]",
+        "settings": {
+          "vnext": [
+            {
+              "address": "188.225.25.142",
+              "port": 443,
+              "users": [
+                {
+                  "id": "026f58a9-b36e-4204-8f8d-54c5374163da",
+                  "encryption": "none",
+                  "level": 8,
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "raw",
+          "security": "reality",
+          "realitySettings": {
+            "serverName": "prime.betust.net",
+            "fingerprint": "random",
+            "publicKey": "SxbaWzlvE_HQqqsA4PNX2PFcSYXTVE2nZlgLc7cPOgk",
+            "shortId": "8681edc9",
+            "spiderX": ""
+          }
+        },
+        "_is_unlimited": false
+      },
+      {
+        "protocol": "vless",
+        "tag": "🇷🇺 France — #46 [Verified RU] t.me/rjsxrd [176.123.162.100:9880]",
+        "settings": {
+          "vnext": [
+            {
+              "address": "176.123.162.100",
+              "port": 9880,
+              "users": [
+                {
+                  "id": "5d16ac22-6eea-426f-b778-6f4c2961faef",
+                  "encryption": "none",
+                  "level": 8
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "grpc",
+          "security": "reality",
+          "grpcSettings": {
+            "serviceName": "grpc-tunnel",
+            "multiMode": false
+          },
+          "realitySettings": {
+            "serverName": "dl.google.com",
+            "fingerprint": "firefox",
+            "publicKey": "bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU",
+            "shortId": "",
+            "spiderX": ""
+          }
+        },
+        "_is_unlimited": false
+      },
+      {
+        "protocol": "vless",
+        "tag": "🇷🇺 The Netherlands — #93 [Verified RU] t.me/rjsxrd [188.225.42.6:443]",
+        "settings": {
+          "vnext": [
+            {
+              "address": "188.225.42.6",
+              "port": 443,
+              "users": [
+                {
+                  "id": "026f58a9-b36e-4204-8f8d-54c5374163da",
+                  "encryption": "none",
+                  "level": 8,
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "raw",
+          "security": "reality",
+          "realitySettings": {
+            "serverName": "app6.betust.net",
+            "fingerprint": "random",
+            "publicKey": "sS3x_ZygtA9uZ5WaYm7pHjy0_lPNUUK7kOSLz0BNhCs",
+            "shortId": "54ac91da",
+            "spiderX": ""
+          }
+        },
+        "_is_unlimited": false
+      },
+      {
+        "protocol": "vless",
+        "tag": "🇷🇺 [VL] Россия #3330 | РосТуннель t.me/rjsxrd [xssite.webredirect.org:443]",
+        "settings": {
+          "vnext": [
+            {
+              "address": "xssite.webredirect.org",
+              "port": 443,
+              "users": [
+                {
+                  "id": "c90395e6-2140-47ad-a54d-9b166729d3ef",
+                  "encryption": "none",
+                  "level": 8
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "grpc",
+          "security": "tls",
+          "grpcSettings": {
+            "serviceName": "grpc-ru",
+            "multiMode": false
+          },
+          "tlsSettings": {
+            "serverName": "xssite.webredirect.org",
+            "allowInsecure": false,
+            "fingerprint": "ios"
+          }
+        },
+        "_is_unlimited": false
+      },
+      {
+        "protocol": "vless",
+        "tag": "🇷🇺 [VL] Россия #10036 | РосТуннель t.me/rjsxrd [104.24.16.23:443]",
+        "settings": {
+          "vnext": [
+            {
+              "address": "104.24.16.23",
+              "port": 443,
+              "users": [
+                {
+                  "id": "2c122b00-78ed-44af-ae96-61f0786bf8a6",
+                  "encryption": "none",
+                  "level": 8
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "ws",
+          "security": "tls",
+          "wsSettings": {
+            "path": "/",
+            "headers": {
+              "Host": "104.24.16.23"
+            }
+          },
+          "tlsSettings": {
+            "serverName": "dark-rain-2989.gzgshsgs.workers.dev",
+            "allowInsecure": false,
+            "fingerprint": "chrome"
+          }
+        },
+        "_is_unlimited": false
+      },
+      {
+        "protocol": "vless",
+        "tag": "🇷🇺 [VL] Россия #3300 | РосТуннель t.me/rjsxrd [72.56.250.71:443]",
+        "settings": {
+          "vnext": [
+            {
+              "address": "72.56.250.71",
+              "port": 443,
+              "users": [
+                {
+                  "id": "af2a0c18-b08c-471f-baa3-259ac2ce3a85",
+                  "encryption": "none",
+                  "level": 8
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "ws",
+          "security": "tls",
+          "wsSettings": {
+            "path": "/",
+            "headers": {
+              "Host": "72.56.250.71"
+            }
+          },
+          "tlsSettings": {
+            "serverName": "tr3.wba-pn.ru",
+            "allowInsecure": false,
+            "fingerprint": "safari"
+          }
+        },
+        "_is_unlimited": false
+      },
+      {
+        "protocol": "vless",
+        "tag": "🇷🇺 Germany — #11 [Verified RU] t.me/rjsxrd [46.243.142.227:10443]",
+        "settings": {
+          "vnext": [
+            {
+              "address": "46.243.142.227",
+              "port": 10443,
+              "users": [
+                {
+                  "id": "a85ddf9f-329b-4c31-a80a-cd0f2e5b2a30",
+                  "encryption": "none",
+                  "level": 8
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "grpc",
+          "security": "reality",
+          "grpcSettings": {
+            "serviceName": "google.storage.v2.Storage",
+            "multiMode": false
+          },
+          "realitySettings": {
+            "serverName": "shprcdn.quest",
+            "fingerprint": "firefox",
+            "publicKey": "KoNQ52irUOW-fybKx-gUKCuHpMnHhgQ_skjd8TmqJ2k",
+            "shortId": "",
+            "spiderX": ""
+          }
+        },
+        "_is_unlimited": false
+      },
+      {
+        "protocol": "vless",
+        "tag": "🇷🇺 [VL] Россия #3394 | РосТуннель t.me/rjsxrd [77.110.104.238:443]",
+        "settings": {
+          "vnext": [
+            {
+              "address": "77.110.104.238",
+              "port": 443,
+              "users": [
+                {
+                  "id": "937fbdad-d97b-4540-9136-de1886df866f",
+                  "encryption": "none",
+                  "level": 8
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "grpc",
+          "security": "reality",
+          "grpcSettings": {
+            "serviceName": "ru217125de65grpc",
+            "multiMode": false
+          },
+          "realitySettings": {
+            "serverName": "www.wikipedia.org",
+            "fingerprint": "firefox",
+            "publicKey": "lvBVTmcLFcPyhVE2MGeTd0ls2FNOvBD7UhJNEmvprUQ",
+            "shortId": "f182f2fcf956838e",
+            "spiderX": ""
+          }
+        },
+        "_is_unlimited": false
+      },
+      {
+        "protocol": "vless",
+        "tag": "🇷🇺 [VL] Россия #3389 | РосТуннель t.me/rjsxrd [46.8.200.91:443]",
+        "settings": {
+          "vnext": [
+            {
+              "address": "46.8.200.91",
+              "port": 443,
+              "users": [
+                {
+                  "id": "b8201bab-fa6c-4f6e-b289-b5da660c6f69",
+                  "encryption": "none",
+                  "level": 8
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "ws",
+          "security": "tls",
+          "wsSettings": {
+            "path": "/cdn/v3/live",
+            "headers": {
+              "Host": "cf3.rumedia-cdn.com"
+            }
+          },
+          "tlsSettings": {
+            "serverName": "cf3.rumedia-cdn.com",
+            "allowInsecure": false,
+            "fingerprint": "chrome"
+          }
+        },
+        "_is_unlimited": false
+      },
+      {
+        "protocol": "vless",
+        "tag": "🇷🇺 🌐 Anycast-IP | 🇳🇱 [SNI-RU] yandex.ru t.me/rjsxrd [144.31.57.48:4143]",
+        "settings": {
+          "vnext": [
+            {
+              "address": "144.31.57.48",
+              "port": 4143,
+              "users": [
+                {
+                  "id": "37cec958-22ac-4d99-aee2-48facd8d84d7",
+                  "encryption": "none",
+                  "level": 8
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "grpc",
+          "security": "reality",
+          "grpcSettings": {
+            "serviceName": "google.android.location.SyncService",
+            "multiMode": false
+          },
+          "realitySettings": {
+            "serverName": "yandex.ru",
+            "fingerprint": "firefox",
+            "publicKey": "EB4Ay55d7wUDYVTfDNXg2sX2PxWqNqsyivR4fGcELDo",
+            "shortId": "ad63",
+            "spiderX": ""
+          }
+        },
+        "_is_unlimited": false
+      },
+      {
+        "protocol": "vless",
+        "tag": "🇷🇺 [VL] Россия #3298 | РосТуннель t.me/rjsxrd [176.123.161.222:9892]",
+        "settings": {
+          "vnext": [
+            {
+              "address": "176.123.161.222",
+              "port": 9892,
+              "users": [
+                {
+                  "id": "5d16ac22-6eea-426f-b778-6f4c2961faef",
+                  "encryption": "none",
+                  "level": 8
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "grpc",
+          "security": "reality",
+          "grpcSettings": {
+            "serviceName": "grpc-tunnel",
+            "multiMode": false
+          },
+          "realitySettings": {
+            "serverName": "dl.google.com",
+            "fingerprint": "firefox",
+            "publicKey": "bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU",
+            "shortId": "",
+            "spiderX": ""
+          }
+        },
+        "_is_unlimited": false
+      },
+      {
+        "protocol": "vless",
+        "tag": "🇷🇺 The Netherlands | [SNI-RU] dzen.ru t.me/rjsxrd [94.183.224.45:443]",
+        "settings": {
+          "vnext": [
+            {
+              "address": "94.183.224.45",
+              "port": 443,
+              "users": [
+                {
+                  "id": "d72f05b0-b182-4783-a6f2-21cecc7d841a",
+                  "encryption": "none",
+                  "level": 8,
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "reality",
+          "realitySettings": {
+            "serverName": "dzen.ru",
+            "fingerprint": "firefox",
+            "publicKey": "SibLV5WBGdljTiUCmKx77KhHQfErCwjDMD_ZLoha3js",
+            "shortId": "a1b2c3d4e5f67890",
+            "spiderX": ""
+          }
+        },
+        "_is_unlimited": false
+      },
+      {
+        "protocol": "vless",
+        "tag": "🇷🇺 [VL] Россия #3329 | РосТуннель t.me/rjsxrd [89.169.171.202:8444]",
+        "settings": {
+          "vnext": [
+            {
+              "address": "89.169.171.202",
+              "port": 8444,
+              "users": [
+                {
+                  "id": "b3a11068-1a7e-4643-85de-7c82cce46943",
+                  "encryption": "none",
+                  "level": 8
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "grpc",
+          "security": "reality",
+          "grpcSettings": {
+            "serviceName": "TunService",
+            "multiMode": false
+          },
+          "realitySettings": {
+            "serverName": "www.google.com",
+            "fingerprint": "random",
+            "publicKey": "wGMBs7bvzyzA0-OUiwSkOOTDEMdxEOsSdRzxiP8GGQY",
+            "shortId": "",
+            "spiderX": ""
+          }
+        },
+        "_is_unlimited": false
+      },
+      {
+        "protocol": "vless",
+        "tag": "🇷🇺 NL - Russia [94.26.228.10:443]",
+        "settings": {
+          "vnext": [
+            {
+              "address": "94.26.228.10",
+              "port": 443,
+              "users": [
+                {
+                  "id": "1a6fe500-59da-4598-8576-256f06765ffb",
+                  "encryption": "none",
+                  "level": 8,
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "reality",
+          "realitySettings": {
+            "serverName": "ru.sfasti.ru",
+            "fingerprint": "chrome",
+            "publicKey": "J_jQq9-SWQZjiMhuPaFV7V2MaJ4pkKgVRaz7x6tmvy8",
+            "shortId": "16895459a2c7768d",
+            "spiderX": ""
+          }
+        },
+        "_is_unlimited": false
+      },
+      {
+        "protocol": "vless",
+        "tag": "🇷🇺 Russia X [5.181.171.2:443]",
+        "settings": {
+          "vnext": [
+            {
+              "address": "5.181.171.2",
+              "port": 443,
+              "users": [
+                {
+                  "id": "8e6acce9-8b56-7190-d491-7d84f8189e26",
+                  "encryption": "none",
+                  "level": 8,
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "reality",
+          "realitySettings": {
+            "serverName": "speed.cloudflare.com",
+            "fingerprint": "chrome",
+            "publicKey": "YNGotlyAx3ELUmi4lxOUjiEDmibqf1pPUTE9o3YYT2Y",
+            "shortId": "",
+            "spiderX": ""
+          }
+        },
+        "_is_unlimited": false
+      },
+      {
+        "protocol": "vless",
+        "tag": "🇷🇺 soskeynet  VL-RAW-  RU 126ms [193.168.46.180:443]",
+        "settings": {
+          "vnext": [
+            {
+              "address": "193.168.46.180",
+              "port": 443,
+              "users": [
+                {
+                  "id": "393cf343-b4a2-42bc-b726-a8b8de887b7b",
+                  "encryption": "none",
+                  "level": 8,
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "raw",
+          "security": "reality",
+          "realitySettings": {
+            "serverName": "rruu.persik.host",
+            "fingerprint": "qq",
+            "publicKey": "D0FqzTuVSzCF8IcFo64SFIpMsaGV47LW3el2GCCVoFY",
+            "shortId": "c1a7e9b4711d5f60",
+            "spiderX": ""
+          }
+        },
+        "_is_unlimited": false
+      },
+      {
+        "protocol": "vless",
+        "tag": "🇷🇺 Russia | [*CIDR] [94.26.249.216:52006]",
+        "settings": {
+          "vnext": [
+            {
+              "address": "94.26.249.216",
+              "port": 52006,
+              "users": [
+                {
+                  "id": "1a15a707-0c97-07d0-8c2c-c0e71a67e209",
+                  "encryption": "none",
+                  "level": 8,
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "raw",
+          "security": "tls",
+          "tlsSettings": {
+            "serverName": "clode.fastaichat.ru",
+            "allowInsecure": false,
+            "fingerprint": "android",
+            "alpn": [
+              "h2",
+              "http/1.1"
+            ]
+          }
+        },
+        "_is_unlimited": false
+      },
+      {
+        "protocol": "vless",
+        "tag": "🇷🇺 🌐 Anycast-IP | 🇩🇪 🇷🇺 [*CIDR] Beeline [66.90.93.74:8443]",
+        "settings": {
+          "vnext": [
+            {
+              "address": "66.90.93.74",
+              "port": 8443,
+              "users": [
+                {
+                  "id": "8364e505-9c81-4d72-a66b-fde0182be26b",
+                  "encryption": "none",
+                  "level": 8
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "ws",
+          "security": "tls",
+          "wsSettings": {
+            "path": "/api/connect",
+            "headers": {
+              "Host": "66.90.93.74"
+            }
+          },
+          "tlsSettings": {
+            "serverName": "gateway-v1.bosx.net",
+            "allowInsecure": false,
+            "fingerprint": "chrome",
+            "alpn": [
+              "http/1.1"
+            ]
+          }
+        },
+        "_is_unlimited": false
+      },
+      {
+        "protocol": "vless",
+        "tag": "🇷🇺 Russia | [*CIDR] YA [217.198.169.86:443]",
+        "settings": {
+          "vnext": [
+            {
+              "address": "217.198.169.86",
+              "port": 443,
+              "users": [
+                {
+                  "id": "fc07967d-925b-4246-a535-9527a8242a16",
+                  "encryption": "none",
+                  "level": 8
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "xhttp",
+          "security": "reality",
+          "xhttpSettings": {
+            "path": "/wk7Lj2YbQfCoLCnY5dZ3",
+            "host": "217.198.169.86",
+            "mode": "auto"
+          },
+          "realitySettings": {
+            "serverName": "avatars.mds.yandex.net",
+            "fingerprint": "android",
+            "publicKey": "h5rOWssRWMnFJ0Ka0-PwBwwg3PMPifPShXutXEoj2QM",
+            "shortId": "b8ac5fcfceca",
+            "spiderX": ""
+          }
+        },
+        "_is_unlimited": false
+      },
+      {
+        "protocol": "vless",
+        "tag": "🇷🇺 RU [api.betust.net] [api.betust.net:443]",
+        "settings": {
+          "vnext": [
+            {
+              "address": "api.betust.net",
+              "port": 443,
+              "users": [
+                {
+                  "id": "01a21e01-6098-4c3b-a6fd-1a04d64d0c7f",
+                  "encryption": "none",
+                  "level": 8,
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "reality",
+          "realitySettings": {
+            "serverName": "api.betust.net",
+            "fingerprint": "firefox",
+            "publicKey": "YczbievYAOeZIypa58aRpil6XbfdyifK_0cFJWn8-yg",
+            "shortId": "d6c172d3",
+            "spiderX": "/"
+          }
+        },
+        "_is_unlimited": false
+      },
+      {
+        "protocol": "vless",
+        "tag": "🇷🇺 RU [app4.betust.net] [app4.betust.net:443]",
+        "settings": {
+          "vnext": [
+            {
+              "address": "app4.betust.net",
+              "port": 443,
+              "users": [
+                {
+                  "id": "01a21e01-6098-4c3b-a6fd-1a04d64d0c7f",
+                  "encryption": "none",
+                  "level": 8,
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "reality",
+          "realitySettings": {
+            "serverName": "app4.betust.net",
+            "fingerprint": "firefox",
+            "publicKey": "NCW-zK60GXsiDdlbxww18Pqp4kz3zTG1URHWS_bnfDk",
+            "shortId": "3f7e0363",
+            "spiderX": "/"
+          }
+        },
+        "_is_unlimited": false
+      },
+      {
+        "protocol": "vless",
+        "tag": "🇷🇺 RU [demo.betust.net] [demo.betust.net:443]",
+        "settings": {
+          "vnext": [
+            {
+              "address": "demo.betust.net",
+              "port": 443,
+              "users": [
+                {
+                  "id": "01a21e01-6098-4c3b-a6fd-1a04d64d0c7f",
+                  "encryption": "none",
+                  "level": 8,
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "reality",
+          "realitySettings": {
+            "serverName": "demo.betust.net",
+            "fingerprint": "firefox",
+            "publicKey": "-lLmJilTNFk_DYxnbvWJH_swC9a5JRheZrN1KPVMjCc",
+            "shortId": "219a891b",
+            "spiderX": "/"
+          }
+        },
+        "_is_unlimited": false
+      },
+      {
+        "protocol": "vless",
+        "tag": "🇷🇺 RU [prime.betust.net] [prime.betust.net:443]",
+        "settings": {
+          "vnext": [
+            {
+              "address": "prime.betust.net",
+              "port": 443,
+              "users": [
+                {
+                  "id": "01a21e01-6098-4c3b-a6fd-1a04d64d0c7f",
+                  "encryption": "none",
+                  "level": 8,
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "reality",
+          "realitySettings": {
+            "serverName": "prime.betust.net",
+            "fingerprint": "firefox",
+            "publicKey": "SxbaWzlvE_HQqqsA4PNX2PFcSYXTVE2nZlgLc7cPOgk",
+            "shortId": "8681edc9",
+            "spiderX": "/"
+          }
+        },
+        "_is_unlimited": false
+      },
+      {
+        "protocol": "vless",
+        "tag": "🇷🇺 RU [158.160.144.108] [158.160.144.108:7443]",
+        "settings": {
+          "vnext": [
+            {
+              "address": "158.160.144.108",
+              "port": 7443,
+              "users": [
+                {
+                  "id": "0c9f19ac-d2fb-4ddb-81e4-c96501ac964c",
+                  "encryption": "none",
+                  "level": 8,
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "reality",
+          "realitySettings": {
+            "serverName": "5post-gate.x5.ru",
+            "fingerprint": "firefox",
+            "publicKey": "JxwG7rAbNCd_C82p9K69AZDWh51fri2nm3wLHHrfyiw",
+            "shortId": "7755e972daf8eec8",
+            "spiderX": ""
+          }
+        },
+        "_is_unlimited": false
+      },
+      {
+        "protocol": "vless",
+        "tag": "🇷🇺 RU [176.108.243.140] [176.108.243.140:443]",
+        "settings": {
+          "vnext": [
+            {
+              "address": "176.108.243.140",
+              "port": 443,
+              "users": [
+                {
+                  "id": "0cd84588-2ad1-4c69-ab82-1d3f93d5faa8",
+                  "encryption": "none",
+                  "level": 8,
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "reality",
+          "realitySettings": {
+            "serverName": "ecalc.ru",
+            "fingerprint": "firefox",
+            "publicKey": "yCKV2xr725jI0sFhm4KbttKl8b9UZrnQTXxZLN2S4BM",
+            "shortId": "3e0f",
+            "spiderX": "/bt-gb/"
+          }
+        },
+        "_is_unlimited": false
+      },
+      {
+        "protocol": "vless",
+        "tag": "🇷🇺 @FreakConfighysteria2://cd74c0a406664a5bc0bac098220a2468@144.31.49.138:443?security=tls&obfs=salamander&obfs-password=44f1c1e2f8b99e792ceed574627a1eb0&insecure=0&sni=ru1.sferavpn.pro#🇷🇺@FreakConfigtrojan://humanity@130.250.137.171:443?path=/assignment&security=tls&insecure=0&host=www.ignitelimit.com&ech=ip.gs+udp://8.8.8.8&type=ws&allowInsecure=0&sni=www.ignitelimit.com#🇺🇸@FreakConfigtrojan://humanity@188.114.97.7:443?path=/assignment&security=tls&insecure=0&ech=ip.gs+udp://8.8.8.8&type=ws&allowInsecure=0&sni=www.ignitelimit.com#🇨🇦@FreakConfigvless://d5af4dfe-eaf1-460c-87aa-fefe930db0ba@darsadgir.ir:443?mode=auto&path=/ChOpIn&security=tls&encryption=none&extra={\"mode\":\"auto\",\"xPaddingBytes\":\"1-1\",\"xPaddingObfsMode\":true,\"xPaddingKey\":\"ctx\",\"xPaddingHeader\":\"x-grpc-context\",\"xPaddingMethod\":\"tokenish\",\"sessionIDPlacement\":\"header\",\"sessionIDKey\":\"Idempotency-Key\",\"seqPlacement\":\"header\",\"seqKey\":\"Upload-Offset\",\"sessionPlacement\":\"header\",\"sessionKey\":\"Idempotency-Key\"}&insecure=0&host=chopin.paxr.ir&type=xhttp&allowInsecure=0&sni=chopin.paxr.ir#🇫🇷@FreakConfig [89.35.14.31:443]",
+        "settings": {
+          "vnext": [
+            {
+              "address": "89.35.14.31",
+              "port": 443,
+              "users": [
+                {
+                  "id": "2f35965a-9a9b-45fd-ba32-987296dfb6be",
+                  "encryption": "none",
+                  "level": 8
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "grpc",
+          "security": "reality",
+          "grpcSettings": {
+            "serviceName": "hub.v1.SyncService",
+            "multiMode": false
+          },
+          "realitySettings": {
+            "serverName": "md2.univesalsrv.com",
+            "fingerprint": "firefox",
+            "publicKey": "JXFsWHYjhAcR-7yz9tuCTMdcfuiyC9a-C9ewA55Z63o",
+            "shortId": "d36a38659ce106cb",
+            "spiderX": ""
+          }
+        },
+        "_is_unlimited": false
+      },
+      {
+        "protocol": "vless",
+        "tag": "🇷🇺 @FreakConfigvless://e4514801-0d5a-42ba-869f-39bd605aef9e@16.60.243.242:22223?security=none&encryption=none&headerType=none&type=tcp#🇬🇧@FreakConfigvless://501a2da5-cb22-4a3f-915e-e3b821d1d62d@87.199.205.28:443?security=reality&encryption=none&pbk=W-9zyiOq287RtXVTZlTFbSDJ0Mx8joyBLJoA7ZE7eBw&headerType=none&fp=qq&type=tcp&flow=xtls-rprx-vision&sni=vkvd754.okcdn.ru&sid=ef1d3554c652a436#🇳🇱@FreakConfigvless://e4514801-0d5a-42ba-869f-39bd605aef9e@16.60.243.242:22222?security=none&encryption=none&headerType=none&type=tcp#🇬🇧@FreakConfigvless://14b48651-3738-4926-bc09-4c04e87ff80b@179.61.138.5:443?mode=stream-one&path=/Join-JavidnamanIran-on-Telegram&security=tls&alpn=h2&encryption=none&insecure=0&host=static.lotussec.com&type=xhttp&allowInsecure=0&sni=static.lotussec.com#🇩🇪@FreakConfigvless://e4514801-0d5a-42ba-869f-39bd605aef9e@16.60.243.242:22224?security=none&encryption=none&headerType=none&type=tcp#🇬🇧@FreakConfig [netsecureteam5.ir:4444]",
+        "settings": {
+          "vnext": [
+            {
+              "address": "netsecureteam5.ir",
+              "port": 4444,
+              "users": [
+                {
+                  "id": "d9ce62fc-851b-49db-b52a-d015357a2f3a",
+                  "encryption": "none",
+                  "level": 8
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "none",
+          "tcpSettings": {
+            "header": {
+              "type": "http",
+              "request": {
+                "path": [
+                  "/"
+                ],
+                "headers": {
+                  "Host": [
+                    "play-apps-features.googleusercontent.com"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "_is_unlimited": false
+      },
+      {
+        "protocol": "vless",
+        "tag": "🇷🇺 S3 | @ELiV2Rayvless://84a794a5-2420-4ca7-8e08-8d21571f36f3@152.53.66.34:8443?mode=gun&security=reality&encryption=none&pbk=Zvq-k6PMXjmd6YlWcu3T1J63m0IxZcOaedRwSG9O0lI&fp=firefox&type=grpc&sni=avstri.plus-hit.ru&sid=92558baf673ab721#🇦🇹 S1 | @ELiV2Rayvless://84a794a5-2420-4ca7-8e08-8d21571f36f3@152.53.64.139:8443?mode=gun&security=reality&encryption=none&pbk=Zvq-k6PMXjmd6YlWcu3T1J63m0IxZcOaedRwSG9O0lI&fp=firefox&type=grpc&sni=avstri.plus-hit.ru&sid=92558baf673ab721#🇦🇹 S2 | @ELiV2Rayvless://0fcbc45d-acdc-40cf-9a66-961c00f5b4a5@109.169.76.39:443?security=reality&encryption=none&pbk=SiSky02wHz-S0TDHKFTdYhnrlT8Y3CfRsekZlcdLXDY&headerType=none&fp=firefox&type=tcp&flow=xtls-rprx-vision&sni=slashdot.org&sid=fd55b698ee8c3629#🇬🇧@ELiV2Rayvless://419f25c1-bc35-412e-93fb-258efee859b5@gb2.murhost.network:443?security=reality&encryption=none&pbk=fyfX-egDrRvXNW1Gt2P_8rH4jdupAcmhFLOCZCzCowo&headerType=none&fp=firefox&type=tcp&flow=xtls-rprx-vision&sni=gb2.murhost.network&sid=fc36b4a584871aa5#🇺🇸@ELiV2Ray [152.53.65.60:8443]",
+        "settings": {
+          "vnext": [
+            {
+              "address": "152.53.65.60",
+              "port": 8443,
+              "users": [
+                {
+                  "id": "84a794a5-2420-4ca7-8e08-8d21571f36f3",
+                  "encryption": "none",
+                  "level": 8
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "grpc",
+          "security": "reality",
+          "grpcSettings": {
+            "serviceName": "",
+            "multiMode": false
+          },
+          "realitySettings": {
+            "serverName": "avstri.plus-hit.ru",
+            "fingerprint": "firefox",
+            "publicKey": "Zvq-k6PMXjmd6YlWcu3T1J63m0IxZcOaedRwSG9O0lI",
+            "shortId": "92558baf673ab721",
+            "spiderX": ""
+          }
+        },
+        "_is_unlimited": false
+      },
+      {
+        "protocol": "vless",
+        "tag": "🇷🇺 @FREELAND8 🇪🇺vless://44eae030-290b-4083-8102-6f8bab05701b@104.21.89.41:443?path=/&security=tls&encryption=none&fm={\"tcp\":[{\"type\":\"fragment\",\"settings\":{\"packets\":\"tlshello\",\"lengths\":[\"0\",\"104\",\"1\"],\"delays\":[\"0\"],\"maxSplit\":\"0\"}},{\"type\":\"fragment\",\"settings\":{\"packets\":\"1-1\",\"lengths\":[\"114\",\"1\"],\"delays\":[\"1\"],\"maxSplit\":\"11\"}}]}&insecure=0&host=cfvvv-ev1.pages.dev&type=ws&allowInsecure=0&sni=cfvvv-ev1.pages.dev#@FREELAND8 🇪🇺ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpMQjJKOE12VHQyU0JnRDZv@20.238.35.153:443#@FREELAND8 🇪🇺vless://d85711cf-c5f5-4166-8000-25958322b13f@darsadgir.ir:8443?mode=auto&path=/api/download.php&security=tls&alpn=h2,http/1.1,h3&encryption=none&extra={\"mode\":\"auto\",\"xPaddingBytes\":\"1-1\",\"xPaddingObfsMode\":true,\"xPaddingKey\":\"ctx\",\"xPaddingHeader\":\"x-grpc-context\",\"xPaddingMethod\":\"tokenish\",\"sessionIDPlacement\":\"header\",\"sessionIDKey\":\"Idempotency-Key\",\"seqPlacement\":\"header\",\"seqKey\":\"Upload-Offset\",\"sessionPlacement\":\"header\",\"sessionKey\":\"Idempotency-Key\"}&insecure=0&host=sausage.esmbegudota.ir&type=xhttp&allowInsecure=0&sni=sausage.esmbegudota.ir#@FREELAND8 🇪🇺vless://d85711cf-c5f5-4166-8000-25958322b13f@b2n.ir:8443?mode=auto&path=/api/download.php&security=tls&alpn=h2,http/1.1,h3&encryption=none&extra={\"mode\":\"auto\",\"xPaddingBytes\":\"1-1\",\"xPaddingObfsMode\":true,\"xPaddingKey\":\"ctx\",\"xPaddingHeader\":\"x-grpc-context\",\"xPaddingMethod\":\"tokenish\",\"sessionIDPlacement\":\"header\",\"sessionIDKey\":\"Idempotency-Key\",\"seqPlacement\":\"header\",\"seqKey\":\"Upload-Offset\",\"sessionPlacement\":\"header\",\"sessionKey\":\"Idempotency-Key\"}&insecure=0&host=sausage.esmbegudota.ir&type=xhttp&allowInsecure=0&sni=sausage.esmbegudota.ir#@FREELAND8 🇪🇺vless://2fa4235a-51a7-452b-a760-498951646043@land.zavqeron.ir:2053?path=/fi-cdn&security=tls&alpn=h3,h2,http/1.1&encryption=none&insecure=0&host=land.zavqeron.ir&fp=chrome&type=ws&allowInsecure=0&sni=zavqeron.ir#@FREELAND8 🇫🇮trojan://humanity@8.47.69.0:443?path=/assignment&security=tls&alpn=http/1.1&insecure=0&host=www.pleadcourt.org&fp=chrome&type=ws&allowInsecure=0&sni=www.pleadcourt.org#@FREELAND8 🇪🇺vless://2fa4235a-51a7-452b-a760-498951646043@any.zavqeron.ir:2053?path=/de1-cdn&security=tls&alpn=h3,h2,http/1.1&encryption=none&insecure=0&host=any.zavqeron.ir&fp=chrome&type=ws&allowInsecure=0&sni=zavqeron.ir#@FREELAND8 🇩🇪vless://2fa4235a-51a7-452b-a760-498951646043@fin11.zavqeron.ir:8452?security=reality&encryption=none&pbk=DZ21X_0wGHxZHBARCNMan297KcIblbSZPOWmQiL8Z1g&headerType=none&fp=qq&type=tcp&sni=play.google.com&sid=d74e8f92d523c857#@FREELAND8 🇬🇧vless://2fa4235a-51a7-452b-a760-498951646043@fin11.velqixa.ir:8451?security=reality&encryption=none&pbk=X4ti5_8FOtWv8YgF8Wz7OHZBeG4rPoMVuPUyA86gRkU&headerType=none&fp=qq&type=tcp&sni=play.google.com&sid=9b5ea77c26494863#@FREELAND8 🇺🇸socks://Og@144.91.121.61:1088#@FREELAND8 🇩🇪vmess://eyJhZGQiOiIxNjUuMTU0LjE5NS4zOCIsImFpZCI6IjAiLCJhbHBuIjoiIiwiZnAiOiIiLCJob3N0IjoiIiwiaWQiOiI5NTlhOGNhZi00Y2VhLTQzZDAtYTU0OC0zNjI4ZTdkZGZhZmMiLCJpbnNlY3VyZSI6IjAiLCJuZXQiOiJ0Y3AiLCJwYXRoIjoiIiwicGNzIjoiIiwicG9ydCI6IjM1MDM0IiwicHMiOiJARlJFRUxBTkQ4IPCfh7nwn4e8Iiwic2N5IjoiYXV0byIsInNuaSI6IiIsInRscyI6Im5vbmUiLCJ0eXBlIjoibm9uZSIsInYiOiIyIiwidmNuIjoiIn0=vless://2fa4235a-51a7-452b-a760-498951646043@land.zavqeron.ir:2053?path=/fr-cdn&security=tls&alpn=h3,h2,http/1.1&encryption=none&insecure=0&host=land.zavqeron.ir&fp=chrome&type=ws&allowInsecure=0&sni=zavqeron.ir#@FREELAND8 🇫🇷vless://60a361f9-3c45-4954-9e4c-92a85bda243d@new3.smart-cats.ru:2053?mode=gun&security=reality&encryption=none&pbk=mzrVbIsEggpJfXR8M7yxki2vgv3sXWQdy1bGhXqatUY&fp=chrome&spx=/&type=grpc&serviceName=grpc&sni=www.google.com&sid=4881f8244d1b9021#@FREELAND8 🇩🇪vless://60a2998c-cd85-562e-a3fd-396e4925dd3a@199.232.237.79:443?pcs=cd6e838b9bfe31cab8b3d5c858b0d6223fe84ece236c1fdb281be93c302e1e6e&path=/&security=tls&alpn=h3,h2,http/1.1&encryption=none&insecure=0&host=turboo-server.com&type=ws&allowInsecure=0&sni=turboo-server.com#@FREELAND8 🇩🇪vmess://eyJhZGQiOiIxMzQuMTk1LjE5Ni4yMTEiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImZwIjoiIiwiaG9zdCI6IiIsImlkIjoiZjhjOGRjM2QtMGQzNy00NmIwLThiMzQtYTcyMzI4ODJmY2ZlIiwiaW5zZWN1cmUiOiIwIiwibmV0IjoidGNwIiwicGF0aCI6IiIsInBjcyI6IiIsInBvcnQiOiIxODAwMCIsInBzIjoiQEZSRUVMQU5EOCDwn4eo8J+HpiIsInNjeSI6ImF1dG8iLCJzbmkiOiIiLCJ0bHMiOiJub25lIiwidHlwZSI6Im5vbmUiLCJ2IjoiMiIsInZjbiI6IiJ9ss://YWVzLTI1Ni1nY206UHJveHkyMDI0@23.252.104.131:54321#@FREELAND8 🇪🇺ss://YWVzLTI1Ni1nY206WTZSOXBBdHZ4eHptR0M@51.222.155.113:5601#@FREELAND8 🇨🇦vless://44eae030-290b-4083-8102-6f8bab05701b@188.114.97.6:443?path=/&security=tls&encryption=none&fm={\"tcp\": [{\"type\": \"fragment\", \"settings\": {\"packets\": \"tlshello\", \"lengths\": [\"0\", \"104\", \"1\"], \"delays\": [\"0\"], \"maxSplit\": \"0\"}},{\"type\": \"fragment\", \"settings\": {\"packets\": \"1-1\", \"lengths\": [\"114\", \"1\"], \"delays\": [\"1\"], \"maxSplit\": \"11\"}}]}&insecure=0&host=cfvvv-ev1.pages.dev&type=ws&allowInsecure=0&sni=cfvvv-ev1.pages.dev#@FREELAND8 🇺🇸vless://2a6c617d-98e4-49c3-95ab-76f02fcf0150@46.137.202.178:12512?security=reality&encryption=none&pbk=sO0RBMr_l8TLtZaYBX8n3NdI9AtaugUqJpCR1szNsyA&headerType=none&fp=firefox&type=tcp&flow=xtls-rprx-vision&sni=www.intel.com&sid=e692a8250d2e2fd0#@FREELAND8  🇸🇬ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpJWGEzeWx6U19qQk9Bc1F5MDcxdElR@5.75.192.44:1080#@FREELAND8 🇪🇺vless://2fa4235a-51a7-452b-a760-498951646043@nether11.velqixa.ir:8448?mode=auto&path=/nl-xhttp&security=reality&encryption=none&pbk=GKUHECPMuiffveVgQMvRHHg1GgOSNp5lVWPLjRZGN0c&fp=qq&type=xhttp&sni=play.google.com&sid=d6fdcd5c4aa0e050#@FREELAND8 🇳🇱 [104.16.10.185:443]",
+        "settings": {
+          "vnext": [
+            {
+              "address": "104.16.10.185",
+              "port": 443,
+              "users": [
+                {
+                  "id": "44eae030-290b-4083-8102-6f8bab05701b",
+                  "encryption": "none",
+                  "level": 8
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "ws",
+          "security": "tls",
+          "wsSettings": {
+            "path": "/",
+            "headers": {
+              "Host": "cfvvv-ev1.pages.dev"
+            }
+          },
+          "tlsSettings": {
+            "serverName": "cfvvv-ev1.pages.dev",
+            "allowInsecure": false,
+            "fingerprint": "chrome"
+          }
+        },
+        "_is_unlimited": false
+      },
+      {
+        "protocol": "vless",
+        "tag": "🇷🇺 Free x200 @Outline_Vpnvless://bf443e4a-aa9e-4509-abf0-d0f6828d57be@178.95.170.98:2087?path=/4bc027a44532&security=none&encryption=none&type=ws#Free x201 @Outline_Vpnvless://c21631d5-36c9-4664-b575-97eca17456be@2.27.205.59:443?path=/&security=none&encryption=none&host=neth8.lunariai.ru&type=ws#Free x202 @Outline_Vpnvless://7247b284-c40d-47c7-af4e-c4738f827a3d@89.116.250.135:8880?path=/?ed=2082&security=none&encryption=mlkem768x25519plus.random.0rtt.iZJwXenO31gj30xJyjEnDZ_qxA-iUdzbT1zdrr8Mbmo&host=Petcup.cdn.caroptionzz.ir.cdn.tr1.k8k8110.com&type=httpupgrade#Free x203 @Outline_Vpnvless://7247b284-c40d-47c7-af4e-c4738f827a3d@5.75.201.137:56539?security=none&encryption=mlkem768x25519plus.random.0rtt.swY_aKEuuHUHKO0BHVV2uot-UFbtrXpLWr7g8uZk0xk&headerType=http&type=tcp#Free x204 @Outline_Vpnvless://87a4b6b9-d269-4959-bb80-1234b46c8d06@199.232.78.159:80?path=/&security=none&encryption=none&host=7wwwspeedtestnet.global.ssl.fastly.net&type=ws#Free x205 @Outline_Vpnvless://14f4be39-cb89-4f2b-8200-704666b6fa4e@95.85.241.209:443?security=reality&encryption=none&pbk=vZ22ThhkpXUd5-tY-v5TTrouLHjgYYmeQgqeLt7HRz0&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=google.com#Free x206 @Outline_Vpnvless://dabb9a19-03ab-4cdf-8963-d3c45eb0f80d@83.168.111.58:443?security=reality&encryption=none&pbk=4h74KXbkBMYOhJkZabJNsf85cI91ytap_gkl56mzjTU&headerType=none&type=tcp&flow=xtls-rprx-vision&sni=soulful.host#Free x207 @Outline_Vpnvless://7247b284-c40d-47c7-af4e-c4738f827a3d@151.101.56.7:443?mode=auto&path=/&security=tls&encryption=mlkem768x25519plus.random.0rtt.GdOIY4aWLxkAK8IFF4mpehETCloYQkfBBkEFKuetTKyo41qDNiygh7CUFNc50doXUJu4hIyK-oWG-MgjMrQZRzkJBKqmGdK_QxiDSERyYYak8_usliZfy1Bs7nYYcaUgBPB2HoE_FXxjKmOdPHMSESh4XLcj49S5-3yCDIwn7wJQTxNixPPEsIGRlRVlayyeO2ebRXwCynSXmCCCAA2QN1cTN-tb7SKlVuexDDI_bHsgmjJkyOXCRrV6uQqtkgAFdPYn88IVnOU7xXqmu7V7U1ckw9uu9Zc3p7tgIYiRr6JF4napPskDVLlNIPrL-yMzmJjDlzgphHJTJaACGhF_fEKgzky5ipgavFsik3ynPjfMFjtwmIkPYlqN6qRPZmulaKkVjrOUFMK6hzQAI2l06NUec2Q8YixRUBopc-Vc5SCkakPCzCQg9ygkSfyV2IwQI6Gc-iZLw1sk7mRZyRhHVbFu0nyZgFiM8ZWujoR1SgYVQQJX_2VCtJjGG3C77YBx8KAcr-KAN9q-fEMiHSrOfJsG6mDN-bHOwOhpESA3-jhshQQW-GKGnecMQGibh0iE-qC3z9ugpdE3KeFpzYHH4lJ2zYelDntS53Wd9JI44RtptnOlHruC8YZ9bxKfSQqBwyoF9ve1EKJsuzaCydOVhKpm88lEyXdf4uC9hpRswwxCBCc87xqVAgdcB5SqSmSfUAwcbRCmeyq8oNYF8WaV9NEqisgbijlYrBOekpxIxdADf7E-m5ZMbRu8GMBWnkiWGQdOtpMlHpUnv8c8x3qlMDkspvY5TleN9bmHphOssxYDJgYfJ1EW5RLAWmYVXokPl1WuSahRxgyENyMFewPMl3m5slBZnXaY4Sa05QZbf5mMZxiSxPtYSmEJxOJE7tFCkoF_tXFMXkc3tTuzF1Ohs9QA6qjN5Rms_3dPd3V_OiEkhqIQoFW0PgZWy-VuxHt_jVI9q5muXjIxU8lJAzgBnhZlIjILqnNSRnETY3dY2Fol1cwtLht-r5CzFqw9FWcYJBvPA1ib_7pxYNRq9-yMM8XB0eeStxdvB-GMqOxGXQuvrKWamdcmCwSbo4dYxXiBAzqV6uwTIoSp44w2kpSMkQdiVoI6AoVLsHNf2Da-n6OiePG7fkJi8IVUR6S-r7lRtuVn-wpBNSJVPHtv1iSAWsNEeEwPRLcT71yv3gsBF9MQWbx_zDtP0FNajlQEPJGt-SsZqstxoJjOgXKxitUmHyDDegK7x_sB0Lw_AgUaD8Y102Cr4nulwIuPO4mxa2gI_ze-IxJ8JegG3vd__YK11merHfaBo-tfNvpmu2Mr6WArIaWxp2lJHwq74RyWJJOs1-o9IVWhdLYUgIclUZGC9gwxjDtzUiw7hfAK-BW0F0k7qlAYIDlRa5A9WVDNQfl7LqNGiSGrMGE-i7q7EuW5Vtc7YGy2MUoTbpiqc5McuWulFBsM_RIKyyZ1zSe10mC1xhAbc6I095IePfwhHdawsgS34ceCqzHOb9y066JYqFu6VbpccSAQlTkLcvMWxFud2ouHbw35PpciJEIdisdS8foRDTeBGUGRbhOnhcqZ0J4&insecure=0&host=eitaa.global.ssl.fastly.net&fp=firefox&type=xhttp&allowInsecure=0&sni=default.ssl.fastly.net#Free x208 @Outline_Vpn [5.75.196.199:56539]",
+        "settings": {
+          "vnext": [
+            {
+              "address": "5.75.196.199",
+              "port": 56539,
+              "users": [
+                {
+                  "id": "7247b284-c40d-47c7-af4e-c4738f827a3d",
+                  "encryption": "none",
+                  "level": 8
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "none",
+          "tcpSettings": {
+            "header": {
+              "type": "http",
+              "request": {
+                "path": [
+                  "/"
+                ],
+                "headers": {
+                  "Host": [
+                    "www.unscramblerer.com"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "_is_unlimited": false
+      },
+      {
+        "protocol": "vless",
+        "tag": "🇷🇺 Free x210 @Outline_Vpnvless://54ee5e59-55a3-4599-83ff-0c67b3f411b2@131.123.34.42:443?security=reality&encryption=none&pbk=pX9uknHGLC9I26TT5kq4bIAljtX2AGWLK23EMgn6xFo&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=sheetpeek.com&sid=84be686ea1d16478#Free x211 @Outline_Vpnvless://cb077bf2-70b7-457b-af42-27cdc3e0e544@178.105.61.61:2083?security=reality&encryption=none&pbk=H0nCazQFHVhSObfqSUhGLhK7KRwKzTMggIBPjnMMqhk&headerType=none&fp=chrome&spx=/&type=tcp&flow=xtls-rprx-vision&sid=af04ff8094115e93#Free x212 @Outline_Vpnvless://c21631d5-36c9-4664-b575-97eca17456be@2.27.205.59:443?path=/&security=none&encryption=none&type=ws#Free x213 @Outline_Vpntrojan://02cd3bac-2a78-4dbb-82b9-6b64084ddd8e@107.150.105.84:59385?security=tls&insecure=1&headerType=none&fp=chrome&type=tcp&allowInsecure=1#Free x214 @Outline_Vpntrojan://humanity@188.42.145.180:443?path=/assignment&security=tls&alpn=http/1.1&insecure=0&host=www.volumeroot.com&fp=chrome&type=ws&allowInsecure=0&sni=www.volumeroot.com#Free x215 @Outline_Vpnvless://4fb82973-a7f1-4fc2-9958-cb21f5162f06@nl-xh02.tcp-reset-club.net:8443?mode=stream-one&path=/assets/v2/pkg&security=reality&encryption=none&extra={\"xmux\":{\"maxConcurrency\":\"16-32\"}}&pbk=Gu_QdtOX6E8pZcYvDWgHKA5dxcit7hrpU27sizCEWXg&type=xhttp&sni=s3.netavex.com&sid=e0#Free x216 @Outline_Vpnvless://00f8cbcc-bf10-418b-a842-35519f460c7f@www.hxino.com:443?path=/38284/api4&security=tls&encryption=mlkem768x25519plus.random.0rtt.bt6vamtdf4jPeuNn2b5eHC7VwnJ4KklEReD_AIAkfT0&insecure=0&host=deh.irandoc.info&fp=firefox&type=httpupgrade&allowInsecure=0#Free x217 @Outline_Vpnvless://716426fa-bcb7-4eb9-b460-36399ebf740d@184.107.106.68:443?security=tls&encryption=none&insecure=1&headerType=none&type=tcp&allowInsecure=1&sni=lizca2.footballfantasyforum.com#Free x218 @Outline_Vpnvless://5e3f974b-06fc-4555-907a-6681391b7c17@private.netraidly.ru:40443?security=reality&encryption=none&pbk=oc9uweln_cqyaJnlRMnhhhKrGNP7RrYOsuYtaIOIQDE&headerType=none&type=tcp&flow=xtls-rprx-vision&sni=deepl.com&sid=2bc0#Free x219 @Outline_Vpn [spser1.mechanicir.ir:53719]",
+        "settings": {
+          "vnext": [
+            {
+              "address": "spser1.mechanicir.ir",
+              "port": 53719,
+              "users": [
+                {
+                  "id": "251e9d36-3eec-474f-9eb8-fe508e28ced6",
+                  "encryption": "none",
+                  "level": 8
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "reality",
+          "realitySettings": {
+            "serverName": "play-fe.googleapis.com",
+            "fingerprint": "chrome",
+            "publicKey": "9XG-o5CJH3_h4x6FDeGs-JsE1LzyJSyw5d-xi6LvVTc",
+            "shortId": "5d1caa44e652126d",
+            "spiderX": ""
+          }
+        },
+        "_is_unlimited": false
+      },
+      {
+        "protocol": "vless",
+        "tag": "🇷🇺 Free x220 @Outline_Vpnvless://a18f7c2d-9e45-4b8a-af3c-1d5e7f9c8b2a@83.168.71.216:443?security=reality&encryption=none&pbk=8h8t5eBWL9oERK7xWHQLFJE5j6sZdgNDQAs3EGnNbho&headerType=none&fp=chrome&type=tcp&sni=ads.x5.ru&sid=2f49bccf11150ef2#Free x221 @Outline_Vpnvless://ff1dcb64-f13d-4ccd-a3c6-055218f7490b@az-hti-de.ramzshadi.ir:8088?path=/bmi.ir&security=none&encryption=mlkem768x25519plus.native.0rtt.AX1_Iy42S3tDy5Byp6LQba6NUB3ePNTLrdSyxC7MvVQ&host=play-apps-features.googleusercontent.com&type=ws#Free x222 @Outline_Vpnvless://ff1dcb64-f13d-4ccd-a3c6-055218f7490b@fr-jan.ramcalshoping.ir:8088?path=/bmi.ir&security=none&encryption=mlkem768x25519plus.native.0rtt.AX1_Iy42S3tDy5Byp6LQba6NUB3ePNTLrdSyxC7MvVQ&host=play-apps-features.googleusercontent.com&type=ws#Free x221 @Outline_Vpnvless://9e6b8db1-da80-494f-bad7-7a0451f801a1@5.152.223.193:443?security=reality&encryption=none&pbk=SiSky02wHz-S0TDHKFTdYhnrlT8Y3CfRsekZlcdLXDY&host=/?BIA--TELEGRAM--MARAMBASHI--MARAMBASHI&headerType=none&fp=firefox&type=tcp&flow=xtls-rprx-vision&sni=strapi.io&sid=fd55b698ee8c3629#Free x223 @Outline_Vpnvless://05020afd-d476-406b-8950-ee7dd63a6e64@151.242.168.180:443?security=reality&encryption=none&pbk=urD2miGxEfHylELSqqggBKCYIMSNXNTbdPijru7-eAQ&headerType=none&type=tcp&flow=xtls-rprx-vision&sni=kibi-institut.de&sid=46babe29a750b634#Free x224 @Outline_Vpnvless://a18f7c2d-9e45-4b8a-af3c-1d5e7f9c8b2a@83.168.71.216:443?security=reality&encryption=none&pbk=8h8t5eBWL9oERK7xWHQLFJE5j6sZdgNDQAs3EGnNbho&host=/?BIA--TELEGRAM--MARAMBASHI--MARAMBASHI&headerType=none&fp=chrome&type=tcp&sni=ads.x5.ru&sid=2f49bccf11150ef2#Free x225 @Outline_Vpntrojan://BbNnpOgc1j9WOaWoslbSyeob1r47IRHV@jgzt1997.qivfelo.ir:1080?security=reality&pbk=1ZO9Cjhs1IFAU6nZATRhOuD3kq6J-1dZadfEfX734zc&headerType=none&fp=chrome&type=tcp&sni=maps.google.com&sid=0d12eb289946de9b#Free x226 @Outline_Vpnvless://00ea847b-add2-47e4-9c48-cbca742e55c9@freeforall.nexavps.ir:32443?mode=auto&path=/phx&security=none&encryption=none&type=xhttp#Free x227 @Outline_Vpnvless://9015f0bc-2053-4ca1-9b9b-a018b97b32d2@144.31.125.60:443?security=reality&encryption=none&pbk=SVgtyuD9khylgHuB0treGekxVSHPOS-wPZTNHUf6zj8&headerType=none&fp=chrome&spx=/ozks0ksxmyHue4v&type=tcp&flow=xtls-rprx-vision&sni=www.intel.com&sid=85c86a9863#Free x228 @Outline_Vpnvless://ff1dcb64-f13d-4ccd-a3c6-055218f7490b@trkqountl.ramcalshoping.ir:8088?path=/bmi.ir&security=none&encryption=mlkem768x25519plus.native.0rtt.AX1_Iy42S3tDy5Byp6LQba6NUB3ePNTLrdSyxC7MvVQ&host=play-apps-features.googleusercontent.com&type=ws#Free x229 @Outline_Vpn [pol-hhasca.ramcalshoping.ir:8088]",
+        "settings": {
+          "vnext": [
+            {
+              "address": "pol-hhasca.ramcalshoping.ir",
+              "port": 8088,
+              "users": [
+                {
+                  "id": "ff1dcb64-f13d-4ccd-a3c6-055218f7490b",
+                  "encryption": "none",
+                  "level": 8
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "ws",
+          "security": "none",
+          "wsSettings": {
+            "path": "/bmi.ir",
+            "headers": {
+              "Host": "play-apps-features.googleusercontent.com"
+            }
+          }
+        },
+        "_is_unlimited": false
+      },
+      {
+        "protocol": "vless",
+        "tag": "🇷🇺 Free x250 @Outline_Vpnvless://f85ba8bb-a3da-4389-a67a-2b0afde7bbc1@uk-tube-01.stre4m.net:443?security=reality&encryption=none&pbk=SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc&headerType=none&type=tcp&flow=xtls-rprx-vision&sni=jobinvest.ru#Free x251 @Outline_Vpnvless://bf443e4a-aa9e-4509-abf0-d0f6828d57be@178.95.170.98:2087?path=/4bc027a44532&security=none&encryption=none&type=ws#Free x252 @Outline_Vpnvless://6b03ffdd-6646-410b-b575-6c05eafdaf60@165.231.99.52:8443?security=tls&encryption=none&insecure=0&headerType=none&fp=firefox&type=tcp&allowInsecure=0&flow=xtls-rprx-vision&sni=vusr-6aa2cf2b.adhil.uk#Free x253 @Outline_Vpnvless://bf443e4a-aa9e-4509-abf0-d0f6828d57be@178.95.170.115:2087?path=/4bc027a44532&security=none&encryption=none&type=ws#Free x254 @Outline_Vpnvless://a18f7c2d-9e45-4b8a-af3c-1d5e7f9c8b2a@83.168.71.216:443?security=reality&encryption=none&pbk=8h8t5eBWL9oERK7xWHQLFJE5j6sZdgNDQAs3EGnNbho&host=/?TELEGRAM--MARAMBASHI--MARAMBASHI&headerType=none&fp=chrome&type=tcp&sni=ads.x5.ru&sid=2f49bccf11150ef2#Free x255 @Outline_Vpnvless://028f3908-8885-4f06-ba95-777a435074bd@lv-irancell.xelfona.ir:20018?security=none&encryption=none&host=play-apps-features.googleusercontent.com&headerType=http&type=tcp#Free x256 @Outline_Vpnvless://47e3cf7b-c95c-4997-9003-4c7347c5737a@193.148.253.210:8081?path=/&security=tls&alpn=h2,http/1.1&encryption=none&insecure=0&host=193.148.253.210&fp=chrome&type=httpupgrade&allowInsecure=0&sni=193.148.253.210#Free x257 @Outline_Vpnvless://d9d0f208-d582-41d5-bb7b-742671402810@144.31.215.48:443?security=reality&encryption=none&pbk=w0J3H-DEyHEK-Nj7bst_5sQqzcPl700ybHpqq5mFz0U&headerType=none&type=tcp&flow=xtls-rprx-vision&sni=eu-central-de2.hanvpn.biz&sid=12a3b7681806bc97#Free x258 @Outline_Vpn [84.252.100.49:443]",
+        "settings": {
+          "vnext": [
+            {
+              "address": "84.252.100.49",
+              "port": 443,
+              "users": [
+                {
+                  "id": "3db8407b-1f96-4b82-bfeb-55258c1e57b4",
+                  "encryption": "none",
+                  "level": 8,
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "reality",
+          "realitySettings": {
+            "serverName": "flarora.ferreo.sbs",
+            "fingerprint": "chrome",
+            "publicKey": "HKKWGVu7xJfscDTH_28WhqSfSnp8fA5jpj7X1eMO-mU",
+            "shortId": "1067b23f928e7618",
+            "spiderX": ""
+          }
+        },
+        "_is_unlimited": false
+      },
+      {
+        "protocol": "vless",
+        "tag": "🇷🇺 Free x320 @Outline_Vpnvless://de5906f3-df38-4463-aa9d-2b01320cc6ea@31.76.76.28:443?path=/&security=none&encryption=none&type=ws#Free x321 @Outline_Vpnss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTp3MFlmZjY3anhkM3pYWTln@20.87.3.84:443#Free x322 @Outline_Vpnvless://60a361f9-3c45-4954-9e4c-92a85bda243d@31.184.244.219:2053?mode=gun&security=reality&encryption=none&pbk=mzrVbIsEggpJfXR8M7yxki2vgv3sXWQdy1bGhXqatUY&fp=firefox&type=grpc&serviceName=grpc&sni=www.google.com&sid=4881f8244d1b9021#Free x323 @Outline_Vpnvless://60a361f9-3c45-4954-9e4c-92a85bda243d@31.184.244.219:2053?mode=gun&security=reality&encryption=none&pbk=mzrVbIsEggpJfXR8M7yxki2vgv3sXWQdy1bGhXqatUY&fp=firefox&type=grpc&serviceName=grpc&sni=www.google.com&sid=4881f8244d1b9021#Free x324 @Outline_Vpnvless://d512bf3d-3d5f-433e-b51f-dfb321720a6d@de9.bexait.ir:2434?security=reality&encryption=none&pbk=yzCvRpbQ-cRePaJAuQkw42_xEf-R860gFsQwoPki2E0&headerType=none&fp=chrome&type=tcp&sni=icloud.com&sid=9de041877612a718#Free x325 @Outline_Vpnvless://79b3dab9-3e6b-415f-9d1c-1b1c6855e354@104.143.223.229:2085?mode=gun&security=none&encryption=none&type=grpc&serviceName=vless#Free x326 @Outline_Vpnvless://28cec4eb-2c82-4089-a69b-d61db4fb8006@104.21.51.132:8080?path=/play&security=none&encryption=mlkem768x25519plus.native.0rtt.WAc6bqm9bM6YteuKtv84PJogmTI2R5RsWLvIB_WGeXw&host=th3ee3322.th3store.ir&type=httpupgrade#Free x327 @Outline_Vpnvless://c2e317b0-0847-4579-9b78-7b678634ffc4@freesocks.work:2052?path=/@BlueKnight_net--@BlueKnight_net&security=none&encryption=none&host=uwu.blueknightnet.qzz.io&type=ws#Free x328 @Outline_Vpnvless://60a361f9-3c45-4954-9e4c-92a85bda243d@new3.smart-cats.ru:2053?mode=gun&security=reality&encryption=none&pbk=mzrVbIsEggpJfXR8M7yxki2vgv3sXWQdy1bGhXqatUY&fp=chrome&spx=/&type=grpc&serviceName=grpc&sni=www.google.com&sid=4881f8244d1b9021#Free x329 @Outline_Vpn [104.21.51.132:8080]",
+        "settings": {
+          "vnext": [
+            {
+              "address": "104.21.51.132",
+              "port": 8080,
+              "users": [
+                {
+                  "id": "28cec4eb-2c82-4089-a69b-d61db4fb8006",
+                  "encryption": "none",
+                  "level": 8
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "httpupgrade",
+          "security": "none",
+          "httpupgradeSettings": {
+            "path": "/play",
+            "host": "th3ee3322.th3store.ir"
+          }
+        },
+        "_is_unlimited": false
+      },
+      {
+        "protocol": "vless",
+        "tag": "🇷🇺 Free x330 @Outline_Vpnvless://e5cc16a6-ea42-46b2-82ae-ad2157e1641b@172.64.150.28:2082?path=/fp&security=none&encryption=none&host=hhlfy.twiladaphne.ndjp.net&type=ws#Free x331 @Outline_Vpnvless://59906cb2-a61b-4cf3-b77b-5762ef61d2b0@167.71.45.85:440?security=none&encryption=none&host=store.steampowered.com&headerType=http&type=tcp#Free x332 @Outline_Vpnvless://d342d11e-d424-4583-b36e-524ab1f0afa4@185.217.108.229:23351?path=/help&security=tls&encryption=none&insecure=1&host=cdn8848.776676.xyz&fp=chrome&type=ws&allowInsecure=1&sni=cdn8848.776676.xyz#Free x333 @Outline_Vpnvless://12148993-e326-4061-809d-d2a24a42bcb8@66.33.22.232:34118?mode=auto&path=/&security=reality&encryption=mlkem768x25519plus.native.0rtt.iNp8zQhTV--hc6rOKCn_2wNzEj_gJkzErYU3uhXnhx8&extra={\"mode\":\"auto\",\"xPaddingBytes\":\"100-1000\"}&pbk=hbNyksag-i4fRqV86HG14fhASaXpl4sYv-1zgrrnUSQ&fp=chrome&spx=/2350048babf955d&type=xhttp&sni=cam.ac.uk&sid=b5126487#Free x334 @Outline_Vpnvless://aa6f8aaf-d7ff-46f8-a9a0-d143d7e71f71@37.46.199.240:8443?mode=auto&path=/assets/v2/pkg&security=reality&encryption=none&extra={\n  \"xmux\" : {\n    \"maxConcurrency\" : \"16-32\"\n  }\n}&pbk=Gu_QdtOX6E8pZcYvDWgHKA5dxcit7hrpU27sizCEWXg&fp=firefox&type=xhttp&sni=s3.netavex.com&sid=e0#Free x335 @Outline_Vpnvless://e4514801-0d5a-42ba-869f-39bd605aef9e@15.237.34.168:22222?security=none&encryption=none&headerType=none&type=tcp#Free x336 @Outline_Vpnvless://bd5bbbac-adc3-4b23-d3ac-8506694c0ef9@a2.arshia-nova.ir:443?path=/&security=tls&alpn=h2&encryption=none&insecure=0&host=c12.com&fp=firefox&type=ws&allowInsecure=0&sni=ssl.fastly.com#Free x337 @Outline_Vpnvless://cfffb81e-5034-49ce-8729-18b60c7f1e89@150.241.79.210:443?security=reality&encryption=none&pbk=3J5mYA5NziIVJi77fRsx9dZPYWzLkvaIz-cCdZQvhn8&headerType=none&type=tcp&flow=xtls-rprx-vision&sni=rutube.ru&sid=1a2b#Free x338 @Outline_Vpnvless://cd3bb7d9-7df3-4644-ac05-c260990ac277@pl3.moritech.net:443?security=tls&alpn=h2&encryption=none&insecure=0&headerType=none&fp=firefox&type=tcp&allowInsecure=0&flow=xtls-rprx-vision&sni=pl3.moritech.net#Free x339 @Outline_Vpn [web.turbooserver.net.tr:8443]",
+        "settings": {
+          "vnext": [
+            {
+              "address": "web.turbooserver.net.tr",
+              "port": 8443,
+              "users": [
+                {
+                  "id": "60a2998c-cd85-562e-a3fd-396e4925dd3a",
+                  "encryption": "none",
+                  "level": 8
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "none",
+          "tcpSettings": {
+            "header": {
+              "type": "http",
+              "request": {
+                "path": [
+                  "/"
+                ],
+                "headers": {
+                  "Host": [
+                    "dynu.com"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "_is_unlimited": false
+      },
+      {
+        "protocol": "vless",
+        "tag": "🇷🇺 Free x340 @Outline_Vpnvless://cd3bb7d9-7df3-4644-ac05-c260990ac277@pl6.moritech.net:443?security=tls&alpn=h2&encryption=none&insecure=0&headerType=none&fp=chrome&type=tcp&allowInsecure=0&flow=xtls-rprx-vision&sni=pl6.moritech.net#Free x341 @Outline_Vpnvless://turboo-server@web.turbooserver.net.tr:8443?security=none&encryption=none&host=dynu.com&headerType=http&type=tcp#Free x342 @Outline_Vpnvless://bae8d9ba-9f5d-4802-bb5e-bc0956a472d6@185.126.67.44:1932?security=reality&encryption=none&pbk=SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc&headerType=none&type=tcp&flow=xtls-rprx-vision&sni=www.vk.com#Free x343 @Outline_Vpnss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpnVDM2dHNpUGZuZDBucDVraEpxanlR@p2tun1.greewebservices.ir:1010#Free x344 @Outline_Vpnvless://5e3f974b-06fc-4555-907a-6681391b7c17@186.246.19.79:40443?security=reality&encryption=none&pbk=oc9uweln_cqyaJnlRMnhhhKrGNP7RrYOsuYtaIOIQDE&headerType=none&type=tcp&flow=xtls-rprx-vision&sni=deepl.com&sid=2bc0#Free x344 @Outline_Vpnvless://44eae030-290b-4083-8102-6f8bab05701b@104.24.0.184:443?path=/&security=tls&encryption=none&insecure=0&host=cfvvv-ev1.pages.dev&type=ws&allowInsecure=0&sni=cfvvv-ev1.pages.dev#Free x345 @Outline_Vpnvless://9f61cdf4-810d-4052-bbc7-2da0c8e20104@83.147.18.3:443?security=reality&encryption=none&pbk=3iVJAIGPx6JMlhlRmfpGrHkSmLpHJ4CPvBBH7KsFrFA&headerType=none&type=tcp&flow=xtls-rprx-vision&sni=www.cloudflare.com&sid=fd8cf7e1173f0edb#Free x346 @Outline_Vpnvless://c21631d5-36c9-4664-b575-97eca17456be@2.27.205.59:443?path=/&security=none&encryption=none&host=neth8.lunariai.ru&type=ws#Free x347 @Outline_Vpnvless://e99ba96d-dec8-42eb-be53-19e71eef7cab@5.253.42.164:40443?security=reality&encryption=none&pbk=g77ZJbm18JEotapmVRjaXi133MzkbhkU2lxhVeXx8zw&headerType=none&type=tcp&flow=xtls-rprx-vision&sni=deepl.com&sid=68a8#Free x348 @Outline_Vpn [192.248.182.183:39244]",
+        "settings": {
+          "vnext": [
+            {
+              "address": "192.248.182.183",
+              "port": 39244,
+              "users": [
+                {
+                  "id": "5fc7563b-552d-417f-9409-08ef92284599",
+                  "encryption": "none",
+                  "level": 8
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "none"
+        },
+        "_is_unlimited": false
+      },
+      {
+        "protocol": "vless",
+        "tag": "🇷🇺 Russia [*CIDR] VK [185.130.114.159:443]",
+        "settings": {
+          "vnext": [
+            {
+              "address": "185.130.114.159",
+              "port": 443,
+              "users": [
+                {
+                  "id": "e2cb4685-fbf8-4dc3-9afc-653cbdeae1d9",
+                  "encryption": "none",
+                  "level": 8,
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "reality",
+          "realitySettings": {
+            "serverName": "convert24.ru",
+            "fingerprint": "chrome",
+            "publicKey": "HFlu11M_xqBayi6pD2ZyC30VobHLofr4JpndMGC6OjI",
+            "shortId": "0d3c8408d1c8fecb",
+            "spiderX": ""
+          }
+        },
+        "_is_unlimited": false
+      },
+      {
+        "protocol": "vless",
+        "tag": "🇷🇺 Russia [*CIDR] VK [217.16.26.183:443]",
+        "settings": {
+          "vnext": [
+            {
+              "address": "217.16.26.183",
+              "port": 443,
+              "users": [
+                {
+                  "id": "e2cb4685-fbf8-4dc3-9afc-653cbdeae1d9",
+                  "encryption": "none",
+                  "level": 8
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "xhttp",
+          "security": "tls",
+          "xhttpSettings": {
+            "path": "/ru",
+            "host": "fr.convert24.ru",
+            "mode": "packet-up"
+          },
+          "tlsSettings": {
+            "serverName": "fr.convert24.ru",
+            "allowInsecure": false,
+            "fingerprint": "chrome",
+            "alpn": [
+              "h2",
+              "http/1.1"
+            ]
+          }
+        },
+        "_is_unlimited": false
+      },
+      {
+        "protocol": "vless",
+        "tag": "🇷🇺 Russia, Moscow | [BL] [45.152.113.214:4446]",
+        "settings": {
+          "vnext": [
+            {
+              "address": "45.152.113.214",
+              "port": 4446,
+              "users": [
+                {
+                  "id": "e559b201-72bb-4eb4-9d0e-7e2b029dfe63",
+                  "encryption": "none",
+                  "level": 8,
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "reality",
+          "realitySettings": {
+            "serverName": "files.moscownews24.ru",
+            "fingerprint": "chrome",
+            "publicKey": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
+            "shortId": "",
+            "spiderX": ""
+          }
+        },
+        "_is_unlimited": false
+      },
+      {
+        "protocol": "vless",
+        "tag": "🇷🇺 Russia | 🌐 | [IPv6] [*CIDR] [5.42.104.219:4389]",
+        "settings": {
+          "vnext": [
+            {
+              "address": "5.42.104.219",
+              "port": 4389,
+              "users": [
+                {
+                  "id": "e559b201-72bb-4eb4-9d0e-7e2b029dfe63",
+                  "encryption": "none",
+                  "level": 8,
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "reality",
+          "realitySettings": {
+            "serverName": "files.moscownews24.ru",
+            "fingerprint": "chrome",
+            "publicKey": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
+            "shortId": "",
+            "spiderX": ""
+          }
+        },
+        "_is_unlimited": false
+      },
+      {
+        "protocol": "vless",
+        "tag": "🇷🇺 Russia, Moscow | 🌐 | [IPv6] | [BL] [72.56.11.54:4478]",
+        "settings": {
+          "vnext": [
+            {
+              "address": "72.56.11.54",
+              "port": 4478,
+              "users": [
+                {
+                  "id": "e559b201-72bb-4eb4-9d0e-7e2b029dfe63",
+                  "encryption": "none",
+                  "level": 8,
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "reality",
+          "realitySettings": {
+            "serverName": "files.moscownews24.ru",
+            "fingerprint": "chrome",
+            "publicKey": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
+            "shortId": "",
+            "spiderX": ""
+          }
+        },
+        "_is_unlimited": false
+      },
+      {
+        "protocol": "vless",
+        "tag": "🇷🇺 Russia | 🌐 | [IPv6] | [BL] [72.56.247.218:4448]",
+        "settings": {
+          "vnext": [
+            {
+              "address": "72.56.247.218",
+              "port": 4448,
+              "users": [
+                {
+                  "id": "e559b201-72bb-4eb4-9d0e-7e2b029dfe63",
+                  "encryption": "none",
+                  "level": 8,
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "reality",
+          "realitySettings": {
+            "serverName": "files.moscownews24.ru",
+            "fingerprint": "chrome",
+            "publicKey": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
+            "shortId": "",
+            "spiderX": ""
+          }
+        },
+        "_is_unlimited": false
+      },
+      {
+        "protocol": "vless",
+        "tag": "🇷🇺 Russia [SNI-RU] ads.x5.ru [195.2.84.109:443]",
+        "settings": {
+          "vnext": [
+            {
+              "address": "195.2.84.109",
+              "port": 443,
+              "users": [
+                {
+                  "id": "ec486464-46c8-4f80-acc1-a3ccdcf01744",
+                  "encryption": "none",
+                  "level": 8,
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "reality",
+          "realitySettings": {
+            "serverName": "ads.x5.ru",
+            "fingerprint": "chrome",
+            "publicKey": "6OvNu3z9uVh1Br6hIOQOz4Qai7xuykdjcvtqiLqNRUs",
+            "shortId": "3edd4952",
+            "spiderX": ""
+          }
+        },
+        "_is_unlimited": false
+      },
+      {
+        "protocol": "vless",
+        "tag": "🇷🇺 Russia, Moscow | [BL] [45.152.113.189:4440]",
+        "settings": {
+          "vnext": [
+            {
+              "address": "45.152.113.189",
+              "port": 4440,
+              "users": [
+                {
+                  "id": "f17d4129-ee8b-48f4-baa6-89de1e906b8e",
+                  "encryption": "none",
+                  "level": 8,
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "reality",
+          "realitySettings": {
+            "serverName": "files.moscownews24.ru",
+            "fingerprint": "chrome",
+            "publicKey": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
+            "shortId": "",
+            "spiderX": ""
+          }
+        },
+        "_is_unlimited": false
+      },
+      {
+        "protocol": "vless",
+        "tag": "🇷🇺 Russia [*CIDR] YA [158.160.233.48:443]",
+        "settings": {
+          "vnext": [
+            {
+              "address": "158.160.233.48",
+              "port": 443,
+              "users": [
+                {
+                  "id": "f5a09282-be6f-48b1-b66c-22dc9d04dc08",
+                  "encryption": "none",
+                  "level": 8
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "grpc",
+          "security": "reality",
+          "grpcSettings": {
+            "serviceName": "",
+            "multiMode": false
+          },
+          "realitySettings": {
+            "serverName": "static-mon.yandex.net",
+            "fingerprint": "chrome",
+            "publicKey": "9lryIkDCyHLzVsVJiGE4LFMuOHdzYDSTNJOFqGlpcl8",
+            "shortId": "2901df419dc4e3ff",
+            "spiderX": ""
+          }
+        },
+        "_is_unlimited": false
+      },
+      {
+        "protocol": "vless",
+        "tag": "🇷🇺 Russia [*CIDR] VK [212.233.72.146:443]",
+        "settings": {
+          "vnext": [
+            {
+              "address": "212.233.72.146",
+              "port": 443,
+              "users": [
+                {
+                  "id": "f5a09282-be6f-48b1-b66c-22dc9d04dc08",
+                  "encryption": "none",
+                  "level": 8
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "grpc",
+          "security": "reality",
+          "grpcSettings": {
+            "serviceName": "",
+            "multiMode": true
+          },
+          "realitySettings": {
+            "serverName": "dzen.ru",
+            "fingerprint": "chrome",
+            "publicKey": "9lryIkDCyHLzVsVJiGE4LFMuOHdzYDSTNJOFqGlpcl8",
+            "shortId": "2901df419dc4e3ff",
+            "spiderX": ""
+          }
+        },
+        "_is_unlimited": false
+      },
+      {
+        "protocol": "vless",
+        "tag": "🇷🇺 Russia [*CIDR] VK [217.16.21.235:443]",
+        "settings": {
+          "vnext": [
+            {
+              "address": "217.16.21.235",
+              "port": 443,
+              "users": [
+                {
+                  "id": "f64d8e5b-72b9-000a-a864-d669266fab49",
+                  "encryption": "none",
+                  "level": 8,
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "reality",
+          "realitySettings": {
+            "serverName": "5post-gate.x5.ru",
+            "fingerprint": "random",
+            "publicKey": "OCRYYq4e92sQ-wWFRX6WX9pdvuFBWOqybLhpSiv3nFA",
+            "shortId": "111111",
+            "spiderX": ""
+          }
+        },
+        "_is_unlimited": false
+      },
+      {
+        "protocol": "vless",
+        "tag": "🇷🇺 RU [94.242.55.42] [94.242.55.42:443]",
+        "settings": {
+          "vnext": [
+            {
+              "address": "94.242.55.42",
+              "port": 443,
+              "users": [
+                {
+                  "id": "8ca5cbd3-ec16-4728-bedc-2bc0d82f0922",
+                  "encryption": "none",
+                  "level": 8,
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "reality",
+          "realitySettings": {
+            "serverName": "enterprisekitten.com",
+            "fingerprint": "firefox",
+            "publicKey": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
+            "shortId": "6ba85179e30d4fc2",
+            "spiderX": ""
+          }
+        },
+        "_is_unlimited": false
+      },
+      {
+        "protocol": "vless",
+        "tag": "🇷🇺 Белый_Интернет 14 LTE (Долгий пинг) [46.182.24.147:443]",
+        "settings": {
+          "vnext": [
+            {
+              "address": "46.182.24.147",
+              "port": 443,
+              "users": [
+                {
+                  "id": "953358cb-82ba-4296-960d-6d2ec3468f4c",
+                  "encryption": "none",
+                  "level": 8
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "xhttp",
+          "security": "reality",
+          "xhttpSettings": {
+            "path": "/xhttp_client_upload",
+            "host": "ads.x5.ru",
+            "mode": "packet-up"
+          },
+          "realitySettings": {
+            "serverName": "ads.x5.ru",
+            "fingerprint": "firefox",
+            "publicKey": "oWfus0zGe8_g7JIh5dIVsEyT_smnPtUqpnlIsHLas2w",
+            "shortId": "aaaa",
+            "spiderX": ""
+          }
+        },
+        "_is_unlimited": false
+      },
+      {
+        "protocol": "vless",
+        "tag": "🇷🇺 Россия | БС¹⁰ [95.163.214.43:443]",
+        "settings": {
+          "vnext": [
+            {
+              "address": "95.163.214.43",
+              "port": 443,
+              "users": [
+                {
+                  "id": "88ce17fc-7c6c-43a7-98a4-33fb59697b17",
+                  "encryption": "none",
+                  "level": 8
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "xhttp",
+          "security": "reality",
+          "xhttpSettings": {
+            "path": "/api/v1/e0163615",
+            "host": "vk.com",
+            "mode": "stream-one"
+          },
+          "realitySettings": {
+            "serverName": "ok.ru",
+            "fingerprint": "qq",
+            "publicKey": "VdG4ntV15FfNWV4rvSny2mvOTSXfOUVKHNC0dOyXY2s",
+            "shortId": "864fbb122f15b43d",
+            "spiderX": "/"
+          }
+        },
+        "_is_unlimited": false
+      },
+      {
+        "protocol": "vless",
+        "tag": "🇷🇺 LTE 9 | тгк: @rostunnel (Долгий пинг) [bl3fk52.sysopnova.art:443]",
+        "settings": {
+          "vnext": [
+            {
+              "address": "bl3fk52.sysopnova.art",
+              "port": 443,
+              "users": [
+                {
+                  "id": "441afe11-a180-4516-bb80-80a8a6b38705",
+                  "encryption": "none",
+                  "level": 8,
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "raw",
+          "security": "reality",
+          "realitySettings": {
+            "serverName": "yandex.ru",
+            "fingerprint": "chrome",
+            "publicKey": "gE8LUmGFXik94SoDXNiAG5KprGyhjoRwDuhGebgAVWk",
+            "shortId": "5ee019e02e6ed99a",
+            "spiderX": ""
+          }
+        },
+        "_is_unlimited": false
+      },
+      {
+        "protocol": "vless",
+        "tag": "🇷🇺 LTE 10 | тгк: @rostunnel (Долгий пинг) [144.31.50.236:443]",
+        "settings": {
+          "vnext": [
+            {
+              "address": "144.31.50.236",
+              "port": 443,
+              "users": [
+                {
+                  "id": "1c332eae-7e02-4acd-996d-4eb3e652401c",
+                  "encryption": "none",
+                  "level": 8,
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "reality",
+          "realitySettings": {
+            "serverName": "yandex.ru",
+            "fingerprint": "firefox",
+            "publicKey": "uitO4Z8t9TplwwYaqwLqh5rfxDh_X8bOBiNuPbzvaEM",
+            "shortId": "bbe46bd8f6b96839",
+            "spiderX": ""
+          }
+        },
+        "_is_unlimited": false
+      },
+      {
+        "protocol": "vless",
+        "tag": "🇷🇺 LTE 11 | тгк: @rostunnel (Долгий пинг) [91.240.87.166:443]",
+        "settings": {
+          "vnext": [
+            {
+              "address": "91.240.87.166",
+              "port": 443,
+              "users": [
+                {
+                  "id": "4117ee99-07d8-4f79-bc95-4cad80974324",
+                  "encryption": "none",
+                  "level": 8,
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "raw",
+          "security": "reality",
+          "realitySettings": {
+            "serverName": "yandex.ru",
+            "fingerprint": "firefox",
+            "publicKey": "2ZUQYIhUijdJ1vRL8iR8RxjmJvRVHYp-JoWevQ2LyR4",
+            "shortId": "7bb730e3e6616d31",
+            "spiderX": "/"
+          }
+        },
+        "_is_unlimited": false
+      },
+      {
+        "protocol": "vless",
+        "tag": "🇷🇺 LTE 12 | тгк: @rostunnel (Долгий пинг) [185.229.9.175:443]",
+        "settings": {
+          "vnext": [
+            {
+              "address": "185.229.9.175",
+              "port": 443,
+              "users": [
+                {
+                  "id": "4117ee99-07d8-4f79-bc95-4cad80974324",
+                  "encryption": "none",
+                  "level": 8,
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "raw",
+          "security": "reality",
+          "realitySettings": {
+            "serverName": "yandex.ru",
+            "fingerprint": "firefox",
+            "publicKey": "1ea_kTf2MvXh9PtpzQdjQWb5ls5BjyUtSbn-qiR8ZXk",
+            "shortId": "cb0e256070ac91c7",
+            "spiderX": "/"
+          }
+        },
+        "_is_unlimited": false
+      },
+      {
+        "protocol": "vless",
+        "tag": "🇷🇺 LTE 40 | тгк: @rostunnel (Долгий пинг) [91.224.87.22:9873]",
+        "settings": {
+          "vnext": [
+            {
+              "address": "91.224.87.22",
+              "port": 9873,
+              "users": [
+                {
+                  "id": "76186f1e-3062-4a2b-98c2-fab3c61a9511",
+                  "encryption": "none",
+                  "level": 8
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "grpc",
+          "security": "reality",
+          "grpcSettings": {
+            "serviceName": "grpc-tunnel",
+            "multiMode": true
+          },
+          "realitySettings": {
+            "serverName": "dl.google.com",
+            "fingerprint": "qq",
+            "publicKey": "bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU",
+            "shortId": "aabbccdd",
+            "spiderX": ""
+          }
+        },
+        "_is_unlimited": false
+      },
+      {
+        "protocol": "vless",
+        "tag": "🇷🇺 LTE 41 | тгк: @rostunnel (Долгий пинг) [91.224.86.107:9830]",
+        "settings": {
+          "vnext": [
+            {
+              "address": "91.224.86.107",
+              "port": 9830,
+              "users": [
+                {
+                  "id": "76186f1e-3062-4a2b-98c2-fab3c61a9511",
+                  "encryption": "none",
+                  "level": 8
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "grpc",
+          "security": "reality",
+          "grpcSettings": {
+            "serviceName": "grpc-tunnel",
+            "multiMode": false
+          },
+          "realitySettings": {
+            "serverName": "dl.google.com",
+            "fingerprint": "firefox",
+            "publicKey": "bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU",
+            "shortId": "aabbccdd",
+            "spiderX": ""
+          }
+        },
+        "_is_unlimited": false
+      },
+      {
+        "protocol": "vless",
+        "tag": "🇷🇺 LTE 44 | тгк: @rostunnel (Долгий пинг) [188.124.47.34:9891]",
+        "settings": {
+          "vnext": [
+            {
+              "address": "188.124.47.34",
+              "port": 9891,
+              "users": [
+                {
+                  "id": "76186f1e-3062-4a2b-98c2-fab3c61a9511",
+                  "encryption": "none",
+                  "level": 8
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "grpc",
+          "security": "reality",
+          "grpcSettings": {
+            "serviceName": "grpc-tunnel",
+            "multiMode": false
+          },
+          "realitySettings": {
+            "serverName": "dl.google.com",
+            "fingerprint": "ios",
+            "publicKey": "Dfgu8Ey0M8Hz4gXGZAwQ3H9jLt2HByVsjAOTWiuKDB0",
+            "shortId": "aabbccdd",
+            "spiderX": ""
+          }
+        },
+        "_is_unlimited": false
+      },
+      {
+        "protocol": "vless",
+        "tag": "🇷🇺 LTE 103 | тгк: @rostunnel (Долгий пинг) [prep.wwwinternetvideo.click:443]",
+        "settings": {
+          "vnext": [
+            {
+              "address": "prep.wwwinternetvideo.click",
+              "port": 443,
+              "users": [
+                {
+                  "id": "1c332eae-7e02-4acd-996d-4eb3e652401c",
+                  "encryption": "none",
+                  "level": 8,
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "raw",
+          "security": "reality",
+          "realitySettings": {
+            "serverName": "yandex.ru",
+            "fingerprint": "chrome",
+            "publicKey": "uitO4Z8t9TplwwYaqwLqh5rfxDh_X8bOBiNuPbzvaEM",
+            "shortId": "bbe46bd8f6b96839",
+            "spiderX": ""
+          }
+        },
+        "_is_unlimited": false
+      },
+      {
+        "protocol": "vless",
+        "tag": "🇷🇺 LTE 104 | тгк: @rostunnel (Долгий пинг) [193.163.203.170:443]",
+        "settings": {
+          "vnext": [
+            {
+              "address": "193.163.203.170",
+              "port": 443,
+              "users": [
+                {
+                  "id": "11aabba0-5fd1-4f15-8068-74c1a466cefc",
+                  "encryption": "none",
+                  "level": 8,
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "reality",
+          "realitySettings": {
+            "serverName": "yandex.ru",
+            "fingerprint": "firefox",
+            "publicKey": "GCCZ1ZZjB_nj7yxqFi22bIIWWr_G6rnWUzDcssN_40o",
+            "shortId": "b28db60d77c50b4f",
+            "spiderX": ""
+          }
+        },
+        "_is_unlimited": false
+      },
+      {
+        "protocol": "vless",
+        "tag": "🇷🇺 LTE 107 | тгк: @rostunnel (Долгий пинг) [2.26.9.243:3454]",
+        "settings": {
+          "vnext": [
+            {
+              "address": "2.26.9.243",
+              "port": 3454,
+              "users": [
+                {
+                  "id": "5adaf80e-2347-481f-84cb-46109d582c95",
+                  "encryption": "none",
+                  "level": 8
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "grpc",
+          "security": "reality",
+          "grpcSettings": {
+            "serviceName": "google.android.location.SyncService",
+            "multiMode": false
+          },
+          "realitySettings": {
+            "serverName": "yandex.ru",
+            "fingerprint": "firefox",
+            "publicKey": "Bz2EFAfox-uD9nn8qAVKy86A1kDKO2OpYQhMO4fCrCg",
+            "shortId": "159b4efc",
+            "spiderX": ""
+          }
+        },
+        "_is_unlimited": false
+      },
+      {
+        "protocol": "vless",
+        "tag": "🇷🇺 LTE 113 | тгк: @rostunnel (Долгий пинг) [3.114.220.22:10583]",
+        "settings": {
+          "vnext": [
+            {
+              "address": "3.114.220.22",
+              "port": 10583,
+              "users": [
+                {
+                  "id": "814bd064-544d-4255-a070-5705c03f6da9",
+                  "encryption": "none",
+                  "level": 8,
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "reality",
+          "realitySettings": {
+            "serverName": "www.apple.com",
+            "fingerprint": "chrome",
+            "publicKey": "k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0",
+            "shortId": "48050fab",
+            "spiderX": ""
+          }
+        },
+        "_is_unlimited": false
+      },
+      {
+        "protocol": "freedom",
+        "settings": {
+          "domainStrategy": "UseIP"
+        },
+        "tag": "direct"
+      },
+      {
+        "protocol": "blackhole",
+        "settings": {
+          "response": {
+            "type": "http"
+          }
+        },
+        "tag": "block"
+      }
+    ],
+    "routing": {
+      "domainStrategy": "IPIfNonMatch",
+      "balancers": [
+        {
+          "tag": "Auto_Balancer",
+          "selector": [
+            "🇷🇺 Russia [*CIDR] Beeline [66.90.90.13:8443]",
+            "🇷🇺 [VL] Россия #3354 | РосТуннель t.me/rjsxrd [186.246.12.242:2053]",
+            "🇷🇺 The Netherlands | [SNI-RU] eh.vk.com t.me/rjsxrd [93.89.220.7:8443]",
+            "🇷🇺 [VL] Россия #3368 | РосТуннель t.me/rjsxrd [144.31.48.225:25947]",
+            "🇷🇺 Russia | TG: @HardVpn_robot t.me/rjsxrd [31.130.155.114:443]",
+            "🇷🇺 [VL] Россия #3418 | РосТуннель t.me/rjsxrd [176.108.246.110:9830]",
+            "🇷🇺 [VL] Россия #3417 | РосТуннель t.me/rjsxrd [213.171.25.178:9830]",
+            "🇷🇺 [VL] Россия #3428 | РосТуннель t.me/rjsxrd [188.225.24.201:443]",
+            "🇷🇺 [VL] Россия #3391 | РосТуннель t.me/rjsxrd [176.108.246.58:9881]",
+            "🇷🇺 [VL] Россия #3427 | РосТуннель t.me/rjsxrd [188.225.77.241:443]",
+            "🇷🇺 [VL] Россия #3425 | РосТуннель t.me/rjsxrd [188.225.57.78:443]",
+            "🇷🇺 [VL] Россия #3424 | РосТуннель t.me/rjsxrd [188.225.44.89:443]",
+            "🇷🇺 The Netherlands — #77 [Verified RU] t.me/rjsxrd [188.225.35.207:443]",
+            "🇷🇺 The Netherlands — #79 [Verified RU] t.me/rjsxrd [188.225.58.238:443]",
+            "🇷🇺 The Netherlands — #84 [Verified RU] t.me/rjsxrd [188.225.25.142:443]",
+            "🇷🇺 France — #46 [Verified RU] t.me/rjsxrd [176.123.162.100:9880]",
+            "🇷🇺 The Netherlands — #93 [Verified RU] t.me/rjsxrd [188.225.42.6:443]",
+            "🇷🇺 [VL] Россия #3330 | РосТуннель t.me/rjsxrd [xssite.webredirect.org:443]",
+            "🇷🇺 [VL] Россия #10036 | РосТуннель t.me/rjsxrd [104.24.16.23:443]",
+            "🇷🇺 [VL] Россия #3300 | РосТуннель t.me/rjsxrd [72.56.250.71:443]",
+            "🇷🇺 Germany — #11 [Verified RU] t.me/rjsxrd [46.243.142.227:10443]",
+            "🇷🇺 [VL] Россия #3394 | РосТуннель t.me/rjsxrd [77.110.104.238:443]",
+            "🇷🇺 [VL] Россия #3389 | РосТуннель t.me/rjsxrd [46.8.200.91:443]",
+            "🇷🇺 🌐 Anycast-IP | 🇳🇱 [SNI-RU] yandex.ru t.me/rjsxrd [144.31.57.48:4143]",
+            "🇷🇺 [VL] Россия #3298 | РосТуннель t.me/rjsxrd [176.123.161.222:9892]",
+            "🇷🇺 The Netherlands | [SNI-RU] dzen.ru t.me/rjsxrd [94.183.224.45:443]",
+            "🇷🇺 [VL] Россия #3329 | РосТуннель t.me/rjsxrd [89.169.171.202:8444]",
+            "🇷🇺 NL - Russia [94.26.228.10:443]",
+            "🇷🇺 Russia X [5.181.171.2:443]",
+            "🇷🇺 soskeynet  VL-RAW-  RU 126ms [193.168.46.180:443]",
+            "🇷🇺 Russia | [*CIDR] [94.26.249.216:52006]",
+            "🇷🇺 🌐 Anycast-IP | 🇩🇪 🇷🇺 [*CIDR] Beeline [66.90.93.74:8443]",
+            "🇷🇺 Russia | [*CIDR] YA [217.198.169.86:443]",
+            "🇷🇺 RU [api.betust.net] [api.betust.net:443]",
+            "🇷🇺 RU [app4.betust.net] [app4.betust.net:443]",
+            "🇷🇺 RU [demo.betust.net] [demo.betust.net:443]",
+            "🇷🇺 RU [prime.betust.net] [prime.betust.net:443]",
+            "🇷🇺 RU [158.160.144.108] [158.160.144.108:7443]",
+            "🇷🇺 RU [176.108.243.140] [176.108.243.140:443]",
+            "🇷🇺 @FreakConfighysteria2://cd74c0a406664a5bc0bac098220a2468@144.31.49.138:443?security=tls&obfs=salamander&obfs-password=44f1c1e2f8b99e792ceed574627a1eb0&insecure=0&sni=ru1.sferavpn.pro#🇷🇺@FreakConfigtrojan://humanity@130.250.137.171:443?path=/assignment&security=tls&insecure=0&host=www.ignitelimit.com&ech=ip.gs+udp://8.8.8.8&type=ws&allowInsecure=0&sni=www.ignitelimit.com#🇺🇸@FreakConfigtrojan://humanity@188.114.97.7:443?path=/assignment&security=tls&insecure=0&ech=ip.gs+udp://8.8.8.8&type=ws&allowInsecure=0&sni=www.ignitelimit.com#🇨🇦@FreakConfigvless://d5af4dfe-eaf1-460c-87aa-fefe930db0ba@darsadgir.ir:443?mode=auto&path=/ChOpIn&security=tls&encryption=none&extra={\"mode\":\"auto\",\"xPaddingBytes\":\"1-1\",\"xPaddingObfsMode\":true,\"xPaddingKey\":\"ctx\",\"xPaddingHeader\":\"x-grpc-context\",\"xPaddingMethod\":\"tokenish\",\"sessionIDPlacement\":\"header\",\"sessionIDKey\":\"Idempotency-Key\",\"seqPlacement\":\"header\",\"seqKey\":\"Upload-Offset\",\"sessionPlacement\":\"header\",\"sessionKey\":\"Idempotency-Key\"}&insecure=0&host=chopin.paxr.ir&type=xhttp&allowInsecure=0&sni=chopin.paxr.ir#🇫🇷@FreakConfig [89.35.14.31:443]",
+            "🇷🇺 @FreakConfigvless://e4514801-0d5a-42ba-869f-39bd605aef9e@16.60.243.242:22223?security=none&encryption=none&headerType=none&type=tcp#🇬🇧@FreakConfigvless://501a2da5-cb22-4a3f-915e-e3b821d1d62d@87.199.205.28:443?security=reality&encryption=none&pbk=W-9zyiOq287RtXVTZlTFbSDJ0Mx8joyBLJoA7ZE7eBw&headerType=none&fp=qq&type=tcp&flow=xtls-rprx-vision&sni=vkvd754.okcdn.ru&sid=ef1d3554c652a436#🇳🇱@FreakConfigvless://e4514801-0d5a-42ba-869f-39bd605aef9e@16.60.243.242:22222?security=none&encryption=none&headerType=none&type=tcp#🇬🇧@FreakConfigvless://14b48651-3738-4926-bc09-4c04e87ff80b@179.61.138.5:443?mode=stream-one&path=/Join-JavidnamanIran-on-Telegram&security=tls&alpn=h2&encryption=none&insecure=0&host=static.lotussec.com&type=xhttp&allowInsecure=0&sni=static.lotussec.com#🇩🇪@FreakConfigvless://e4514801-0d5a-42ba-869f-39bd605aef9e@16.60.243.242:22224?security=none&encryption=none&headerType=none&type=tcp#🇬🇧@FreakConfig [netsecureteam5.ir:4444]",
+            "🇷🇺 S3 | @ELiV2Rayvless://84a794a5-2420-4ca7-8e08-8d21571f36f3@152.53.66.34:8443?mode=gun&security=reality&encryption=none&pbk=Zvq-k6PMXjmd6YlWcu3T1J63m0IxZcOaedRwSG9O0lI&fp=firefox&type=grpc&sni=avstri.plus-hit.ru&sid=92558baf673ab721#🇦🇹 S1 | @ELiV2Rayvless://84a794a5-2420-4ca7-8e08-8d21571f36f3@152.53.64.139:8443?mode=gun&security=reality&encryption=none&pbk=Zvq-k6PMXjmd6YlWcu3T1J63m0IxZcOaedRwSG9O0lI&fp=firefox&type=grpc&sni=avstri.plus-hit.ru&sid=92558baf673ab721#🇦🇹 S2 | @ELiV2Rayvless://0fcbc45d-acdc-40cf-9a66-961c00f5b4a5@109.169.76.39:443?security=reality&encryption=none&pbk=SiSky02wHz-S0TDHKFTdYhnrlT8Y3CfRsekZlcdLXDY&headerType=none&fp=firefox&type=tcp&flow=xtls-rprx-vision&sni=slashdot.org&sid=fd55b698ee8c3629#🇬🇧@ELiV2Rayvless://419f25c1-bc35-412e-93fb-258efee859b5@gb2.murhost.network:443?security=reality&encryption=none&pbk=fyfX-egDrRvXNW1Gt2P_8rH4jdupAcmhFLOCZCzCowo&headerType=none&fp=firefox&type=tcp&flow=xtls-rprx-vision&sni=gb2.murhost.network&sid=fc36b4a584871aa5#🇺🇸@ELiV2Ray [152.53.65.60:8443]",
+            "🇷🇺 @FREELAND8 🇪🇺vless://44eae030-290b-4083-8102-6f8bab05701b@104.21.89.41:443?path=/&security=tls&encryption=none&fm={\"tcp\":[{\"type\":\"fragment\",\"settings\":{\"packets\":\"tlshello\",\"lengths\":[\"0\",\"104\",\"1\"],\"delays\":[\"0\"],\"maxSplit\":\"0\"}},{\"type\":\"fragment\",\"settings\":{\"packets\":\"1-1\",\"lengths\":[\"114\",\"1\"],\"delays\":[\"1\"],\"maxSplit\":\"11\"}}]}&insecure=0&host=cfvvv-ev1.pages.dev&type=ws&allowInsecure=0&sni=cfvvv-ev1.pages.dev#@FREELAND8 🇪🇺ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpMQjJKOE12VHQyU0JnRDZv@20.238.35.153:443#@FREELAND8 🇪🇺vless://d85711cf-c5f5-4166-8000-25958322b13f@darsadgir.ir:8443?mode=auto&path=/api/download.php&security=tls&alpn=h2,http/1.1,h3&encryption=none&extra={\"mode\":\"auto\",\"xPaddingBytes\":\"1-1\",\"xPaddingObfsMode\":true,\"xPaddingKey\":\"ctx\",\"xPaddingHeader\":\"x-grpc-context\",\"xPaddingMethod\":\"tokenish\",\"sessionIDPlacement\":\"header\",\"sessionIDKey\":\"Idempotency-Key\",\"seqPlacement\":\"header\",\"seqKey\":\"Upload-Offset\",\"sessionPlacement\":\"header\",\"sessionKey\":\"Idempotency-Key\"}&insecure=0&host=sausage.esmbegudota.ir&type=xhttp&allowInsecure=0&sni=sausage.esmbegudota.ir#@FREELAND8 🇪🇺vless://d85711cf-c5f5-4166-8000-25958322b13f@b2n.ir:8443?mode=auto&path=/api/download.php&security=tls&alpn=h2,http/1.1,h3&encryption=none&extra={\"mode\":\"auto\",\"xPaddingBytes\":\"1-1\",\"xPaddingObfsMode\":true,\"xPaddingKey\":\"ctx\",\"xPaddingHeader\":\"x-grpc-context\",\"xPaddingMethod\":\"tokenish\",\"sessionIDPlacement\":\"header\",\"sessionIDKey\":\"Idempotency-Key\",\"seqPlacement\":\"header\",\"seqKey\":\"Upload-Offset\",\"sessionPlacement\":\"header\",\"sessionKey\":\"Idempotency-Key\"}&insecure=0&host=sausage.esmbegudota.ir&type=xhttp&allowInsecure=0&sni=sausage.esmbegudota.ir#@FREELAND8 🇪🇺vless://2fa4235a-51a7-452b-a760-498951646043@land.zavqeron.ir:2053?path=/fi-cdn&security=tls&alpn=h3,h2,http/1.1&encryption=none&insecure=0&host=land.zavqeron.ir&fp=chrome&type=ws&allowInsecure=0&sni=zavqeron.ir#@FREELAND8 🇫🇮trojan://humanity@8.47.69.0:443?path=/assignment&security=tls&alpn=http/1.1&insecure=0&host=www.pleadcourt.org&fp=chrome&type=ws&allowInsecure=0&sni=www.pleadcourt.org#@FREELAND8 🇪🇺vless://2fa4235a-51a7-452b-a760-498951646043@any.zavqeron.ir:2053?path=/de1-cdn&security=tls&alpn=h3,h2,http/1.1&encryption=none&insecure=0&host=any.zavqeron.ir&fp=chrome&type=ws&allowInsecure=0&sni=zavqeron.ir#@FREELAND8 🇩🇪vless://2fa4235a-51a7-452b-a760-498951646043@fin11.zavqeron.ir:8452?security=reality&encryption=none&pbk=DZ21X_0wGHxZHBARCNMan297KcIblbSZPOWmQiL8Z1g&headerType=none&fp=qq&type=tcp&sni=play.google.com&sid=d74e8f92d523c857#@FREELAND8 🇬🇧vless://2fa4235a-51a7-452b-a760-498951646043@fin11.velqixa.ir:8451?security=reality&encryption=none&pbk=X4ti5_8FOtWv8YgF8Wz7OHZBeG4rPoMVuPUyA86gRkU&headerType=none&fp=qq&type=tcp&sni=play.google.com&sid=9b5ea77c26494863#@FREELAND8 🇺🇸socks://Og@144.91.121.61:1088#@FREELAND8 🇩🇪vmess://eyJhZGQiOiIxNjUuMTU0LjE5NS4zOCIsImFpZCI6IjAiLCJhbHBuIjoiIiwiZnAiOiIiLCJob3N0IjoiIiwiaWQiOiI5NTlhOGNhZi00Y2VhLTQzZDAtYTU0OC0zNjI4ZTdkZGZhZmMiLCJpbnNlY3VyZSI6IjAiLCJuZXQiOiJ0Y3AiLCJwYXRoIjoiIiwicGNzIjoiIiwicG9ydCI6IjM1MDM0IiwicHMiOiJARlJFRUxBTkQ4IPCfh7nwn4e8Iiwic2N5IjoiYXV0byIsInNuaSI6IiIsInRscyI6Im5vbmUiLCJ0eXBlIjoibm9uZSIsInYiOiIyIiwidmNuIjoiIn0=vless://2fa4235a-51a7-452b-a760-498951646043@land.zavqeron.ir:2053?path=/fr-cdn&security=tls&alpn=h3,h2,http/1.1&encryption=none&insecure=0&host=land.zavqeron.ir&fp=chrome&type=ws&allowInsecure=0&sni=zavqeron.ir#@FREELAND8 🇫🇷vless://60a361f9-3c45-4954-9e4c-92a85bda243d@new3.smart-cats.ru:2053?mode=gun&security=reality&encryption=none&pbk=mzrVbIsEggpJfXR8M7yxki2vgv3sXWQdy1bGhXqatUY&fp=chrome&spx=/&type=grpc&serviceName=grpc&sni=www.google.com&sid=4881f8244d1b9021#@FREELAND8 🇩🇪vless://60a2998c-cd85-562e-a3fd-396e4925dd3a@199.232.237.79:443?pcs=cd6e838b9bfe31cab8b3d5c858b0d6223fe84ece236c1fdb281be93c302e1e6e&path=/&security=tls&alpn=h3,h2,http/1.1&encryption=none&insecure=0&host=turboo-server.com&type=ws&allowInsecure=0&sni=turboo-server.com#@FREELAND8 🇩🇪vmess://eyJhZGQiOiIxMzQuMTk1LjE5Ni4yMTEiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImZwIjoiIiwiaG9zdCI6IiIsImlkIjoiZjhjOGRjM2QtMGQzNy00NmIwLThiMzQtYTcyMzI4ODJmY2ZlIiwiaW5zZWN1cmUiOiIwIiwibmV0IjoidGNwIiwicGF0aCI6IiIsInBjcyI6IiIsInBvcnQiOiIxODAwMCIsInBzIjoiQEZSRUVMQU5EOCDwn4eo8J+HpiIsInNjeSI6ImF1dG8iLCJzbmkiOiIiLCJ0bHMiOiJub25lIiwidHlwZSI6Im5vbmUiLCJ2IjoiMiIsInZjbiI6IiJ9ss://YWVzLTI1Ni1nY206UHJveHkyMDI0@23.252.104.131:54321#@FREELAND8 🇪🇺ss://YWVzLTI1Ni1nY206WTZSOXBBdHZ4eHptR0M@51.222.155.113:5601#@FREELAND8 🇨🇦vless://44eae030-290b-4083-8102-6f8bab05701b@188.114.97.6:443?path=/&security=tls&encryption=none&fm={\"tcp\": [{\"type\": \"fragment\", \"settings\": {\"packets\": \"tlshello\", \"lengths\": [\"0\", \"104\", \"1\"], \"delays\": [\"0\"], \"maxSplit\": \"0\"}},{\"type\": \"fragment\", \"settings\": {\"packets\": \"1-1\", \"lengths\": [\"114\", \"1\"], \"delays\": [\"1\"], \"maxSplit\": \"11\"}}]}&insecure=0&host=cfvvv-ev1.pages.dev&type=ws&allowInsecure=0&sni=cfvvv-ev1.pages.dev#@FREELAND8 🇺🇸vless://2a6c617d-98e4-49c3-95ab-76f02fcf0150@46.137.202.178:12512?security=reality&encryption=none&pbk=sO0RBMr_l8TLtZaYBX8n3NdI9AtaugUqJpCR1szNsyA&headerType=none&fp=firefox&type=tcp&flow=xtls-rprx-vision&sni=www.intel.com&sid=e692a8250d2e2fd0#@FREELAND8  🇸🇬ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpJWGEzeWx6U19qQk9Bc1F5MDcxdElR@5.75.192.44:1080#@FREELAND8 🇪🇺vless://2fa4235a-51a7-452b-a760-498951646043@nether11.velqixa.ir:8448?mode=auto&path=/nl-xhttp&security=reality&encryption=none&pbk=GKUHECPMuiffveVgQMvRHHg1GgOSNp5lVWPLjRZGN0c&fp=qq&type=xhttp&sni=play.google.com&sid=d6fdcd5c4aa0e050#@FREELAND8 🇳🇱 [104.16.10.185:443]",
+            "🇷🇺 Free x200 @Outline_Vpnvless://bf443e4a-aa9e-4509-abf0-d0f6828d57be@178.95.170.98:2087?path=/4bc027a44532&security=none&encryption=none&type=ws#Free x201 @Outline_Vpnvless://c21631d5-36c9-4664-b575-97eca17456be@2.27.205.59:443?path=/&security=none&encryption=none&host=neth8.lunariai.ru&type=ws#Free x202 @Outline_Vpnvless://7247b284-c40d-47c7-af4e-c4738f827a3d@89.116.250.135:8880?path=/?ed=2082&security=none&encryption=mlkem768x25519plus.random.0rtt.iZJwXenO31gj30xJyjEnDZ_qxA-iUdzbT1zdrr8Mbmo&host=Petcup.cdn.caroptionzz.ir.cdn.tr1.k8k8110.com&type=httpupgrade#Free x203 @Outline_Vpnvless://7247b284-c40d-47c7-af4e-c4738f827a3d@5.75.201.137:56539?security=none&encryption=mlkem768x25519plus.random.0rtt.swY_aKEuuHUHKO0BHVV2uot-UFbtrXpLWr7g8uZk0xk&headerType=http&type=tcp#Free x204 @Outline_Vpnvless://87a4b6b9-d269-4959-bb80-1234b46c8d06@199.232.78.159:80?path=/&security=none&encryption=none&host=7wwwspeedtestnet.global.ssl.fastly.net&type=ws#Free x205 @Outline_Vpnvless://14f4be39-cb89-4f2b-8200-704666b6fa4e@95.85.241.209:443?security=reality&encryption=none&pbk=vZ22ThhkpXUd5-tY-v5TTrouLHjgYYmeQgqeLt7HRz0&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=google.com#Free x206 @Outline_Vpnvless://dabb9a19-03ab-4cdf-8963-d3c45eb0f80d@83.168.111.58:443?security=reality&encryption=none&pbk=4h74KXbkBMYOhJkZabJNsf85cI91ytap_gkl56mzjTU&headerType=none&type=tcp&flow=xtls-rprx-vision&sni=soulful.host#Free x207 @Outline_Vpnvless://7247b284-c40d-47c7-af4e-c4738f827a3d@151.101.56.7:443?mode=auto&path=/&security=tls&encryption=mlkem768x25519plus.random.0rtt.GdOIY4aWLxkAK8IFF4mpehETCloYQkfBBkEFKuetTKyo41qDNiygh7CUFNc50doXUJu4hIyK-oWG-MgjMrQZRzkJBKqmGdK_QxiDSERyYYak8_usliZfy1Bs7nYYcaUgBPB2HoE_FXxjKmOdPHMSESh4XLcj49S5-3yCDIwn7wJQTxNixPPEsIGRlRVlayyeO2ebRXwCynSXmCCCAA2QN1cTN-tb7SKlVuexDDI_bHsgmjJkyOXCRrV6uQqtkgAFdPYn88IVnOU7xXqmu7V7U1ckw9uu9Zc3p7tgIYiRr6JF4napPskDVLlNIPrL-yMzmJjDlzgphHJTJaACGhF_fEKgzky5ipgavFsik3ynPjfMFjtwmIkPYlqN6qRPZmulaKkVjrOUFMK6hzQAI2l06NUec2Q8YixRUBopc-Vc5SCkakPCzCQg9ygkSfyV2IwQI6Gc-iZLw1sk7mRZyRhHVbFu0nyZgFiM8ZWujoR1SgYVQQJX_2VCtJjGG3C77YBx8KAcr-KAN9q-fEMiHSrOfJsG6mDN-bHOwOhpESA3-jhshQQW-GKGnecMQGibh0iE-qC3z9ugpdE3KeFpzYHH4lJ2zYelDntS53Wd9JI44RtptnOlHruC8YZ9bxKfSQqBwyoF9ve1EKJsuzaCydOVhKpm88lEyXdf4uC9hpRswwxCBCc87xqVAgdcB5SqSmSfUAwcbRCmeyq8oNYF8WaV9NEqisgbijlYrBOekpxIxdADf7E-m5ZMbRu8GMBWnkiWGQdOtpMlHpUnv8c8x3qlMDkspvY5TleN9bmHphOssxYDJgYfJ1EW5RLAWmYVXokPl1WuSahRxgyENyMFewPMl3m5slBZnXaY4Sa05QZbf5mMZxiSxPtYSmEJxOJE7tFCkoF_tXFMXkc3tTuzF1Ohs9QA6qjN5Rms_3dPd3V_OiEkhqIQoFW0PgZWy-VuxHt_jVI9q5muXjIxU8lJAzgBnhZlIjILqnNSRnETY3dY2Fol1cwtLht-r5CzFqw9FWcYJBvPA1ib_7pxYNRq9-yMM8XB0eeStxdvB-GMqOxGXQuvrKWamdcmCwSbo4dYxXiBAzqV6uwTIoSp44w2kpSMkQdiVoI6AoVLsHNf2Da-n6OiePG7fkJi8IVUR6S-r7lRtuVn-wpBNSJVPHtv1iSAWsNEeEwPRLcT71yv3gsBF9MQWbx_zDtP0FNajlQEPJGt-SsZqstxoJjOgXKxitUmHyDDegK7x_sB0Lw_AgUaD8Y102Cr4nulwIuPO4mxa2gI_ze-IxJ8JegG3vd__YK11merHfaBo-tfNvpmu2Mr6WArIaWxp2lJHwq74RyWJJOs1-o9IVWhdLYUgIclUZGC9gwxjDtzUiw7hfAK-BW0F0k7qlAYIDlRa5A9WVDNQfl7LqNGiSGrMGE-i7q7EuW5Vtc7YGy2MUoTbpiqc5McuWulFBsM_RIKyyZ1zSe10mC1xhAbc6I095IePfwhHdawsgS34ceCqzHOb9y066JYqFu6VbpccSAQlTkLcvMWxFud2ouHbw35PpciJEIdisdS8foRDTeBGUGRbhOnhcqZ0J4&insecure=0&host=eitaa.global.ssl.fastly.net&fp=firefox&type=xhttp&allowInsecure=0&sni=default.ssl.fastly.net#Free x208 @Outline_Vpn [5.75.196.199:56539]",
+            "🇷🇺 Free x210 @Outline_Vpnvless://54ee5e59-55a3-4599-83ff-0c67b3f411b2@131.123.34.42:443?security=reality&encryption=none&pbk=pX9uknHGLC9I26TT5kq4bIAljtX2AGWLK23EMgn6xFo&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=sheetpeek.com&sid=84be686ea1d16478#Free x211 @Outline_Vpnvless://cb077bf2-70b7-457b-af42-27cdc3e0e544@178.105.61.61:2083?security=reality&encryption=none&pbk=H0nCazQFHVhSObfqSUhGLhK7KRwKzTMggIBPjnMMqhk&headerType=none&fp=chrome&spx=/&type=tcp&flow=xtls-rprx-vision&sid=af04ff8094115e93#Free x212 @Outline_Vpnvless://c21631d5-36c9-4664-b575-97eca17456be@2.27.205.59:443?path=/&security=none&encryption=none&type=ws#Free x213 @Outline_Vpntrojan://02cd3bac-2a78-4dbb-82b9-6b64084ddd8e@107.150.105.84:59385?security=tls&insecure=1&headerType=none&fp=chrome&type=tcp&allowInsecure=1#Free x214 @Outline_Vpntrojan://humanity@188.42.145.180:443?path=/assignment&security=tls&alpn=http/1.1&insecure=0&host=www.volumeroot.com&fp=chrome&type=ws&allowInsecure=0&sni=www.volumeroot.com#Free x215 @Outline_Vpnvless://4fb82973-a7f1-4fc2-9958-cb21f5162f06@nl-xh02.tcp-reset-club.net:8443?mode=stream-one&path=/assets/v2/pkg&security=reality&encryption=none&extra={\"xmux\":{\"maxConcurrency\":\"16-32\"}}&pbk=Gu_QdtOX6E8pZcYvDWgHKA5dxcit7hrpU27sizCEWXg&type=xhttp&sni=s3.netavex.com&sid=e0#Free x216 @Outline_Vpnvless://00f8cbcc-bf10-418b-a842-35519f460c7f@www.hxino.com:443?path=/38284/api4&security=tls&encryption=mlkem768x25519plus.random.0rtt.bt6vamtdf4jPeuNn2b5eHC7VwnJ4KklEReD_AIAkfT0&insecure=0&host=deh.irandoc.info&fp=firefox&type=httpupgrade&allowInsecure=0#Free x217 @Outline_Vpnvless://716426fa-bcb7-4eb9-b460-36399ebf740d@184.107.106.68:443?security=tls&encryption=none&insecure=1&headerType=none&type=tcp&allowInsecure=1&sni=lizca2.footballfantasyforum.com#Free x218 @Outline_Vpnvless://5e3f974b-06fc-4555-907a-6681391b7c17@private.netraidly.ru:40443?security=reality&encryption=none&pbk=oc9uweln_cqyaJnlRMnhhhKrGNP7RrYOsuYtaIOIQDE&headerType=none&type=tcp&flow=xtls-rprx-vision&sni=deepl.com&sid=2bc0#Free x219 @Outline_Vpn [spser1.mechanicir.ir:53719]",
+            "🇷🇺 Free x220 @Outline_Vpnvless://a18f7c2d-9e45-4b8a-af3c-1d5e7f9c8b2a@83.168.71.216:443?security=reality&encryption=none&pbk=8h8t5eBWL9oERK7xWHQLFJE5j6sZdgNDQAs3EGnNbho&headerType=none&fp=chrome&type=tcp&sni=ads.x5.ru&sid=2f49bccf11150ef2#Free x221 @Outline_Vpnvless://ff1dcb64-f13d-4ccd-a3c6-055218f7490b@az-hti-de.ramzshadi.ir:8088?path=/bmi.ir&security=none&encryption=mlkem768x25519plus.native.0rtt.AX1_Iy42S3tDy5Byp6LQba6NUB3ePNTLrdSyxC7MvVQ&host=play-apps-features.googleusercontent.com&type=ws#Free x222 @Outline_Vpnvless://ff1dcb64-f13d-4ccd-a3c6-055218f7490b@fr-jan.ramcalshoping.ir:8088?path=/bmi.ir&security=none&encryption=mlkem768x25519plus.native.0rtt.AX1_Iy42S3tDy5Byp6LQba6NUB3ePNTLrdSyxC7MvVQ&host=play-apps-features.googleusercontent.com&type=ws#Free x221 @Outline_Vpnvless://9e6b8db1-da80-494f-bad7-7a0451f801a1@5.152.223.193:443?security=reality&encryption=none&pbk=SiSky02wHz-S0TDHKFTdYhnrlT8Y3CfRsekZlcdLXDY&host=/?BIA--TELEGRAM--MARAMBASHI--MARAMBASHI&headerType=none&fp=firefox&type=tcp&flow=xtls-rprx-vision&sni=strapi.io&sid=fd55b698ee8c3629#Free x223 @Outline_Vpnvless://05020afd-d476-406b-8950-ee7dd63a6e64@151.242.168.180:443?security=reality&encryption=none&pbk=urD2miGxEfHylELSqqggBKCYIMSNXNTbdPijru7-eAQ&headerType=none&type=tcp&flow=xtls-rprx-vision&sni=kibi-institut.de&sid=46babe29a750b634#Free x224 @Outline_Vpnvless://a18f7c2d-9e45-4b8a-af3c-1d5e7f9c8b2a@83.168.71.216:443?security=reality&encryption=none&pbk=8h8t5eBWL9oERK7xWHQLFJE5j6sZdgNDQAs3EGnNbho&host=/?BIA--TELEGRAM--MARAMBASHI--MARAMBASHI&headerType=none&fp=chrome&type=tcp&sni=ads.x5.ru&sid=2f49bccf11150ef2#Free x225 @Outline_Vpntrojan://BbNnpOgc1j9WOaWoslbSyeob1r47IRHV@jgzt1997.qivfelo.ir:1080?security=reality&pbk=1ZO9Cjhs1IFAU6nZATRhOuD3kq6J-1dZadfEfX734zc&headerType=none&fp=chrome&type=tcp&sni=maps.google.com&sid=0d12eb289946de9b#Free x226 @Outline_Vpnvless://00ea847b-add2-47e4-9c48-cbca742e55c9@freeforall.nexavps.ir:32443?mode=auto&path=/phx&security=none&encryption=none&type=xhttp#Free x227 @Outline_Vpnvless://9015f0bc-2053-4ca1-9b9b-a018b97b32d2@144.31.125.60:443?security=reality&encryption=none&pbk=SVgtyuD9khylgHuB0treGekxVSHPOS-wPZTNHUf6zj8&headerType=none&fp=chrome&spx=/ozks0ksxmyHue4v&type=tcp&flow=xtls-rprx-vision&sni=www.intel.com&sid=85c86a9863#Free x228 @Outline_Vpnvless://ff1dcb64-f13d-4ccd-a3c6-055218f7490b@trkqountl.ramcalshoping.ir:8088?path=/bmi.ir&security=none&encryption=mlkem768x25519plus.native.0rtt.AX1_Iy42S3tDy5Byp6LQba6NUB3ePNTLrdSyxC7MvVQ&host=play-apps-features.googleusercontent.com&type=ws#Free x229 @Outline_Vpn [pol-hhasca.ramcalshoping.ir:8088]",
+            "🇷🇺 Free x250 @Outline_Vpnvless://f85ba8bb-a3da-4389-a67a-2b0afde7bbc1@uk-tube-01.stre4m.net:443?security=reality&encryption=none&pbk=SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc&headerType=none&type=tcp&flow=xtls-rprx-vision&sni=jobinvest.ru#Free x251 @Outline_Vpnvless://bf443e4a-aa9e-4509-abf0-d0f6828d57be@178.95.170.98:2087?path=/4bc027a44532&security=none&encryption=none&type=ws#Free x252 @Outline_Vpnvless://6b03ffdd-6646-410b-b575-6c05eafdaf60@165.231.99.52:8443?security=tls&encryption=none&insecure=0&headerType=none&fp=firefox&type=tcp&allowInsecure=0&flow=xtls-rprx-vision&sni=vusr-6aa2cf2b.adhil.uk#Free x253 @Outline_Vpnvless://bf443e4a-aa9e-4509-abf0-d0f6828d57be@178.95.170.115:2087?path=/4bc027a44532&security=none&encryption=none&type=ws#Free x254 @Outline_Vpnvless://a18f7c2d-9e45-4b8a-af3c-1d5e7f9c8b2a@83.168.71.216:443?security=reality&encryption=none&pbk=8h8t5eBWL9oERK7xWHQLFJE5j6sZdgNDQAs3EGnNbho&host=/?TELEGRAM--MARAMBASHI--MARAMBASHI&headerType=none&fp=chrome&type=tcp&sni=ads.x5.ru&sid=2f49bccf11150ef2#Free x255 @Outline_Vpnvless://028f3908-8885-4f06-ba95-777a435074bd@lv-irancell.xelfona.ir:20018?security=none&encryption=none&host=play-apps-features.googleusercontent.com&headerType=http&type=tcp#Free x256 @Outline_Vpnvless://47e3cf7b-c95c-4997-9003-4c7347c5737a@193.148.253.210:8081?path=/&security=tls&alpn=h2,http/1.1&encryption=none&insecure=0&host=193.148.253.210&fp=chrome&type=httpupgrade&allowInsecure=0&sni=193.148.253.210#Free x257 @Outline_Vpnvless://d9d0f208-d582-41d5-bb7b-742671402810@144.31.215.48:443?security=reality&encryption=none&pbk=w0J3H-DEyHEK-Nj7bst_5sQqzcPl700ybHpqq5mFz0U&headerType=none&type=tcp&flow=xtls-rprx-vision&sni=eu-central-de2.hanvpn.biz&sid=12a3b7681806bc97#Free x258 @Outline_Vpn [84.252.100.49:443]",
+            "🇷🇺 Free x320 @Outline_Vpnvless://de5906f3-df38-4463-aa9d-2b01320cc6ea@31.76.76.28:443?path=/&security=none&encryption=none&type=ws#Free x321 @Outline_Vpnss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTp3MFlmZjY3anhkM3pYWTln@20.87.3.84:443#Free x322 @Outline_Vpnvless://60a361f9-3c45-4954-9e4c-92a85bda243d@31.184.244.219:2053?mode=gun&security=reality&encryption=none&pbk=mzrVbIsEggpJfXR8M7yxki2vgv3sXWQdy1bGhXqatUY&fp=firefox&type=grpc&serviceName=grpc&sni=www.google.com&sid=4881f8244d1b9021#Free x323 @Outline_Vpnvless://60a361f9-3c45-4954-9e4c-92a85bda243d@31.184.244.219:2053?mode=gun&security=reality&encryption=none&pbk=mzrVbIsEggpJfXR8M7yxki2vgv3sXWQdy1bGhXqatUY&fp=firefox&type=grpc&serviceName=grpc&sni=www.google.com&sid=4881f8244d1b9021#Free x324 @Outline_Vpnvless://d512bf3d-3d5f-433e-b51f-dfb321720a6d@de9.bexait.ir:2434?security=reality&encryption=none&pbk=yzCvRpbQ-cRePaJAuQkw42_xEf-R860gFsQwoPki2E0&headerType=none&fp=chrome&type=tcp&sni=icloud.com&sid=9de041877612a718#Free x325 @Outline_Vpnvless://79b3dab9-3e6b-415f-9d1c-1b1c6855e354@104.143.223.229:2085?mode=gun&security=none&encryption=none&type=grpc&serviceName=vless#Free x326 @Outline_Vpnvless://28cec4eb-2c82-4089-a69b-d61db4fb8006@104.21.51.132:8080?path=/play&security=none&encryption=mlkem768x25519plus.native.0rtt.WAc6bqm9bM6YteuKtv84PJogmTI2R5RsWLvIB_WGeXw&host=th3ee3322.th3store.ir&type=httpupgrade#Free x327 @Outline_Vpnvless://c2e317b0-0847-4579-9b78-7b678634ffc4@freesocks.work:2052?path=/@BlueKnight_net--@BlueKnight_net&security=none&encryption=none&host=uwu.blueknightnet.qzz.io&type=ws#Free x328 @Outline_Vpnvless://60a361f9-3c45-4954-9e4c-92a85bda243d@new3.smart-cats.ru:2053?mode=gun&security=reality&encryption=none&pbk=mzrVbIsEggpJfXR8M7yxki2vgv3sXWQdy1bGhXqatUY&fp=chrome&spx=/&type=grpc&serviceName=grpc&sni=www.google.com&sid=4881f8244d1b9021#Free x329 @Outline_Vpn [104.21.51.132:8080]",
+            "🇷🇺 Free x330 @Outline_Vpnvless://e5cc16a6-ea42-46b2-82ae-ad2157e1641b@172.64.150.28:2082?path=/fp&security=none&encryption=none&host=hhlfy.twiladaphne.ndjp.net&type=ws#Free x331 @Outline_Vpnvless://59906cb2-a61b-4cf3-b77b-5762ef61d2b0@167.71.45.85:440?security=none&encryption=none&host=store.steampowered.com&headerType=http&type=tcp#Free x332 @Outline_Vpnvless://d342d11e-d424-4583-b36e-524ab1f0afa4@185.217.108.229:23351?path=/help&security=tls&encryption=none&insecure=1&host=cdn8848.776676.xyz&fp=chrome&type=ws&allowInsecure=1&sni=cdn8848.776676.xyz#Free x333 @Outline_Vpnvless://12148993-e326-4061-809d-d2a24a42bcb8@66.33.22.232:34118?mode=auto&path=/&security=reality&encryption=mlkem768x25519plus.native.0rtt.iNp8zQhTV--hc6rOKCn_2wNzEj_gJkzErYU3uhXnhx8&extra={\"mode\":\"auto\",\"xPaddingBytes\":\"100-1000\"}&pbk=hbNyksag-i4fRqV86HG14fhASaXpl4sYv-1zgrrnUSQ&fp=chrome&spx=/2350048babf955d&type=xhttp&sni=cam.ac.uk&sid=b5126487#Free x334 @Outline_Vpnvless://aa6f8aaf-d7ff-46f8-a9a0-d143d7e71f71@37.46.199.240:8443?mode=auto&path=/assets/v2/pkg&security=reality&encryption=none&extra={\n  \"xmux\" : {\n    \"maxConcurrency\" : \"16-32\"\n  }\n}&pbk=Gu_QdtOX6E8pZcYvDWgHKA5dxcit7hrpU27sizCEWXg&fp=firefox&type=xhttp&sni=s3.netavex.com&sid=e0#Free x335 @Outline_Vpnvless://e4514801-0d5a-42ba-869f-39bd605aef9e@15.237.34.168:22222?security=none&encryption=none&headerType=none&type=tcp#Free x336 @Outline_Vpnvless://bd5bbbac-adc3-4b23-d3ac-8506694c0ef9@a2.arshia-nova.ir:443?path=/&security=tls&alpn=h2&encryption=none&insecure=0&host=c12.com&fp=firefox&type=ws&allowInsecure=0&sni=ssl.fastly.com#Free x337 @Outline_Vpnvless://cfffb81e-5034-49ce-8729-18b60c7f1e89@150.241.79.210:443?security=reality&encryption=none&pbk=3J5mYA5NziIVJi77fRsx9dZPYWzLkvaIz-cCdZQvhn8&headerType=none&type=tcp&flow=xtls-rprx-vision&sni=rutube.ru&sid=1a2b#Free x338 @Outline_Vpnvless://cd3bb7d9-7df3-4644-ac05-c260990ac277@pl3.moritech.net:443?security=tls&alpn=h2&encryption=none&insecure=0&headerType=none&fp=firefox&type=tcp&allowInsecure=0&flow=xtls-rprx-vision&sni=pl3.moritech.net#Free x339 @Outline_Vpn [web.turbooserver.net.tr:8443]",
+            "🇷🇺 Free x340 @Outline_Vpnvless://cd3bb7d9-7df3-4644-ac05-c260990ac277@pl6.moritech.net:443?security=tls&alpn=h2&encryption=none&insecure=0&headerType=none&fp=chrome&type=tcp&allowInsecure=0&flow=xtls-rprx-vision&sni=pl6.moritech.net#Free x341 @Outline_Vpnvless://turboo-server@web.turbooserver.net.tr:8443?security=none&encryption=none&host=dynu.com&headerType=http&type=tcp#Free x342 @Outline_Vpnvless://bae8d9ba-9f5d-4802-bb5e-bc0956a472d6@185.126.67.44:1932?security=reality&encryption=none&pbk=SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc&headerType=none&type=tcp&flow=xtls-rprx-vision&sni=www.vk.com#Free x343 @Outline_Vpnss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpnVDM2dHNpUGZuZDBucDVraEpxanlR@p2tun1.greewebservices.ir:1010#Free x344 @Outline_Vpnvless://5e3f974b-06fc-4555-907a-6681391b7c17@186.246.19.79:40443?security=reality&encryption=none&pbk=oc9uweln_cqyaJnlRMnhhhKrGNP7RrYOsuYtaIOIQDE&headerType=none&type=tcp&flow=xtls-rprx-vision&sni=deepl.com&sid=2bc0#Free x344 @Outline_Vpnvless://44eae030-290b-4083-8102-6f8bab05701b@104.24.0.184:443?path=/&security=tls&encryption=none&insecure=0&host=cfvvv-ev1.pages.dev&type=ws&allowInsecure=0&sni=cfvvv-ev1.pages.dev#Free x345 @Outline_Vpnvless://9f61cdf4-810d-4052-bbc7-2da0c8e20104@83.147.18.3:443?security=reality&encryption=none&pbk=3iVJAIGPx6JMlhlRmfpGrHkSmLpHJ4CPvBBH7KsFrFA&headerType=none&type=tcp&flow=xtls-rprx-vision&sni=www.cloudflare.com&sid=fd8cf7e1173f0edb#Free x346 @Outline_Vpnvless://c21631d5-36c9-4664-b575-97eca17456be@2.27.205.59:443?path=/&security=none&encryption=none&host=neth8.lunariai.ru&type=ws#Free x347 @Outline_Vpnvless://e99ba96d-dec8-42eb-be53-19e71eef7cab@5.253.42.164:40443?security=reality&encryption=none&pbk=g77ZJbm18JEotapmVRjaXi133MzkbhkU2lxhVeXx8zw&headerType=none&type=tcp&flow=xtls-rprx-vision&sni=deepl.com&sid=68a8#Free x348 @Outline_Vpn [192.248.182.183:39244]",
+            "🇷🇺 Russia [*CIDR] VK [185.130.114.159:443]",
+            "🇷🇺 Russia [*CIDR] VK [217.16.26.183:443]",
+            "🇷🇺 Russia, Moscow | [BL] [45.152.113.214:4446]",
+            "🇷🇺 Russia | 🌐 | [IPv6] [*CIDR] [5.42.104.219:4389]",
+            "🇷🇺 Russia, Moscow | 🌐 | [IPv6] | [BL] [72.56.11.54:4478]",
+            "🇷🇺 Russia | 🌐 | [IPv6] | [BL] [72.56.247.218:4448]",
+            "🇷🇺 Russia [SNI-RU] ads.x5.ru [195.2.84.109:443]",
+            "🇷🇺 Russia, Moscow | [BL] [45.152.113.189:4440]",
+            "🇷🇺 Russia [*CIDR] YA [158.160.233.48:443]",
+            "🇷🇺 Russia [*CIDR] VK [212.233.72.146:443]",
+            "🇷🇺 Russia [*CIDR] VK [217.16.21.235:443]",
+            "🇷🇺 RU [94.242.55.42] [94.242.55.42:443]",
+            "🇷🇺 Белый_Интернет 14 LTE (Долгий пинг) [46.182.24.147:443]",
+            "🇷🇺 Россия | БС¹⁰ [95.163.214.43:443]",
+            "🇷🇺 LTE 9 | тгк: @rostunnel (Долгий пинг) [bl3fk52.sysopnova.art:443]",
+            "🇷🇺 LTE 10 | тгк: @rostunnel (Долгий пинг) [144.31.50.236:443]",
+            "🇷🇺 LTE 11 | тгк: @rostunnel (Долгий пинг) [91.240.87.166:443]",
+            "🇷🇺 LTE 12 | тгк: @rostunnel (Долгий пинг) [185.229.9.175:443]",
+            "🇷🇺 LTE 40 | тгк: @rostunnel (Долгий пинг) [91.224.87.22:9873]",
+            "🇷🇺 LTE 41 | тгк: @rostunnel (Долгий пинг) [91.224.86.107:9830]",
+            "🇷🇺 LTE 44 | тгк: @rostunnel (Долгий пинг) [188.124.47.34:9891]",
+            "🇷🇺 LTE 103 | тгк: @rostunnel (Долгий пинг) [prep.wwwinternetvideo.click:443]",
+            "🇷🇺 LTE 104 | тгк: @rostunnel (Долгий пинг) [193.163.203.170:443]",
+            "🇷🇺 LTE 107 | тгк: @rostunnel (Долгий пинг) [2.26.9.243:3454]",
+            "🇷🇺 LTE 113 | тгк: @rostunnel (Долгий пинг) [3.114.220.22:10583]"
+          ],
+          "strategy": {
+            "type": "leastLoad",
+            "settings": {
+              "baselines": [
+                "200ms",
+                "500ms"
+              ],
+              "expected": 2,
+              "maxRTT": "1500ms",
+              "tolerance": 0
+            }
+          }
+        }
+      ],
+      "rules": [
+        {
+          "type": "field",
+          "protocol": [
+            "bittorrent"
+          ],
+          "outboundTag": "direct"
+        },
+        {
+          "type": "field",
+          "ip": [
+            "geoip:private"
+          ],
+          "outboundTag": "direct"
+        },
+        {
+          "type": "field",
+          "balancerTag": "Auto_Balancer",
+          "network": "tcp,udp"
+        }
+      ]
+    },
+    "burstObservatory": {
+      "pingConfig": {
+        "destination": "http://gstatic.com",
+        "interval": "2m",
+        "sampling": 3,
+        "timeout": "3s"
+      },
+      "subjectSelector": [
+        "🇷🇺 Russia [*CIDR] Beeline [66.90.90.13:8443]",
+        "🇷🇺 [VL] Россия #3354 | РосТуннель t.me/rjsxrd [186.246.12.242:2053]",
+        "🇷🇺 The Netherlands | [SNI-RU] eh.vk.com t.me/rjsxrd [93.89.220.7:8443]",
+        "🇷🇺 [VL] Россия #3368 | РосТуннель t.me/rjsxrd [144.31.48.225:25947]",
+        "🇷🇺 Russia | TG: @HardVpn_robot t.me/rjsxrd [31.130.155.114:443]",
+        "🇷🇺 [VL] Россия #3418 | РосТуннель t.me/rjsxrd [176.108.246.110:9830]",
+        "🇷🇺 [VL] Россия #3417 | РосТуннель t.me/rjsxrd [213.171.25.178:9830]",
+        "🇷🇺 [VL] Россия #3428 | РосТуннель t.me/rjsxrd [188.225.24.201:443]",
+        "🇷🇺 [VL] Россия #3391 | РосТуннель t.me/rjsxrd [176.108.246.58:9881]",
+        "🇷🇺 [VL] Россия #3427 | РосТуннель t.me/rjsxrd [188.225.77.241:443]",
+        "🇷🇺 [VL] Россия #3425 | РосТуннель t.me/rjsxrd [188.225.57.78:443]",
+        "🇷🇺 [VL] Россия #3424 | РосТуннель t.me/rjsxrd [188.225.44.89:443]",
+        "🇷🇺 The Netherlands — #77 [Verified RU] t.me/rjsxrd [188.225.35.207:443]",
+        "🇷🇺 The Netherlands — #79 [Verified RU] t.me/rjsxrd [188.225.58.238:443]",
+        "🇷🇺 The Netherlands — #84 [Verified RU] t.me/rjsxrd [188.225.25.142:443]",
+        "🇷🇺 France — #46 [Verified RU] t.me/rjsxrd [176.123.162.100:9880]",
+        "🇷🇺 The Netherlands — #93 [Verified RU] t.me/rjsxrd [188.225.42.6:443]",
+        "🇷🇺 [VL] Россия #3330 | РосТуннель t.me/rjsxrd [xssite.webredirect.org:443]",
+        "🇷🇺 [VL] Россия #10036 | РосТуннель t.me/rjsxrd [104.24.16.23:443]",
+        "🇷🇺 [VL] Россия #3300 | РосТуннель t.me/rjsxrd [72.56.250.71:443]",
+        "🇷🇺 Germany — #11 [Verified RU] t.me/rjsxrd [46.243.142.227:10443]",
+        "🇷🇺 [VL] Россия #3394 | РосТуннель t.me/rjsxrd [77.110.104.238:443]",
+        "🇷🇺 [VL] Россия #3389 | РосТуннель t.me/rjsxrd [46.8.200.91:443]",
+        "🇷🇺 🌐 Anycast-IP | 🇳🇱 [SNI-RU] yandex.ru t.me/rjsxrd [144.31.57.48:4143]",
+        "🇷🇺 [VL] Россия #3298 | РосТуннель t.me/rjsxrd [176.123.161.222:9892]",
+        "🇷🇺 The Netherlands | [SNI-RU] dzen.ru t.me/rjsxrd [94.183.224.45:443]",
+        "🇷🇺 [VL] Россия #3329 | РосТуннель t.me/rjsxrd [89.169.171.202:8444]",
+        "🇷🇺 NL - Russia [94.26.228.10:443]",
+        "🇷🇺 Russia X [5.181.171.2:443]",
+        "🇷🇺 soskeynet  VL-RAW-  RU 126ms [193.168.46.180:443]",
+        "🇷🇺 Russia | [*CIDR] [94.26.249.216:52006]",
+        "🇷🇺 🌐 Anycast-IP | 🇩🇪 🇷🇺 [*CIDR] Beeline [66.90.93.74:8443]",
+        "🇷🇺 Russia | [*CIDR] YA [217.198.169.86:443]",
+        "🇷🇺 RU [api.betust.net] [api.betust.net:443]",
+        "🇷🇺 RU [app4.betust.net] [app4.betust.net:443]",
+        "🇷🇺 RU [demo.betust.net] [demo.betust.net:443]",
+        "🇷🇺 RU [prime.betust.net] [prime.betust.net:443]",
+        "🇷🇺 RU [158.160.144.108] [158.160.144.108:7443]",
+        "🇷🇺 RU [176.108.243.140] [176.108.243.140:443]",
+        "🇷🇺 @FreakConfighysteria2://cd74c0a406664a5bc0bac098220a2468@144.31.49.138:443?security=tls&obfs=salamander&obfs-password=44f1c1e2f8b99e792ceed574627a1eb0&insecure=0&sni=ru1.sferavpn.pro#🇷🇺@FreakConfigtrojan://humanity@130.250.137.171:443?path=/assignment&security=tls&insecure=0&host=www.ignitelimit.com&ech=ip.gs+udp://8.8.8.8&type=ws&allowInsecure=0&sni=www.ignitelimit.com#🇺🇸@FreakConfigtrojan://humanity@188.114.97.7:443?path=/assignment&security=tls&insecure=0&ech=ip.gs+udp://8.8.8.8&type=ws&allowInsecure=0&sni=www.ignitelimit.com#🇨🇦@FreakConfigvless://d5af4dfe-eaf1-460c-87aa-fefe930db0ba@darsadgir.ir:443?mode=auto&path=/ChOpIn&security=tls&encryption=none&extra={\"mode\":\"auto\",\"xPaddingBytes\":\"1-1\",\"xPaddingObfsMode\":true,\"xPaddingKey\":\"ctx\",\"xPaddingHeader\":\"x-grpc-context\",\"xPaddingMethod\":\"tokenish\",\"sessionIDPlacement\":\"header\",\"sessionIDKey\":\"Idempotency-Key\",\"seqPlacement\":\"header\",\"seqKey\":\"Upload-Offset\",\"sessionPlacement\":\"header\",\"sessionKey\":\"Idempotency-Key\"}&insecure=0&host=chopin.paxr.ir&type=xhttp&allowInsecure=0&sni=chopin.paxr.ir#🇫🇷@FreakConfig [89.35.14.31:443]",
+        "🇷🇺 @FreakConfigvless://e4514801-0d5a-42ba-869f-39bd605aef9e@16.60.243.242:22223?security=none&encryption=none&headerType=none&type=tcp#🇬🇧@FreakConfigvless://501a2da5-cb22-4a3f-915e-e3b821d1d62d@87.199.205.28:443?security=reality&encryption=none&pbk=W-9zyiOq287RtXVTZlTFbSDJ0Mx8joyBLJoA7ZE7eBw&headerType=none&fp=qq&type=tcp&flow=xtls-rprx-vision&sni=vkvd754.okcdn.ru&sid=ef1d3554c652a436#🇳🇱@FreakConfigvless://e4514801-0d5a-42ba-869f-39bd605aef9e@16.60.243.242:22222?security=none&encryption=none&headerType=none&type=tcp#🇬🇧@FreakConfigvless://14b48651-3738-4926-bc09-4c04e87ff80b@179.61.138.5:443?mode=stream-one&path=/Join-JavidnamanIran-on-Telegram&security=tls&alpn=h2&encryption=none&insecure=0&host=static.lotussec.com&type=xhttp&allowInsecure=0&sni=static.lotussec.com#🇩🇪@FreakConfigvless://e4514801-0d5a-42ba-869f-39bd605aef9e@16.60.243.242:22224?security=none&encryption=none&headerType=none&type=tcp#🇬🇧@FreakConfig [netsecureteam5.ir:4444]",
+        "🇷🇺 S3 | @ELiV2Rayvless://84a794a5-2420-4ca7-8e08-8d21571f36f3@152.53.66.34:8443?mode=gun&security=reality&encryption=none&pbk=Zvq-k6PMXjmd6YlWcu3T1J63m0IxZcOaedRwSG9O0lI&fp=firefox&type=grpc&sni=avstri.plus-hit.ru&sid=92558baf673ab721#🇦🇹 S1 | @ELiV2Rayvless://84a794a5-2420-4ca7-8e08-8d21571f36f3@152.53.64.139:8443?mode=gun&security=reality&encryption=none&pbk=Zvq-k6PMXjmd6YlWcu3T1J63m0IxZcOaedRwSG9O0lI&fp=firefox&type=grpc&sni=avstri.plus-hit.ru&sid=92558baf673ab721#🇦🇹 S2 | @ELiV2Rayvless://0fcbc45d-acdc-40cf-9a66-961c00f5b4a5@109.169.76.39:443?security=reality&encryption=none&pbk=SiSky02wHz-S0TDHKFTdYhnrlT8Y3CfRsekZlcdLXDY&headerType=none&fp=firefox&type=tcp&flow=xtls-rprx-vision&sni=slashdot.org&sid=fd55b698ee8c3629#🇬🇧@ELiV2Rayvless://419f25c1-bc35-412e-93fb-258efee859b5@gb2.murhost.network:443?security=reality&encryption=none&pbk=fyfX-egDrRvXNW1Gt2P_8rH4jdupAcmhFLOCZCzCowo&headerType=none&fp=firefox&type=tcp&flow=xtls-rprx-vision&sni=gb2.murhost.network&sid=fc36b4a584871aa5#🇺🇸@ELiV2Ray [152.53.65.60:8443]",
+        "🇷🇺 @FREELAND8 🇪🇺vless://44eae030-290b-4083-8102-6f8bab05701b@104.21.89.41:443?path=/&security=tls&encryption=none&fm={\"tcp\":[{\"type\":\"fragment\",\"settings\":{\"packets\":\"tlshello\",\"lengths\":[\"0\",\"104\",\"1\"],\"delays\":[\"0\"],\"maxSplit\":\"0\"}},{\"type\":\"fragment\",\"settings\":{\"packets\":\"1-1\",\"lengths\":[\"114\",\"1\"],\"delays\":[\"1\"],\"maxSplit\":\"11\"}}]}&insecure=0&host=cfvvv-ev1.pages.dev&type=ws&allowInsecure=0&sni=cfvvv-ev1.pages.dev#@FREELAND8 🇪🇺ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpMQjJKOE12VHQyU0JnRDZv@20.238.35.153:443#@FREELAND8 🇪🇺vless://d85711cf-c5f5-4166-8000-25958322b13f@darsadgir.ir:8443?mode=auto&path=/api/download.php&security=tls&alpn=h2,http/1.1,h3&encryption=none&extra={\"mode\":\"auto\",\"xPaddingBytes\":\"1-1\",\"xPaddingObfsMode\":true,\"xPaddingKey\":\"ctx\",\"xPaddingHeader\":\"x-grpc-context\",\"xPaddingMethod\":\"tokenish\",\"sessionIDPlacement\":\"header\",\"sessionIDKey\":\"Idempotency-Key\",\"seqPlacement\":\"header\",\"seqKey\":\"Upload-Offset\",\"sessionPlacement\":\"header\",\"sessionKey\":\"Idempotency-Key\"}&insecure=0&host=sausage.esmbegudota.ir&type=xhttp&allowInsecure=0&sni=sausage.esmbegudota.ir#@FREELAND8 🇪🇺vless://d85711cf-c5f5-4166-8000-25958322b13f@b2n.ir:8443?mode=auto&path=/api/download.php&security=tls&alpn=h2,http/1.1,h3&encryption=none&extra={\"mode\":\"auto\",\"xPaddingBytes\":\"1-1\",\"xPaddingObfsMode\":true,\"xPaddingKey\":\"ctx\",\"xPaddingHeader\":\"x-grpc-context\",\"xPaddingMethod\":\"tokenish\",\"sessionIDPlacement\":\"header\",\"sessionIDKey\":\"Idempotency-Key\",\"seqPlacement\":\"header\",\"seqKey\":\"Upload-Offset\",\"sessionPlacement\":\"header\",\"sessionKey\":\"Idempotency-Key\"}&insecure=0&host=sausage.esmbegudota.ir&type=xhttp&allowInsecure=0&sni=sausage.esmbegudota.ir#@FREELAND8 🇪🇺vless://2fa4235a-51a7-452b-a760-498951646043@land.zavqeron.ir:2053?path=/fi-cdn&security=tls&alpn=h3,h2,http/1.1&encryption=none&insecure=0&host=land.zavqeron.ir&fp=chrome&type=ws&allowInsecure=0&sni=zavqeron.ir#@FREELAND8 🇫🇮trojan://humanity@8.47.69.0:443?path=/assignment&security=tls&alpn=http/1.1&insecure=0&host=www.pleadcourt.org&fp=chrome&type=ws&allowInsecure=0&sni=www.pleadcourt.org#@FREELAND8 🇪🇺vless://2fa4235a-51a7-452b-a760-498951646043@any.zavqeron.ir:2053?path=/de1-cdn&security=tls&alpn=h3,h2,http/1.1&encryption=none&insecure=0&host=any.zavqeron.ir&fp=chrome&type=ws&allowInsecure=0&sni=zavqeron.ir#@FREELAND8 🇩🇪vless://2fa4235a-51a7-452b-a760-498951646043@fin11.zavqeron.ir:8452?security=reality&encryption=none&pbk=DZ21X_0wGHxZHBARCNMan297KcIblbSZPOWmQiL8Z1g&headerType=none&fp=qq&type=tcp&sni=play.google.com&sid=d74e8f92d523c857#@FREELAND8 🇬🇧vless://2fa4235a-51a7-452b-a760-498951646043@fin11.velqixa.ir:8451?security=reality&encryption=none&pbk=X4ti5_8FOtWv8YgF8Wz7OHZBeG4rPoMVuPUyA86gRkU&headerType=none&fp=qq&type=tcp&sni=play.google.com&sid=9b5ea77c26494863#@FREELAND8 🇺🇸socks://Og@144.91.121.61:1088#@FREELAND8 🇩🇪vmess://eyJhZGQiOiIxNjUuMTU0LjE5NS4zOCIsImFpZCI6IjAiLCJhbHBuIjoiIiwiZnAiOiIiLCJob3N0IjoiIiwiaWQiOiI5NTlhOGNhZi00Y2VhLTQzZDAtYTU0OC0zNjI4ZTdkZGZhZmMiLCJpbnNlY3VyZSI6IjAiLCJuZXQiOiJ0Y3AiLCJwYXRoIjoiIiwicGNzIjoiIiwicG9ydCI6IjM1MDM0IiwicHMiOiJARlJFRUxBTkQ4IPCfh7nwn4e8Iiwic2N5IjoiYXV0byIsInNuaSI6IiIsInRscyI6Im5vbmUiLCJ0eXBlIjoibm9uZSIsInYiOiIyIiwidmNuIjoiIn0=vless://2fa4235a-51a7-452b-a760-498951646043@land.zavqeron.ir:2053?path=/fr-cdn&security=tls&alpn=h3,h2,http/1.1&encryption=none&insecure=0&host=land.zavqeron.ir&fp=chrome&type=ws&allowInsecure=0&sni=zavqeron.ir#@FREELAND8 🇫🇷vless://60a361f9-3c45-4954-9e4c-92a85bda243d@new3.smart-cats.ru:2053?mode=gun&security=reality&encryption=none&pbk=mzrVbIsEggpJfXR8M7yxki2vgv3sXWQdy1bGhXqatUY&fp=chrome&spx=/&type=grpc&serviceName=grpc&sni=www.google.com&sid=4881f8244d1b9021#@FREELAND8 🇩🇪vless://60a2998c-cd85-562e-a3fd-396e4925dd3a@199.232.237.79:443?pcs=cd6e838b9bfe31cab8b3d5c858b0d6223fe84ece236c1fdb281be93c302e1e6e&path=/&security=tls&alpn=h3,h2,http/1.1&encryption=none&insecure=0&host=turboo-server.com&type=ws&allowInsecure=0&sni=turboo-server.com#@FREELAND8 🇩🇪vmess://eyJhZGQiOiIxMzQuMTk1LjE5Ni4yMTEiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImZwIjoiIiwiaG9zdCI6IiIsImlkIjoiZjhjOGRjM2QtMGQzNy00NmIwLThiMzQtYTcyMzI4ODJmY2ZlIiwiaW5zZWN1cmUiOiIwIiwibmV0IjoidGNwIiwicGF0aCI6IiIsInBjcyI6IiIsInBvcnQiOiIxODAwMCIsInBzIjoiQEZSRUVMQU5EOCDwn4eo8J+HpiIsInNjeSI6ImF1dG8iLCJzbmkiOiIiLCJ0bHMiOiJub25lIiwidHlwZSI6Im5vbmUiLCJ2IjoiMiIsInZjbiI6IiJ9ss://YWVzLTI1Ni1nY206UHJveHkyMDI0@23.252.104.131:54321#@FREELAND8 🇪🇺ss://YWVzLTI1Ni1nY206WTZSOXBBdHZ4eHptR0M@51.222.155.113:5601#@FREELAND8 🇨🇦vless://44eae030-290b-4083-8102-6f8bab05701b@188.114.97.6:443?path=/&security=tls&encryption=none&fm={\"tcp\": [{\"type\": \"fragment\", \"settings\": {\"packets\": \"tlshello\", \"lengths\": [\"0\", \"104\", \"1\"], \"delays\": [\"0\"], \"maxSplit\": \"0\"}},{\"type\": \"fragment\", \"settings\": {\"packets\": \"1-1\", \"lengths\": [\"114\", \"1\"], \"delays\": [\"1\"], \"maxSplit\": \"11\"}}]}&insecure=0&host=cfvvv-ev1.pages.dev&type=ws&allowInsecure=0&sni=cfvvv-ev1.pages.dev#@FREELAND8 🇺🇸vless://2a6c617d-98e4-49c3-95ab-76f02fcf0150@46.137.202.178:12512?security=reality&encryption=none&pbk=sO0RBMr_l8TLtZaYBX8n3NdI9AtaugUqJpCR1szNsyA&headerType=none&fp=firefox&type=tcp&flow=xtls-rprx-vision&sni=www.intel.com&sid=e692a8250d2e2fd0#@FREELAND8  🇸🇬ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpJWGEzeWx6U19qQk9Bc1F5MDcxdElR@5.75.192.44:1080#@FREELAND8 🇪🇺vless://2fa4235a-51a7-452b-a760-498951646043@nether11.velqixa.ir:8448?mode=auto&path=/nl-xhttp&security=reality&encryption=none&pbk=GKUHECPMuiffveVgQMvRHHg1GgOSNp5lVWPLjRZGN0c&fp=qq&type=xhttp&sni=play.google.com&sid=d6fdcd5c4aa0e050#@FREELAND8 🇳🇱 [104.16.10.185:443]",
+        "🇷🇺 Free x200 @Outline_Vpnvless://bf443e4a-aa9e-4509-abf0-d0f6828d57be@178.95.170.98:2087?path=/4bc027a44532&security=none&encryption=none&type=ws#Free x201 @Outline_Vpnvless://c21631d5-36c9-4664-b575-97eca17456be@2.27.205.59:443?path=/&security=none&encryption=none&host=neth8.lunariai.ru&type=ws#Free x202 @Outline_Vpnvless://7247b284-c40d-47c7-af4e-c4738f827a3d@89.116.250.135:8880?path=/?ed=2082&security=none&encryption=mlkem768x25519plus.random.0rtt.iZJwXenO31gj30xJyjEnDZ_qxA-iUdzbT1zdrr8Mbmo&host=Petcup.cdn.caroptionzz.ir.cdn.tr1.k8k8110.com&type=httpupgrade#Free x203 @Outline_Vpnvless://7247b284-c40d-47c7-af4e-c4738f827a3d@5.75.201.137:56539?security=none&encryption=mlkem768x25519plus.random.0rtt.swY_aKEuuHUHKO0BHVV2uot-UFbtrXpLWr7g8uZk0xk&headerType=http&type=tcp#Free x204 @Outline_Vpnvless://87a4b6b9-d269-4959-bb80-1234b46c8d06@199.232.78.159:80?path=/&security=none&encryption=none&host=7wwwspeedtestnet.global.ssl.fastly.net&type=ws#Free x205 @Outline_Vpnvless://14f4be39-cb89-4f2b-8200-704666b6fa4e@95.85.241.209:443?security=reality&encryption=none&pbk=vZ22ThhkpXUd5-tY-v5TTrouLHjgYYmeQgqeLt7HRz0&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=google.com#Free x206 @Outline_Vpnvless://dabb9a19-03ab-4cdf-8963-d3c45eb0f80d@83.168.111.58:443?security=reality&encryption=none&pbk=4h74KXbkBMYOhJkZabJNsf85cI91ytap_gkl56mzjTU&headerType=none&type=tcp&flow=xtls-rprx-vision&sni=soulful.host#Free x207 @Outline_Vpnvless://7247b284-c40d-47c7-af4e-c4738f827a3d@151.101.56.7:443?mode=auto&path=/&security=tls&encryption=mlkem768x25519plus.random.0rtt.GdOIY4aWLxkAK8IFF4mpehETCloYQkfBBkEFKuetTKyo41qDNiygh7CUFNc50doXUJu4hIyK-oWG-MgjMrQZRzkJBKqmGdK_QxiDSERyYYak8_usliZfy1Bs7nYYcaUgBPB2HoE_FXxjKmOdPHMSESh4XLcj49S5-3yCDIwn7wJQTxNixPPEsIGRlRVlayyeO2ebRXwCynSXmCCCAA2QN1cTN-tb7SKlVuexDDI_bHsgmjJkyOXCRrV6uQqtkgAFdPYn88IVnOU7xXqmu7V7U1ckw9uu9Zc3p7tgIYiRr6JF4napPskDVLlNIPrL-yMzmJjDlzgphHJTJaACGhF_fEKgzky5ipgavFsik3ynPjfMFjtwmIkPYlqN6qRPZmulaKkVjrOUFMK6hzQAI2l06NUec2Q8YixRUBopc-Vc5SCkakPCzCQg9ygkSfyV2IwQI6Gc-iZLw1sk7mRZyRhHVbFu0nyZgFiM8ZWujoR1SgYVQQJX_2VCtJjGG3C77YBx8KAcr-KAN9q-fEMiHSrOfJsG6mDN-bHOwOhpESA3-jhshQQW-GKGnecMQGibh0iE-qC3z9ugpdE3KeFpzYHH4lJ2zYelDntS53Wd9JI44RtptnOlHruC8YZ9bxKfSQqBwyoF9ve1EKJsuzaCydOVhKpm88lEyXdf4uC9hpRswwxCBCc87xqVAgdcB5SqSmSfUAwcbRCmeyq8oNYF8WaV9NEqisgbijlYrBOekpxIxdADf7E-m5ZMbRu8GMBWnkiWGQdOtpMlHpUnv8c8x3qlMDkspvY5TleN9bmHphOssxYDJgYfJ1EW5RLAWmYVXokPl1WuSahRxgyENyMFewPMl3m5slBZnXaY4Sa05QZbf5mMZxiSxPtYSmEJxOJE7tFCkoF_tXFMXkc3tTuzF1Ohs9QA6qjN5Rms_3dPd3V_OiEkhqIQoFW0PgZWy-VuxHt_jVI9q5muXjIxU8lJAzgBnhZlIjILqnNSRnETY3dY2Fol1cwtLht-r5CzFqw9FWcYJBvPA1ib_7pxYNRq9-yMM8XB0eeStxdvB-GMqOxGXQuvrKWamdcmCwSbo4dYxXiBAzqV6uwTIoSp44w2kpSMkQdiVoI6AoVLsHNf2Da-n6OiePG7fkJi8IVUR6S-r7lRtuVn-wpBNSJVPHtv1iSAWsNEeEwPRLcT71yv3gsBF9MQWbx_zDtP0FNajlQEPJGt-SsZqstxoJjOgXKxitUmHyDDegK7x_sB0Lw_AgUaD8Y102Cr4nulwIuPO4mxa2gI_ze-IxJ8JegG3vd__YK11merHfaBo-tfNvpmu2Mr6WArIaWxp2lJHwq74RyWJJOs1-o9IVWhdLYUgIclUZGC9gwxjDtzUiw7hfAK-BW0F0k7qlAYIDlRa5A9WVDNQfl7LqNGiSGrMGE-i7q7EuW5Vtc7YGy2MUoTbpiqc5McuWulFBsM_RIKyyZ1zSe10mC1xhAbc6I095IePfwhHdawsgS34ceCqzHOb9y066JYqFu6VbpccSAQlTkLcvMWxFud2ouHbw35PpciJEIdisdS8foRDTeBGUGRbhOnhcqZ0J4&insecure=0&host=eitaa.global.ssl.fastly.net&fp=firefox&type=xhttp&allowInsecure=0&sni=default.ssl.fastly.net#Free x208 @Outline_Vpn [5.75.196.199:56539]",
+        "🇷🇺 Free x210 @Outline_Vpnvless://54ee5e59-55a3-4599-83ff-0c67b3f411b2@131.123.34.42:443?security=reality&encryption=none&pbk=pX9uknHGLC9I26TT5kq4bIAljtX2AGWLK23EMgn6xFo&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=sheetpeek.com&sid=84be686ea1d16478#Free x211 @Outline_Vpnvless://cb077bf2-70b7-457b-af42-27cdc3e0e544@178.105.61.61:2083?security=reality&encryption=none&pbk=H0nCazQFHVhSObfqSUhGLhK7KRwKzTMggIBPjnMMqhk&headerType=none&fp=chrome&spx=/&type=tcp&flow=xtls-rprx-vision&sid=af04ff8094115e93#Free x212 @Outline_Vpnvless://c21631d5-36c9-4664-b575-97eca17456be@2.27.205.59:443?path=/&security=none&encryption=none&type=ws#Free x213 @Outline_Vpntrojan://02cd3bac-2a78-4dbb-82b9-6b64084ddd8e@107.150.105.84:59385?security=tls&insecure=1&headerType=none&fp=chrome&type=tcp&allowInsecure=1#Free x214 @Outline_Vpntrojan://humanity@188.42.145.180:443?path=/assignment&security=tls&alpn=http/1.1&insecure=0&host=www.volumeroot.com&fp=chrome&type=ws&allowInsecure=0&sni=www.volumeroot.com#Free x215 @Outline_Vpnvless://4fb82973-a7f1-4fc2-9958-cb21f5162f06@nl-xh02.tcp-reset-club.net:8443?mode=stream-one&path=/assets/v2/pkg&security=reality&encryption=none&extra={\"xmux\":{\"maxConcurrency\":\"16-32\"}}&pbk=Gu_QdtOX6E8pZcYvDWgHKA5dxcit7hrpU27sizCEWXg&type=xhttp&sni=s3.netavex.com&sid=e0#Free x216 @Outline_Vpnvless://00f8cbcc-bf10-418b-a842-35519f460c7f@www.hxino.com:443?path=/38284/api4&security=tls&encryption=mlkem768x25519plus.random.0rtt.bt6vamtdf4jPeuNn2b5eHC7VwnJ4KklEReD_AIAkfT0&insecure=0&host=deh.irandoc.info&fp=firefox&type=httpupgrade&allowInsecure=0#Free x217 @Outline_Vpnvless://716426fa-bcb7-4eb9-b460-36399ebf740d@184.107.106.68:443?security=tls&encryption=none&insecure=1&headerType=none&type=tcp&allowInsecure=1&sni=lizca2.footballfantasyforum.com#Free x218 @Outline_Vpnvless://5e3f974b-06fc-4555-907a-6681391b7c17@private.netraidly.ru:40443?security=reality&encryption=none&pbk=oc9uweln_cqyaJnlRMnhhhKrGNP7RrYOsuYtaIOIQDE&headerType=none&type=tcp&flow=xtls-rprx-vision&sni=deepl.com&sid=2bc0#Free x219 @Outline_Vpn [spser1.mechanicir.ir:53719]",
+        "🇷🇺 Free x220 @Outline_Vpnvless://a18f7c2d-9e45-4b8a-af3c-1d5e7f9c8b2a@83.168.71.216:443?security=reality&encryption=none&pbk=8h8t5eBWL9oERK7xWHQLFJE5j6sZdgNDQAs3EGnNbho&headerType=none&fp=chrome&type=tcp&sni=ads.x5.ru&sid=2f49bccf11150ef2#Free x221 @Outline_Vpnvless://ff1dcb64-f13d-4ccd-a3c6-055218f7490b@az-hti-de.ramzshadi.ir:8088?path=/bmi.ir&security=none&encryption=mlkem768x25519plus.native.0rtt.AX1_Iy42S3tDy5Byp6LQba6NUB3ePNTLrdSyxC7MvVQ&host=play-apps-features.googleusercontent.com&type=ws#Free x222 @Outline_Vpnvless://ff1dcb64-f13d-4ccd-a3c6-055218f7490b@fr-jan.ramcalshoping.ir:8088?path=/bmi.ir&security=none&encryption=mlkem768x25519plus.native.0rtt.AX1_Iy42S3tDy5Byp6LQba6NUB3ePNTLrdSyxC7MvVQ&host=play-apps-features.googleusercontent.com&type=ws#Free x221 @Outline_Vpnvless://9e6b8db1-da80-494f-bad7-7a0451f801a1@5.152.223.193:443?security=reality&encryption=none&pbk=SiSky02wHz-S0TDHKFTdYhnrlT8Y3CfRsekZlcdLXDY&host=/?BIA--TELEGRAM--MARAMBASHI--MARAMBASHI&headerType=none&fp=firefox&type=tcp&flow=xtls-rprx-vision&sni=strapi.io&sid=fd55b698ee8c3629#Free x223 @Outline_Vpnvless://05020afd-d476-406b-8950-ee7dd63a6e64@151.242.168.180:443?security=reality&encryption=none&pbk=urD2miGxEfHylELSqqggBKCYIMSNXNTbdPijru7-eAQ&headerType=none&type=tcp&flow=xtls-rprx-vision&sni=kibi-institut.de&sid=46babe29a750b634#Free x224 @Outline_Vpnvless://a18f7c2d-9e45-4b8a-af3c-1d5e7f9c8b2a@83.168.71.216:443?security=reality&encryption=none&pbk=8h8t5eBWL9oERK7xWHQLFJE5j6sZdgNDQAs3EGnNbho&host=/?BIA--TELEGRAM--MARAMBASHI--MARAMBASHI&headerType=none&fp=chrome&type=tcp&sni=ads.x5.ru&sid=2f49bccf11150ef2#Free x225 @Outline_Vpntrojan://BbNnpOgc1j9WOaWoslbSyeob1r47IRHV@jgzt1997.qivfelo.ir:1080?security=reality&pbk=1ZO9Cjhs1IFAU6nZATRhOuD3kq6J-1dZadfEfX734zc&headerType=none&fp=chrome&type=tcp&sni=maps.google.com&sid=0d12eb289946de9b#Free x226 @Outline_Vpnvless://00ea847b-add2-47e4-9c48-cbca742e55c9@freeforall.nexavps.ir:32443?mode=auto&path=/phx&security=none&encryption=none&type=xhttp#Free x227 @Outline_Vpnvless://9015f0bc-2053-4ca1-9b9b-a018b97b32d2@144.31.125.60:443?security=reality&encryption=none&pbk=SVgtyuD9khylgHuB0treGekxVSHPOS-wPZTNHUf6zj8&headerType=none&fp=chrome&spx=/ozks0ksxmyHue4v&type=tcp&flow=xtls-rprx-vision&sni=www.intel.com&sid=85c86a9863#Free x228 @Outline_Vpnvless://ff1dcb64-f13d-4ccd-a3c6-055218f7490b@trkqountl.ramcalshoping.ir:8088?path=/bmi.ir&security=none&encryption=mlkem768x25519plus.native.0rtt.AX1_Iy42S3tDy5Byp6LQba6NUB3ePNTLrdSyxC7MvVQ&host=play-apps-features.googleusercontent.com&type=ws#Free x229 @Outline_Vpn [pol-hhasca.ramcalshoping.ir:8088]",
+        "🇷🇺 Free x250 @Outline_Vpnvless://f85ba8bb-a3da-4389-a67a-2b0afde7bbc1@uk-tube-01.stre4m.net:443?security=reality&encryption=none&pbk=SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc&headerType=none&type=tcp&flow=xtls-rprx-vision&sni=jobinvest.ru#Free x251 @Outline_Vpnvless://bf443e4a-aa9e-4509-abf0-d0f6828d57be@178.95.170.98:2087?path=/4bc027a44532&security=none&encryption=none&type=ws#Free x252 @Outline_Vpnvless://6b03ffdd-6646-410b-b575-6c05eafdaf60@165.231.99.52:8443?security=tls&encryption=none&insecure=0&headerType=none&fp=firefox&type=tcp&allowInsecure=0&flow=xtls-rprx-vision&sni=vusr-6aa2cf2b.adhil.uk#Free x253 @Outline_Vpnvless://bf443e4a-aa9e-4509-abf0-d0f6828d57be@178.95.170.115:2087?path=/4bc027a44532&security=none&encryption=none&type=ws#Free x254 @Outline_Vpnvless://a18f7c2d-9e45-4b8a-af3c-1d5e7f9c8b2a@83.168.71.216:443?security=reality&encryption=none&pbk=8h8t5eBWL9oERK7xWHQLFJE5j6sZdgNDQAs3EGnNbho&host=/?TELEGRAM--MARAMBASHI--MARAMBASHI&headerType=none&fp=chrome&type=tcp&sni=ads.x5.ru&sid=2f49bccf11150ef2#Free x255 @Outline_Vpnvless://028f3908-8885-4f06-ba95-777a435074bd@lv-irancell.xelfona.ir:20018?security=none&encryption=none&host=play-apps-features.googleusercontent.com&headerType=http&type=tcp#Free x256 @Outline_Vpnvless://47e3cf7b-c95c-4997-9003-4c7347c5737a@193.148.253.210:8081?path=/&security=tls&alpn=h2,http/1.1&encryption=none&insecure=0&host=193.148.253.210&fp=chrome&type=httpupgrade&allowInsecure=0&sni=193.148.253.210#Free x257 @Outline_Vpnvless://d9d0f208-d582-41d5-bb7b-742671402810@144.31.215.48:443?security=reality&encryption=none&pbk=w0J3H-DEyHEK-Nj7bst_5sQqzcPl700ybHpqq5mFz0U&headerType=none&type=tcp&flow=xtls-rprx-vision&sni=eu-central-de2.hanvpn.biz&sid=12a3b7681806bc97#Free x258 @Outline_Vpn [84.252.100.49:443]",
+        "🇷🇺 Free x320 @Outline_Vpnvless://de5906f3-df38-4463-aa9d-2b01320cc6ea@31.76.76.28:443?path=/&security=none&encryption=none&type=ws#Free x321 @Outline_Vpnss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTp3MFlmZjY3anhkM3pYWTln@20.87.3.84:443#Free x322 @Outline_Vpnvless://60a361f9-3c45-4954-9e4c-92a85bda243d@31.184.244.219:2053?mode=gun&security=reality&encryption=none&pbk=mzrVbIsEggpJfXR8M7yxki2vgv3sXWQdy1bGhXqatUY&fp=firefox&type=grpc&serviceName=grpc&sni=www.google.com&sid=4881f8244d1b9021#Free x323 @Outline_Vpnvless://60a361f9-3c45-4954-9e4c-92a85bda243d@31.184.244.219:2053?mode=gun&security=reality&encryption=none&pbk=mzrVbIsEggpJfXR8M7yxki2vgv3sXWQdy1bGhXqatUY&fp=firefox&type=grpc&serviceName=grpc&sni=www.google.com&sid=4881f8244d1b9021#Free x324 @Outline_Vpnvless://d512bf3d-3d5f-433e-b51f-dfb321720a6d@de9.bexait.ir:2434?security=reality&encryption=none&pbk=yzCvRpbQ-cRePaJAuQkw42_xEf-R860gFsQwoPki2E0&headerType=none&fp=chrome&type=tcp&sni=icloud.com&sid=9de041877612a718#Free x325 @Outline_Vpnvless://79b3dab9-3e6b-415f-9d1c-1b1c6855e354@104.143.223.229:2085?mode=gun&security=none&encryption=none&type=grpc&serviceName=vless#Free x326 @Outline_Vpnvless://28cec4eb-2c82-4089-a69b-d61db4fb8006@104.21.51.132:8080?path=/play&security=none&encryption=mlkem768x25519plus.native.0rtt.WAc6bqm9bM6YteuKtv84PJogmTI2R5RsWLvIB_WGeXw&host=th3ee3322.th3store.ir&type=httpupgrade#Free x327 @Outline_Vpnvless://c2e317b0-0847-4579-9b78-7b678634ffc4@freesocks.work:2052?path=/@BlueKnight_net--@BlueKnight_net&security=none&encryption=none&host=uwu.blueknightnet.qzz.io&type=ws#Free x328 @Outline_Vpnvless://60a361f9-3c45-4954-9e4c-92a85bda243d@new3.smart-cats.ru:2053?mode=gun&security=reality&encryption=none&pbk=mzrVbIsEggpJfXR8M7yxki2vgv3sXWQdy1bGhXqatUY&fp=chrome&spx=/&type=grpc&serviceName=grpc&sni=www.google.com&sid=4881f8244d1b9021#Free x329 @Outline_Vpn [104.21.51.132:8080]",
+        "🇷🇺 Free x330 @Outline_Vpnvless://e5cc16a6-ea42-46b2-82ae-ad2157e1641b@172.64.150.28:2082?path=/fp&security=none&encryption=none&host=hhlfy.twiladaphne.ndjp.net&type=ws#Free x331 @Outline_Vpnvless://59906cb2-a61b-4cf3-b77b-5762ef61d2b0@167.71.45.85:440?security=none&encryption=none&host=store.steampowered.com&headerType=http&type=tcp#Free x332 @Outline_Vpnvless://d342d11e-d424-4583-b36e-524ab1f0afa4@185.217.108.229:23351?path=/help&security=tls&encryption=none&insecure=1&host=cdn8848.776676.xyz&fp=chrome&type=ws&allowInsecure=1&sni=cdn8848.776676.xyz#Free x333 @Outline_Vpnvless://12148993-e326-4061-809d-d2a24a42bcb8@66.33.22.232:34118?mode=auto&path=/&security=reality&encryption=mlkem768x25519plus.native.0rtt.iNp8zQhTV--hc6rOKCn_2wNzEj_gJkzErYU3uhXnhx8&extra={\"mode\":\"auto\",\"xPaddingBytes\":\"100-1000\"}&pbk=hbNyksag-i4fRqV86HG14fhASaXpl4sYv-1zgrrnUSQ&fp=chrome&spx=/2350048babf955d&type=xhttp&sni=cam.ac.uk&sid=b5126487#Free x334 @Outline_Vpnvless://aa6f8aaf-d7ff-46f8-a9a0-d143d7e71f71@37.46.199.240:8443?mode=auto&path=/assets/v2/pkg&security=reality&encryption=none&extra={\n  \"xmux\" : {\n    \"maxConcurrency\" : \"16-32\"\n  }\n}&pbk=Gu_QdtOX6E8pZcYvDWgHKA5dxcit7hrpU27sizCEWXg&fp=firefox&type=xhttp&sni=s3.netavex.com&sid=e0#Free x335 @Outline_Vpnvless://e4514801-0d5a-42ba-869f-39bd605aef9e@15.237.34.168:22222?security=none&encryption=none&headerType=none&type=tcp#Free x336 @Outline_Vpnvless://bd5bbbac-adc3-4b23-d3ac-8506694c0ef9@a2.arshia-nova.ir:443?path=/&security=tls&alpn=h2&encryption=none&insecure=0&host=c12.com&fp=firefox&type=ws&allowInsecure=0&sni=ssl.fastly.com#Free x337 @Outline_Vpnvless://cfffb81e-5034-49ce-8729-18b60c7f1e89@150.241.79.210:443?security=reality&encryption=none&pbk=3J5mYA5NziIVJi77fRsx9dZPYWzLkvaIz-cCdZQvhn8&headerType=none&type=tcp&flow=xtls-rprx-vision&sni=rutube.ru&sid=1a2b#Free x338 @Outline_Vpnvless://cd3bb7d9-7df3-4644-ac05-c260990ac277@pl3.moritech.net:443?security=tls&alpn=h2&encryption=none&insecure=0&headerType=none&fp=firefox&type=tcp&allowInsecure=0&flow=xtls-rprx-vision&sni=pl3.moritech.net#Free x339 @Outline_Vpn [web.turbooserver.net.tr:8443]",
+        "🇷🇺 Free x340 @Outline_Vpnvless://cd3bb7d9-7df3-4644-ac05-c260990ac277@pl6.moritech.net:443?security=tls&alpn=h2&encryption=none&insecure=0&headerType=none&fp=chrome&type=tcp&allowInsecure=0&flow=xtls-rprx-vision&sni=pl6.moritech.net#Free x341 @Outline_Vpnvless://turboo-server@web.turbooserver.net.tr:8443?security=none&encryption=none&host=dynu.com&headerType=http&type=tcp#Free x342 @Outline_Vpnvless://bae8d9ba-9f5d-4802-bb5e-bc0956a472d6@185.126.67.44:1932?security=reality&encryption=none&pbk=SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc&headerType=none&type=tcp&flow=xtls-rprx-vision&sni=www.vk.com#Free x343 @Outline_Vpnss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpnVDM2dHNpUGZuZDBucDVraEpxanlR@p2tun1.greewebservices.ir:1010#Free x344 @Outline_Vpnvless://5e3f974b-06fc-4555-907a-6681391b7c17@186.246.19.79:40443?security=reality&encryption=none&pbk=oc9uweln_cqyaJnlRMnhhhKrGNP7RrYOsuYtaIOIQDE&headerType=none&type=tcp&flow=xtls-rprx-vision&sni=deepl.com&sid=2bc0#Free x344 @Outline_Vpnvless://44eae030-290b-4083-8102-6f8bab05701b@104.24.0.184:443?path=/&security=tls&encryption=none&insecure=0&host=cfvvv-ev1.pages.dev&type=ws&allowInsecure=0&sni=cfvvv-ev1.pages.dev#Free x345 @Outline_Vpnvless://9f61cdf4-810d-4052-bbc7-2da0c8e20104@83.147.18.3:443?security=reality&encryption=none&pbk=3iVJAIGPx6JMlhlRmfpGrHkSmLpHJ4CPvBBH7KsFrFA&headerType=none&type=tcp&flow=xtls-rprx-vision&sni=www.cloudflare.com&sid=fd8cf7e1173f0edb#Free x346 @Outline_Vpnvless://c21631d5-36c9-4664-b575-97eca17456be@2.27.205.59:443?path=/&security=none&encryption=none&host=neth8.lunariai.ru&type=ws#Free x347 @Outline_Vpnvless://e99ba96d-dec8-42eb-be53-19e71eef7cab@5.253.42.164:40443?security=reality&encryption=none&pbk=g77ZJbm18JEotapmVRjaXi133MzkbhkU2lxhVeXx8zw&headerType=none&type=tcp&flow=xtls-rprx-vision&sni=deepl.com&sid=68a8#Free x348 @Outline_Vpn [192.248.182.183:39244]",
+        "🇷🇺 Russia [*CIDR] VK [185.130.114.159:443]",
+        "🇷🇺 Russia [*CIDR] VK [217.16.26.183:443]",
+        "🇷🇺 Russia, Moscow | [BL] [45.152.113.214:4446]",
+        "🇷🇺 Russia | 🌐 | [IPv6] [*CIDR] [5.42.104.219:4389]",
+        "🇷🇺 Russia, Moscow | 🌐 | [IPv6] | [BL] [72.56.11.54:4478]",
+        "🇷🇺 Russia | 🌐 | [IPv6] | [BL] [72.56.247.218:4448]",
+        "🇷🇺 Russia [SNI-RU] ads.x5.ru [195.2.84.109:443]",
+        "🇷🇺 Russia, Moscow | [BL] [45.152.113.189:4440]",
+        "🇷🇺 Russia [*CIDR] YA [158.160.233.48:443]",
+        "🇷🇺 Russia [*CIDR] VK [212.233.72.146:443]",
+        "🇷🇺 Russia [*CIDR] VK [217.16.21.235:443]",
+        "🇷🇺 RU [94.242.55.42] [94.242.55.42:443]",
+        "🇷🇺 Белый_Интернет 14 LTE (Долгий пинг) [46.182.24.147:443]",
+        "🇷🇺 Россия | БС¹⁰ [95.163.214.43:443]",
+        "🇷🇺 LTE 9 | тгк: @rostunnel (Долгий пинг) [bl3fk52.sysopnova.art:443]",
+        "🇷🇺 LTE 10 | тгк: @rostunnel (Долгий пинг) [144.31.50.236:443]",
+        "🇷🇺 LTE 11 | тгк: @rostunnel (Долгий пинг) [91.240.87.166:443]",
+        "🇷🇺 LTE 12 | тгк: @rostunnel (Долгий пинг) [185.229.9.175:443]",
+        "🇷🇺 LTE 40 | тгк: @rostunnel (Долгий пинг) [91.224.87.22:9873]",
+        "🇷🇺 LTE 41 | тгк: @rostunnel (Долгий пинг) [91.224.86.107:9830]",
+        "🇷🇺 LTE 44 | тгк: @rostunnel (Долгий пинг) [188.124.47.34:9891]",
+        "🇷🇺 LTE 103 | тгк: @rostunnel (Долгий пинг) [prep.wwwinternetvideo.click:443]",
+        "🇷🇺 LTE 104 | тгк: @rostunnel (Долгий пинг) [193.163.203.170:443]",
+        "🇷🇺 LTE 107 | тгк: @rostunnel (Долгий пинг) [2.26.9.243:3454]",
+        "🇷🇺 LTE 113 | тгк: @rostunnel (Долгий пинг) [3.114.220.22:10583]"
+      ]
+    }
+  },
+  {
+    "remarks": "🇷🇺 RU Конфиг - Часть 2 (6 серв.)",
+    "log": {
+      "loglevel": "warning"
+    },
+    "inbounds": [
+      {
+        "port": 10808,
+        "protocol": "socks",
+        "settings": {
+          "auth": "noauth",
+          "udp": true,
+          "userLevel": 8
+        },
+        "sniffing": {
+          "enabled": true,
+          "destOverride": [
+            "http",
+            "tls",
+            "quic"
+          ]
+        },
+        "tag": "socks-in"
+      },
+      {
+        "port": 10809,
+        "protocol": "http",
+        "settings": {},
+        "tag": "http-in"
+      }
+    ],
+    "outbounds": [
+      {
+        "protocol": "vless",
+        "tag": "🇷🇺 LTE 147 | тгк: @rostunnel (Долгий пинг) [45.12.75.242:26424]",
+        "settings": {
+          "vnext": [
+            {
+              "address": "45.12.75.242",
+              "port": 26424,
+              "users": [
+                {
+                  "id": "633f424e-2b11-48da-a6b3-a849dd71456f",
+                  "encryption": "none",
+                  "level": 8
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "raw",
+          "security": "reality",
+          "realitySettings": {
+            "serverName": "ya.ru",
+            "fingerprint": "chrome",
+            "publicKey": "l8AubqcxQO-HRFJy4pZL1vbLOo-eXit69s-XulSELE0",
+            "shortId": "23103e1e",
+            "spiderX": ""
+          }
+        },
+        "_is_unlimited": false
+      },
+      {
+        "protocol": "vless",
+        "tag": "🇷🇺 LTE 149 | тгк: @rostunnel (Долгий пинг) [46.243.142.184:8444]",
+        "settings": {
+          "vnext": [
+            {
+              "address": "46.243.142.184",
+              "port": 8444,
+              "users": [
+                {
+                  "id": "d58e7f2b-b537-4e76-ba3f-2678b406308d",
+                  "encryption": "none",
+                  "level": 8
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "grpc",
+          "security": "reality",
+          "grpcSettings": {
+            "serviceName": "google.storage.v2.Storage",
+            "multiMode": false
+          },
+          "realitySettings": {
+            "serverName": "ppfu3n-01.p.portshaper.com",
+            "fingerprint": "edge",
+            "publicKey": "b6SEWuzbmM0LK3AgcYZCIDPFRYbdP6ScVeajomMn_xU",
+            "shortId": "",
+            "spiderX": ""
+          }
+        },
+        "_is_unlimited": false
+      },
+      {
+        "protocol": "vless",
+        "tag": "🇷🇺 LTE 189 | тгк: @rostunnel (Долгий пинг) [81.94.148.178:7445]",
+        "settings": {
+          "vnext": [
+            {
+              "address": "81.94.148.178",
+              "port": 7445,
+              "users": [
+                {
+                  "id": "c91a22cd-bd4f-497d-abad-68dc565534a2",
+                  "encryption": "none",
+                  "level": 8,
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "raw",
+          "security": "reality",
+          "realitySettings": {
+            "serverName": "s1.cdnguard.org",
+            "fingerprint": "firefox",
+            "publicKey": "wBB_aSYGm86IhxUcO8jccIsaBJZdNGlo3hTQlJFftkE",
+            "shortId": "f7d9e9a2e78e9a17",
+            "spiderX": ""
+          }
+        },
+        "_is_unlimited": false
+      },
+      {
+        "protocol": "vless",
+        "tag": "🇷🇺 LTE 190 | тгк: @rostunnel (Долгий пинг) [81.94.148.178:8443]",
+        "settings": {
+          "vnext": [
+            {
+              "address": "81.94.148.178",
+              "port": 8443,
+              "users": [
+                {
+                  "id": "15db20f0-3c62-4838-aff4-1f68293003e5",
+                  "encryption": "none",
+                  "level": 8,
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "raw",
+          "security": "reality",
+          "realitySettings": {
+            "serverName": "passport.yandex.ru",
+            "fingerprint": "firefox",
+            "publicKey": "AiG06E-jizo9xtBbulKQvdQqhZfobZJBTQIKkaDjaiU",
+            "shortId": "a1b2c3d4e5",
+            "spiderX": ""
+          }
+        },
+        "_is_unlimited": false
+      },
+      {
+        "protocol": "vless",
+        "tag": "🇷🇺 LTE 224 | тгк: @rostunnel (Долгий пинг) [fi.nvrsk-not-news.ru:42062]",
+        "settings": {
+          "vnext": [
+            {
+              "address": "fi.nvrsk-not-news.ru",
+              "port": 42062,
+              "users": [
+                {
+                  "id": "5a676086-981f-4cdb-9b4e-6d579881a603",
+                  "encryption": "none",
+                  "level": 8
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "reality",
+          "realitySettings": {
+            "serverName": "api.vk.com",
+            "fingerprint": "firefox",
+            "publicKey": "nz_-f0x2HonNSLcydWbXLK_IeDTjMuXeMOPu9XmyxB8",
+            "shortId": "9e",
+            "spiderX": ""
+          }
+        },
+        "_is_unlimited": false
+      },
+      {
+        "protocol": "vless",
+        "tag": "🇷🇺 LTE 225 | тгк: @rostunnel (Долгий пинг) [89.125.212.90:59845]",
+        "settings": {
+          "vnext": [
+            {
+              "address": "89.125.212.90",
+              "port": 59845,
+              "users": [
+                {
+                  "id": "7a677cec-8f98-4b5c-8c83-aa529a25c3bb",
+                  "encryption": "none",
+                  "level": 8
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "reality",
+          "realitySettings": {
+            "serverName": "vkontakte.ru",
+            "fingerprint": "firefox",
+            "publicKey": "pU85Kw3aP7KPzU6bsllQfvj6p6skHROuKEgRJ6IVLWE",
+            "shortId": "a3b181230822163f",
+            "spiderX": ""
+          }
+        },
+        "_is_unlimited": false
+      },
+      {
+        "protocol": "freedom",
+        "settings": {
+          "domainStrategy": "UseIP"
+        },
+        "tag": "direct"
+      },
+      {
+        "protocol": "blackhole",
+        "settings": {
+          "response": {
+            "type": "http"
+          }
+        },
+        "tag": "block"
+      }
+    ],
+    "routing": {
+      "domainStrategy": "IPIfNonMatch",
+      "balancers": [
+        {
+          "tag": "Auto_Balancer",
+          "selector": [
+            "🇷🇺 LTE 147 | тгк: @rostunnel (Долгий пинг) [45.12.75.242:26424]",
+            "🇷🇺 LTE 149 | тгк: @rostunnel (Долгий пинг) [46.243.142.184:8444]",
+            "🇷🇺 LTE 189 | тгк: @rostunnel (Долгий пинг) [81.94.148.178:7445]",
+            "🇷🇺 LTE 190 | тгк: @rostunnel (Долгий пинг) [81.94.148.178:8443]",
+            "🇷🇺 LTE 224 | тгк: @rostunnel (Долгий пинг) [fi.nvrsk-not-news.ru:42062]",
+            "🇷🇺 LTE 225 | тгк: @rostunnel (Долгий пинг) [89.125.212.90:59845]"
+          ],
+          "strategy": {
+            "type": "leastLoad",
+            "settings": {
+              "baselines": [
+                "200ms",
+                "500ms"
+              ],
+              "expected": 2,
+              "maxRTT": "1500ms",
+              "tolerance": 0
+            }
+          }
+        }
+      ],
+      "rules": [
+        {
+          "type": "field",
+          "protocol": [
+            "bittorrent"
+          ],
+          "outboundTag": "direct"
+        },
+        {
+          "type": "field",
+          "ip": [
+            "geoip:private"
+          ],
+          "outboundTag": "direct"
+        },
+        {
+          "type": "field",
+          "balancerTag": "Auto_Balancer",
+          "network": "tcp,udp"
+        }
+      ]
+    },
+    "burstObservatory": {
+      "pingConfig": {
+        "destination": "http://gstatic.com",
+        "interval": "2m",
+        "sampling": 3,
+        "timeout": "3s"
+      },
+      "subjectSelector": [
+        "🇷🇺 LTE 147 | тгк: @rostunnel (Долгий пинг) [45.12.75.242:26424]",
+        "🇷🇺 LTE 149 | тгк: @rostunnel (Долгий пинг) [46.243.142.184:8444]",
+        "🇷🇺 LTE 189 | тгк: @rostunnel (Долгий пинг) [81.94.148.178:7445]",
+        "🇷🇺 LTE 190 | тгк: @rostunnel (Долгий пинг) [81.94.148.178:8443]",
+        "🇷🇺 LTE 224 | тгк: @rostunnel (Долгий пинг) [fi.nvrsk-not-news.ru:42062]",
+        "🇷🇺 LTE 225 | тгк: @rostunnel (Долгий пинг) [89.125.212.90:59845]"
+      ]
+    }
+  }
+]
