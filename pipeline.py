@@ -22,60 +22,12 @@ FINAL_OUTPUT_FILE = os.path.join(OUTPUT_DIR, "sub_1212.json")
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 
-# --- БЕЛЫЙ СПИСОК СТРАН: оставляем ТОЛЬКО эти ---
-# Россия
+# --- БЕЛЫЙ СПИСОК: только Россия ---
 RU_WORDS = [
     "RU", "RUS", "RUSSIA", "РОССИЯ", "РОССИИ", "РОССИЙСКИЙ",
     "YANDEX", "ЯНДЕКС",
 ]
 RU_FLAGS = ["🇷🇺"]
-
-# Германия
-DE_WORDS = [
-    "DE", "GERMANY", "ГЕРМАНИЯ", "ГЕРМАНИИ", "ГЕРМАН",
-]
-DE_FLAGS = ["🇩🇪"]
-
-# Франция
-FR_WORDS = [
-    "FR", "FRANCE", "ФРАНЦИЯ", "ФРАНЦИИ",
-]
-FR_FLAGS = ["🇫🇷"]
-
-# Эстония
-EE_WORDS = [
-    "EE", "ESTONIA", "ЭСТОНИЯ", "ЭСТОНИИ",
-]
-EE_FLAGS = ["🇪🇪"]
-
-# Финляндия
-FI_WORDS = [
-    "FI", "FINLAND", "ФИНЛЯНДИЯ", "ФИНЛЯНДИИ",
-]
-FI_FLAGS = ["🇫🇮"]
-
-# Нидерланды
-NL_WORDS = [
-    "NL", "NETHERLANDS", "НИДЕРЛАНДЫ", "НИДЕРЛАНД", "ГОЛЛАНДИЯ",
-]
-NL_FLAGS = ["🇳🇱"]
-
-# Латвия
-LV_WORDS = [
-    "LV", "LATVIA", "ЛАТВИЯ", "ЛАТВИИ",
-]
-LV_FLAGS = ["🇱🇻"]
-
-# Собираем всё в один список для проверки: (слова, флаги)
-ALLOWED_COUNTRIES = [
-    ("RU", RU_WORDS, RU_FLAGS),
-    ("DE", DE_WORDS, DE_FLAGS),
-    ("FR", FR_WORDS, FR_FLAGS),
-    ("EE", EE_WORDS, EE_FLAGS),
-    ("FI", FI_WORDS, FI_FLAGS),
-    ("NL", NL_WORDS, NL_FLAGS),
-    ("LV", LV_WORDS, LV_FLAGS),
-]
 
 # UUID-регулярка
 UUID_RE = re.compile(
@@ -95,21 +47,6 @@ def _is_valid_uuid(value: str) -> bool:
     if not value:
         return False
     return bool(UUID_RE.match(value.strip()))
-
-
-def _detect_allowed_country(old_tag: str):
-    """
-    Возвращает код страны ('RU','DE','FR','EE','FI','NL','LV'),
-    если тег явно относится к одной из разрешённых стран.
-    Иначе — None (нода под снос).
-    """
-    tag_upper = old_tag.upper()
-    for code, words, flags in ALLOWED_COUNTRIES:
-        if _has_word(tag_upper, words):
-            return code
-        if any(f in old_tag for f in flags):
-            return code
-    return None
 
 
 class VPNAggregator:
@@ -316,17 +253,14 @@ class VPNAggregator:
     # ---------------------------------------------------------------- filter
     def process_and_filter(self):
         """
-        Оставляем ТОЛЬКО ноды из белого списка стран:
-        RU, DE, FR, EE, FI, NL, LV.
-        Всё остальное (включая ноды без гео) — удаляем.
+        Оставляем ТОЛЬКО ноды с явным RU-гео:
+        слово RU/RUS/RUSSIA/РОССИЯ/ЯНДЕКС или флаг 🇷🇺.
+        Всё остальное (DE, FR, EE, FI, NL, LV, любые другие и без гео) — под снос.
         """
-        print("🔧 Фильтрация: RU, DE, FR, EE, FI, NL, LV — остальные под снос...")
+        print("🔧 Фильтрация: оставляем только 🇷🇺 RU, всё остальное — под снос...")
         total_before = len(self.outbounds)
         filtered_obs = []
         seen_keys = set()
-
-        # Счётчик по странам для наглядности
-        stats = {code: 0 for code, _, _ in ALLOWED_COUNTRIES}
 
         for ob in self.outbounds:
             try:
@@ -347,9 +281,11 @@ class VPNAggregator:
             if not _is_valid_uuid(user_id):
                 continue
 
-            # --- Определяем страну: если не из белого списка — режем ---
-            country = _detect_allowed_country(old_tag)
-            if not country:
+            tag_upper = old_tag.upper()
+
+            # --- Главное условие: явный RU ---
+            has_ru = _has_word(tag_upper, RU_WORDS) or any(f in old_tag for f in RU_FLAGS)
+            if not has_ru:
                 continue
 
             key = (address, port)
@@ -357,32 +293,17 @@ class VPNAggregator:
                 continue
             seen_keys.add(key)
 
-            stats[country] += 1
-
             # Признак безлимита
             ob["_is_unlimited"] = "безлимит" in old_tag.lower()
 
-            # Собираем новый тег — оставляем оригинальное имя, только чистим дубли флагов
+            # Чистим дубли флагов и собираем новый тег
             orig = old_tag.strip()
-            orig_clean = re.sub(r"^[\U0001F1E6-\U0001F1FF\s]+", "", orig).strip() or f"[{address}]"
-
-            # Определяем флаг страны
-            flag = {
-                "RU": "🇷🇺",
-                "DE": "🇩🇪",
-                "FR": "🇫🇷",
-                "EE": "🇪🇪",
-                "FI": "🇫🇮",
-                "NL": "🇳🇱",
-                "LV": "🇱🇻",
-            }[country]
-
-            new_remarks = f"{flag} {orig_clean}"
+            orig_clean = re.sub(r"^[\U0001F1E6-\U0001F1FF\s]+", "", orig).strip() or f"RU [{address}]"
+            new_remarks = f"🇷🇺 {orig_clean}"
 
             if ob["_is_unlimited"]:
                 new_remarks += " [Безлимит]"
 
-            tag_upper = old_tag.upper()
             if _has_word(tag_upper, ["LTE", "4G", "ЛТЕ"]):
                 new_remarks += " (Долгий пинг)"
 
@@ -391,9 +312,6 @@ class VPNAggregator:
 
         print(f"🗑 Фильтр завершён. Было: {total_before}, стало: {len(filtered_obs)} "
               f"(отсеяно: {total_before - len(filtered_obs)})")
-        print(f"   Разбивка по странам: "
-              f"RU={stats['RU']}, DE={stats['DE']}, FR={stats['FR']}, "
-              f"EE={stats['EE']}, FI={stats['FI']}, NL={stats['NL']}, LV={stats['LV']}")
         self.outbounds = filtered_obs
 
     # ---------------------------------------------------------------- генератор конфига
@@ -478,7 +396,7 @@ class VPNAggregator:
         chunk_index = 1
         for i in range(0, len(all_nodes), CHUNK_SIZE):
             chunk = all_nodes[i:i + CHUNK_SIZE]
-            config_name = f"🌍 Конфиг - Часть {chunk_index} ({len(chunk)} серв.)"
+            config_name = f"🇷🇺 RU Конфиг - Часть {chunk_index} ({len(chunk)} серв.)"
             single_config = self.build_single_config(chunk, config_name)
             final_array.append(single_config)
             chunk_index += 1
