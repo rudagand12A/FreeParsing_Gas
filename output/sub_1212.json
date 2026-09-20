@@ -33,7 +33,7 @@
     "outbounds": [
       {
         "protocol": "vless",
-        "tag": "🇷🇺 Russia | [*CIDR] Beeline [66.90.90.13:8443]",
+        "tag": "🇷🇺 Russia [*CIDR] Beeline [66.90.90.13:8443]",
         "settings": {
           "vnext": [
             {
@@ -56,7 +56,7 @@
           "tlsSettings": {
             "serverName": "dsapi-v2-6aaeee8a.adhil.uk",
             "allowInsecure": false,
-            "fingerprint": "qq"
+            "fingerprint": "chrome"
           }
         },
         "_is_unlimited": false
@@ -2527,7 +2527,7 @@
         {
           "tag": "Auto_Balancer",
           "selector": [
-            "🇷🇺 Russia | [*CIDR] Beeline [66.90.90.13:8443]",
+            "🇷🇺 Russia [*CIDR] Beeline [66.90.90.13:8443]",
             "🇷🇺 [VL] Россия #3354 | РосТуннель t.me/rjsxrd [186.246.12.242:2053]",
             "🇷🇺 The Netherlands | [SNI-RU] eh.vk.com t.me/rjsxrd [93.89.220.7:8443]",
             "🇷🇺 [VL] Россия #3368 | РосТуннель t.me/rjsxrd [144.31.48.225:25947]",
@@ -2647,7 +2647,7 @@
         "timeout": "3s"
       },
       "subjectSelector": [
-        "🇷🇺 Russia | [*CIDR] Beeline [66.90.90.13:8443]",
+        "🇷🇺 Russia [*CIDR] Beeline [66.90.90.13:8443]",
         "🇷🇺 [VL] Россия #3354 | РосТуннель t.me/rjsxrd [186.246.12.242:2053]",
         "🇷🇺 The Netherlands | [SNI-RU] eh.vk.com t.me/rjsxrd [93.89.220.7:8443]",
         "🇷🇺 [VL] Россия #3368 | РосТуннель t.me/rjsxrd [144.31.48.225:25947]",
