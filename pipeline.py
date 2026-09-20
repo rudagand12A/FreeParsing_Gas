@@ -25,7 +25,15 @@ os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 
 # --- Гео-словари (регулярки по границам слов, чтобы "RU" не ловило "BRUSSELS" и т.п.) ---
-RU_WORDS = ["RU", "RUS", "RUSSIA", "РОССИЯ", "РОССИИ", "YANDEX", "ЯНДЕКС"]
+RU_WORDS = [
+    # Страна / провайдеры
+    "RU", "RUS", "RUSSIA", "РОССИЯ", "РОССИИ",
+    "YANDEX", "ЯНДЕКС",
+    # Сети / теги скорости
+    "LTE", "4G", "TCP",
+    # Бренды / тарифы
+    "MAX", "МАКС",
+]
 RU_FLAGS = ["🇷🇺"]
 
 FOREIGN_WORDS = [
@@ -83,7 +91,7 @@ class VPNAggregator:
             return
 
         with open(URL_FILE, "r", encoding="utf-8") as f:
-            urls = [line.strip() for line in f if line.strip() and not line.startswith("#")]
+            urls = [s for s in (line.strip() for line in f) if s and not s.startswith("#")]
 
         print(f"📥 Загружено источников из url.txt: {len(urls)}")
 
@@ -112,16 +120,22 @@ class VPNAggregator:
                 if not content.startswith(('vless://', 'vmess://', 'trojan://', 'ss://')):
                     content = self.decode_base64(content)
 
-                for line in content.splitlines():
+                lines = content.splitlines()
+                parsed_before = len(self.outbounds)
+                for line in lines:
                     line = line.strip()
                     if not line or line.startswith("#"):
                         continue
                     ob = self.parse_uri(line)
                     if ob:
                         self.outbounds.append(ob)
+                parsed_now = len(self.outbounds) - parsed_before
+                print(f"   └─ строк: {len(lines)}, распарсено VLESS: {parsed_now}")
 
             except Exception as e:
                 print(f"⚠️ Ошибка сети при скачивании ссылки {url}: {e}")
+
+        print(f"📦 Всего распарсено до фильтра: {len(self.outbounds)}")
 
     # ---------------------------------------------------------------- parser
     def parse_uri(self, uri: str):
@@ -163,7 +177,7 @@ class VPNAggregator:
                 return None
 
             # Фильтр пустых и фейковых адресов
-            if address in ("0.0.0.0", "127.0.0.1", "localhost") or user_info.lower() == "dummy":
+            if address in ("0.0.0.0", "127.0.0.1", "localhost"):
                 return None
 
             network = params.get("type", "raw")
@@ -213,7 +227,7 @@ class VPNAggregator:
                 tls_settings = {
                     "serverName": params.get("sni", address),
                     "allowInsecure": params.get("allowInsecure", "0") == "1",
-                    "fingerprint": params.get("fp", "chrome"),
+                    "fingerprint": params.get("fp") or "chrome",
                     "alpn": [a for a in params.get("alpn", "").split(",") if a] or None,
                 }
                 stream["tlsSettings"] = {k: v for k, v in tls_settings.items() if v is not None}
@@ -221,7 +235,7 @@ class VPNAggregator:
             if security == "reality":
                 stream["realitySettings"] = {
                     "serverName": params.get("sni", address),
-                    "fingerprint": params.get("fp", "chrome"),
+                    "fingerprint": params.get("fp") or "chrome",
                     "publicKey": params.get("pbk") or params.get("publicKey", ""),
                     "shortId": params.get("sid", ""),
                     "spiderX": params.get("spx", ""),
@@ -253,14 +267,17 @@ class VPNAggregator:
 
     # ---------------------------------------------------------------- filter
     def process_and_filter(self):
-        print("🔧 Запуск гео-фильтрации (оставляем только явные RU-серверы)...")
+        print("🔧 Запуск гео-фильтрации (режем только явные иностранные)...")
+        total_before = len(self.outbounds)
         filtered_obs = []
-        seen_addresses = set()
+        seen_keys = set()
 
         for ob in self.outbounds:
             try:
-                old_tag = ob.get("tag", "")
-                address = ob["settings"]["vnext"][0]["address"]
+                old_tag = ob.get("tag", "") or ""
+                vnext = ob["settings"]["vnext"][0]
+                address = vnext["address"]
+                port = vnext["port"]
             except (KeyError, IndexError, TypeError):
                 continue
 
@@ -270,28 +287,37 @@ class VPNAggregator:
 
             tag_upper = old_tag.upper()
 
-            is_russian = _has_word(tag_upper, RU_WORDS) or any(f in old_tag for f in RU_FLAGS)
             is_foreign = _has_word(tag_upper, FOREIGN_WORDS) or any(f in old_tag for f in FOREIGN_FLAGS)
 
-            # Отсекаем зарубежные и всё, где RU не подтверждён явно
-            if is_foreign or not is_russian:
+            # Режем только явных иностранцев. Всё остальное (RU + нейтральные) оставляем.
+            if is_foreign:
                 continue
 
-            # Дедупликация по IP / Хосту
-            if address in seen_addresses:
+            # Дедупликация по (address, port) — разные порты одного IP = разные ноды
+            key = (address, port)
+            if key in seen_keys:
                 continue
-            seen_addresses.add(address)
+            seen_keys.add(key)
 
-            base_name = "🇷🇺 YandexTCP Тест"
-            new_remarks = f"{base_name} Безлимит" if "безлимит" in old_tag.lower() else base_name
-            if _has_word(tag_upper, ["LTE", "ЛТЕ"]):
+            # Собираем новое имя: сохраняем оригинал + добавляем 🇷🇺
+            orig = old_tag.strip()
+            if orig:
+                new_remarks = f"🇷🇺 {orig}"
+            else:
+                new_remarks = f"🇷🇺 RU [{address}]"
+
+            if "безлимит" in old_tag.lower():
+                new_remarks += " [Безлимит]"
+            if _has_word(tag_upper, ["LTE", "4G", "ЛТЕ"]):
                 new_remarks += " (Долгий пинг)"
 
-            ob["tag"] = f"{new_remarks} [{address}]"
+            # Тег делаем уникальным — с портом, иначе Xray ругается на дубли тегов
+            ob["tag"] = f"{new_remarks} [{address}:{port}]"
             ob["remarks"] = new_remarks
             filtered_obs.append(ob)
 
-        print(f"🗑 Фильтр завершён. Найдено чистых RU серверов: {len(filtered_obs)}")
+        print(f"🗑 Фильтр завершён. Было: {total_before}, стало: {len(filtered_obs)} "
+              f"(отсеяно: {total_before - len(filtered_obs)})")
         self.outbounds = filtered_obs
 
     # ---------------------------------------------------------------- saver
@@ -355,7 +381,7 @@ class VPNAggregator:
                     {"type": "field", "protocol": ["bittorrent"], "outboundTag": "direct"},
                     # Локальную сеть открываем напрямую
                     {"type": "field", "ip": ["geoip:private"], "outboundTag": "direct"},
-                    # ИСПРАВЛЕНО: Всё остальное (включая RU домены и IP) отправляем в балансировщик!
+                    # Всё остальное (включая RU домены и IP) отправляем в балансировщик
                     {"type": "field", "balancerTag": "Auto_Balancer", "network": "tcp,udp"},
                 ],
             },
