@@ -52,12 +52,25 @@ FOREIGN_WORDS = [
 FOREIGN_FLAGS = ["🇪🇺", "🇩🇪", "🇫🇷", "🇺🇸", "🇳🇱", "🇬🇧", "🇵🇱", "🇫🇮", "🇸🇪",
                  "🇹🇷", "🇯🇵", "🇰🇷", "🇸🇬", "🇭🇰", "🇨🇦", "🇦🇺"]
 
+# Регулярка для проверки, что UUID корректный (стандартный формат Xray/V2Ray)
+UUID_RE = re.compile(
+    r"^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-"
+    r"[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$"
+)
+
 
 def _has_word(text_upper: str, words) -> bool:
     for w in words:
         if re.search(rf"(?<![A-Z0-9]){re.escape(w)}(?![A-Z0-9])", text_upper):
             return True
     return False
+
+
+def _is_valid_uuid(value: str) -> bool:
+    """Проверяет, что строка — корректный UUID (id пользователя VLESS)."""
+    if not value:
+        return False
+    return bool(UUID_RE.match(value.strip()))
 
 
 class VPNAggregator:
@@ -154,6 +167,15 @@ class VPNAggregator:
                 return None
             user_info, host_port = rest.rsplit("@", 1)
 
+            # --- ПРОВЕРКА: UUID не должен быть пустым или невалидным ---
+            user_info = (user_info or "").strip()
+            if not user_info:
+                print("⚠️ Пропущена нода с пустым UUID")
+                return None
+            if not _is_valid_uuid(user_info):
+                print(f"⚠️ Пропущена нода с невалидным UUID: {user_info!r}")
+                return None
+
             if host_port.startswith("["):
                 m = re.match(r"^\[(.+)\]:(\d+)$", host_port)
                 if not m:
@@ -167,10 +189,13 @@ class VPNAggregator:
                     return None
                 port = int(port_str)
 
-            if not user_info or not address:
+            if not address:
                 return None
 
             if address in ("0.0.0.0", "127.0.0.1", "localhost"):
+                return None
+
+            if not (0 < port < 65536):
                 return None
 
             network = params.get("type", "raw")
@@ -226,10 +251,15 @@ class VPNAggregator:
                 stream["tlsSettings"] = {k: v for k, v in tls_settings.items() if v is not None}
 
             if security == "reality":
+                pbk = params.get("pbk") or params.get("publicKey", "")
+                # --- ПРОВЕРКА: для REALITY обязателен publicKey ---
+                if not pbk:
+                    print(f"⚠️ Пропущена REALITY-нода без publicKey: {address}:{port}")
+                    return None
                 stream["realitySettings"] = {
                     "serverName": params.get("sni", address),
                     "fingerprint": params.get("fp") or "chrome",
-                    "publicKey": params.get("pbk") or params.get("publicKey", ""),
+                    "publicKey": pbk,
                     "shortId": params.get("sid", ""),
                     "spiderX": params.get("spx", ""),
                 }
@@ -271,10 +301,19 @@ class VPNAggregator:
                 vnext = ob["settings"]["vnext"][0]
                 address = vnext["address"]
                 port = vnext["port"]
+                users = vnext.get("users", [])
             except (KeyError, IndexError, TypeError):
                 continue
 
             if address in ("0.0.0.0", "127.0.0.1"):
+                continue
+
+            # --- ПРОВЕРКА: id пользователя обязателен и должен быть валидным ---
+            if not users:
+                continue
+            user_id = (users[0].get("id") or "").strip()
+            if not user_id or not _is_valid_uuid(user_id):
+                print(f"⚠️ Пропущена нода с пустым/невалидным id: {address}:{port}")
                 continue
 
             tag_upper = old_tag.upper()
@@ -388,7 +427,26 @@ class VPNAggregator:
         # ⚙️ ЛИМИТ СЕРВЕРОВ НА ОДИН КОНФИГ
         CHUNK_SIZE = 75
 
-        all_nodes = self.outbounds
+        # --- ФИНАЛЬНАЯ ЗАЩИТА: проверяем каждую ноду ещё раз перед записью ---
+        safe_nodes = []
+        for ob in self.outbounds:
+            try:
+                vnext = ob["settings"]["vnext"][0]
+                users = vnext.get("users", [])
+                if not users:
+                    continue
+                user_id = (users[0].get("id") or "").strip()
+                if not _is_valid_uuid(user_id):
+                    continue
+                address = vnext.get("address", "").strip()
+                port = vnext.get("port", 0)
+                if not address or not (0 < port < 65536):
+                    continue
+            except (KeyError, IndexError, TypeError):
+                continue
+            safe_nodes.append(ob)
+
+        all_nodes = safe_nodes
         final_array = []
 
         # Разбиваем общий список на блоки по CHUNK_SIZE штук
