@@ -2,9 +2,6 @@ https://cdn.jsdelivr.net/gh/igareck/vpn-configs-for-russia@main/Vless-Reality-Wh
 https://cdn.jsdelivr.net/gh/igareck/vpn-configs-for-russia@main/WHITE-CIDR-RU-checked.txt
 https://cdn.jsdelivr.net/gh/igareck/vpn-configs-for-russia@main/WHITE-CIDR-RU-all.txt
 https://cdn.jsdelivr.net/gh/igareck/vpn-configs-for-russia@main/WHITE-SNI-RU-all.txt
-https://raw.githubusercontent.com/hiztin/VLESS-PO-GRIBI/refs/heads/main/deploy/sub.txt
-https://cdn.jsdelivr.net/gh/AvenCores/goida-vpn-configs@main/githubmirror/12.txt
-https://cdn.jsdelivr.net/gh/AvenCores/goida-vpn-configs@main/githubmirror/26.txt
 https://raw.githubusercontent.com/prominbro/sub/refs/heads/main/212.txt
 https://subrostunnel.vercel.app/lte.txt
 https://raw.githubusercontent.com/OceaniaVPN/StekloVPN/main/configs/whitelist.txt
