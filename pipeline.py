@@ -22,37 +22,64 @@ FINAL_OUTPUT_FILE = os.path.join(OUTPUT_DIR, "sub_1212.json")
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 
-# --- Гео-словари ---
+# --- Слова-страны: если в теге есть любое из них — нода остаётся ---
+
+# Россия
 RU_WORDS = [
-    "RU", "RUS", "RUSSIA", "РОССИЯ", "РОССИИ",
+    "RU", "RUS", "RUSSIA", "РОССИЯ", "РОССИИ", "РОССИЙСКИЙ",
     "YANDEX", "ЯНДЕКС",
-    "LTE", "4G", "TCP",
-    "MAX", "МАКС",
 ]
 RU_FLAGS = ["🇷🇺"]
 
+# Иностранные
 FOREIGN_WORDS = [
     "EU", "EUROPE", "ЕВРОПА",
-    "DE", "GERMANY", "ГЕРМАНИЯ",
-    "FR", "FRANCE", "ФРАНЦИЯ",
-    "US", "USA", "США",
-    "NL", "NETHERLANDS", "НИДЕРЛАНДЫ",
-    "GB", "UK", "BRITAIN", "АНГЛИЯ",
-    "PL", "POLAND", "ПОЛЬША",
-    "FI", "FINLAND", "ФИНЛЯНДИЯ",
-    "SE", "SWEDEN", "ШВЕЦИЯ",
-    "TR", "TURKEY", "ТУРЦИЯ",
-    "JP", "JAPAN", "ЯПОНИЯ",
-    "KR", "KOREA", "КОРЕЯ",
+    "DE", "GERMANY", "ГЕРМАНИЯ", "ГЕРМАНИИ",
+    "FR", "FRANCE", "ФРАНЦИЯ", "ФРАНЦИИ",
+    "US", "USA", "США", "АМЕРИКА",
+    "NL", "NETHERLANDS", "НИДЕРЛАНДЫ", "НИДЕРЛАНД",
+    "GB", "UK", "BRITAIN", "АНГЛИЯ", "ВЕЛИКОБРИТАНИЯ",
+    "PL", "POLAND", "ПОЛЬША", "ПОЛЬШЕ",
+    "FI", "FINLAND", "ФИНЛЯНДИЯ", "ФИНЛЯНДИИ",
+    "SE", "SWEDEN", "ШВЕЦИЯ", "ШВЕЦИИ",
+    "EE", "ESTONIA", "ЭСТОНИЯ", "ЭСТОНИИ",
+    "LV", "LATVIA", "ЛАТВИЯ", "ЛАТВИИ",
+    "LT", "LITHUANIA", "ЛИТВА", "ЛИТВЫ",
+    "TR", "TURKEY", "ТУРЦИЯ", "ТУРЦИИ",
+    "JP", "JAPAN", "ЯПОНИЯ", "ЯПОНИИ",
+    "KR", "KOREA", "КОРЕЯ", "КОРЕИ",
     "SG", "SINGAPORE", "СИНГАПУР",
     "HK", "HONGKONG", "ГОНКОНГ",
-    "CA", "CANADA", "КАНАДА",
-    "AU", "AUSTRALIA", "АВСТРАЛИЯ",
+    "CA", "CANADA", "КАНАДА", "КАНАДЫ",
+    "AU", "AUSTRALIA", "АВСТРАЛИЯ", "АВСТРАЛИИ",
+    "CH", "SWITZERLAND", "ШВЕЙЦАРИЯ",
+    "AT", "AUSTRIA", "АВСТРИЯ",
+    "CZ", "CZECH", "ЧЕХИЯ",
+    "RO", "ROMANIA", "РУМЫНИЯ",
+    "BG", "BULGARIA", "БОЛГАРИЯ",
+    "MD", "MOLDOVA", "МОЛДОВА",
+    "UA", "UKRAINE", "УКРАИНА",
+    "BY", "BELARUS", "БЕЛАРУСЬ",
+    "KZ", "KAZAKHSTAN", "КАЗАХСТАН",
+    "AM", "ARMENIA", "АРМЕНИЯ",
+    "GE", "GEORGIA", "ГРУЗИЯ",
+    "IL", "ISRAEL", "ИЗРАИЛЬ",
+    "AE", "EMIRATES", "ОАЭ", "ДУБАЙ",
+    "IN", "INDIA", "ИНДИЯ",
+    "BR", "BRAZIL", "БРАЗИЛИЯ",
+    "MX", "MEXICO", "МЕКСИКА",
+    "AR", "ARGENTINA", "АРГЕНТИНА",
+    "ZA", "AFRICA", "АФРИКА",
+    "EG", "EGYPT", "ЕГИПЕТ",
 ]
-FOREIGN_FLAGS = ["🇪🇺", "🇩🇪", "🇫🇷", "🇺🇸", "🇳🇱", "🇬🇧", "🇵🇱", "🇫🇮", "🇸🇪",
-                 "🇹🇷", "🇯🇵", "🇰🇷", "🇸🇬", "🇭🇰", "🇨🇦", "🇦🇺"]
+FOREIGN_FLAGS = [
+    "🇪🇺", "🇩🇪", "🇫🇷", "🇺🇸", "🇳🇱", "🇬🇧", "🇵🇱", "🇫🇮", "🇸🇪",
+    "🇪🇪", "🇱🇻", "🇱🇹", "🇹🇷", "🇯🇵", "🇰🇷", "🇸🇬", "🇭🇰", "🇨🇦", "🇦🇺",
+    "🇨🇭", "🇦🇹", "🇨🇿", "🇷🇴", "🇧🇬", "🇲🇩", "🇺🇦", "🇧🇾", "🇰🇿",
+    "🇦🇲", "🇬🇪", "🇮🇱", "🇦🇪", "🇮🇳", "🇧🇷", "🇲🇽", "🇦🇷", "🇿🇦", "🇪🇬",
+]
 
-# Регулярка для проверки, что UUID корректный (стандартный формат Xray/V2Ray)
+# UUID-регулярка
 UUID_RE = re.compile(
     r"^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-"
     r"[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$"
@@ -67,7 +94,6 @@ def _has_word(text_upper: str, words) -> bool:
 
 
 def _is_valid_uuid(value: str) -> bool:
-    """Проверяет, что строка — корректный UUID (id пользователя VLESS)."""
     if not value:
         return False
     return bool(UUID_RE.match(value.strip()))
@@ -78,7 +104,7 @@ class VPNAggregator:
         self.ssl_ctx = ssl.create_default_context()
         self.ssl_ctx.check_hostname = False
         self.ssl_ctx.verify_mode = ssl.CERT_NONE
-        self.outbounds = []   # только outbound-объекты (ноды)
+        self.outbounds = []
 
     # ---------------------------------------------------------------- utils
     def decode_base64(self, text: str) -> str:
@@ -167,13 +193,8 @@ class VPNAggregator:
                 return None
             user_info, host_port = rest.rsplit("@", 1)
 
-            # --- ПРОВЕРКА: UUID не должен быть пустым или невалидным ---
             user_info = (user_info or "").strip()
-            if not user_info:
-                print("⚠️ Пропущена нода с пустым UUID")
-                return None
-            if not _is_valid_uuid(user_info):
-                print(f"⚠️ Пропущена нода с невалидным UUID: {user_info!r}")
+            if not user_info or not _is_valid_uuid(user_info):
                 return None
 
             if host_port.startswith("["):
@@ -189,22 +210,15 @@ class VPNAggregator:
                     return None
                 port = int(port_str)
 
-            if not address:
+            if not address or address in ("0.0.0.0", "127.0.0.1", "localhost"):
                 return None
-
-            if address in ("0.0.0.0", "127.0.0.1", "localhost"):
-                return None
-
             if not (0 < port < 65536):
                 return None
 
             network = params.get("type", "raw")
             security = params.get("security", "none")
 
-            stream = {
-                "network": network,
-                "security": security,
-            }
+            stream = {"network": network, "security": security}
 
             if network in ("tcp", "raw") and params.get("headerType") == "http":
                 stream["tcpSettings"] = {
@@ -252,9 +266,7 @@ class VPNAggregator:
 
             if security == "reality":
                 pbk = params.get("pbk") or params.get("publicKey", "")
-                # --- ПРОВЕРКА: для REALITY обязателен publicKey ---
                 if not pbk:
-                    print(f"⚠️ Пропущена REALITY-нода без publicKey: {address}:{port}")
                     return None
                 stream["realitySettings"] = {
                     "serverName": params.get("sni", address),
@@ -290,7 +302,13 @@ class VPNAggregator:
 
     # ---------------------------------------------------------------- filter
     def process_and_filter(self):
-        print("🔧 Запуск гео-фильтрации (режем только явные иностранные)...")
+        """
+        Оставляем ноды ТОЛЬКО если в теге явно указана страна:
+          - Россия (RU/RUS/RUSSIA/РОССИЯ/ЯНДЕКС) или 🇷🇺
+          - Либо любая иностранная (DE/FR/NL/FI/EE/US/... или флаг)
+        Всё, где страна НЕ указана — удаляем.
+        """
+        print("🔧 Фильтрация: оставляем только ноды с явным гео (RU или иностранные)...")
         total_before = len(self.outbounds)
         filtered_obs = []
         seen_keys = set()
@@ -308,18 +326,20 @@ class VPNAggregator:
             if address in ("0.0.0.0", "127.0.0.1"):
                 continue
 
-            # --- ПРОВЕРКА: id пользователя обязателен и должен быть валидным ---
             if not users:
                 continue
             user_id = (users[0].get("id") or "").strip()
-            if not user_id or not _is_valid_uuid(user_id):
-                print(f"⚠️ Пропущена нода с пустым/невалидным id: {address}:{port}")
+            if not _is_valid_uuid(user_id):
                 continue
 
             tag_upper = old_tag.upper()
 
-            is_foreign = _has_word(tag_upper, FOREIGN_WORDS) or any(f in old_tag for f in FOREIGN_FLAGS)
-            if is_foreign:
+            # --- ГЛАВНОЕ УСЛОВИЕ: страна должна быть указана явно ---
+            has_ru = _has_word(tag_upper, RU_WORDS) or any(f in old_tag for f in RU_FLAGS)
+            has_foreign = _has_word(tag_upper, FOREIGN_WORDS) or any(f in old_tag for f in FOREIGN_FLAGS)
+
+            if not (has_ru or has_foreign):
+                # Страна не указана — режем
                 continue
 
             key = (address, port)
@@ -327,14 +347,25 @@ class VPNAggregator:
                 continue
             seen_keys.add(key)
 
-            # 🛠 Сохраняем признак безлимита во временное поле объекта
+            # Признак безлимита
             ob["_is_unlimited"] = "безлимит" in old_tag.lower()
 
+            # Собираем новый тег
             orig = old_tag.strip()
-            if orig:
-                new_remarks = f"🇷🇺 {orig}"
-            else:
-                new_remarks = f"🇷🇺 RU [{address}]"
+            # Убираем ведущие флаги/эмодзи, чтобы не дублировать
+            orig_clean = re.sub(r"^[\U0001F1E6-\U0001F1FF\s]+", "", orig).strip() or f"RU [{address}]"
+
+            if has_ru:
+                prefix = "🇷🇺"
+            elif has_foreign:
+                # Определяем флаг иностранной страны по слову/флагу в теге
+                prefix = "🌍"
+                for f in FOREIGN_FLAGS:
+                    if f in old_tag:
+                        prefix = f
+                        break
+
+            new_remarks = f"{prefix} {orig_clean}"
 
             if ob["_is_unlimited"]:
                 new_remarks += " [Безлимит]"
@@ -367,7 +398,7 @@ class VPNAggregator:
         })
 
         return {
-            "remarks": config_name,  # Название профиля в приложении Happ
+            "remarks": config_name,
             "log": {"loglevel": "warning"},
             "inbounds": [
                 {
@@ -424,46 +455,19 @@ class VPNAggregator:
 
     # ---------------------------------------------------------------- saver
     def save_final_config(self):
-        # ⚙️ ЛИМИТ СЕРВЕРОВ НА ОДИН КОНФИГ
         CHUNK_SIZE = 75
 
-        # --- ФИНАЛЬНАЯ ЗАЩИТА: проверяем каждую ноду ещё раз перед записью ---
-        safe_nodes = []
-        for ob in self.outbounds:
-            try:
-                vnext = ob["settings"]["vnext"][0]
-                users = vnext.get("users", [])
-                if not users:
-                    continue
-                user_id = (users[0].get("id") or "").strip()
-                if not _is_valid_uuid(user_id):
-                    continue
-                address = vnext.get("address", "").strip()
-                port = vnext.get("port", 0)
-                if not address or not (0 < port < 65536):
-                    continue
-            except (KeyError, IndexError, TypeError):
-                continue
-            safe_nodes.append(ob)
-
-        all_nodes = safe_nodes
+        all_nodes = self.outbounds
         final_array = []
 
-        # Разбиваем общий список на блоки по CHUNK_SIZE штук
         chunk_index = 1
         for i in range(0, len(all_nodes), CHUNK_SIZE):
             chunk = all_nodes[i:i + CHUNK_SIZE]
-
-            # Генерируем имя профиля, например: "🇷🇺 RU Конфиг - Часть 1 (75 серв.)"
-            config_name = f"🇷🇺 RU Конфиг - Часть {chunk_index} ({len(chunk)} серв.)"
-
-            # Собираем полноценный xray-конфиг для этой пачки
+            config_name = f"🌍 Конфиг - Часть {chunk_index} ({len(chunk)} серв.)"
             single_config = self.build_single_config(chunk, config_name)
             final_array.append(single_config)
-
             chunk_index += 1
 
-        # Записываем массив из нарезанных конфигов в итоговый JSON-файл подписки
         with open(FINAL_OUTPUT_FILE, "w", encoding="utf-8") as f:
             json.dump(final_array, f, indent=2, ensure_ascii=False)
 
