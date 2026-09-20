@@ -288,16 +288,13 @@ class VPNAggregator:
                 continue
             seen_keys.add(key)
 
-            # 🛠 Сохраняем признак безлимита во временное поле объекта
-            ob["_is_unlimited"] = "безлимит" in old_tag.lower()
-
             orig = old_tag.strip()
             if orig:
                 new_remarks = f"🇷🇺 {orig}"
             else:
                 new_remarks = f"🇷🇺 RU [{address}]"
 
-            if ob["_is_unlimited"]:
+            if "безлимит" in old_tag.lower():
                 new_remarks += " [Безлимит]"
 
             if _has_word(tag_upper, ["LTE", "4G", "ЛТЕ"]):
@@ -310,9 +307,9 @@ class VPNAggregator:
               f"(отсеяно: {total_before - len(filtered_obs)})")
         self.outbounds = filtered_obs
 
-    # ---------------------------------------------------------------- генератор одиночного конфига
+    # ---------------------------------------------------------------- генератор конфига
     def build_single_config(self, nodes_list, config_name):
-        """Собирает один изолированный объект Xray-конфига со своими балансировщиками и нодами."""
+        """Собирает один изолированный объект Xray-конфига со своими балансировщиками."""
         tags = [o["tag"] for o in nodes_list]
 
         outbounds = list(nodes_list)
@@ -328,7 +325,7 @@ class VPNAggregator:
         })
 
         return {
-            "remarks": config_name,  # Имя конфигурации, которое отобразит Happ
+            "remarks": config_name,  # Название профиля в приложении Happ
             "log": {"loglevel": "warning"},
             "inbounds": [
                 {
@@ -385,32 +382,33 @@ class VPNAggregator:
 
     # ---------------------------------------------------------------- saver
     def save_final_config(self):
-        # 1. Разделяем ноды по группам (Безлимитные и Стандартные)
-        unlimited_nodes = [o for o in self.outbounds if o.get("_is_unlimited", False)]
-        standard_nodes = [o for o in self.outbounds if not o.get("_is_unlimited", False)]
+        # ⚙️ ЛИМИТ СЕРВЕРОВ НА ОДИН КОНФИГ (сделайте 70, как просили)
+        CHUNK_SIZE = 70
 
-        # Удаляем служебный ключ, чтобы не засорять итоговый файл
-        for o in self.outbounds:
-            o.pop("_is_unlimited", None)
+        all_nodes = self.outbounds
+        final_array = []
 
-        # Ограничиваем лимиты на каждую группу, если серверов слишком много
-        unlimited_nodes = unlimited_nodes[:50000]
-        standard_nodes = standard_nodes[:50000]
+        # Разбиваем общий список на блоки по CHUNK_SIZE штук
+        chunk_index = 1
+        for i in range(0, len(all_nodes), CHUNK_SIZE):
+            chunk = all_nodes[i:i + CHUNK_SIZE]
 
-        # 2. Создаем две независимые конфигурационные структуры
-        config_unlimited = self.build_single_config(unlimited_nodes, "🇷🇺 RU - Безлимитные")
-        config_standard = self.build_single_config(standard_nodes, "🇷🇺 RU - Стандарт")
+            # Генерируем имя профиля, например: "🇷🇺 RU Конфиг - Часть 1 (70 серв.)"
+            config_name = f"🇷🇺 RU Конфиг - Часть {chunk_index} ({len(chunk)} серв.)"
 
-        # 3. Помещаем их в единый JSON-массив (теперь они не склеиваются)
-        final_array = [config_unlimited, config_standard]
+            # Собираем полноценный xray-конфиг для этой пачки
+            single_config = self.build_single_config(chunk, config_name)
+            final_array.append(single_config)
 
-        # 4. Записываем получившийся массив файлов в результирующий подписочный файл
+            chunk_index += 1
+
+        # Записываем массив из нарезанных конфигов в итоговый JSON-файл подписки
         with open(FINAL_OUTPUT_FILE, "w", encoding="utf-8") as f:
             json.dump(final_array, f, indent=2, ensure_ascii=False)
 
         print(f"🎉 Итоговый файл успешно обновлен: {FINAL_OUTPUT_FILE}\n"
-              f"   - Конфиг 'Безлимитные': {len(unlimited_nodes)} нод\n"
-              f"   - Конфиг 'Стандарт': {len(standard_nodes)} нод\n"
+              f"   - Всего серверов обработано: {len(all_nodes)}\n"
+              f"   - Создано раздельных конфигов: {len(final_array)} (нарезка по {CHUNK_SIZE} шт.)\n"
               f"   - Дата генерации: {datetime.now():%Y-%m-%d %H:%M:%S}")
 
 
