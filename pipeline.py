@@ -25,9 +25,9 @@ os.makedirs(OUTPUT_DIR, exist_ok=True)
 # --- БЕЛЫЙ СПИСОК: только Россия ---
 RU_WORDS = [
     "RU", "RUS", "RUSSIA", "РОССИЯ", "РОССИИ", "РОССИЙСКИЙ",
-    "YANDEX", "ЯНДЕКС",
+    "YANDEX", "ЯНДЕКС", "Германия", "Germany",
 ]
-RU_FLAGS = ["🇷🇺"]
+RU_FLAGS = ["🇷🇺"] ["🇩🇪"]
 
 # UUID-регулярка
 UUID_RE = re.compile(
