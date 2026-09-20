@@ -27,7 +27,7 @@ RU_WORDS = [
     "RU", "RUS", "RUSSIA", "РОССИЯ", "РОССИИ", "РОССИЙСКИЙ",
     "YANDEX", "ЯНДЕКС", "Германия", "Germany",
 ]
-RU_FLAGS = ["🇷🇺"] ["🇩🇪"]
+RU_FLAGS = ["🇷🇺"]
 
 # UUID-регулярка
 UUID_RE = re.compile(
