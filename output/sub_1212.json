@@ -30,50 +30,17 @@
   "outbounds": [
     {
       "protocol": "vless",
-      "tag": "🇷🇺 YandexTCP Тест [155.212.161.140]",
+      "tag": "🇷🇺 YandexTCP Тест [95.163.155.137]",
       "settings": {
         "vnext": [
           {
-            "address": "155.212.161.140",
-            "port": 443,
+            "address": "95.163.155.137",
+            "port": 31585,
             "users": [
               {
-                "id": "f07d9192-9d39-49fc-ba70-610fcb7fb176",
+                "id": "00d4010a-ac43-48a4-a790-50a50599e616",
                 "encryption": "none",
-                "level": 8,
-                "flow": "xtls-rprx-vision"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "raw",
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "stablequenchcone.heatherneedle.info",
-          "fingerprint": "firefox",
-          "publicKey": "X3U2Y1fzAORyXdy_awWirvlCjOV_Qsj6SEOPd4hFHgE",
-          "shortId": "091faecd7e0808ed",
-          "spiderX": ""
-        }
-      },
-      "remarks": "🇷🇺 YandexTCP Тест"
-    },
-    {
-      "protocol": "vless",
-      "tag": "🇷🇺 YandexTCP Тест [spb.snappycore.com]",
-      "settings": {
-        "vnext": [
-          {
-            "address": "spb.snappycore.com",
-            "port": 443,
-            "users": [
-              {
-                "id": "8f9c5260-9456-472b-8ee2-444500ba6cab",
-                "encryption": "none",
-                "level": 8,
-                "flow": "xtls-rprx-vision"
+                "level": 8
               }
             ]
           }
@@ -81,14 +48,7 @@
       },
       "streamSettings": {
         "network": "tcp",
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "spb.snappycore.com",
-          "fingerprint": "edge",
-          "publicKey": "SCuasCPva4lPGu-QRP955zZB8f6i7ydHBQh6bsSlrgo",
-          "shortId": "3d87c490ddd41305",
-          "spiderX": "/"
-        }
+        "security": "none"
       },
       "remarks": "🇷🇺 YandexTCP Тест"
     },
@@ -188,9 +148,41 @@
         "security": "reality",
         "realitySettings": {
           "serverName": "yandex.ru",
-          "fingerprint": "firefox",
+          "fingerprint": "chrome",
           "publicKey": "uitO4Z8t9TplwwYaqwLqh5rfxDh_X8bOBiNuPbzvaEM",
           "shortId": "bbe46bd8f6b96839",
+          "spiderX": ""
+        }
+      },
+      "remarks": "🇷🇺 YandexTCP Тест (Долгий пинг)"
+    },
+    {
+      "protocol": "vless",
+      "tag": "🇷🇺 YandexTCP Тест (Долгий пинг) [193.163.203.253]",
+      "settings": {
+        "vnext": [
+          {
+            "address": "193.163.203.253",
+            "port": 443,
+            "users": [
+              {
+                "id": "441afe11-a180-4516-bb80-80a8a6b38705",
+                "encryption": "none",
+                "level": 8,
+                "flow": "xtls-rprx-vision"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "yandex.ru",
+          "fingerprint": "chrome",
+          "publicKey": "gE8LUmGFXik94SoDXNiAG5KprGyhjoRwDuhGebgAVWk",
+          "shortId": "5ee019e02e6ed99a",
           "spiderX": ""
         }
       },
@@ -220,7 +212,7 @@
         "security": "reality",
         "realitySettings": {
           "serverName": "yandex.ru",
-          "fingerprint": "randomized",
+          "fingerprint": "chrome",
           "publicKey": "uitO4Z8t9TplwwYaqwLqh5rfxDh_X8bOBiNuPbzvaEM",
           "shortId": "bbe46bd8f6b96839",
           "spiderX": ""
@@ -230,15 +222,47 @@
     },
     {
       "protocol": "vless",
-      "tag": "🇷🇺 YandexTCP Тест (Долгий пинг) [185.141.227.150]",
+      "tag": "🇷🇺 YandexTCP Тест (Долгий пинг) [185.229.9.74]",
       "settings": {
         "vnext": [
           {
-            "address": "185.141.227.150",
-            "port": 9001,
+            "address": "185.229.9.74",
+            "port": 443,
             "users": [
               {
-                "id": "2c634977-584e-4e1f-b501-1b70c77a6743",
+                "id": "d82e3813-9c83-43a5-bd30-385ed7c20a94",
+                "encryption": "none",
+                "level": 8,
+                "flow": "xtls-rprx-vision"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "raw",
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "yandex.ru",
+          "fingerprint": "firefox",
+          "publicKey": "fsyvGBPzzwpnSA0UnJML_cDqviNSEdj9zktpC1EeFhY",
+          "shortId": "743541f932fa3959",
+          "spiderX": "/"
+        }
+      },
+      "remarks": "🇷🇺 YandexTCP Тест (Долгий пинг)"
+    },
+    {
+      "protocol": "vless",
+      "tag": "🇷🇺 YandexTCP Тест (Долгий пинг) [91.224.87.22]",
+      "settings": {
+        "vnext": [
+          {
+            "address": "91.224.87.22",
+            "port": 9873,
+            "users": [
+              {
+                "id": "76186f1e-3062-4a2b-98c2-fab3c61a9511",
                 "encryption": "none",
                 "level": 8
               }
@@ -250,14 +274,49 @@
         "network": "grpc",
         "security": "reality",
         "grpcSettings": {
-          "serviceName": "grpc-reality",
+          "serviceName": "grpc-tunnel",
           "multiMode": false
         },
         "realitySettings": {
-          "serverName": "api-maps.yandex.ru",
-          "fingerprint": "firefox",
-          "publicKey": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
-          "shortId": "6ba85179e30d4fc2",
+          "serverName": "dl.google.com",
+          "fingerprint": "qq",
+          "publicKey": "bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU",
+          "shortId": "aabbccdd",
+          "spiderX": ""
+        }
+      },
+      "remarks": "🇷🇺 YandexTCP Тест (Долгий пинг)"
+    },
+    {
+      "protocol": "vless",
+      "tag": "🇷🇺 YandexTCP Тест (Долгий пинг) [95.143.190.125]",
+      "settings": {
+        "vnext": [
+          {
+            "address": "95.143.190.125",
+            "port": 9895,
+            "users": [
+              {
+                "id": "76186f1e-3062-4a2b-98c2-fab3c61a9511",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "grpc",
+        "security": "reality",
+        "grpcSettings": {
+          "serviceName": "grpc-tunnel",
+          "multiMode": false
+        },
+        "realitySettings": {
+          "serverName": "dl.google.com",
+          "fingerprint": "qq",
+          "publicKey": "bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU",
+          "shortId": "aabb",
           "spiderX": ""
         }
       },
@@ -300,6 +359,169 @@
     },
     {
       "protocol": "vless",
+      "tag": "🇷🇺 YandexTCP Тест (Долгий пинг) [82.202.143.37]",
+      "settings": {
+        "vnext": [
+          {
+            "address": "82.202.143.37",
+            "port": 9830,
+            "users": [
+              {
+                "id": "76186f1e-3062-4a2b-98c2-fab3c61a9511",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "grpc",
+        "security": "reality",
+        "grpcSettings": {
+          "serviceName": "grpc-tunnel",
+          "multiMode": false
+        },
+        "realitySettings": {
+          "serverName": "dl.google.com",
+          "fingerprint": "firefox",
+          "publicKey": "bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU",
+          "shortId": "aabbccdd",
+          "spiderX": ""
+        }
+      },
+      "remarks": "🇷🇺 YandexTCP Тест (Долгий пинг)"
+    },
+    {
+      "protocol": "vless",
+      "tag": "🇷🇺 YandexTCP Тест (Долгий пинг) [bl3fk52.sysopnova.art]",
+      "settings": {
+        "vnext": [
+          {
+            "address": "bl3fk52.sysopnova.art",
+            "port": 443,
+            "users": [
+              {
+                "id": "441afe11-a180-4516-bb80-80a8a6b38705",
+                "encryption": "none",
+                "level": 8,
+                "flow": "xtls-rprx-vision"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "raw",
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "yandex.ru",
+          "fingerprint": "chrome",
+          "publicKey": "gE8LUmGFXik94SoDXNiAG5KprGyhjoRwDuhGebgAVWk",
+          "shortId": "5ee019e02e6ed99a",
+          "spiderX": ""
+        }
+      },
+      "remarks": "🇷🇺 YandexTCP Тест (Долгий пинг)"
+    },
+    {
+      "protocol": "vless",
+      "tag": "🇷🇺 YandexTCP Тест (Долгий пинг) [193.163.203.170]",
+      "settings": {
+        "vnext": [
+          {
+            "address": "193.163.203.170",
+            "port": 443,
+            "users": [
+              {
+                "id": "11aabba0-5fd1-4f15-8068-74c1a466cefc",
+                "encryption": "none",
+                "level": 8,
+                "flow": "xtls-rprx-vision"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "yandex.ru",
+          "fingerprint": "chrome",
+          "publicKey": "GCCZ1ZZjB_nj7yxqFi22bIIWWr_G6rnWUzDcssN_40o",
+          "shortId": "b28db60d77c50b4f",
+          "spiderX": ""
+        }
+      },
+      "remarks": "🇷🇺 YandexTCP Тест (Долгий пинг)"
+    },
+    {
+      "protocol": "vless",
+      "tag": "🇷🇺 YandexTCP Тест (Долгий пинг) [2.27.54.106]",
+      "settings": {
+        "vnext": [
+          {
+            "address": "2.27.54.106",
+            "port": 20029,
+            "users": [
+              {
+                "id": "52b55083-112b-4f12-8c69-c0d48c32f801",
+                "encryption": "none",
+                "level": 8,
+                "flow": "xtls-rprx-vision"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "eh.vk.com",
+          "fingerprint": "firefox",
+          "publicKey": "0_FWbcTe6tvBuSZ7_7PrMaNmg44a8VxYRXPKjZuERwQ",
+          "shortId": "a150dff4",
+          "spiderX": ""
+        }
+      },
+      "remarks": "🇷🇺 YandexTCP Тест (Долгий пинг)"
+    },
+    {
+      "protocol": "vless",
+      "tag": "🇷🇺 YandexTCP Тест (Долгий пинг) [45.151.182.160]",
+      "settings": {
+        "vnext": [
+          {
+            "address": "45.151.182.160",
+            "port": 443,
+            "users": [
+              {
+                "id": "52b55083-112b-4f12-8c69-c0d48c32f801",
+                "encryption": "none",
+                "level": 8,
+                "flow": "xtls-rprx-vision"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "eh.vk.com",
+          "fingerprint": "firefox",
+          "publicKey": "0_FWbcTe6tvBuSZ7_7PrMaNmg44a8VxYRXPKjZuERwQ",
+          "shortId": "a150dff4",
+          "spiderX": ""
+        }
+      },
+      "remarks": "🇷🇺 YandexTCP Тест (Долгий пинг)"
+    },
+    {
+      "protocol": "vless",
       "tag": "🇷🇺 YandexTCP Тест (Долгий пинг) [188.124.47.34]",
       "settings": {
         "vnext": [
@@ -335,6 +557,69 @@
     },
     {
       "protocol": "vless",
+      "tag": "🇷🇺 YandexTCP Тест (Долгий пинг) [45.12.75.242]",
+      "settings": {
+        "vnext": [
+          {
+            "address": "45.12.75.242",
+            "port": 26424,
+            "users": [
+              {
+                "id": "633f424e-2b11-48da-a6b3-a849dd71456f",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "raw",
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "ya.ru",
+          "fingerprint": "chrome",
+          "publicKey": "l8AubqcxQO-HRFJy4pZL1vbLOo-eXit69s-XulSELE0",
+          "shortId": "23103e1e",
+          "spiderX": ""
+        }
+      },
+      "remarks": "🇷🇺 YandexTCP Тест (Долгий пинг)"
+    },
+    {
+      "protocol": "vless",
+      "tag": "🇷🇺 YandexTCP Тест (Долгий пинг) [4.kiska.lol]",
+      "settings": {
+        "vnext": [
+          {
+            "address": "4.kiska.lol",
+            "port": 443,
+            "users": [
+              {
+                "id": "52b55083-112b-4f12-8c69-c0d48c32f801",
+                "encryption": "none",
+                "level": 8,
+                "flow": "xtls-rprx-vision"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "eh.vk.com",
+          "fingerprint": "firefox",
+          "publicKey": "0_FWbcTe6tvBuSZ7_7PrMaNmg44a8VxYRXPKjZuERwQ",
+          "shortId": "a150dff4",
+          "spiderX": ""
+        }
+      },
+      "remarks": "🇷🇺 YandexTCP Тест (Долгий пинг)"
+    },
+    {
+      "protocol": "vless",
       "tag": "🇷🇺 YandexTCP Тест (Долгий пинг) [176.123.162.100]",
       "settings": {
         "vnext": [
@@ -362,7 +647,7 @@
           "serverName": "dl.google.com",
           "fingerprint": "firefox",
           "publicKey": "bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU",
-          "shortId": "",
+          "shortId": "aabb",
           "spiderX": ""
         }
       },
@@ -370,15 +655,15 @@
     },
     {
       "protocol": "vless",
-      "tag": "🇷🇺 YandexTCP Тест (Долгий пинг) [179.198.49.43]",
+      "tag": "🇷🇺 YandexTCP Тест (Долгий пинг) [144.31.93.231]",
       "settings": {
         "vnext": [
           {
-            "address": "179.198.49.43",
+            "address": "144.31.93.231",
             "port": 443,
             "users": [
               {
-                "id": "d72f05b0-b182-4783-a6f2-21cecc7d841a",
+                "id": "3710fc0f-5f0c-4b9c-a5d4-40cb419e943a",
                 "encryption": "none",
                 "level": 8,
                 "flow": "xtls-rprx-vision"
@@ -391,26 +676,26 @@
         "network": "tcp",
         "security": "reality",
         "realitySettings": {
-          "serverName": "dzen.ru",
-          "fingerprint": "firefox",
-          "publicKey": "SibLV5WBGdljTiUCmKx77KhHQfErCwjDMD_ZLoha3js",
-          "shortId": "a1b2c3d4e5f67890",
-          "spiderX": "/"
+          "serverName": "yandex.ru",
+          "fingerprint": "chrome",
+          "publicKey": "WKN5yaRN05O2WdCURXRmS-yBVYaabaFWOvGudX6ohWc",
+          "shortId": "b97e7d4582b6fa6e",
+          "spiderX": ""
         }
       },
       "remarks": "🇷🇺 YandexTCP Тест (Долгий пинг)"
     },
     {
       "protocol": "vless",
-      "tag": "🇷🇺 YandexTCP Тест (Долгий пинг) [185.229.9.175]",
+      "tag": "🇷🇺 YandexTCP Тест [188.225.44.89]",
       "settings": {
         "vnext": [
           {
-            "address": "185.229.9.175",
+            "address": "188.225.44.89",
             "port": 443,
             "users": [
               {
-                "id": "c5694dc5-39fd-4a92-8430-3837baa522a3",
+                "id": "026f58a9-b36e-4204-8f8d-54c5374163da",
                 "encryption": "none",
                 "level": 8,
                 "flow": "xtls-rprx-vision"
@@ -423,61 +708,26 @@
         "network": "raw",
         "security": "reality",
         "realitySettings": {
-          "serverName": "api.ok.ru",
+          "serverName": "app12.betust.net",
           "fingerprint": "firefox",
-          "publicKey": "Eutx4frdhG1y7THj7k3CjazAsrCMj932RtbV4a1QfQk",
-          "shortId": "d5b6308860d578bb",
-          "spiderX": ""
+          "publicKey": "Fgd7fSq-ZXnAZd3GUYGEfTyiz9wno4IWVIcs7-Narwg",
+          "shortId": "f73ac93d",
+          "spiderX": "/"
         }
       },
-      "remarks": "🇷🇺 YandexTCP Тест (Долгий пинг)"
+      "remarks": "🇷🇺 YandexTCP Тест"
     },
     {
       "protocol": "vless",
-      "tag": "🇷🇺 YandexTCP Тест (Долгий пинг) [213.171.25.178]",
+      "tag": "🇷🇺 YandexTCP Тест [188.225.58.238]",
       "settings": {
         "vnext": [
           {
-            "address": "213.171.25.178",
-            "port": 9830,
-            "users": [
-              {
-                "id": "5d16ac22-6eea-426f-b778-6f4c2961faef",
-                "encryption": "none",
-                "level": 8
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "grpc",
-        "security": "reality",
-        "grpcSettings": {
-          "serviceName": "grpc-tunnel",
-          "multiMode": false
-        },
-        "realitySettings": {
-          "serverName": "dl.google.com",
-          "fingerprint": "chrome",
-          "publicKey": "bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU",
-          "shortId": "aabb",
-          "spiderX": ""
-        }
-      },
-      "remarks": "🇷🇺 YandexTCP Тест (Долгий пинг)"
-    },
-    {
-      "protocol": "vless",
-      "tag": "🇷🇺 YandexTCP Тест (Долгий пинг) [213.176.78.168]",
-      "settings": {
-        "vnext": [
-          {
-            "address": "213.176.78.168",
+            "address": "188.225.58.238",
             "port": 443,
             "users": [
               {
-                "id": "c795bdd5-0460-42bd-927b-fbff154d2ab5",
+                "id": "026f58a9-b36e-4204-8f8d-54c5374163da",
                 "encryption": "none",
                 "level": 8,
                 "flow": "xtls-rprx-vision"
@@ -487,29 +737,61 @@
         ]
       },
       "streamSettings": {
-        "network": "tcp",
+        "network": "raw",
         "security": "reality",
         "realitySettings": {
-          "serverName": "cdp.x5.ru",
-          "fingerprint": "safari",
-          "publicKey": "wK66Ve91QmwuclMGLWiN3ADL0i4-VwEK-_P4sDynogo",
-          "shortId": "99bfeeeb5c1c",
-          "spiderX": ""
+          "serverName": "app5.betust.net",
+          "fingerprint": "random",
+          "publicKey": "laDuxd6kFSPv2nWTy9LUjMGVRZM949R82alkZpMAqlk",
+          "shortId": "e84029c5",
+          "spiderX": "/"
         }
       },
-      "remarks": "🇷🇺 YandexTCP Тест (Долгий пинг)"
+      "remarks": "🇷🇺 YandexTCP Тест"
     },
     {
       "protocol": "vless",
-      "tag": "🇷🇺 YandexTCP Тест (Долгий пинг) [188.72.103.4]",
+      "tag": "🇷🇺 YandexTCP Тест [188.225.24.201]",
       "settings": {
         "vnext": [
           {
-            "address": "188.72.103.4",
+            "address": "188.225.24.201",
             "port": 443,
             "users": [
               {
-                "id": "1f959100-a98b-47fb-84fa-359246dc458a",
+                "id": "026f58a9-b36e-4204-8f8d-54c5374163da",
+                "encryption": "none",
+                "level": 8,
+                "flow": "xtls-rprx-vision"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "raw",
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "app11.betust.net",
+          "fingerprint": "firefox",
+          "publicKey": "XhzNlmMTdYr2pYTqiNNP6qWe7BkAgVHU-kZWXc9u9hY",
+          "shortId": "91c2269c",
+          "spiderX": ""
+        }
+      },
+      "remarks": "🇷🇺 YandexTCP Тест"
+    },
+    {
+      "protocol": "vless",
+      "tag": "🇷🇺 YandexTCP Тест [185.141.227.180]",
+      "settings": {
+        "vnext": [
+          {
+            "address": "185.141.227.180",
+            "port": 2053,
+            "users": [
+              {
+                "id": "2c634977-584e-4e1f-b501-1b70c77a6743",
                 "encryption": "none",
                 "level": 8
               }
@@ -518,33 +800,32 @@
         ]
       },
       "streamSettings": {
-        "network": "ws",
+        "network": "xhttp",
         "security": "tls",
-        "wsSettings": {
-          "path": "/apiv1/esa1-asda2jcvnbpseflkn-kjweksad",
-          "headers": {
-            "Host": "apicdn.4subnodes.com"
-          }
+        "xhttpSettings": {
+          "path": "/api/v1/upload",
+          "host": "dismissaltree.net",
+          "mode": "auto"
         },
         "tlsSettings": {
-          "serverName": "apicdn.4subnodes.com",
+          "serverName": "dismissaltree.net",
           "allowInsecure": false,
-          "fingerprint": "chrome"
+          "fingerprint": "random"
         }
       },
-      "remarks": "🇷🇺 YandexTCP Тест (Долгий пинг)"
+      "remarks": "🇷🇺 YandexTCP Тест"
     },
     {
       "protocol": "vless",
-      "tag": "🇷🇺 YandexTCP Тест (Долгий пинг) [3.114.220.22]",
+      "tag": "🇷🇺 YandexTCP Тест [5.42.96.76]",
       "settings": {
         "vnext": [
           {
-            "address": "3.114.220.22",
-            "port": 10583,
+            "address": "5.42.96.76",
+            "port": 443,
             "users": [
               {
-                "id": "814bd064-544d-4255-a070-5705c03f6da9",
+                "id": "f96d53bc-e0a9-4ea9-b3f1-dd8033fd7f1f",
                 "encryption": "none",
                 "level": 8,
                 "flow": "xtls-rprx-vision"
@@ -557,26 +838,26 @@
         "network": "tcp",
         "security": "reality",
         "realitySettings": {
-          "serverName": "www.apple.com",
-          "fingerprint": "chrome",
-          "publicKey": "k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0",
-          "shortId": "48050fab",
+          "serverName": "ruself.yandex-api.com",
+          "fingerprint": "random",
+          "publicKey": "c8IEc_c_QBmI5YAwILoVH0xw2xC4AJgJDKEYKcmKogo",
+          "shortId": "7f2e9c4b1a8d6e55",
           "spiderX": ""
         }
       },
-      "remarks": "🇷🇺 YandexTCP Тест (Долгий пинг)"
+      "remarks": "🇷🇺 YandexTCP Тест"
     },
     {
       "protocol": "vless",
-      "tag": "🇷🇺 YandexTCP Тест (Долгий пинг) [3.0.111.82]",
+      "tag": "🇷🇺 YandexTCP Тест [87.249.49.87]",
       "settings": {
         "vnext": [
           {
-            "address": "3.0.111.82",
-            "port": 10574,
+            "address": "87.249.49.87",
+            "port": 443,
             "users": [
               {
-                "id": "814bd064-544d-4255-a070-5705c03f6da9",
+                "id": "9bbd487f-8f84-4ad7-b897-681c3f7d95dc",
                 "encryption": "none",
                 "level": 8,
                 "flow": "xtls-rprx-vision"
@@ -589,46 +870,14 @@
         "network": "tcp",
         "security": "reality",
         "realitySettings": {
-          "serverName": "www.apple.com",
-          "fingerprint": "chrome",
-          "publicKey": "k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0",
-          "shortId": "48050fab",
+          "serverName": "werwer.mervi.icu",
+          "fingerprint": "random",
+          "publicKey": "n4HzRVDwOdcZQ62HiKeVYn_A9FMv_Qm_LRRDZlbe3xQ",
+          "shortId": "2cce6a63eaeb0b4f",
           "spiderX": ""
         }
       },
-      "remarks": "🇷🇺 YandexTCP Тест (Долгий пинг)"
-    },
-    {
-      "protocol": "vless",
-      "tag": "🇷🇺 YandexTCP Тест (Долгий пинг) [31.58.181.88]",
-      "settings": {
-        "vnext": [
-          {
-            "address": "31.58.181.88",
-            "port": 8443,
-            "users": [
-              {
-                "id": "010158f4-1a88-4dfa-8420-c770dc1584e1",
-                "encryption": "none",
-                "level": 8,
-                "flow": "xtls-rprx-vision"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "tradingview.com",
-          "fingerprint": "firefox",
-          "publicKey": "AERbWB2uslqIzm1hSlOZZEH3Y9qg_zlWRRyLfh97kXc",
-          "shortId": "",
-          "spiderX": ""
-        }
-      },
-      "remarks": "🇷🇺 YandexTCP Тест (Долгий пинг)"
+      "remarks": "🇷🇺 YandexTCP Тест"
     },
     {
       "protocol": "freedom",
@@ -653,24 +902,32 @@
       {
         "tag": "Auto_Balancer",
         "selector": [
-          "🇷🇺 YandexTCP Тест [155.212.161.140]",
-          "🇷🇺 YandexTCP Тест [spb.snappycore.com]",
+          "🇷🇺 YandexTCP Тест [95.163.155.137]",
           "🇷🇺 YandexTCP Тест (Долгий пинг) [46.182.24.147]",
           "🇷🇺 YandexTCP Тест [95.163.214.43]",
           "🇷🇺 YandexTCP Тест (Долгий пинг) [prep.wwwinternetvideo.click]",
+          "🇷🇺 YandexTCP Тест (Долгий пинг) [193.163.203.253]",
           "🇷🇺 YandexTCP Тест (Долгий пинг) [144.31.50.236]",
-          "🇷🇺 YandexTCP Тест (Долгий пинг) [185.141.227.150]",
+          "🇷🇺 YandexTCP Тест (Долгий пинг) [185.229.9.74]",
+          "🇷🇺 YandexTCP Тест (Долгий пинг) [91.224.87.22]",
+          "🇷🇺 YandexTCP Тест (Долгий пинг) [95.143.190.125]",
           "🇷🇺 YandexTCP Тест (Долгий пинг) [91.224.86.107]",
+          "🇷🇺 YandexTCP Тест (Долгий пинг) [82.202.143.37]",
+          "🇷🇺 YandexTCP Тест (Долгий пинг) [bl3fk52.sysopnova.art]",
+          "🇷🇺 YandexTCP Тест (Долгий пинг) [193.163.203.170]",
+          "🇷🇺 YandexTCP Тест (Долгий пинг) [2.27.54.106]",
+          "🇷🇺 YandexTCP Тест (Долгий пинг) [45.151.182.160]",
           "🇷🇺 YandexTCP Тест (Долгий пинг) [188.124.47.34]",
+          "🇷🇺 YandexTCP Тест (Долгий пинг) [45.12.75.242]",
+          "🇷🇺 YandexTCP Тест (Долгий пинг) [4.kiska.lol]",
           "🇷🇺 YandexTCP Тест (Долгий пинг) [176.123.162.100]",
-          "🇷🇺 YandexTCP Тест (Долгий пинг) [179.198.49.43]",
-          "🇷🇺 YandexTCP Тест (Долгий пинг) [185.229.9.175]",
-          "🇷🇺 YandexTCP Тест (Долгий пинг) [213.171.25.178]",
-          "🇷🇺 YandexTCP Тест (Долгий пинг) [213.176.78.168]",
-          "🇷🇺 YandexTCP Тест (Долгий пинг) [188.72.103.4]",
-          "🇷🇺 YandexTCP Тест (Долгий пинг) [3.114.220.22]",
-          "🇷🇺 YandexTCP Тест (Долгий пинг) [3.0.111.82]",
-          "🇷🇺 YandexTCP Тест (Долгий пинг) [31.58.181.88]"
+          "🇷🇺 YandexTCP Тест (Долгий пинг) [144.31.93.231]",
+          "🇷🇺 YandexTCP Тест [188.225.44.89]",
+          "🇷🇺 YandexTCP Тест [188.225.58.238]",
+          "🇷🇺 YandexTCP Тест [188.225.24.201]",
+          "🇷🇺 YandexTCP Тест [185.141.227.180]",
+          "🇷🇺 YandexTCP Тест [5.42.96.76]",
+          "🇷🇺 YandexTCP Тест [87.249.49.87]"
         ],
         "strategy": {
           "type": "leastLoad",
@@ -716,24 +973,32 @@
       "timeout": "3s"
     },
     "subjectSelector": [
-      "🇷🇺 YandexTCP Тест [155.212.161.140]",
-      "🇷🇺 YandexTCP Тест [spb.snappycore.com]",
+      "🇷🇺 YandexTCP Тест [95.163.155.137]",
       "🇷🇺 YandexTCP Тест (Долгий пинг) [46.182.24.147]",
       "🇷🇺 YandexTCP Тест [95.163.214.43]",
       "🇷🇺 YandexTCP Тест (Долгий пинг) [prep.wwwinternetvideo.click]",
+      "🇷🇺 YandexTCP Тест (Долгий пинг) [193.163.203.253]",
       "🇷🇺 YandexTCP Тест (Долгий пинг) [144.31.50.236]",
-      "🇷🇺 YandexTCP Тест (Долгий пинг) [185.141.227.150]",
+      "🇷🇺 YandexTCP Тест (Долгий пинг) [185.229.9.74]",
+      "🇷🇺 YandexTCP Тест (Долгий пинг) [91.224.87.22]",
+      "🇷🇺 YandexTCP Тест (Долгий пинг) [95.143.190.125]",
       "🇷🇺 YandexTCP Тест (Долгий пинг) [91.224.86.107]",
+      "🇷🇺 YandexTCP Тест (Долгий пинг) [82.202.143.37]",
+      "🇷🇺 YandexTCP Тест (Долгий пинг) [bl3fk52.sysopnova.art]",
+      "🇷🇺 YandexTCP Тест (Долгий пинг) [193.163.203.170]",
+      "🇷🇺 YandexTCP Тест (Долгий пинг) [2.27.54.106]",
+      "🇷🇺 YandexTCP Тест (Долгий пинг) [45.151.182.160]",
       "🇷🇺 YandexTCP Тест (Долгий пинг) [188.124.47.34]",
+      "🇷🇺 YandexTCP Тест (Долгий пинг) [45.12.75.242]",
+      "🇷🇺 YandexTCP Тест (Долгий пинг) [4.kiska.lol]",
       "🇷🇺 YandexTCP Тест (Долгий пинг) [176.123.162.100]",
-      "🇷🇺 YandexTCP Тест (Долгий пинг) [179.198.49.43]",
-      "🇷🇺 YandexTCP Тест (Долгий пинг) [185.229.9.175]",
-      "🇷🇺 YandexTCP Тест (Долгий пинг) [213.171.25.178]",
-      "🇷🇺 YandexTCP Тест (Долгий пинг) [213.176.78.168]",
-      "🇷🇺 YandexTCP Тест (Долгий пинг) [188.72.103.4]",
-      "🇷🇺 YandexTCP Тест (Долгий пинг) [3.114.220.22]",
-      "🇷🇺 YandexTCP Тест (Долгий пинг) [3.0.111.82]",
-      "🇷🇺 YandexTCP Тест (Долгий пинг) [31.58.181.88]"
+      "🇷🇺 YandexTCP Тест (Долгий пинг) [144.31.93.231]",
+      "🇷🇺 YandexTCP Тест [188.225.44.89]",
+      "🇷🇺 YandexTCP Тест [188.225.58.238]",
+      "🇷🇺 YandexTCP Тест [188.225.24.201]",
+      "🇷🇺 YandexTCP Тест [185.141.227.180]",
+      "🇷🇺 YandexTCP Тест [5.42.96.76]",
+      "🇷🇺 YandexTCP Тест [87.249.49.87]"
     ]
   }
 }
