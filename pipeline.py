@@ -24,30 +24,64 @@ FINAL_OUTPUT_FILE = os.path.join(OUTPUT_DIR, "sub_1212.json")
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 
-# --- Гео-словари (регулярки по границам слов, чтобы "RU" не ловило "BRUSSELS" и т.п.) ---
-RU_WORDS = ["RU", "RUS", "RUSSIA", "РОССИЯ", "РОССИИ", "YANDEX", "ЯНДЕКС"]
-RU_FLAGS = ["🇷🇺"]
-
-# Страны, которые ТОЖЕ оставляем (плюс к RU)
-ALLOWED_WORDS = [
-    # Германия
-    "DE", "GERMANY", "ГЕРМАНИЯ", "ГЕРМАНИИ", "DEUTSCHLAND",
-    # Финляндия
-    "FI", "FINLAND", "ФИНЛЯНДИЯ", "ФИНЛЯНДИИ", "HELSINKI", "ХЕЛЬСИНКИ",
-    # Европа
-    "EU", "EUROPE", "ЕВРОПА", "ЕВРОПЫ", "EUROPEAN",
-    # Нидерланды
-    "NL", "NETHERLANDS", "НИДЕРЛАНДЫ", "НИДЕРЛАНДОВ", "HOLLAND", "AMSTERDAM", "АМСТЕРДАМ",
-    # Франция
-    "FR", "FRANCE", "ФРАНЦИЯ", "ФРАНЦИИ", "PARIS", "ПАРИЖ",
-    # Эстония
-    "EE", "ESTONIA", "ЭСТОНИЯ", "ЭСТОНИИ", "TALLINN", "ТАЛЛИН",
-    # Великобритания
-    "GB", "UK", "BRITAIN", "АНГЛИЯ", "АНГЛИИ", "LONDON", "ЛОНДОН", "UNITED KINGDOM",
-    # Швеция
-    "SE", "SWEDEN", "ШВЕЦИЯ", "ШВЕЦИИ", "STOCKHOLM", "СТОКГОЛЬМ",
+# --- Гео-словари ---
+# Каждая страна = отдельная группа. Порядок важен: первое совпадение выигрывает.
+COUNTRY_GROUPS = [
+    {
+        "code": "RU",
+        "name": "🇷🇺 Russia",
+        "words": ["RU", "RUS", "RUSSIA", "РОССИЯ", "РОССИИ", "YANDEX", "ЯНДЕКС"],
+        "flags": ["🇷🇺"],
+    },
+    {
+        "code": "DE",
+        "name": "🇩🇪 Germany",
+        "words": ["DE", "GERMANY", "ГЕРМАНИЯ", "ГЕРМАНИИ", "DEUTSCHLAND", "FRANKFURT", "ФРАНКФУРТ"],
+        "flags": ["🇩🇪"],
+    },
+    {
+        "code": "FI",
+        "name": "🇫🇮 Finland",
+        "words": ["FI", "FINLAND", "ФИНЛЯНДИЯ", "ФИНЛЯНДИИ", "HELSINKI", "ХЕЛЬСИНКИ"],
+        "flags": ["🇫🇮"],
+    },
+    {
+        "code": "NL",
+        "name": "🇳🇱 Netherlands",
+        "words": ["NL", "NETHERLANDS", "НИДЕРЛАНДЫ", "НИДЕРЛАНДОВ", "HOLLAND", "AMSTERDAM", "АМСТЕРДАМ"],
+        "flags": ["🇳🇱"],
+    },
+    {
+        "code": "FR",
+        "name": "🇫🇷 France",
+        "words": ["FR", "FRANCE", "ФРАНЦИЯ", "ФРАНЦИИ", "PARIS", "ПАРИЖ"],
+        "flags": ["🇫🇷"],
+    },
+    {
+        "code": "EE",
+        "name": "🇪🇪 Estonia",
+        "words": ["EE", "ESTONIA", "ЭСТОНИЯ", "ЭСТОНИИ", "TALLINN", "ТАЛЛИН"],
+        "flags": ["🇪🇪"],
+    },
+    {
+        "code": "GB",
+        "name": "🇬🇧 United Kingdom",
+        "words": ["GB", "UK", "BRITAIN", "АНГЛИЯ", "АНГЛИИ", "LONDON", "ЛОНДОН", "UNITED KINGDOM"],
+        "flags": ["🇬🇧"],
+    },
+    {
+        "code": "SE",
+        "name": "🇸🇪 Sweden",
+        "words": ["SE", "SWEDEN", "ШВЕЦИЯ", "ШВЕЦИИ", "STOCKHOLM", "СТОКГОЛЬМ"],
+        "flags": ["🇸🇪"],
+    },
+    {
+        "code": "EU",
+        "name": "🇪🇺 Europe",
+        "words": ["EU", "EUROPE", "ЕВРОПА", "ЕВРОПЫ", "EUROPEAN"],
+        "flags": ["🇪🇺"],
+    },
 ]
-ALLOWED_FLAGS = ["🇩🇪", "🇫🇮", "🇪🇺", "🇳🇱", "🇫🇷", "🇪🇪", "🇬🇧", "🇸🇪"]
 
 # Страны, которые ВСЁ РАВНО отсекаем
 FOREIGN_WORDS = [
@@ -73,6 +107,19 @@ def _has_word(text_upper: str, words) -> bool:
         if re.search(rf"(?<![A-Z0-9]){re.escape(w)}(?![A-Z0-9])", text_upper):
             return True
     return False
+
+
+def detect_country(tag: str):
+    """Определяет страну по тегу. Возвращает объект группы или None."""
+    tag_upper = tag.upper()
+    # Сначала отсекаем чёрный список
+    if _has_word(tag_upper, FOREIGN_WORDS) or any(f in tag for f in FOREIGN_FLAGS):
+        return None
+    # Ищем первую подходящую страну
+    for group in COUNTRY_GROUPS:
+        if _has_word(tag_upper, group["words"]) or any(f in tag for f in group["flags"]):
+            return group
+    return None
 
 
 class VPNAggregator:
@@ -270,9 +317,10 @@ class VPNAggregator:
 
     # ---------------------------------------------------------------- filter
     def process_and_filter(self):
-        print("🔧 Запуск гео-фильтрации (RU + DE + FI + EU + NL + FR + EE + GB + SE)...")
+        print("🔧 Запуск гео-фильтрации с разделением по странам...")
         filtered_obs = []
         seen_addresses = set()
+        country_stats = {}
 
         for ob in self.outbounds:
             try:
@@ -281,40 +329,35 @@ class VPNAggregator:
             except (KeyError, IndexError, TypeError):
                 continue
 
-            # Дополнительная проверка на мертвый хост
             if address in ("0.0.0.0", "127.0.0.1"):
                 continue
 
-            tag_upper = old_tag.upper()
-
-            is_russian = _has_word(tag_upper, RU_WORDS) or any(f in old_tag for f in RU_FLAGS)
-            is_allowed = _has_word(tag_upper, ALLOWED_WORDS) or any(f in old_tag for f in ALLOWED_FLAGS)
-            is_foreign = _has_word(tag_upper, FOREIGN_WORDS) or any(f in old_tag for f in FOREIGN_FLAGS)
-
-            # Отсекаем всё, что в чёрном списке
-            if is_foreign:
+            # Определяем страну
+            group = detect_country(old_tag)
+            if not group:
                 continue
 
-            # Оставляем только RU или разрешённые страны
-            if not (is_russian or is_allowed):
-                continue
-
-            # Дедупликация по IP / Хосту
+            # Дедупликация по IP / Хосту (в рамках всего конфига)
             if address in seen_addresses:
                 continue
             seen_addresses.add(address)
 
-            # Единый tag. remarks НЕ добавляем — он будет один на верхнем уровне конфига
-            ob["tag"] = f"🌍 Yandex/Max [{address}]"
+            # Формируем tag: "🇷🇺 Russia | 1.2.3.4:443"
+            country_name = group["name"]
+            ob["tag"] = f"{country_name} | {address}:{ob['settings']['vnext'][0]['port']}"
 
             filtered_obs.append(ob)
+            country_stats[group["code"]] = country_stats.get(group["code"], 0) + 1
 
-        print(f"🗑 Фильтр завершён. Найдено серверов (RU+разрешённые): {len(filtered_obs)}")
+        print(f"🗑 Фильтр завершён. Всего серверов: {len(filtered_obs)}")
+        for code, cnt in sorted(country_stats.items(), key=lambda x: -x[1]):
+            print(f"   • {code}: {cnt}")
+
         self.outbounds = filtered_obs
+        self.country_stats = country_stats
 
     # ---------------------------------------------------------------- saver
     def save_final_config(self):
-        # Увеличили лимит до 100 тысяч, чтобы ничего не резалось
         selected_obs = self.outbounds[:100000]
         tags = [o["tag"] for o in selected_obs]
 
@@ -329,6 +372,57 @@ class VPNAggregator:
             "settings": {"response": {"type": "http"}},
             "tag": "block",
         })
+
+        # Балансировщик по каждой стране + общий
+        balancers = []
+        for group in COUNTRY_GROUPS:
+            code = group["code"]
+            country_tags = [t for t in tags if t.startswith(group["name"])]
+            if country_tags:
+                balancers.append({
+                    "tag": f"Balancer_{code}",
+                    "selector": country_tags,
+                    "strategy": {
+                        "type": "leastLoad",
+                        "settings": {
+                            "baselines": ["200ms", "500ms"],
+                            "expected": 2,
+                            "maxRTT": "1500ms",
+                            "tolerance": 0,
+                        },
+                    },
+                })
+
+        # Общий балансировщик по всем
+        if tags:
+            balancers.append({
+                "tag": "Auto_Balancer",
+                "selector": tags,
+                "strategy": {
+                    "type": "leastLoad",
+                    "settings": {
+                        "baselines": ["200ms", "500ms"],
+                        "expected": 2,
+                        "maxRTT": "1500ms",
+                        "tolerance": 0,
+                    },
+                },
+            })
+
+        # Правила: для каждой страны — своё правило, можно в клиенте выбрать
+        rules = [
+            {"type": "field", "protocol": ["bittorrent"], "outboundTag": "direct"},
+            {"type": "field", "ip": ["geoip:private"], "outboundTag": "direct"},
+        ]
+        for group in COUNTRY_GROUPS:
+            code = group["code"]
+            country_tags = [t for t in tags if t.startswith(group["name"])]
+            if country_tags:
+                rules.append({
+                    "type": "field",
+                    "balancerTag": f"Balancer_{code}",
+                    "network": "tcp,udp",
+                })
 
         final_json = {
             "log": {"loglevel": "warning"},
@@ -353,29 +447,8 @@ class VPNAggregator:
             "outbounds": selected_obs,
             "routing": {
                 "domainStrategy": "IPIfNonMatch",
-                "balancers": [
-                    {
-                        "tag": "Auto_Balancer",
-                        "selector": tags,
-                        "strategy": {
-                            "type": "leastLoad",
-                            "settings": {
-                                "baselines": ["200ms", "500ms"],
-                                "expected": 2,
-                                "maxRTT": "1500ms",
-                                "tolerance": 0,
-                            },
-                        },
-                    }
-                ] if tags else [],
-                "rules": [
-                    # Торренты качаем напрямую
-                    {"type": "field", "protocol": ["bittorrent"], "outboundTag": "direct"},
-                    # Локальную сеть открываем напрямую
-                    {"type": "field", "ip": ["geoip:private"], "outboundTag": "direct"},
-                    # Всё остальное отправляем в балансировщик!
-                    {"type": "field", "balancerTag": "Auto_Balancer", "network": "tcp,udp"},
-                ],
+                "balancers": balancers,
+                "rules": rules,
             },
             "burstObservatory": {
                 "pingConfig": {
@@ -388,7 +461,7 @@ class VPNAggregator:
             },
         }
 
-        # === ЖЁСТКАЯ ЗАЧИСТКА: удаляем ВСЕ ключи "remarks" рекурсивно ===
+        # Жёсткая зачистка remarks везде
         def strip_remarks(obj):
             if isinstance(obj, dict):
                 obj.pop("remarks", None)
@@ -400,20 +473,19 @@ class VPNAggregator:
 
         strip_remarks(final_json)
 
-        # Добавляем ЕДИНСТВЕННУЮ строку remarks на верхнем уровне
-        final_json = {"remarks": "🌍 Yandex/Max", **final_json}
+        # Единственная строка remarks на верхнем уровне
+        final_json = {"remarks": "🌍 Yandex/Max (by country)", **final_json}
 
         with open(FINAL_OUTPUT_FILE, "w", encoding="utf-8") as f:
             json.dump(final_json, f, indent=2, ensure_ascii=False)
 
-        # Контроль: считаем сколько раз встречается "remarks" в файле
         with open(FINAL_OUTPUT_FILE, "r", encoding="utf-8") as f:
             count = f.read().count('"remarks"')
         print(f"🔍 Проверка: строк 'remarks' в JSON = {count}")
 
-        print(f"🎉 Итоговый конфиг успешно сохранен: {FINAL_OUTPUT_FILE} "
-              f"(Всего рабочих серверов добавлено: {len(tags)}, "
-              f"дата обновления: {datetime.now():%Y-%m-%d %H:%M:%S})")
+        print(f"🎉 Итоговый конфиг сохранён: {FINAL_OUTPUT_FILE} "
+              f"(серверов: {len(tags)}, "
+              f"дата: {datetime.now():%Y-%m-%d %H:%M:%S})")
 
 
 if __name__ == "__main__":
