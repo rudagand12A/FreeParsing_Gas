@@ -65,37 +65,6 @@
     },
     {
       "protocol": "vless",
-      "tag": "🇷🇺 Yandex/Max [84.240.206.178]",
-      "settings": {
-        "vnext": [
-          {
-            "address": "84.240.206.178",
-            "port": 443,
-            "users": [
-              {
-                "id": "a5a311a8-6b0b-4ddc-b354-79acb4e19d67",
-                "encryption": "none",
-                "level": 8,
-                "flow": "xtls-rprx-vision"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "ok.ru",
-          "fingerprint": "chrome",
-          "publicKey": "YPxklREENCJn2akAL8LHl9IuYYLlOv_3FG_9oJXiDXQ",
-          "shortId": "",
-          "spiderX": ""
-        }
-      }
-    },
-    {
-      "protocol": "vless",
       "tag": "🇷🇺 Yandex/Max [46.182.24.147]",
       "settings": {
         "vnext": [
@@ -774,7 +743,6 @@
         "tag": "Auto_Balancer",
         "selector": [
           "🇷🇺 Yandex/Max [72.56.1.5]",
-          "🇷🇺 Yandex/Max [84.240.206.178]",
           "🇷🇺 Yandex/Max [46.182.24.147]",
           "🇷🇺 Yandex/Max [95.163.214.43]",
           "🇷🇺 Yandex/Max [prep.wwwinternetvideo.click]",
@@ -841,7 +809,6 @@
     },
     "subjectSelector": [
       "🇷🇺 Yandex/Max [72.56.1.5]",
-      "🇷🇺 Yandex/Max [84.240.206.178]",
       "🇷🇺 Yandex/Max [46.182.24.147]",
       "🇷🇺 Yandex/Max [95.163.214.43]",
       "🇷🇺 Yandex/Max [prep.wwwinternetvideo.click]",
