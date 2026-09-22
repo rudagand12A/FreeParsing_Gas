@@ -30,7 +30,7 @@
   "outbounds": [
     {
       "protocol": "vless",
-      "tag": "🇷🇺 YandexTCP Тест [72.56.1.5]",
+      "tag": "🇷🇺 Yandex/Max [72.56.1.5]",
       "settings": {
         "vnext": [
           {
@@ -60,11 +60,44 @@
           "shortId": "271684C10127374D",
           "spiderX": ""
         }
-      }
+      },
+      "remarks": "🇷🇺 Yandex/Max"
     },
     {
       "protocol": "vless",
-      "tag": "🇷🇺 YandexTCP Тест (Долгий пинг) [46.182.24.147]",
+      "tag": "🇷🇺 Yandex/Max [84.240.206.178]",
+      "settings": {
+        "vnext": [
+          {
+            "address": "84.240.206.178",
+            "port": 443,
+            "users": [
+              {
+                "id": "a5a311a8-6b0b-4ddc-b354-79acb4e19d67",
+                "encryption": "none",
+                "level": 8,
+                "flow": "xtls-rprx-vision"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "ok.ru",
+          "fingerprint": "chrome",
+          "publicKey": "YPxklREENCJn2akAL8LHl9IuYYLlOv_3FG_9oJXiDXQ",
+          "shortId": "",
+          "spiderX": ""
+        }
+      },
+      "remarks": "🇷🇺 Yandex/Max"
+    },
+    {
+      "protocol": "vless",
+      "tag": "🇷🇺 Yandex/Max [46.182.24.147]",
       "settings": {
         "vnext": [
           {
@@ -95,11 +128,12 @@
           "shortId": "aaaa",
           "spiderX": ""
         }
-      }
+      },
+      "remarks": "🇷🇺 Yandex/Max"
     },
     {
       "protocol": "vless",
-      "tag": "🇷🇺 YandexTCP Тест [95.163.214.43]",
+      "tag": "🇷🇺 Yandex/Max [95.163.214.43]",
       "settings": {
         "vnext": [
           {
@@ -130,11 +164,12 @@
           "shortId": "864fbb122f15b43d",
           "spiderX": "/"
         }
-      }
+      },
+      "remarks": "🇷🇺 Yandex/Max"
     },
     {
       "protocol": "vless",
-      "tag": "🇷🇺 YandexTCP Тест (Долгий пинг) [prep.wwwinternetvideo.click]",
+      "tag": "🇷🇺 Yandex/Max [prep.wwwinternetvideo.click]",
       "settings": {
         "vnext": [
           {
@@ -161,11 +196,12 @@
           "shortId": "bbe46bd8f6b96839",
           "spiderX": ""
         }
-      }
+      },
+      "remarks": "🇷🇺 Yandex/Max"
     },
     {
       "protocol": "vless",
-      "tag": "🇷🇺 YandexTCP Тест (Долгий пинг) [91.224.87.22]",
+      "tag": "🇷🇺 Yandex/Max [91.224.87.22]",
       "settings": {
         "vnext": [
           {
@@ -195,11 +231,12 @@
           "shortId": "aabbccdd",
           "spiderX": ""
         }
-      }
+      },
+      "remarks": "🇷🇺 Yandex/Max"
     },
     {
       "protocol": "vless",
-      "tag": "🇷🇺 YandexTCP Тест (Долгий пинг) [95.143.190.125]",
+      "tag": "🇷🇺 Yandex/Max [95.143.190.125]",
       "settings": {
         "vnext": [
           {
@@ -229,11 +266,12 @@
           "shortId": "aabb",
           "spiderX": ""
         }
-      }
+      },
+      "remarks": "🇷🇺 Yandex/Max"
     },
     {
       "protocol": "vless",
-      "tag": "🇷🇺 YandexTCP Тест (Долгий пинг) [91.224.86.107]",
+      "tag": "🇷🇺 Yandex/Max [91.224.86.107]",
       "settings": {
         "vnext": [
           {
@@ -263,11 +301,12 @@
           "shortId": "aabbccdd",
           "spiderX": ""
         }
-      }
+      },
+      "remarks": "🇷🇺 Yandex/Max"
     },
     {
       "protocol": "vless",
-      "tag": "🇷🇺 YandexTCP Тест (Долгий пинг) [82.202.143.37]",
+      "tag": "🇷🇺 Yandex/Max [82.202.143.37]",
       "settings": {
         "vnext": [
           {
@@ -297,11 +336,12 @@
           "shortId": "aabbccdd",
           "spiderX": ""
         }
-      }
+      },
+      "remarks": "🇷🇺 Yandex/Max"
     },
     {
       "protocol": "vless",
-      "tag": "🇷🇺 YandexTCP Тест (Долгий пинг) [188.124.47.34]",
+      "tag": "🇷🇺 Yandex/Max [188.124.47.34]",
       "settings": {
         "vnext": [
           {
@@ -331,11 +371,12 @@
           "shortId": "aabbccdd",
           "spiderX": ""
         }
-      }
+      },
+      "remarks": "🇷🇺 Yandex/Max"
     },
     {
       "protocol": "vless",
-      "tag": "🇷🇺 YandexTCP Тест (Долгий пинг) [176.108.246.110]",
+      "tag": "🇷🇺 Yandex/Max [176.108.246.110]",
       "settings": {
         "vnext": [
           {
@@ -365,11 +406,12 @@
           "shortId": "",
           "spiderX": ""
         }
-      }
+      },
+      "remarks": "🇷🇺 Yandex/Max"
     },
     {
       "protocol": "vless",
-      "tag": "🇷🇺 YandexTCP Тест (Долгий пинг) [185.141.227.180]",
+      "tag": "🇷🇺 Yandex/Max [185.141.227.180]",
       "settings": {
         "vnext": [
           {
@@ -398,11 +440,12 @@
           "allowInsecure": false,
           "fingerprint": "random"
         }
-      }
+      },
+      "remarks": "🇷🇺 Yandex/Max"
     },
     {
       "protocol": "vless",
-      "tag": "🇷🇺 YandexTCP Тест (Долгий пинг) [144.31.93.231]",
+      "tag": "🇷🇺 Yandex/Max [144.31.93.231]",
       "settings": {
         "vnext": [
           {
@@ -429,11 +472,12 @@
           "shortId": "b97e7d4582b6fa6e",
           "spiderX": ""
         }
-      }
+      },
+      "remarks": "🇷🇺 Yandex/Max"
     },
     {
       "protocol": "vless",
-      "tag": "🇷🇺 YandexTCP Тест (Долгий пинг) [bl3fk52.sysopnova.art]",
+      "tag": "🇷🇺 Yandex/Max [bl3fk52.sysopnova.art]",
       "settings": {
         "vnext": [
           {
@@ -460,11 +504,12 @@
           "shortId": "5ee019e02e6ed99a",
           "spiderX": ""
         }
-      }
+      },
+      "remarks": "🇷🇺 Yandex/Max"
     },
     {
       "protocol": "vless",
-      "tag": "🇷🇺 YandexTCP Тест (Долгий пинг) [176.123.162.100]",
+      "tag": "🇷🇺 Yandex/Max [176.123.162.100]",
       "settings": {
         "vnext": [
           {
@@ -494,11 +539,12 @@
           "shortId": "aabb",
           "spiderX": ""
         }
-      }
+      },
+      "remarks": "🇷🇺 Yandex/Max"
     },
     {
       "protocol": "vless",
-      "tag": "🇷🇺 YandexTCP Тест (Долгий пинг) [213.171.25.29]",
+      "tag": "🇷🇺 Yandex/Max [213.171.25.29]",
       "settings": {
         "vnext": [
           {
@@ -528,11 +574,12 @@
           "shortId": "aabb",
           "spiderX": ""
         }
-      }
+      },
+      "remarks": "🇷🇺 Yandex/Max"
     },
     {
       "protocol": "vless",
-      "tag": "🇷🇺 YandexTCP Тест (Долгий пинг) [176.123.161.222]",
+      "tag": "🇷🇺 Yandex/Max [176.123.161.222]",
       "settings": {
         "vnext": [
           {
@@ -562,11 +609,12 @@
           "shortId": "",
           "spiderX": ""
         }
-      }
+      },
+      "remarks": "🇷🇺 Yandex/Max"
     },
     {
       "protocol": "vless",
-      "tag": "🇷🇺 YandexTCP Тест (Долгий пинг) [45.12.75.242]",
+      "tag": "🇷🇺 Yandex/Max [45.12.75.242]",
       "settings": {
         "vnext": [
           {
@@ -592,11 +640,12 @@
           "shortId": "23103e1e",
           "spiderX": ""
         }
-      }
+      },
+      "remarks": "🇷🇺 Yandex/Max"
     },
     {
       "protocol": "vless",
-      "tag": "🇷🇺 YandexTCP Тест (Долгий пинг) [144.31.50.236]",
+      "tag": "🇷🇺 Yandex/Max [144.31.50.236]",
       "settings": {
         "vnext": [
           {
@@ -623,11 +672,12 @@
           "shortId": "bbe46bd8f6b96839",
           "spiderX": ""
         }
-      }
+      },
+      "remarks": "🇷🇺 Yandex/Max"
     },
     {
       "protocol": "vless",
-      "tag": "🇷🇺 YandexTCP Тест (Долгий пинг) [193.163.203.253]",
+      "tag": "🇷🇺 Yandex/Max [193.163.203.253]",
       "settings": {
         "vnext": [
           {
@@ -654,11 +704,12 @@
           "shortId": "5ee019e02e6ed99a",
           "spiderX": ""
         }
-      }
+      },
+      "remarks": "🇷🇺 Yandex/Max"
     },
     {
       "protocol": "vless",
-      "tag": "🇷🇺 YandexTCP Тест [5.42.96.76]",
+      "tag": "🇷🇺 Yandex/Max [5.42.96.76]",
       "settings": {
         "vnext": [
           {
@@ -685,11 +736,12 @@
           "shortId": "7f2e9c4b1a8d6e55",
           "spiderX": ""
         }
-      }
+      },
+      "remarks": "🇷🇺 Yandex/Max"
     },
     {
       "protocol": "vless",
-      "tag": "🇷🇺 YandexTCP Тест [87.249.49.87]",
+      "tag": "🇷🇺 Yandex/Max [87.249.49.87]",
       "settings": {
         "vnext": [
           {
@@ -716,7 +768,8 @@
           "shortId": "2cce6a63eaeb0b4f",
           "spiderX": ""
         }
-      }
+      },
+      "remarks": "🇷🇺 Yandex/Max"
     },
     {
       "protocol": "freedom",
@@ -741,27 +794,28 @@
       {
         "tag": "Auto_Balancer",
         "selector": [
-          "🇷🇺 YandexTCP Тест [72.56.1.5]",
-          "🇷🇺 YandexTCP Тест (Долгий пинг) [46.182.24.147]",
-          "🇷🇺 YandexTCP Тест [95.163.214.43]",
-          "🇷🇺 YandexTCP Тест (Долгий пинг) [prep.wwwinternetvideo.click]",
-          "🇷🇺 YandexTCP Тест (Долгий пинг) [91.224.87.22]",
-          "🇷🇺 YandexTCP Тест (Долгий пинг) [95.143.190.125]",
-          "🇷🇺 YandexTCP Тест (Долгий пинг) [91.224.86.107]",
-          "🇷🇺 YandexTCP Тест (Долгий пинг) [82.202.143.37]",
-          "🇷🇺 YandexTCP Тест (Долгий пинг) [188.124.47.34]",
-          "🇷🇺 YandexTCP Тест (Долгий пинг) [176.108.246.110]",
-          "🇷🇺 YandexTCP Тест (Долгий пинг) [185.141.227.180]",
-          "🇷🇺 YandexTCP Тест (Долгий пинг) [144.31.93.231]",
-          "🇷🇺 YandexTCP Тест (Долгий пинг) [bl3fk52.sysopnova.art]",
-          "🇷🇺 YandexTCP Тест (Долгий пинг) [176.123.162.100]",
-          "🇷🇺 YandexTCP Тест (Долгий пинг) [213.171.25.29]",
-          "🇷🇺 YandexTCP Тест (Долгий пинг) [176.123.161.222]",
-          "🇷🇺 YandexTCP Тест (Долгий пинг) [45.12.75.242]",
-          "🇷🇺 YandexTCP Тест (Долгий пинг) [144.31.50.236]",
-          "🇷🇺 YandexTCP Тест (Долгий пинг) [193.163.203.253]",
-          "🇷🇺 YandexTCP Тест [5.42.96.76]",
-          "🇷🇺 YandexTCP Тест [87.249.49.87]"
+          "🇷🇺 Yandex/Max [72.56.1.5]",
+          "🇷🇺 Yandex/Max [84.240.206.178]",
+          "🇷🇺 Yandex/Max [46.182.24.147]",
+          "🇷🇺 Yandex/Max [95.163.214.43]",
+          "🇷🇺 Yandex/Max [prep.wwwinternetvideo.click]",
+          "🇷🇺 Yandex/Max [91.224.87.22]",
+          "🇷🇺 Yandex/Max [95.143.190.125]",
+          "🇷🇺 Yandex/Max [91.224.86.107]",
+          "🇷🇺 Yandex/Max [82.202.143.37]",
+          "🇷🇺 Yandex/Max [188.124.47.34]",
+          "🇷🇺 Yandex/Max [176.108.246.110]",
+          "🇷🇺 Yandex/Max [185.141.227.180]",
+          "🇷🇺 Yandex/Max [144.31.93.231]",
+          "🇷🇺 Yandex/Max [bl3fk52.sysopnova.art]",
+          "🇷🇺 Yandex/Max [176.123.162.100]",
+          "🇷🇺 Yandex/Max [213.171.25.29]",
+          "🇷🇺 Yandex/Max [176.123.161.222]",
+          "🇷🇺 Yandex/Max [45.12.75.242]",
+          "🇷🇺 Yandex/Max [144.31.50.236]",
+          "🇷🇺 Yandex/Max [193.163.203.253]",
+          "🇷🇺 Yandex/Max [5.42.96.76]",
+          "🇷🇺 Yandex/Max [87.249.49.87]"
         ],
         "strategy": {
           "type": "leastLoad",
@@ -807,27 +861,28 @@
       "timeout": "3s"
     },
     "subjectSelector": [
-      "🇷🇺 YandexTCP Тест [72.56.1.5]",
-      "🇷🇺 YandexTCP Тест (Долгий пинг) [46.182.24.147]",
-      "🇷🇺 YandexTCP Тест [95.163.214.43]",
-      "🇷🇺 YandexTCP Тест (Долгий пинг) [prep.wwwinternetvideo.click]",
-      "🇷🇺 YandexTCP Тест (Долгий пинг) [91.224.87.22]",
-      "🇷🇺 YandexTCP Тест (Долгий пинг) [95.143.190.125]",
-      "🇷🇺 YandexTCP Тест (Долгий пинг) [91.224.86.107]",
-      "🇷🇺 YandexTCP Тест (Долгий пинг) [82.202.143.37]",
-      "🇷🇺 YandexTCP Тест (Долгий пинг) [188.124.47.34]",
-      "🇷🇺 YandexTCP Тест (Долгий пинг) [176.108.246.110]",
-      "🇷🇺 YandexTCP Тест (Долгий пинг) [185.141.227.180]",
-      "🇷🇺 YandexTCP Тест (Долгий пинг) [144.31.93.231]",
-      "🇷🇺 YandexTCP Тест (Долгий пинг) [bl3fk52.sysopnova.art]",
-      "🇷🇺 YandexTCP Тест (Долгий пинг) [176.123.162.100]",
-      "🇷🇺 YandexTCP Тест (Долгий пинг) [213.171.25.29]",
-      "🇷🇺 YandexTCP Тест (Долгий пинг) [176.123.161.222]",
-      "🇷🇺 YandexTCP Тест (Долгий пинг) [45.12.75.242]",
-      "🇷🇺 YandexTCP Тест (Долгий пинг) [144.31.50.236]",
-      "🇷🇺 YandexTCP Тест (Долгий пинг) [193.163.203.253]",
-      "🇷🇺 YandexTCP Тест [5.42.96.76]",
-      "🇷🇺 YandexTCP Тест [87.249.49.87]"
+      "🇷🇺 Yandex/Max [72.56.1.5]",
+      "🇷🇺 Yandex/Max [84.240.206.178]",
+      "🇷🇺 Yandex/Max [46.182.24.147]",
+      "🇷🇺 Yandex/Max [95.163.214.43]",
+      "🇷🇺 Yandex/Max [prep.wwwinternetvideo.click]",
+      "🇷🇺 Yandex/Max [91.224.87.22]",
+      "🇷🇺 Yandex/Max [95.143.190.125]",
+      "🇷🇺 Yandex/Max [91.224.86.107]",
+      "🇷🇺 Yandex/Max [82.202.143.37]",
+      "🇷🇺 Yandex/Max [188.124.47.34]",
+      "🇷🇺 Yandex/Max [176.108.246.110]",
+      "🇷🇺 Yandex/Max [185.141.227.180]",
+      "🇷🇺 Yandex/Max [144.31.93.231]",
+      "🇷🇺 Yandex/Max [bl3fk52.sysopnova.art]",
+      "🇷🇺 Yandex/Max [176.123.162.100]",
+      "🇷🇺 Yandex/Max [213.171.25.29]",
+      "🇷🇺 Yandex/Max [176.123.161.222]",
+      "🇷🇺 Yandex/Max [45.12.75.242]",
+      "🇷🇺 Yandex/Max [144.31.50.236]",
+      "🇷🇺 Yandex/Max [193.163.203.253]",
+      "🇷🇺 Yandex/Max [5.42.96.76]",
+      "🇷🇺 Yandex/Max [87.249.49.87]"
     ]
   }
 }
