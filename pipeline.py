@@ -292,13 +292,8 @@ class VPNAggregator:
 
     # ---------------------------------------------------------------- saver
     def save_final_config(self):
-        # Увеличили лимит до 100 тысяч, чтобы ничего не резалось
         selected_obs = self.outbounds[:100000]
         tags = [o["tag"] for o in selected_obs]
-
-        # Убираем remarks из каждого outbound, чтобы не дублировалось
-        for ob in selected_obs:
-            ob.pop("remarks", None)
 
         # Служебные выходы
         selected_obs.append({
@@ -313,8 +308,6 @@ class VPNAggregator:
         })
 
         final_json = {
-            # ЕДИНСТВЕННАЯ строка remarks во всём конфиге
-            "remarks": "🇷🇺 Yandex/Max",
             "log": {"loglevel": "warning"},
             "inbounds": [
                 {
@@ -353,11 +346,8 @@ class VPNAggregator:
                     }
                 ] if tags else [],
                 "rules": [
-                    # Торренты качаем напрямую
                     {"type": "field", "protocol": ["bittorrent"], "outboundTag": "direct"},
-                    # Локальную сеть открываем напрямую
                     {"type": "field", "ip": ["geoip:private"], "outboundTag": "direct"},
-                    # Всё остальное отправляем в балансировщик!
                     {"type": "field", "balancerTag": "Auto_Balancer", "network": "tcp,udp"},
                 ],
             },
@@ -372,8 +362,28 @@ class VPNAggregator:
             },
         }
 
+        # === ЖЁСТКАЯ ЗАЧИСТКА: удаляем ВСЕ ключи "remarks" рекурсивно ===
+        def strip_remarks(obj):
+            if isinstance(obj, dict):
+                obj.pop("remarks", None)
+                for v in obj.values():
+                    strip_remarks(v)
+            elif isinstance(obj, list):
+                for item in obj:
+                    strip_remarks(item)
+
+        strip_remarks(final_json)
+
+        # Добавляем ЕДИНСТВЕННУЮ строку remarks на верхнем уровне
+        final_json = {"remarks": "🇷🇺 Yandex/Max", **final_json}
+
         with open(FINAL_OUTPUT_FILE, "w", encoding="utf-8") as f:
             json.dump(final_json, f, indent=2, ensure_ascii=False)
+
+        # Контроль: считаем сколько раз встречается "remarks" в файле
+        with open(FINAL_OUTPUT_FILE, "r", encoding="utf-8") as f:
+            count = f.read().count('"remarks"')
+        print(f"🔍 Проверка: строк 'remarks' в JSON = {count}")
 
         print(f"🎉 Итоговый конфиг успешно сохранен: {FINAL_OUTPUT_FILE} "
               f"(Всего рабочих серверов добавлено: {len(tags)}, "
