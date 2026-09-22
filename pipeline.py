@@ -283,12 +283,12 @@ class VPNAggregator:
             seen_addresses.add(address)
 
             base_name = "🇷🇺 YandexTCP Тест"
-            new_remarks = f"{base_name} Безлимит" if "безлимит" in old_tag.lower() else base_name
+            new_tag_name = f"{base_name} Безлимит" if "безлимит" in old_tag.lower() else base_name
             if _has_word(tag_upper, ["LTE", "ЛТЕ"]):
-                new_remarks += " (Долгий пинг)"
+                new_tag_name += " (Долгий пинг)"
 
-            ob["tag"] = f"{new_remarks} [{address}]"
-            ob["remarks"] = new_remarks
+            ob["tag"] = f"{new_tag_name} [{address}]"
+            # Убрали создание ob["remarks"] внутри каждого провайдера, чтобы не спамить конфиг
             filtered_obs.append(ob)
 
         print(f"🗑 Фильтр завершён. Найдено чистых RU серверов: {len(filtered_obs)}")
@@ -355,7 +355,7 @@ class VPNAggregator:
                     {"type": "field", "protocol": ["bittorrent"], "outboundTag": "direct"},
                     # Локальную сеть открываем напрямую
                     {"type": "field", "ip": ["geoip:private"], "outboundTag": "direct"},
-                    # ИСПРАВЛЕНО: Всё остальное (включая RU домены и IP) отправляем в балансировщик!
+                    # Всё остальное отправляем в балансировщик!
                     {"type": "field", "balancerTag": "Auto_Balancer", "network": "tcp,udp"},
                 ],
             },
