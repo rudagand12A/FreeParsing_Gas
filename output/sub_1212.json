@@ -1,5 +1,5 @@
 {
-  "remarks": "🌍 Yandex/Max",
+  "remarks": "🌍 Yandex/Max (by country)",
   "log": {
     "loglevel": "warning"
   },
@@ -31,7 +31,7 @@
   "outbounds": [
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [qq.utiltools.site]",
+      "tag": "🇷🇺 Russia | qq.utiltools.site:443",
       "settings": {
         "vnext": [
           {
@@ -62,7 +62,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [2.27.249.144]",
+      "tag": "🇳🇱 Netherlands | 2.27.249.144:443",
       "settings": {
         "vnext": [
           {
@@ -93,7 +93,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [de2.edge-9d7c.com]",
+      "tag": "🇳🇱 Netherlands | de2.edge-9d7c.com:443",
       "settings": {
         "vnext": [
           {
@@ -124,7 +124,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [136.148.71.4]",
+      "tag": "🇳🇱 Netherlands | 136.148.71.4:443",
       "settings": {
         "vnext": [
           {
@@ -155,7 +155,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [217.19.122.17]",
+      "tag": "🇳🇱 Netherlands | 217.19.122.17:10654",
       "settings": {
         "vnext": [
           {
@@ -190,7 +190,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [194.77.71.152]",
+      "tag": "🇫🇮 Finland | 194.77.71.152:443",
       "settings": {
         "vnext": [
           {
@@ -221,7 +221,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [147.45.148.6]",
+      "tag": "🇷🇺 Russia | 147.45.148.6:443",
       "settings": {
         "vnext": [
           {
@@ -252,7 +252,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [176.108.246.110]",
+      "tag": "🇷🇺 Russia | 176.108.246.110:9830",
       "settings": {
         "vnext": [
           {
@@ -286,7 +286,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [latte.coffebahnem.site]",
+      "tag": "🇪🇪 Estonia | latte.coffebahnem.site:80",
       "settings": {
         "vnext": [
           {
@@ -317,7 +317,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [31.76.101.39]",
+      "tag": "🇩🇪 Germany | 31.76.101.39:443",
       "settings": {
         "vnext": [
           {
@@ -348,7 +348,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [66.90.104.42]",
+      "tag": "🇬🇧 United Kingdom | 66.90.104.42:2083",
       "settings": {
         "vnext": [
           {
@@ -375,7 +375,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [5.157.10.250]",
+      "tag": "🇸🇪 Sweden | 5.157.10.250:443",
       "settings": {
         "vnext": [
           {
@@ -406,7 +406,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [topup.multirouterapp.com]",
+      "tag": "🇳🇱 Netherlands | topup.multirouterapp.com:443",
       "settings": {
         "vnext": [
           {
@@ -440,7 +440,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [212.46.33.90]",
+      "tag": "🇳🇱 Netherlands | 212.46.33.90:443",
       "settings": {
         "vnext": [
           {
@@ -471,7 +471,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [87.228.33.67]",
+      "tag": "🇪🇺 Europe | 87.228.33.67:443",
       "settings": {
         "vnext": [
           {
@@ -506,7 +506,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [194.55.239.15]",
+      "tag": "🇪🇺 Europe | 194.55.239.15:443",
       "settings": {
         "vnext": [
           {
@@ -541,7 +541,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [194.55.239.111]",
+      "tag": "🇪🇺 Europe | 194.55.239.111:443",
       "settings": {
         "vnext": [
           {
@@ -576,7 +576,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [194.55.239.18]",
+      "tag": "🇪🇺 Europe | 194.55.239.18:443",
       "settings": {
         "vnext": [
           {
@@ -611,7 +611,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [194.55.239.105]",
+      "tag": "🇪🇺 Europe | 194.55.239.105:443",
       "settings": {
         "vnext": [
           {
@@ -646,7 +646,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [91.240.86.186]",
+      "tag": "🇪🇺 Europe | 91.240.86.186:443",
       "settings": {
         "vnext": [
           {
@@ -677,7 +677,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [91.240.86.12]",
+      "tag": "🇪🇺 Europe | 91.240.86.12:443",
       "settings": {
         "vnext": [
           {
@@ -708,7 +708,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [xnodtwx.artemida.live]",
+      "tag": "🇪🇺 Europe | xnodtwx.artemida.live:443",
       "settings": {
         "vnext": [
           {
@@ -742,7 +742,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [5.188.114.71]",
+      "tag": "🇪🇺 Europe | 5.188.114.71:443",
       "settings": {
         "vnext": [
           {
@@ -773,7 +773,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [yif6f.guardora.pro]",
+      "tag": "🇪🇺 Europe | yif6f.guardora.pro:443",
       "settings": {
         "vnext": [
           {
@@ -807,7 +807,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [fbsv6.guardora.pro]",
+      "tag": "🇪🇺 Europe | fbsv6.guardora.pro:443",
       "settings": {
         "vnext": [
           {
@@ -844,7 +844,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [8sdev.guardora.pro]",
+      "tag": "🇪🇺 Europe | 8sdev.guardora.pro:443",
       "settings": {
         "vnext": [
           {
@@ -878,7 +878,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [91.240.87.166]",
+      "tag": "🇪🇺 Europe | 91.240.87.166:443",
       "settings": {
         "vnext": [
           {
@@ -909,7 +909,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [188.225.76.244]",
+      "tag": "🇷🇺 Russia | 188.225.76.244:7777",
       "settings": {
         "vnext": [
           {
@@ -940,7 +940,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [13.143.164.40]",
+      "tag": "🇷🇺 Russia | 13.143.164.40:443",
       "settings": {
         "vnext": [
           {
@@ -970,7 +970,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [77.110.113.188]",
+      "tag": "🇷🇺 Russia | 77.110.113.188:8443",
       "settings": {
         "vnext": [
           {
@@ -1001,7 +1001,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [31.76.57.191]",
+      "tag": "🇩🇪 Germany | 31.76.57.191:2443",
       "settings": {
         "vnext": [
           {
@@ -1032,7 +1032,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [138.124.9.108]",
+      "tag": "🇫🇮 Finland | 138.124.9.108:443",
       "settings": {
         "vnext": [
           {
@@ -1063,7 +1063,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [eh-nl6.country-road.org]",
+      "tag": "🇳🇱 Netherlands | eh-nl6.country-road.org:8443",
       "settings": {
         "vnext": [
           {
@@ -1096,7 +1096,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [fn2.pg.fastlanehosting.ru]",
+      "tag": "🇫🇮 Finland | fn2.pg.fastlanehosting.ru:2096",
       "settings": {
         "vnext": [
           {
@@ -1124,7 +1124,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [185.33.24.85]",
+      "tag": "🇷🇺 Russia | 185.33.24.85:443",
       "settings": {
         "vnext": [
           {
@@ -1154,7 +1154,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [ndi.lavivas.org]",
+      "tag": "🇳🇱 Netherlands | ndi.lavivas.org:2096",
       "settings": {
         "vnext": [
           {
@@ -1183,7 +1183,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [167.104.223.209]",
+      "tag": "🇬🇧 United Kingdom | 167.104.223.209:443",
       "settings": {
         "vnext": [
           {
@@ -1214,7 +1214,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [132.243.65.26]",
+      "tag": "🇪🇪 Estonia | 132.243.65.26:443",
       "settings": {
         "vnext": [
           {
@@ -1249,7 +1249,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [nl3.pg.fastlanehosting.ru]",
+      "tag": "🇳🇱 Netherlands | nl3.pg.fastlanehosting.ru:40189",
       "settings": {
         "vnext": [
           {
@@ -1277,7 +1277,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [74.112.103.69]",
+      "tag": "🇳🇱 Netherlands | 74.112.103.69:443",
       "settings": {
         "vnext": [
           {
@@ -1308,7 +1308,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [eh-nl5.country-road.org]",
+      "tag": "🇳🇱 Netherlands | eh-nl5.country-road.org:443",
       "settings": {
         "vnext": [
           {
@@ -1341,7 +1341,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [135.106.221.177]",
+      "tag": "🇷🇺 Russia | 135.106.221.177:11801",
       "settings": {
         "vnext": [
           {
@@ -1372,7 +1372,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [150.241.71.245]",
+      "tag": "🇫🇮 Finland | 150.241.71.245:443",
       "settings": {
         "vnext": [
           {
@@ -1403,7 +1403,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [193.160.208.137]",
+      "tag": "🇷🇺 Russia | 193.160.208.137:443",
       "settings": {
         "vnext": [
           {
@@ -1437,7 +1437,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [167.104.223.216]",
+      "tag": "🇬🇧 United Kingdom | 167.104.223.216:7443",
       "settings": {
         "vnext": [
           {
@@ -1469,7 +1469,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [89.22.232.117]",
+      "tag": "🇸🇪 Sweden | 89.22.232.117:443",
       "settings": {
         "vnext": [
           {
@@ -1499,7 +1499,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [171.22.114.98]",
+      "tag": "🇫🇮 Finland | 171.22.114.98:443",
       "settings": {
         "vnext": [
           {
@@ -1529,7 +1529,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [dlx1.boat-supply.org]",
+      "tag": "🇳🇱 Netherlands | dlx1.boat-supply.org:443",
       "settings": {
         "vnext": [
           {
@@ -1562,7 +1562,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [ms1.pg.fastlanehosting.ru]",
+      "tag": "🇷🇺 Russia | ms1.pg.fastlanehosting.ru:2096",
       "settings": {
         "vnext": [
           {
@@ -1590,7 +1590,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [31.76.39.141]",
+      "tag": "🇬🇧 United Kingdom | 31.76.39.141:443",
       "settings": {
         "vnext": [
           {
@@ -1621,7 +1621,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [46.8.200.91]",
+      "tag": "🇷🇺 Russia | 46.8.200.91:443",
       "settings": {
         "vnext": [
           {
@@ -1655,7 +1655,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [177.3.215.83]",
+      "tag": "🇸🇪 Sweden | 177.3.215.83:443",
       "settings": {
         "vnext": [
           {
@@ -1686,7 +1686,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [multirouterapp.com]",
+      "tag": "🇸🇪 Sweden | multirouterapp.com:443",
       "settings": {
         "vnext": [
           {
@@ -1720,7 +1720,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [slowkd.sadiepinki.com]",
+      "tag": "🇳🇱 Netherlands | slowkd.sadiepinki.com:443",
       "settings": {
         "vnext": [
           {
@@ -1751,7 +1751,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [141.101.122.147]",
+      "tag": "🇬🇧 United Kingdom | 141.101.122.147:443",
       "settings": {
         "vnext": [
           {
@@ -1785,7 +1785,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [195.133.198.200]",
+      "tag": "🇷🇺 Russia | 195.133.198.200:7443",
       "settings": {
         "vnext": [
           {
@@ -1821,7 +1821,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [swebz.loozerp.wiki]",
+      "tag": "🇸🇪 Sweden | swebz.loozerp.wiki:443",
       "settings": {
         "vnext": [
           {
@@ -1852,7 +1852,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [87.228.32.207]",
+      "tag": "🇷🇺 Russia | 87.228.32.207:443",
       "settings": {
         "vnext": [
           {
@@ -1887,7 +1887,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [159.195.240.82]",
+      "tag": "🇩🇪 Germany | 159.195.240.82:443",
       "settings": {
         "vnext": [
           {
@@ -1918,7 +1918,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [gb.superbuba.top]",
+      "tag": "🇬🇧 United Kingdom | gb.superbuba.top:443",
       "settings": {
         "vnext": [
           {
@@ -1949,7 +1949,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [159.69.103.251]",
+      "tag": "🇩🇪 Germany | 159.69.103.251:2053",
       "settings": {
         "vnext": [
           {
@@ -1980,7 +1980,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [nl2.bbobr.win]",
+      "tag": "🇳🇱 Netherlands | nl2.bbobr.win:443",
       "settings": {
         "vnext": [
           {
@@ -2011,7 +2011,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [31.57.34.139]",
+      "tag": "🇳🇱 Netherlands | 31.57.34.139:443",
       "settings": {
         "vnext": [
           {
@@ -2042,7 +2042,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [177.3.215.62]",
+      "tag": "🇸🇪 Sweden | 177.3.215.62:443",
       "settings": {
         "vnext": [
           {
@@ -2073,7 +2073,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [mur.burladuck.com]",
+      "tag": "🇩🇪 Germany | mur.burladuck.com:443",
       "settings": {
         "vnext": [
           {
@@ -2104,7 +2104,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [185.229.9.175]",
+      "tag": "🇩🇪 Germany | 185.229.9.175:443",
       "settings": {
         "vnext": [
           {
@@ -2135,7 +2135,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [185.229.9.236]",
+      "tag": "🇩🇪 Germany | 185.229.9.236:43005",
       "settings": {
         "vnext": [
           {
@@ -2166,7 +2166,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [185.229.9.74]",
+      "tag": "🇩🇪 Germany | 185.229.9.74:443",
       "settings": {
         "vnext": [
           {
@@ -2197,7 +2197,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [185.134.200.180]",
+      "tag": "🇩🇪 Germany | 185.134.200.180:443",
       "settings": {
         "vnext": [
           {
@@ -2228,7 +2228,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [45.12.75.242]",
+      "tag": "🇷🇺 Russia | 45.12.75.242:26424",
       "settings": {
         "vnext": [
           {
@@ -2258,7 +2258,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [81.94.148.178]",
+      "tag": "🇳🇱 Netherlands | 81.94.148.178:7445",
       "settings": {
         "vnext": [
           {
@@ -2289,7 +2289,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [185.241.195.151]",
+      "tag": "🇳🇱 Netherlands | 185.241.195.151:9444",
       "settings": {
         "vnext": [
           {
@@ -2320,7 +2320,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [45.11.27.86]",
+      "tag": "🇳🇱 Netherlands | 45.11.27.86:443",
       "settings": {
         "vnext": [
           {
@@ -2351,7 +2351,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [95.85.224.51]",
+      "tag": "🇪🇪 Estonia | 95.85.224.51:443",
       "settings": {
         "vnext": [
           {
@@ -2382,7 +2382,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [prep.wwwinternetvideo.click]",
+      "tag": "🇫🇮 Finland | prep.wwwinternetvideo.click:443",
       "settings": {
         "vnext": [
           {
@@ -2413,7 +2413,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [144.31.50.236]",
+      "tag": "🇫🇮 Finland | 144.31.50.236:443",
       "settings": {
         "vnext": [
           {
@@ -2444,7 +2444,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [31.76.100.41]",
+      "tag": "🇩🇪 Germany | 31.76.100.41:443",
       "settings": {
         "vnext": [
           {
@@ -2475,7 +2475,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [31.76.245.63]",
+      "tag": "🇫🇮 Finland | 31.76.245.63:443",
       "settings": {
         "vnext": [
           {
@@ -2506,7 +2506,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [144.31.40.96]",
+      "tag": "🇩🇪 Germany | 144.31.40.96:2053",
       "settings": {
         "vnext": [
           {
@@ -2537,7 +2537,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [193.163.203.170]",
+      "tag": "🇸🇪 Sweden | 193.163.203.170:443",
       "settings": {
         "vnext": [
           {
@@ -2568,7 +2568,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [150.241.101.80]",
+      "tag": "🇩🇪 Germany | 150.241.101.80:8443",
       "settings": {
         "vnext": [
           {
@@ -2599,7 +2599,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [94.183.224.45]",
+      "tag": "🇳🇱 Netherlands | 94.183.224.45:443",
       "settings": {
         "vnext": [
           {
@@ -2630,7 +2630,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [150.241.101.17]",
+      "tag": "🇩🇪 Germany | 150.241.101.17:8443",
       "settings": {
         "vnext": [
           {
@@ -2661,7 +2661,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [31.76.7.154]",
+      "tag": "🇩🇪 Germany | 31.76.7.154:7443",
       "settings": {
         "vnext": [
           {
@@ -2692,7 +2692,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [91.196.32.216]",
+      "tag": "🇩🇪 Germany | 91.196.32.216:9543",
       "settings": {
         "vnext": [
           {
@@ -2723,7 +2723,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [171.22.119.160]",
+      "tag": "🇬🇧 United Kingdom | 171.22.119.160:31770",
       "settings": {
         "vnext": [
           {
@@ -2754,7 +2754,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [2.59.134.226]",
+      "tag": "🇩🇪 Germany | 2.59.134.226:443",
       "settings": {
         "vnext": [
           {
@@ -2785,7 +2785,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [est1313.ggisopi.su]",
+      "tag": "🇫🇮 Finland | est1313.ggisopi.su:443",
       "settings": {
         "vnext": [
           {
@@ -2816,7 +2816,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [94.241.143.161]",
+      "tag": "🇩🇪 Germany | 94.241.143.161:9871",
       "settings": {
         "vnext": [
           {
@@ -2850,7 +2850,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [91.224.87.22]",
+      "tag": "🇷🇺 Russia | 91.224.87.22:9873",
       "settings": {
         "vnext": [
           {
@@ -2884,7 +2884,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [95.143.190.125]",
+      "tag": "🇷🇺 Russia | 95.143.190.125:9895",
       "settings": {
         "vnext": [
           {
@@ -2918,7 +2918,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [176.108.246.58]",
+      "tag": "🇸🇪 Sweden | 176.108.246.58:9881",
       "settings": {
         "vnext": [
           {
@@ -2952,7 +2952,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [91.224.86.107]",
+      "tag": "🇷🇺 Russia | 91.224.86.107:9830",
       "settings": {
         "vnext": [
           {
@@ -2986,7 +2986,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [82.202.143.37]",
+      "tag": "🇷🇺 Russia | 82.202.143.37:9830",
       "settings": {
         "vnext": [
           {
@@ -3020,7 +3020,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [188.124.47.34]",
+      "tag": "🇷🇺 Russia | 188.124.47.34:9891",
       "settings": {
         "vnext": [
           {
@@ -3054,7 +3054,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [176.123.162.100]",
+      "tag": "🇫🇷 France | 176.123.162.100:9880",
       "settings": {
         "vnext": [
           {
@@ -3088,7 +3088,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [185.141.227.180]",
+      "tag": "🇷🇺 Russia | 185.141.227.180:2053",
       "settings": {
         "vnext": [
           {
@@ -3121,7 +3121,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [144.31.93.231]",
+      "tag": "🇷🇺 Russia | 144.31.93.231:443",
       "settings": {
         "vnext": [
           {
@@ -3152,7 +3152,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [bl3fk52.sysopnova.art]",
+      "tag": "🇷🇺 Russia | bl3fk52.sysopnova.art:443",
       "settings": {
         "vnext": [
           {
@@ -3183,7 +3183,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [213.171.25.29]",
+      "tag": "🇷🇺 Russia | 213.171.25.29:9889",
       "settings": {
         "vnext": [
           {
@@ -3217,7 +3217,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [176.123.161.222]",
+      "tag": "🇷🇺 Russia | 176.123.161.222:9892",
       "settings": {
         "vnext": [
           {
@@ -3251,7 +3251,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [31.58.181.88]",
+      "tag": "🇳🇱 Netherlands | 31.58.181.88:8443",
       "settings": {
         "vnext": [
           {
@@ -3282,7 +3282,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [46.250.250.149]",
+      "tag": "🇬🇧 United Kingdom | 46.250.250.149:2053",
       "settings": {
         "vnext": [
           {
@@ -3312,7 +3312,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [92.255.79.246]",
+      "tag": "🇩🇪 Germany | 92.255.79.246:443",
       "settings": {
         "vnext": [
           {
@@ -3346,7 +3346,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [193.163.203.253]",
+      "tag": "🇷🇺 Russia | 193.163.203.253:443",
       "settings": {
         "vnext": [
           {
@@ -3377,7 +3377,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [85.192.48.236]",
+      "tag": "🇫🇮 Finland | 85.192.48.236:8443",
       "settings": {
         "vnext": [
           {
@@ -3412,7 +3412,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [server.slavkiti.monster]",
+      "tag": "🇫🇮 Finland | server.slavkiti.monster:443",
       "settings": {
         "vnext": [
           {
@@ -3443,7 +3443,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [94.183.170.147]",
+      "tag": "🇪🇪 Estonia | 94.183.170.147:8443",
       "settings": {
         "vnext": [
           {
@@ -3477,7 +3477,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [83.147.18.3]",
+      "tag": "🇬🇧 United Kingdom | 83.147.18.3:443",
       "settings": {
         "vnext": [
           {
@@ -3508,7 +3508,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [staging.lastilhame.monster]",
+      "tag": "🇫🇮 Finland | staging.lastilhame.monster:443",
       "settings": {
         "vnext": [
           {
@@ -3539,7 +3539,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [107.181.151.241]",
+      "tag": "🇫🇮 Finland | 107.181.151.241:443",
       "settings": {
         "vnext": [
           {
@@ -3570,7 +3570,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [107.181.151.39]",
+      "tag": "🇫🇮 Finland | 107.181.151.39:443",
       "settings": {
         "vnext": [
           {
@@ -3601,7 +3601,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [104.171.138.229]",
+      "tag": "🇸🇪 Sweden | 104.171.138.229:443",
       "settings": {
         "vnext": [
           {
@@ -3635,7 +3635,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [188.225.44.89]",
+      "tag": "🇳🇱 Netherlands | 188.225.44.89:443",
       "settings": {
         "vnext": [
           {
@@ -3666,7 +3666,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [188.225.42.6]",
+      "tag": "🇳🇱 Netherlands | 188.225.42.6:443",
       "settings": {
         "vnext": [
           {
@@ -3697,7 +3697,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [188.225.77.241]",
+      "tag": "🇳🇱 Netherlands | 188.225.77.241:443",
       "settings": {
         "vnext": [
           {
@@ -3728,7 +3728,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [191.44.38.143]",
+      "tag": "🇳🇱 Netherlands | 191.44.38.143:8443",
       "settings": {
         "vnext": [
           {
@@ -3758,7 +3758,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [5.42.96.76]",
+      "tag": "🇷🇺 Russia | 5.42.96.76:443",
       "settings": {
         "vnext": [
           {
@@ -3789,7 +3789,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [188.225.83.133]",
+      "tag": "🇪🇪 Estonia | 188.225.83.133:443",
       "settings": {
         "vnext": [
           {
@@ -3823,7 +3823,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [87.249.49.87]",
+      "tag": "🇷🇺 Russia | 87.249.49.87:443",
       "settings": {
         "vnext": [
           {
@@ -3854,7 +3854,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [188.225.57.78]",
+      "tag": "🇳🇱 Netherlands | 188.225.57.78:443",
       "settings": {
         "vnext": [
           {
@@ -3904,129 +3904,403 @@
     "domainStrategy": "IPIfNonMatch",
     "balancers": [
       {
+        "tag": "Balancer_RU",
+        "selector": [
+          "🇷🇺 Russia | qq.utiltools.site:443",
+          "🇷🇺 Russia | 147.45.148.6:443",
+          "🇷🇺 Russia | 176.108.246.110:9830",
+          "🇷🇺 Russia | 188.225.76.244:7777",
+          "🇷🇺 Russia | 13.143.164.40:443",
+          "🇷🇺 Russia | 77.110.113.188:8443",
+          "🇷🇺 Russia | 185.33.24.85:443",
+          "🇷🇺 Russia | 135.106.221.177:11801",
+          "🇷🇺 Russia | 193.160.208.137:443",
+          "🇷🇺 Russia | ms1.pg.fastlanehosting.ru:2096",
+          "🇷🇺 Russia | 46.8.200.91:443",
+          "🇷🇺 Russia | 195.133.198.200:7443",
+          "🇷🇺 Russia | 87.228.32.207:443",
+          "🇷🇺 Russia | 45.12.75.242:26424",
+          "🇷🇺 Russia | 91.224.87.22:9873",
+          "🇷🇺 Russia | 95.143.190.125:9895",
+          "🇷🇺 Russia | 91.224.86.107:9830",
+          "🇷🇺 Russia | 82.202.143.37:9830",
+          "🇷🇺 Russia | 188.124.47.34:9891",
+          "🇷🇺 Russia | 185.141.227.180:2053",
+          "🇷🇺 Russia | 144.31.93.231:443",
+          "🇷🇺 Russia | bl3fk52.sysopnova.art:443",
+          "🇷🇺 Russia | 213.171.25.29:9889",
+          "🇷🇺 Russia | 176.123.161.222:9892",
+          "🇷🇺 Russia | 193.163.203.253:443",
+          "🇷🇺 Russia | 5.42.96.76:443",
+          "🇷🇺 Russia | 87.249.49.87:443"
+        ],
+        "strategy": {
+          "type": "leastLoad",
+          "settings": {
+            "baselines": [
+              "200ms",
+              "500ms"
+            ],
+            "expected": 2,
+            "maxRTT": "1500ms",
+            "tolerance": 0
+          }
+        }
+      },
+      {
+        "tag": "Balancer_DE",
+        "selector": [
+          "🇩🇪 Germany | 31.76.101.39:443",
+          "🇩🇪 Germany | 31.76.57.191:2443",
+          "🇩🇪 Germany | 159.195.240.82:443",
+          "🇩🇪 Germany | 159.69.103.251:2053",
+          "🇩🇪 Germany | mur.burladuck.com:443",
+          "🇩🇪 Germany | 185.229.9.175:443",
+          "🇩🇪 Germany | 185.229.9.236:43005",
+          "🇩🇪 Germany | 185.229.9.74:443",
+          "🇩🇪 Germany | 185.134.200.180:443",
+          "🇩🇪 Germany | 31.76.100.41:443",
+          "🇩🇪 Germany | 144.31.40.96:2053",
+          "🇩🇪 Germany | 150.241.101.80:8443",
+          "🇩🇪 Germany | 150.241.101.17:8443",
+          "🇩🇪 Germany | 31.76.7.154:7443",
+          "🇩🇪 Germany | 91.196.32.216:9543",
+          "🇩🇪 Germany | 2.59.134.226:443",
+          "🇩🇪 Germany | 94.241.143.161:9871",
+          "🇩🇪 Germany | 92.255.79.246:443"
+        ],
+        "strategy": {
+          "type": "leastLoad",
+          "settings": {
+            "baselines": [
+              "200ms",
+              "500ms"
+            ],
+            "expected": 2,
+            "maxRTT": "1500ms",
+            "tolerance": 0
+          }
+        }
+      },
+      {
+        "tag": "Balancer_FI",
+        "selector": [
+          "🇫🇮 Finland | 194.77.71.152:443",
+          "🇫🇮 Finland | 138.124.9.108:443",
+          "🇫🇮 Finland | fn2.pg.fastlanehosting.ru:2096",
+          "🇫🇮 Finland | 150.241.71.245:443",
+          "🇫🇮 Finland | 171.22.114.98:443",
+          "🇫🇮 Finland | prep.wwwinternetvideo.click:443",
+          "🇫🇮 Finland | 144.31.50.236:443",
+          "🇫🇮 Finland | 31.76.245.63:443",
+          "🇫🇮 Finland | est1313.ggisopi.su:443",
+          "🇫🇮 Finland | 85.192.48.236:8443",
+          "🇫🇮 Finland | server.slavkiti.monster:443",
+          "🇫🇮 Finland | staging.lastilhame.monster:443",
+          "🇫🇮 Finland | 107.181.151.241:443",
+          "🇫🇮 Finland | 107.181.151.39:443"
+        ],
+        "strategy": {
+          "type": "leastLoad",
+          "settings": {
+            "baselines": [
+              "200ms",
+              "500ms"
+            ],
+            "expected": 2,
+            "maxRTT": "1500ms",
+            "tolerance": 0
+          }
+        }
+      },
+      {
+        "tag": "Balancer_NL",
+        "selector": [
+          "🇳🇱 Netherlands | 2.27.249.144:443",
+          "🇳🇱 Netherlands | de2.edge-9d7c.com:443",
+          "🇳🇱 Netherlands | 136.148.71.4:443",
+          "🇳🇱 Netherlands | 217.19.122.17:10654",
+          "🇳🇱 Netherlands | topup.multirouterapp.com:443",
+          "🇳🇱 Netherlands | 212.46.33.90:443",
+          "🇳🇱 Netherlands | eh-nl6.country-road.org:8443",
+          "🇳🇱 Netherlands | ndi.lavivas.org:2096",
+          "🇳🇱 Netherlands | nl3.pg.fastlanehosting.ru:40189",
+          "🇳🇱 Netherlands | 74.112.103.69:443",
+          "🇳🇱 Netherlands | eh-nl5.country-road.org:443",
+          "🇳🇱 Netherlands | dlx1.boat-supply.org:443",
+          "🇳🇱 Netherlands | slowkd.sadiepinki.com:443",
+          "🇳🇱 Netherlands | nl2.bbobr.win:443",
+          "🇳🇱 Netherlands | 31.57.34.139:443",
+          "🇳🇱 Netherlands | 81.94.148.178:7445",
+          "🇳🇱 Netherlands | 185.241.195.151:9444",
+          "🇳🇱 Netherlands | 45.11.27.86:443",
+          "🇳🇱 Netherlands | 94.183.224.45:443",
+          "🇳🇱 Netherlands | 31.58.181.88:8443",
+          "🇳🇱 Netherlands | 188.225.44.89:443",
+          "🇳🇱 Netherlands | 188.225.42.6:443",
+          "🇳🇱 Netherlands | 188.225.77.241:443",
+          "🇳🇱 Netherlands | 191.44.38.143:8443",
+          "🇳🇱 Netherlands | 188.225.57.78:443"
+        ],
+        "strategy": {
+          "type": "leastLoad",
+          "settings": {
+            "baselines": [
+              "200ms",
+              "500ms"
+            ],
+            "expected": 2,
+            "maxRTT": "1500ms",
+            "tolerance": 0
+          }
+        }
+      },
+      {
+        "tag": "Balancer_FR",
+        "selector": [
+          "🇫🇷 France | 176.123.162.100:9880"
+        ],
+        "strategy": {
+          "type": "leastLoad",
+          "settings": {
+            "baselines": [
+              "200ms",
+              "500ms"
+            ],
+            "expected": 2,
+            "maxRTT": "1500ms",
+            "tolerance": 0
+          }
+        }
+      },
+      {
+        "tag": "Balancer_EE",
+        "selector": [
+          "🇪🇪 Estonia | latte.coffebahnem.site:80",
+          "🇪🇪 Estonia | 132.243.65.26:443",
+          "🇪🇪 Estonia | 95.85.224.51:443",
+          "🇪🇪 Estonia | 94.183.170.147:8443",
+          "🇪🇪 Estonia | 188.225.83.133:443"
+        ],
+        "strategy": {
+          "type": "leastLoad",
+          "settings": {
+            "baselines": [
+              "200ms",
+              "500ms"
+            ],
+            "expected": 2,
+            "maxRTT": "1500ms",
+            "tolerance": 0
+          }
+        }
+      },
+      {
+        "tag": "Balancer_GB",
+        "selector": [
+          "🇬🇧 United Kingdom | 66.90.104.42:2083",
+          "🇬🇧 United Kingdom | 167.104.223.209:443",
+          "🇬🇧 United Kingdom | 167.104.223.216:7443",
+          "🇬🇧 United Kingdom | 31.76.39.141:443",
+          "🇬🇧 United Kingdom | 141.101.122.147:443",
+          "🇬🇧 United Kingdom | gb.superbuba.top:443",
+          "🇬🇧 United Kingdom | 171.22.119.160:31770",
+          "🇬🇧 United Kingdom | 46.250.250.149:2053",
+          "🇬🇧 United Kingdom | 83.147.18.3:443"
+        ],
+        "strategy": {
+          "type": "leastLoad",
+          "settings": {
+            "baselines": [
+              "200ms",
+              "500ms"
+            ],
+            "expected": 2,
+            "maxRTT": "1500ms",
+            "tolerance": 0
+          }
+        }
+      },
+      {
+        "tag": "Balancer_SE",
+        "selector": [
+          "🇸🇪 Sweden | 5.157.10.250:443",
+          "🇸🇪 Sweden | 89.22.232.117:443",
+          "🇸🇪 Sweden | 177.3.215.83:443",
+          "🇸🇪 Sweden | multirouterapp.com:443",
+          "🇸🇪 Sweden | swebz.loozerp.wiki:443",
+          "🇸🇪 Sweden | 177.3.215.62:443",
+          "🇸🇪 Sweden | 193.163.203.170:443",
+          "🇸🇪 Sweden | 176.108.246.58:9881",
+          "🇸🇪 Sweden | 104.171.138.229:443"
+        ],
+        "strategy": {
+          "type": "leastLoad",
+          "settings": {
+            "baselines": [
+              "200ms",
+              "500ms"
+            ],
+            "expected": 2,
+            "maxRTT": "1500ms",
+            "tolerance": 0
+          }
+        }
+      },
+      {
+        "tag": "Balancer_EU",
+        "selector": [
+          "🇪🇺 Europe | 87.228.33.67:443",
+          "🇪🇺 Europe | 194.55.239.15:443",
+          "🇪🇺 Europe | 194.55.239.111:443",
+          "🇪🇺 Europe | 194.55.239.18:443",
+          "🇪🇺 Europe | 194.55.239.105:443",
+          "🇪🇺 Europe | 91.240.86.186:443",
+          "🇪🇺 Europe | 91.240.86.12:443",
+          "🇪🇺 Europe | xnodtwx.artemida.live:443",
+          "🇪🇺 Europe | 5.188.114.71:443",
+          "🇪🇺 Europe | yif6f.guardora.pro:443",
+          "🇪🇺 Europe | fbsv6.guardora.pro:443",
+          "🇪🇺 Europe | 8sdev.guardora.pro:443",
+          "🇪🇺 Europe | 91.240.87.166:443"
+        ],
+        "strategy": {
+          "type": "leastLoad",
+          "settings": {
+            "baselines": [
+              "200ms",
+              "500ms"
+            ],
+            "expected": 2,
+            "maxRTT": "1500ms",
+            "tolerance": 0
+          }
+        }
+      },
+      {
         "tag": "Auto_Balancer",
         "selector": [
-          "🌍 Yandex/Max [qq.utiltools.site]",
-          "🌍 Yandex/Max [2.27.249.144]",
-          "🌍 Yandex/Max [de2.edge-9d7c.com]",
-          "🌍 Yandex/Max [136.148.71.4]",
-          "🌍 Yandex/Max [217.19.122.17]",
-          "🌍 Yandex/Max [194.77.71.152]",
-          "🌍 Yandex/Max [147.45.148.6]",
-          "🌍 Yandex/Max [176.108.246.110]",
-          "🌍 Yandex/Max [latte.coffebahnem.site]",
-          "🌍 Yandex/Max [31.76.101.39]",
-          "🌍 Yandex/Max [66.90.104.42]",
-          "🌍 Yandex/Max [5.157.10.250]",
-          "🌍 Yandex/Max [topup.multirouterapp.com]",
-          "🌍 Yandex/Max [212.46.33.90]",
-          "🌍 Yandex/Max [87.228.33.67]",
-          "🌍 Yandex/Max [194.55.239.15]",
-          "🌍 Yandex/Max [194.55.239.111]",
-          "🌍 Yandex/Max [194.55.239.18]",
-          "🌍 Yandex/Max [194.55.239.105]",
-          "🌍 Yandex/Max [91.240.86.186]",
-          "🌍 Yandex/Max [91.240.86.12]",
-          "🌍 Yandex/Max [xnodtwx.artemida.live]",
-          "🌍 Yandex/Max [5.188.114.71]",
-          "🌍 Yandex/Max [yif6f.guardora.pro]",
-          "🌍 Yandex/Max [fbsv6.guardora.pro]",
-          "🌍 Yandex/Max [8sdev.guardora.pro]",
-          "🌍 Yandex/Max [91.240.87.166]",
-          "🌍 Yandex/Max [188.225.76.244]",
-          "🌍 Yandex/Max [13.143.164.40]",
-          "🌍 Yandex/Max [77.110.113.188]",
-          "🌍 Yandex/Max [31.76.57.191]",
-          "🌍 Yandex/Max [138.124.9.108]",
-          "🌍 Yandex/Max [eh-nl6.country-road.org]",
-          "🌍 Yandex/Max [fn2.pg.fastlanehosting.ru]",
-          "🌍 Yandex/Max [185.33.24.85]",
-          "🌍 Yandex/Max [ndi.lavivas.org]",
-          "🌍 Yandex/Max [167.104.223.209]",
-          "🌍 Yandex/Max [132.243.65.26]",
-          "🌍 Yandex/Max [nl3.pg.fastlanehosting.ru]",
-          "🌍 Yandex/Max [74.112.103.69]",
-          "🌍 Yandex/Max [eh-nl5.country-road.org]",
-          "🌍 Yandex/Max [135.106.221.177]",
-          "🌍 Yandex/Max [150.241.71.245]",
-          "🌍 Yandex/Max [193.160.208.137]",
-          "🌍 Yandex/Max [167.104.223.216]",
-          "🌍 Yandex/Max [89.22.232.117]",
-          "🌍 Yandex/Max [171.22.114.98]",
-          "🌍 Yandex/Max [dlx1.boat-supply.org]",
-          "🌍 Yandex/Max [ms1.pg.fastlanehosting.ru]",
-          "🌍 Yandex/Max [31.76.39.141]",
-          "🌍 Yandex/Max [46.8.200.91]",
-          "🌍 Yandex/Max [177.3.215.83]",
-          "🌍 Yandex/Max [multirouterapp.com]",
-          "🌍 Yandex/Max [slowkd.sadiepinki.com]",
-          "🌍 Yandex/Max [141.101.122.147]",
-          "🌍 Yandex/Max [195.133.198.200]",
-          "🌍 Yandex/Max [swebz.loozerp.wiki]",
-          "🌍 Yandex/Max [87.228.32.207]",
-          "🌍 Yandex/Max [159.195.240.82]",
-          "🌍 Yandex/Max [gb.superbuba.top]",
-          "🌍 Yandex/Max [159.69.103.251]",
-          "🌍 Yandex/Max [nl2.bbobr.win]",
-          "🌍 Yandex/Max [31.57.34.139]",
-          "🌍 Yandex/Max [177.3.215.62]",
-          "🌍 Yandex/Max [mur.burladuck.com]",
-          "🌍 Yandex/Max [185.229.9.175]",
-          "🌍 Yandex/Max [185.229.9.236]",
-          "🌍 Yandex/Max [185.229.9.74]",
-          "🌍 Yandex/Max [185.134.200.180]",
-          "🌍 Yandex/Max [45.12.75.242]",
-          "🌍 Yandex/Max [81.94.148.178]",
-          "🌍 Yandex/Max [185.241.195.151]",
-          "🌍 Yandex/Max [45.11.27.86]",
-          "🌍 Yandex/Max [95.85.224.51]",
-          "🌍 Yandex/Max [prep.wwwinternetvideo.click]",
-          "🌍 Yandex/Max [144.31.50.236]",
-          "🌍 Yandex/Max [31.76.100.41]",
-          "🌍 Yandex/Max [31.76.245.63]",
-          "🌍 Yandex/Max [144.31.40.96]",
-          "🌍 Yandex/Max [193.163.203.170]",
-          "🌍 Yandex/Max [150.241.101.80]",
-          "🌍 Yandex/Max [94.183.224.45]",
-          "🌍 Yandex/Max [150.241.101.17]",
-          "🌍 Yandex/Max [31.76.7.154]",
-          "🌍 Yandex/Max [91.196.32.216]",
-          "🌍 Yandex/Max [171.22.119.160]",
-          "🌍 Yandex/Max [2.59.134.226]",
-          "🌍 Yandex/Max [est1313.ggisopi.su]",
-          "🌍 Yandex/Max [94.241.143.161]",
-          "🌍 Yandex/Max [91.224.87.22]",
-          "🌍 Yandex/Max [95.143.190.125]",
-          "🌍 Yandex/Max [176.108.246.58]",
-          "🌍 Yandex/Max [91.224.86.107]",
-          "🌍 Yandex/Max [82.202.143.37]",
-          "🌍 Yandex/Max [188.124.47.34]",
-          "🌍 Yandex/Max [176.123.162.100]",
-          "🌍 Yandex/Max [185.141.227.180]",
-          "🌍 Yandex/Max [144.31.93.231]",
-          "🌍 Yandex/Max [bl3fk52.sysopnova.art]",
-          "🌍 Yandex/Max [213.171.25.29]",
-          "🌍 Yandex/Max [176.123.161.222]",
-          "🌍 Yandex/Max [31.58.181.88]",
-          "🌍 Yandex/Max [46.250.250.149]",
-          "🌍 Yandex/Max [92.255.79.246]",
-          "🌍 Yandex/Max [193.163.203.253]",
-          "🌍 Yandex/Max [85.192.48.236]",
-          "🌍 Yandex/Max [server.slavkiti.monster]",
-          "🌍 Yandex/Max [94.183.170.147]",
-          "🌍 Yandex/Max [83.147.18.3]",
-          "🌍 Yandex/Max [staging.lastilhame.monster]",
-          "🌍 Yandex/Max [107.181.151.241]",
-          "🌍 Yandex/Max [107.181.151.39]",
-          "🌍 Yandex/Max [104.171.138.229]",
-          "🌍 Yandex/Max [188.225.44.89]",
-          "🌍 Yandex/Max [188.225.42.6]",
-          "🌍 Yandex/Max [188.225.77.241]",
-          "🌍 Yandex/Max [191.44.38.143]",
-          "🌍 Yandex/Max [5.42.96.76]",
-          "🌍 Yandex/Max [188.225.83.133]",
-          "🌍 Yandex/Max [87.249.49.87]",
-          "🌍 Yandex/Max [188.225.57.78]"
+          "🇷🇺 Russia | qq.utiltools.site:443",
+          "🇳🇱 Netherlands | 2.27.249.144:443",
+          "🇳🇱 Netherlands | de2.edge-9d7c.com:443",
+          "🇳🇱 Netherlands | 136.148.71.4:443",
+          "🇳🇱 Netherlands | 217.19.122.17:10654",
+          "🇫🇮 Finland | 194.77.71.152:443",
+          "🇷🇺 Russia | 147.45.148.6:443",
+          "🇷🇺 Russia | 176.108.246.110:9830",
+          "🇪🇪 Estonia | latte.coffebahnem.site:80",
+          "🇩🇪 Germany | 31.76.101.39:443",
+          "🇬🇧 United Kingdom | 66.90.104.42:2083",
+          "🇸🇪 Sweden | 5.157.10.250:443",
+          "🇳🇱 Netherlands | topup.multirouterapp.com:443",
+          "🇳🇱 Netherlands | 212.46.33.90:443",
+          "🇪🇺 Europe | 87.228.33.67:443",
+          "🇪🇺 Europe | 194.55.239.15:443",
+          "🇪🇺 Europe | 194.55.239.111:443",
+          "🇪🇺 Europe | 194.55.239.18:443",
+          "🇪🇺 Europe | 194.55.239.105:443",
+          "🇪🇺 Europe | 91.240.86.186:443",
+          "🇪🇺 Europe | 91.240.86.12:443",
+          "🇪🇺 Europe | xnodtwx.artemida.live:443",
+          "🇪🇺 Europe | 5.188.114.71:443",
+          "🇪🇺 Europe | yif6f.guardora.pro:443",
+          "🇪🇺 Europe | fbsv6.guardora.pro:443",
+          "🇪🇺 Europe | 8sdev.guardora.pro:443",
+          "🇪🇺 Europe | 91.240.87.166:443",
+          "🇷🇺 Russia | 188.225.76.244:7777",
+          "🇷🇺 Russia | 13.143.164.40:443",
+          "🇷🇺 Russia | 77.110.113.188:8443",
+          "🇩🇪 Germany | 31.76.57.191:2443",
+          "🇫🇮 Finland | 138.124.9.108:443",
+          "🇳🇱 Netherlands | eh-nl6.country-road.org:8443",
+          "🇫🇮 Finland | fn2.pg.fastlanehosting.ru:2096",
+          "🇷🇺 Russia | 185.33.24.85:443",
+          "🇳🇱 Netherlands | ndi.lavivas.org:2096",
+          "🇬🇧 United Kingdom | 167.104.223.209:443",
+          "🇪🇪 Estonia | 132.243.65.26:443",
+          "🇳🇱 Netherlands | nl3.pg.fastlanehosting.ru:40189",
+          "🇳🇱 Netherlands | 74.112.103.69:443",
+          "🇳🇱 Netherlands | eh-nl5.country-road.org:443",
+          "🇷🇺 Russia | 135.106.221.177:11801",
+          "🇫🇮 Finland | 150.241.71.245:443",
+          "🇷🇺 Russia | 193.160.208.137:443",
+          "🇬🇧 United Kingdom | 167.104.223.216:7443",
+          "🇸🇪 Sweden | 89.22.232.117:443",
+          "🇫🇮 Finland | 171.22.114.98:443",
+          "🇳🇱 Netherlands | dlx1.boat-supply.org:443",
+          "🇷🇺 Russia | ms1.pg.fastlanehosting.ru:2096",
+          "🇬🇧 United Kingdom | 31.76.39.141:443",
+          "🇷🇺 Russia | 46.8.200.91:443",
+          "🇸🇪 Sweden | 177.3.215.83:443",
+          "🇸🇪 Sweden | multirouterapp.com:443",
+          "🇳🇱 Netherlands | slowkd.sadiepinki.com:443",
+          "🇬🇧 United Kingdom | 141.101.122.147:443",
+          "🇷🇺 Russia | 195.133.198.200:7443",
+          "🇸🇪 Sweden | swebz.loozerp.wiki:443",
+          "🇷🇺 Russia | 87.228.32.207:443",
+          "🇩🇪 Germany | 159.195.240.82:443",
+          "🇬🇧 United Kingdom | gb.superbuba.top:443",
+          "🇩🇪 Germany | 159.69.103.251:2053",
+          "🇳🇱 Netherlands | nl2.bbobr.win:443",
+          "🇳🇱 Netherlands | 31.57.34.139:443",
+          "🇸🇪 Sweden | 177.3.215.62:443",
+          "🇩🇪 Germany | mur.burladuck.com:443",
+          "🇩🇪 Germany | 185.229.9.175:443",
+          "🇩🇪 Germany | 185.229.9.236:43005",
+          "🇩🇪 Germany | 185.229.9.74:443",
+          "🇩🇪 Germany | 185.134.200.180:443",
+          "🇷🇺 Russia | 45.12.75.242:26424",
+          "🇳🇱 Netherlands | 81.94.148.178:7445",
+          "🇳🇱 Netherlands | 185.241.195.151:9444",
+          "🇳🇱 Netherlands | 45.11.27.86:443",
+          "🇪🇪 Estonia | 95.85.224.51:443",
+          "🇫🇮 Finland | prep.wwwinternetvideo.click:443",
+          "🇫🇮 Finland | 144.31.50.236:443",
+          "🇩🇪 Germany | 31.76.100.41:443",
+          "🇫🇮 Finland | 31.76.245.63:443",
+          "🇩🇪 Germany | 144.31.40.96:2053",
+          "🇸🇪 Sweden | 193.163.203.170:443",
+          "🇩🇪 Germany | 150.241.101.80:8443",
+          "🇳🇱 Netherlands | 94.183.224.45:443",
+          "🇩🇪 Germany | 150.241.101.17:8443",
+          "🇩🇪 Germany | 31.76.7.154:7443",
+          "🇩🇪 Germany | 91.196.32.216:9543",
+          "🇬🇧 United Kingdom | 171.22.119.160:31770",
+          "🇩🇪 Germany | 2.59.134.226:443",
+          "🇫🇮 Finland | est1313.ggisopi.su:443",
+          "🇩🇪 Germany | 94.241.143.161:9871",
+          "🇷🇺 Russia | 91.224.87.22:9873",
+          "🇷🇺 Russia | 95.143.190.125:9895",
+          "🇸🇪 Sweden | 176.108.246.58:9881",
+          "🇷🇺 Russia | 91.224.86.107:9830",
+          "🇷🇺 Russia | 82.202.143.37:9830",
+          "🇷🇺 Russia | 188.124.47.34:9891",
+          "🇫🇷 France | 176.123.162.100:9880",
+          "🇷🇺 Russia | 185.141.227.180:2053",
+          "🇷🇺 Russia | 144.31.93.231:443",
+          "🇷🇺 Russia | bl3fk52.sysopnova.art:443",
+          "🇷🇺 Russia | 213.171.25.29:9889",
+          "🇷🇺 Russia | 176.123.161.222:9892",
+          "🇳🇱 Netherlands | 31.58.181.88:8443",
+          "🇬🇧 United Kingdom | 46.250.250.149:2053",
+          "🇩🇪 Germany | 92.255.79.246:443",
+          "🇷🇺 Russia | 193.163.203.253:443",
+          "🇫🇮 Finland | 85.192.48.236:8443",
+          "🇫🇮 Finland | server.slavkiti.monster:443",
+          "🇪🇪 Estonia | 94.183.170.147:8443",
+          "🇬🇧 United Kingdom | 83.147.18.3:443",
+          "🇫🇮 Finland | staging.lastilhame.monster:443",
+          "🇫🇮 Finland | 107.181.151.241:443",
+          "🇫🇮 Finland | 107.181.151.39:443",
+          "🇸🇪 Sweden | 104.171.138.229:443",
+          "🇳🇱 Netherlands | 188.225.44.89:443",
+          "🇳🇱 Netherlands | 188.225.42.6:443",
+          "🇳🇱 Netherlands | 188.225.77.241:443",
+          "🇳🇱 Netherlands | 191.44.38.143:8443",
+          "🇷🇺 Russia | 5.42.96.76:443",
+          "🇪🇪 Estonia | 188.225.83.133:443",
+          "🇷🇺 Russia | 87.249.49.87:443",
+          "🇳🇱 Netherlands | 188.225.57.78:443"
         ],
         "strategy": {
           "type": "leastLoad",
@@ -4059,7 +4333,47 @@
       },
       {
         "type": "field",
-        "balancerTag": "Auto_Balancer",
+        "balancerTag": "Balancer_RU",
+        "network": "tcp,udp"
+      },
+      {
+        "type": "field",
+        "balancerTag": "Balancer_DE",
+        "network": "tcp,udp"
+      },
+      {
+        "type": "field",
+        "balancerTag": "Balancer_FI",
+        "network": "tcp,udp"
+      },
+      {
+        "type": "field",
+        "balancerTag": "Balancer_NL",
+        "network": "tcp,udp"
+      },
+      {
+        "type": "field",
+        "balancerTag": "Balancer_FR",
+        "network": "tcp,udp"
+      },
+      {
+        "type": "field",
+        "balancerTag": "Balancer_EE",
+        "network": "tcp,udp"
+      },
+      {
+        "type": "field",
+        "balancerTag": "Balancer_GB",
+        "network": "tcp,udp"
+      },
+      {
+        "type": "field",
+        "balancerTag": "Balancer_SE",
+        "network": "tcp,udp"
+      },
+      {
+        "type": "field",
+        "balancerTag": "Balancer_EU",
         "network": "tcp,udp"
       }
     ]
@@ -4072,127 +4386,127 @@
       "timeout": "3s"
     },
     "subjectSelector": [
-      "🌍 Yandex/Max [qq.utiltools.site]",
-      "🌍 Yandex/Max [2.27.249.144]",
-      "🌍 Yandex/Max [de2.edge-9d7c.com]",
-      "🌍 Yandex/Max [136.148.71.4]",
-      "🌍 Yandex/Max [217.19.122.17]",
-      "🌍 Yandex/Max [194.77.71.152]",
-      "🌍 Yandex/Max [147.45.148.6]",
-      "🌍 Yandex/Max [176.108.246.110]",
-      "🌍 Yandex/Max [latte.coffebahnem.site]",
-      "🌍 Yandex/Max [31.76.101.39]",
-      "🌍 Yandex/Max [66.90.104.42]",
-      "🌍 Yandex/Max [5.157.10.250]",
-      "🌍 Yandex/Max [topup.multirouterapp.com]",
-      "🌍 Yandex/Max [212.46.33.90]",
-      "🌍 Yandex/Max [87.228.33.67]",
-      "🌍 Yandex/Max [194.55.239.15]",
-      "🌍 Yandex/Max [194.55.239.111]",
-      "🌍 Yandex/Max [194.55.239.18]",
-      "🌍 Yandex/Max [194.55.239.105]",
-      "🌍 Yandex/Max [91.240.86.186]",
-      "🌍 Yandex/Max [91.240.86.12]",
-      "🌍 Yandex/Max [xnodtwx.artemida.live]",
-      "🌍 Yandex/Max [5.188.114.71]",
-      "🌍 Yandex/Max [yif6f.guardora.pro]",
-      "🌍 Yandex/Max [fbsv6.guardora.pro]",
-      "🌍 Yandex/Max [8sdev.guardora.pro]",
-      "🌍 Yandex/Max [91.240.87.166]",
-      "🌍 Yandex/Max [188.225.76.244]",
-      "🌍 Yandex/Max [13.143.164.40]",
-      "🌍 Yandex/Max [77.110.113.188]",
-      "🌍 Yandex/Max [31.76.57.191]",
-      "🌍 Yandex/Max [138.124.9.108]",
-      "🌍 Yandex/Max [eh-nl6.country-road.org]",
-      "🌍 Yandex/Max [fn2.pg.fastlanehosting.ru]",
-      "🌍 Yandex/Max [185.33.24.85]",
-      "🌍 Yandex/Max [ndi.lavivas.org]",
-      "🌍 Yandex/Max [167.104.223.209]",
-      "🌍 Yandex/Max [132.243.65.26]",
-      "🌍 Yandex/Max [nl3.pg.fastlanehosting.ru]",
-      "🌍 Yandex/Max [74.112.103.69]",
-      "🌍 Yandex/Max [eh-nl5.country-road.org]",
-      "🌍 Yandex/Max [135.106.221.177]",
-      "🌍 Yandex/Max [150.241.71.245]",
-      "🌍 Yandex/Max [193.160.208.137]",
-      "🌍 Yandex/Max [167.104.223.216]",
-      "🌍 Yandex/Max [89.22.232.117]",
-      "🌍 Yandex/Max [171.22.114.98]",
-      "🌍 Yandex/Max [dlx1.boat-supply.org]",
-      "🌍 Yandex/Max [ms1.pg.fastlanehosting.ru]",
-      "🌍 Yandex/Max [31.76.39.141]",
-      "🌍 Yandex/Max [46.8.200.91]",
-      "🌍 Yandex/Max [177.3.215.83]",
-      "🌍 Yandex/Max [multirouterapp.com]",
-      "🌍 Yandex/Max [slowkd.sadiepinki.com]",
-      "🌍 Yandex/Max [141.101.122.147]",
-      "🌍 Yandex/Max [195.133.198.200]",
-      "🌍 Yandex/Max [swebz.loozerp.wiki]",
-      "🌍 Yandex/Max [87.228.32.207]",
-      "🌍 Yandex/Max [159.195.240.82]",
-      "🌍 Yandex/Max [gb.superbuba.top]",
-      "🌍 Yandex/Max [159.69.103.251]",
-      "🌍 Yandex/Max [nl2.bbobr.win]",
-      "🌍 Yandex/Max [31.57.34.139]",
-      "🌍 Yandex/Max [177.3.215.62]",
-      "🌍 Yandex/Max [mur.burladuck.com]",
-      "🌍 Yandex/Max [185.229.9.175]",
-      "🌍 Yandex/Max [185.229.9.236]",
-      "🌍 Yandex/Max [185.229.9.74]",
-      "🌍 Yandex/Max [185.134.200.180]",
-      "🌍 Yandex/Max [45.12.75.242]",
-      "🌍 Yandex/Max [81.94.148.178]",
-      "🌍 Yandex/Max [185.241.195.151]",
-      "🌍 Yandex/Max [45.11.27.86]",
-      "🌍 Yandex/Max [95.85.224.51]",
-      "🌍 Yandex/Max [prep.wwwinternetvideo.click]",
-      "🌍 Yandex/Max [144.31.50.236]",
-      "🌍 Yandex/Max [31.76.100.41]",
-      "🌍 Yandex/Max [31.76.245.63]",
-      "🌍 Yandex/Max [144.31.40.96]",
-      "🌍 Yandex/Max [193.163.203.170]",
-      "🌍 Yandex/Max [150.241.101.80]",
-      "🌍 Yandex/Max [94.183.224.45]",
-      "🌍 Yandex/Max [150.241.101.17]",
-      "🌍 Yandex/Max [31.76.7.154]",
-      "🌍 Yandex/Max [91.196.32.216]",
-      "🌍 Yandex/Max [171.22.119.160]",
-      "🌍 Yandex/Max [2.59.134.226]",
-      "🌍 Yandex/Max [est1313.ggisopi.su]",
-      "🌍 Yandex/Max [94.241.143.161]",
-      "🌍 Yandex/Max [91.224.87.22]",
-      "🌍 Yandex/Max [95.143.190.125]",
-      "🌍 Yandex/Max [176.108.246.58]",
-      "🌍 Yandex/Max [91.224.86.107]",
-      "🌍 Yandex/Max [82.202.143.37]",
-      "🌍 Yandex/Max [188.124.47.34]",
-      "🌍 Yandex/Max [176.123.162.100]",
-      "🌍 Yandex/Max [185.141.227.180]",
-      "🌍 Yandex/Max [144.31.93.231]",
-      "🌍 Yandex/Max [bl3fk52.sysopnova.art]",
-      "🌍 Yandex/Max [213.171.25.29]",
-      "🌍 Yandex/Max [176.123.161.222]",
-      "🌍 Yandex/Max [31.58.181.88]",
-      "🌍 Yandex/Max [46.250.250.149]",
-      "🌍 Yandex/Max [92.255.79.246]",
-      "🌍 Yandex/Max [193.163.203.253]",
-      "🌍 Yandex/Max [85.192.48.236]",
-      "🌍 Yandex/Max [server.slavkiti.monster]",
-      "🌍 Yandex/Max [94.183.170.147]",
-      "🌍 Yandex/Max [83.147.18.3]",
-      "🌍 Yandex/Max [staging.lastilhame.monster]",
-      "🌍 Yandex/Max [107.181.151.241]",
-      "🌍 Yandex/Max [107.181.151.39]",
-      "🌍 Yandex/Max [104.171.138.229]",
-      "🌍 Yandex/Max [188.225.44.89]",
-      "🌍 Yandex/Max [188.225.42.6]",
-      "🌍 Yandex/Max [188.225.77.241]",
-      "🌍 Yandex/Max [191.44.38.143]",
-      "🌍 Yandex/Max [5.42.96.76]",
-      "🌍 Yandex/Max [188.225.83.133]",
-      "🌍 Yandex/Max [87.249.49.87]",
-      "🌍 Yandex/Max [188.225.57.78]"
+      "🇷🇺 Russia | qq.utiltools.site:443",
+      "🇳🇱 Netherlands | 2.27.249.144:443",
+      "🇳🇱 Netherlands | de2.edge-9d7c.com:443",
+      "🇳🇱 Netherlands | 136.148.71.4:443",
+      "🇳🇱 Netherlands | 217.19.122.17:10654",
+      "🇫🇮 Finland | 194.77.71.152:443",
+      "🇷🇺 Russia | 147.45.148.6:443",
+      "🇷🇺 Russia | 176.108.246.110:9830",
+      "🇪🇪 Estonia | latte.coffebahnem.site:80",
+      "🇩🇪 Germany | 31.76.101.39:443",
+      "🇬🇧 United Kingdom | 66.90.104.42:2083",
+      "🇸🇪 Sweden | 5.157.10.250:443",
+      "🇳🇱 Netherlands | topup.multirouterapp.com:443",
+      "🇳🇱 Netherlands | 212.46.33.90:443",
+      "🇪🇺 Europe | 87.228.33.67:443",
+      "🇪🇺 Europe | 194.55.239.15:443",
+      "🇪🇺 Europe | 194.55.239.111:443",
+      "🇪🇺 Europe | 194.55.239.18:443",
+      "🇪🇺 Europe | 194.55.239.105:443",
+      "🇪🇺 Europe | 91.240.86.186:443",
+      "🇪🇺 Europe | 91.240.86.12:443",
+      "🇪🇺 Europe | xnodtwx.artemida.live:443",
+      "🇪🇺 Europe | 5.188.114.71:443",
+      "🇪🇺 Europe | yif6f.guardora.pro:443",
+      "🇪🇺 Europe | fbsv6.guardora.pro:443",
+      "🇪🇺 Europe | 8sdev.guardora.pro:443",
+      "🇪🇺 Europe | 91.240.87.166:443",
+      "🇷🇺 Russia | 188.225.76.244:7777",
+      "🇷🇺 Russia | 13.143.164.40:443",
+      "🇷🇺 Russia | 77.110.113.188:8443",
+      "🇩🇪 Germany | 31.76.57.191:2443",
+      "🇫🇮 Finland | 138.124.9.108:443",
+      "🇳🇱 Netherlands | eh-nl6.country-road.org:8443",
+      "🇫🇮 Finland | fn2.pg.fastlanehosting.ru:2096",
+      "🇷🇺 Russia | 185.33.24.85:443",
+      "🇳🇱 Netherlands | ndi.lavivas.org:2096",
+      "🇬🇧 United Kingdom | 167.104.223.209:443",
+      "🇪🇪 Estonia | 132.243.65.26:443",
+      "🇳🇱 Netherlands | nl3.pg.fastlanehosting.ru:40189",
+      "🇳🇱 Netherlands | 74.112.103.69:443",
+      "🇳🇱 Netherlands | eh-nl5.country-road.org:443",
+      "🇷🇺 Russia | 135.106.221.177:11801",
+      "🇫🇮 Finland | 150.241.71.245:443",
+      "🇷🇺 Russia | 193.160.208.137:443",
+      "🇬🇧 United Kingdom | 167.104.223.216:7443",
+      "🇸🇪 Sweden | 89.22.232.117:443",
+      "🇫🇮 Finland | 171.22.114.98:443",
+      "🇳🇱 Netherlands | dlx1.boat-supply.org:443",
+      "🇷🇺 Russia | ms1.pg.fastlanehosting.ru:2096",
+      "🇬🇧 United Kingdom | 31.76.39.141:443",
+      "🇷🇺 Russia | 46.8.200.91:443",
+      "🇸🇪 Sweden | 177.3.215.83:443",
+      "🇸🇪 Sweden | multirouterapp.com:443",
+      "🇳🇱 Netherlands | slowkd.sadiepinki.com:443",
+      "🇬🇧 United Kingdom | 141.101.122.147:443",
+      "🇷🇺 Russia | 195.133.198.200:7443",
+      "🇸🇪 Sweden | swebz.loozerp.wiki:443",
+      "🇷🇺 Russia | 87.228.32.207:443",
+      "🇩🇪 Germany | 159.195.240.82:443",
+      "🇬🇧 United Kingdom | gb.superbuba.top:443",
+      "🇩🇪 Germany | 159.69.103.251:2053",
+      "🇳🇱 Netherlands | nl2.bbobr.win:443",
+      "🇳🇱 Netherlands | 31.57.34.139:443",
+      "🇸🇪 Sweden | 177.3.215.62:443",
+      "🇩🇪 Germany | mur.burladuck.com:443",
+      "🇩🇪 Germany | 185.229.9.175:443",
+      "🇩🇪 Germany | 185.229.9.236:43005",
+      "🇩🇪 Germany | 185.229.9.74:443",
+      "🇩🇪 Germany | 185.134.200.180:443",
+      "🇷🇺 Russia | 45.12.75.242:26424",
+      "🇳🇱 Netherlands | 81.94.148.178:7445",
+      "🇳🇱 Netherlands | 185.241.195.151:9444",
+      "🇳🇱 Netherlands | 45.11.27.86:443",
+      "🇪🇪 Estonia | 95.85.224.51:443",
+      "🇫🇮 Finland | prep.wwwinternetvideo.click:443",
+      "🇫🇮 Finland | 144.31.50.236:443",
+      "🇩🇪 Germany | 31.76.100.41:443",
+      "🇫🇮 Finland | 31.76.245.63:443",
+      "🇩🇪 Germany | 144.31.40.96:2053",
+      "🇸🇪 Sweden | 193.163.203.170:443",
+      "🇩🇪 Germany | 150.241.101.80:8443",
+      "🇳🇱 Netherlands | 94.183.224.45:443",
+      "🇩🇪 Germany | 150.241.101.17:8443",
+      "🇩🇪 Germany | 31.76.7.154:7443",
+      "🇩🇪 Germany | 91.196.32.216:9543",
+      "🇬🇧 United Kingdom | 171.22.119.160:31770",
+      "🇩🇪 Germany | 2.59.134.226:443",
+      "🇫🇮 Finland | est1313.ggisopi.su:443",
+      "🇩🇪 Germany | 94.241.143.161:9871",
+      "🇷🇺 Russia | 91.224.87.22:9873",
+      "🇷🇺 Russia | 95.143.190.125:9895",
+      "🇸🇪 Sweden | 176.108.246.58:9881",
+      "🇷🇺 Russia | 91.224.86.107:9830",
+      "🇷🇺 Russia | 82.202.143.37:9830",
+      "🇷🇺 Russia | 188.124.47.34:9891",
+      "🇫🇷 France | 176.123.162.100:9880",
+      "🇷🇺 Russia | 185.141.227.180:2053",
+      "🇷🇺 Russia | 144.31.93.231:443",
+      "🇷🇺 Russia | bl3fk52.sysopnova.art:443",
+      "🇷🇺 Russia | 213.171.25.29:9889",
+      "🇷🇺 Russia | 176.123.161.222:9892",
+      "🇳🇱 Netherlands | 31.58.181.88:8443",
+      "🇬🇧 United Kingdom | 46.250.250.149:2053",
+      "🇩🇪 Germany | 92.255.79.246:443",
+      "🇷🇺 Russia | 193.163.203.253:443",
+      "🇫🇮 Finland | 85.192.48.236:8443",
+      "🇫🇮 Finland | server.slavkiti.monster:443",
+      "🇪🇪 Estonia | 94.183.170.147:8443",
+      "🇬🇧 United Kingdom | 83.147.18.3:443",
+      "🇫🇮 Finland | staging.lastilhame.monster:443",
+      "🇫🇮 Finland | 107.181.151.241:443",
+      "🇫🇮 Finland | 107.181.151.39:443",
+      "🇸🇪 Sweden | 104.171.138.229:443",
+      "🇳🇱 Netherlands | 188.225.44.89:443",
+      "🇳🇱 Netherlands | 188.225.42.6:443",
+      "🇳🇱 Netherlands | 188.225.77.241:443",
+      "🇳🇱 Netherlands | 191.44.38.143:8443",
+      "🇷🇺 Russia | 5.42.96.76:443",
+      "🇪🇪 Estonia | 188.225.83.133:443",
+      "🇷🇺 Russia | 87.249.49.87:443",
+      "🇳🇱 Netherlands | 188.225.57.78:443"
     ]
   }
 }
