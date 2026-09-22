@@ -282,8 +282,7 @@ class VPNAggregator:
                 continue
             seen_addresses.add(address)
 
-            # Единое имя для всех серверов
-            ob["remarks"] = "🇷🇺 Yandex/Max"
+            # Единый tag. remarks НЕ добавляем — он будет один на верхнем уровне конфига
             ob["tag"] = f"🇷🇺 Yandex/Max [{address}]"
 
             filtered_obs.append(ob)
@@ -296,6 +295,10 @@ class VPNAggregator:
         # Увеличили лимит до 100 тысяч, чтобы ничего не резалось
         selected_obs = self.outbounds[:100000]
         tags = [o["tag"] for o in selected_obs]
+
+        # Убираем remarks из каждого outbound, чтобы не дублировалось
+        for ob in selected_obs:
+            ob.pop("remarks", None)
 
         # Служебные выходы
         selected_obs.append({
@@ -310,6 +313,8 @@ class VPNAggregator:
         })
 
         final_json = {
+            # ЕДИНСТВЕННАЯ строка remarks во всём конфиге
+            "remarks": "🇷🇺 Yandex/Max",
             "log": {"loglevel": "warning"},
             "inbounds": [
                 {
