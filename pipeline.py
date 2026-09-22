@@ -282,13 +282,10 @@ class VPNAggregator:
                 continue
             seen_addresses.add(address)
 
-            base_name = "🇷🇺 YandexTCP Тест"
-            new_tag_name = f"{base_name} Безлимит" if "безлимит" in old_tag.lower() else base_name
-            if _has_word(tag_upper, ["LTE", "ЛТЕ"]):
-                new_tag_name += " (Долгий пинг)"
+            # Единое имя для всех серверов
+            ob["remarks"] = "🇷🇺 Yandex/Max"
+            ob["tag"] = f"🇷🇺 Yandex/Max [{address}]"
 
-            ob["tag"] = f"{new_tag_name} [{address}]"
-            # Убрали создание ob["remarks"] внутри каждого провайдера, чтобы не спамить конфиг
             filtered_obs.append(ob)
 
         print(f"🗑 Фильтр завершён. Найдено чистых RU серверов: {len(filtered_obs)}")
