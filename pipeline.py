@@ -28,16 +28,31 @@ os.makedirs(OUTPUT_DIR, exist_ok=True)
 RU_WORDS = ["RU", "RUS", "RUSSIA", "РОССИЯ", "РОССИИ", "YANDEX", "ЯНДЕКС"]
 RU_FLAGS = ["🇷🇺"]
 
+# Страны, которые ТОЖЕ оставляем (плюс к RU)
+ALLOWED_WORDS = [
+    # Германия
+    "DE", "GERMANY", "ГЕРМАНИЯ", "ГЕРМАНИИ", "DEUTSCHLAND",
+    # Финляндия
+    "FI", "FINLAND", "ФИНЛЯНДИЯ", "ФИНЛЯНДИИ", "HELSINKI", "ХЕЛЬСИНКИ",
+    # Европа
+    "EU", "EUROPE", "ЕВРОПА", "ЕВРОПЫ", "EUROPEAN",
+    # Нидерланды
+    "NL", "NETHERLANDS", "НИДЕРЛАНДЫ", "НИДЕРЛАНДОВ", "HOLLAND", "AMSTERDAM", "АМСТЕРДАМ",
+    # Франция
+    "FR", "FRANCE", "ФРАНЦИЯ", "ФРАНЦИИ", "PARIS", "ПАРИЖ",
+    # Эстония
+    "EE", "ESTONIA", "ЭСТОНИЯ", "ЭСТОНИИ", "TALLINN", "ТАЛЛИН",
+    # Великобритания
+    "GB", "UK", "BRITAIN", "АНГЛИЯ", "АНГЛИИ", "LONDON", "ЛОНДОН", "UNITED KINGDOM",
+    # Швеция
+    "SE", "SWEDEN", "ШВЕЦИЯ", "ШВЕЦИИ", "STOCKHOLM", "СТОКГОЛЬМ",
+]
+ALLOWED_FLAGS = ["🇩🇪", "🇫🇮", "🇪🇺", "🇳🇱", "🇫🇷", "🇪🇪", "🇬🇧", "🇸🇪"]
+
+# Страны, которые ВСЁ РАВНО отсекаем
 FOREIGN_WORDS = [
-    "EU", "EUROPE", "ЕВРОПА",
-    "DE", "GERMANY", "ГЕРМАНИЯ",
-    "FR", "FRANCE", "ФРАНЦИЯ",
-    "US", "USA", "США",
-    "NL", "NETHERLANDS", "НИДЕРЛАНДЫ",
-    "GB", "UK", "BRITAIN", "АНГЛИЯ",
+    "US", "USA", "США", "AMERICA", "АМЕРИКА",
     "PL", "POLAND", "ПОЛЬША",
-    "FI", "FINLAND", "ФИНЛЯНДИЯ",
-    "SE", "SWEDEN", "ШВЕЦИЯ",
     "TR", "TURKEY", "ТУРЦИЯ",
     "JP", "JAPAN", "ЯПОНИЯ",
     "KR", "KOREA", "КОРЕЯ",
@@ -45,9 +60,11 @@ FOREIGN_WORDS = [
     "HK", "HONGKONG", "ГОНКОНГ",
     "CA", "CANADA", "КАНАДА",
     "AU", "AUSTRALIA", "АВСТРАЛИЯ",
+    "CN", "CHINA", "КИТАЙ",
+    "IN", "INDIA", "ИНДИЯ",
+    "BR", "BRAZIL", "БРАЗИЛИЯ",
 ]
-FOREIGN_FLAGS = ["🇪🇺", "🇩🇪", "🇫🇷", "🇺🇸", "🇳🇱", "🇬🇧", "🇵🇱", "🇫🇮", "🇸🇪",
-                 "🇹🇷", "🇯🇵", "🇰🇷", "🇸🇬", "🇭🇰", "🇨🇦", "🇦🇺"]
+FOREIGN_FLAGS = ["🇺🇸", "🇵🇱", "🇹🇷", "🇯🇵", "🇰🇷", "🇸🇬", "🇭🇰", "🇨🇦", "🇦🇺", "🇨🇳", "🇮🇳", "🇧🇷"]
 
 
 def _has_word(text_upper: str, words) -> bool:
@@ -253,7 +270,7 @@ class VPNAggregator:
 
     # ---------------------------------------------------------------- filter
     def process_and_filter(self):
-        print("🔧 Запуск гео-фильтрации (оставляем только явные RU-серверы)...")
+        print("🔧 Запуск гео-фильтрации (RU + DE + FI + EU + NL + FR + EE + GB + SE)...")
         filtered_obs = []
         seen_addresses = set()
 
@@ -271,10 +288,15 @@ class VPNAggregator:
             tag_upper = old_tag.upper()
 
             is_russian = _has_word(tag_upper, RU_WORDS) or any(f in old_tag for f in RU_FLAGS)
+            is_allowed = _has_word(tag_upper, ALLOWED_WORDS) or any(f in old_tag for f in ALLOWED_FLAGS)
             is_foreign = _has_word(tag_upper, FOREIGN_WORDS) or any(f in old_tag for f in FOREIGN_FLAGS)
 
-            # Отсекаем зарубежные и всё, где RU не подтверждён явно
-            if is_foreign or not is_russian:
+            # Отсекаем всё, что в чёрном списке
+            if is_foreign:
+                continue
+
+            # Оставляем только RU или разрешённые страны
+            if not (is_russian or is_allowed):
                 continue
 
             # Дедупликация по IP / Хосту
@@ -283,15 +305,16 @@ class VPNAggregator:
             seen_addresses.add(address)
 
             # Единый tag. remarks НЕ добавляем — он будет один на верхнем уровне конфига
-            ob["tag"] = f"🇷🇺 Yandex/Max [{address}]"
+            ob["tag"] = f"🌍 Yandex/Max [{address}]"
 
             filtered_obs.append(ob)
 
-        print(f"🗑 Фильтр завершён. Найдено чистых RU серверов: {len(filtered_obs)}")
+        print(f"🗑 Фильтр завершён. Найдено серверов (RU+разрешённые): {len(filtered_obs)}")
         self.outbounds = filtered_obs
 
     # ---------------------------------------------------------------- saver
     def save_final_config(self):
+        # Увеличили лимит до 100 тысяч, чтобы ничего не резалось
         selected_obs = self.outbounds[:100000]
         tags = [o["tag"] for o in selected_obs]
 
@@ -346,8 +369,11 @@ class VPNAggregator:
                     }
                 ] if tags else [],
                 "rules": [
+                    # Торренты качаем напрямую
                     {"type": "field", "protocol": ["bittorrent"], "outboundTag": "direct"},
+                    # Локальную сеть открываем напрямую
                     {"type": "field", "ip": ["geoip:private"], "outboundTag": "direct"},
+                    # Всё остальное отправляем в балансировщик!
                     {"type": "field", "balancerTag": "Auto_Balancer", "network": "tcp,udp"},
                 ],
             },
@@ -375,7 +401,7 @@ class VPNAggregator:
         strip_remarks(final_json)
 
         # Добавляем ЕДИНСТВЕННУЮ строку remarks на верхнем уровне
-        final_json = {"remarks": "🇷🇺 Yandex/Max", **final_json}
+        final_json = {"remarks": "🌍 Yandex/Max", **final_json}
 
         with open(FINAL_OUTPUT_FILE, "w", encoding="utf-8") as f:
             json.dump(final_json, f, indent=2, ensure_ascii=False)
