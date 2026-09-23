@@ -229,10 +229,13 @@ class VPNAggregator:
             if security == "tls":
                 tls_settings = {
                     "serverName": params.get("sni", address),
-                    "allowInsecure": params.get("allowInsecure", "0") == "1",
                     "fingerprint": params.get("fp", "chrome"),
                     "alpn": [a for a in params.get("alpn", "").split(",") if a] or None,
                 }
+                # Поддержка современного пиннинга сертификатов вместо allowInsecure
+                if "pinnedPeerCertSha256" in params:
+                    tls_settings["pinnedPeerCertSha256"] = params["pinnedPeerCertSha256"]
+
                 stream["tlsSettings"] = {k: v for k, v in tls_settings.items() if v is not None}
 
             if security == "reality":
@@ -286,7 +289,6 @@ class VPNAggregator:
                 continue
 
             tag_upper = old_tag.upper()
-
             is_russian = _has_word(tag_upper, RU_WORDS) or any(f in old_tag for f in RU_FLAGS)
             is_allowed = _has_word(tag_upper, ALLOWED_WORDS) or any(f in old_tag for f in ALLOWED_FLAGS)
             is_foreign = _has_word(tag_upper, FOREIGN_WORDS) or any(f in old_tag for f in FOREIGN_FLAGS)
@@ -306,7 +308,6 @@ class VPNAggregator:
 
             # Единый tag. remarks НЕ добавляем — он будет один на верхнем уровне конфига
             ob["tag"] = f"🌍 Yandex/Max [{address}]"
-
             filtered_obs.append(ob)
 
         print(f"🗑 Фильтр завершён. Найдено серверов (RU+разрешённые): {len(filtered_obs)}")
@@ -410,7 +411,6 @@ class VPNAggregator:
         with open(FINAL_OUTPUT_FILE, "r", encoding="utf-8") as f:
             count = f.read().count('"remarks"')
         print(f"🔍 Проверка: строк 'remarks' в JSON = {count}")
-
         print(f"🎉 Итоговый конфиг успешно сохранен: {FINAL_OUTPUT_FILE} "
               f"(Всего рабочих серверов добавлено: {len(tags)}, "
               f"дата обновления: {datetime.now():%Y-%m-%d %H:%M:%S})")
