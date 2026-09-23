@@ -3,7 +3,7 @@
   "outbounds": [
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [104.21.88.129]",
+      "tag": "🌍 Yandex/Max [104.21.88.129:8880 #70c16ec7]",
       "settings": {
         "vnext": [
           {
@@ -32,7 +32,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [141.101.122.147]",
+      "tag": "🌍 Yandex/Max [141.101.122.147:443 #c4edb87e]",
       "settings": {
         "vnext": [
           {
@@ -65,7 +65,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [172.67.152.71]",
+      "tag": "🌍 Yandex/Max [172.67.152.71:8880 #f7ebef03]",
       "settings": {
         "vnext": [
           {
@@ -94,7 +94,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [188.225.44.89]",
+      "tag": "🌍 Yandex/Max [188.225.44.89:443 #026f58a9]",
       "settings": {
         "vnext": [
           {
@@ -125,7 +125,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [104.21.70.21]",
+      "tag": "🌍 Yandex/Max [104.21.70.21:443 #c4edb87e]",
       "settings": {
         "vnext": [
           {
@@ -158,7 +158,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [94.183.209.33]",
+      "tag": "🌍 Yandex/Max [94.183.209.33:8443 #f4ba862a]",
       "settings": {
         "vnext": [
           {
@@ -188,7 +188,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [91.210.169.181]",
+      "tag": "🌍 Yandex/Max [91.210.169.181:443 #ff0b6ba8]",
       "settings": {
         "vnext": [
           {
@@ -221,7 +221,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [200.165.231.209]",
+      "tag": "🌍 Yandex/Max [200.165.231.209:443 #ff0b6ba8]",
       "settings": {
         "vnext": [
           {
@@ -254,7 +254,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [195.133.73.65]",
+      "tag": "🌍 Yandex/Max [195.133.73.65:443 #ebd1c0d6]",
       "settings": {
         "vnext": [
           {
@@ -285,7 +285,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [157.254.174.14]",
+      "tag": "🌍 Yandex/Max [157.254.174.14:443 #ddf09ad0]",
       "settings": {
         "vnext": [
           {
@@ -316,7 +316,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [188.114.97.6]",
+      "tag": "🌍 Yandex/Max [188.114.97.6:443 #c4edb87e]",
       "settings": {
         "vnext": [
           {
@@ -349,7 +349,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [31.57.20.51]",
+      "tag": "🌍 Yandex/Max [31.57.20.51:443 #4f8a1d19]",
       "settings": {
         "vnext": [
           {
@@ -380,7 +380,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [188.225.42.6]",
+      "tag": "🌍 Yandex/Max [188.225.42.6:443 #026f58a9]",
       "settings": {
         "vnext": [
           {
@@ -411,7 +411,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [31.57.20.45]",
+      "tag": "🌍 Yandex/Max [31.57.20.45:443 #4f8a1d19]",
       "settings": {
         "vnext": [
           {
@@ -442,7 +442,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [91.196.32.216]",
+      "tag": "🌍 Yandex/Max [91.196.32.216:9543 #ff6d2dda]",
       "settings": {
         "vnext": [
           {
@@ -473,7 +473,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [144.31.214.172]",
+      "tag": "🌍 Yandex/Max [144.31.214.172:9443 #ff6d2dda]",
       "settings": {
         "vnext": [
           {
@@ -504,7 +504,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [144.31.50.236]",
+      "tag": "🌍 Yandex/Max [144.31.50.236:443 #1c332eae]",
       "settings": {
         "vnext": [
           {
@@ -535,7 +535,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [151.241.226.201]",
+      "tag": "🌍 Yandex/Max [151.241.226.201:2053 #0eed6293]",
       "settings": {
         "vnext": [
           {
@@ -565,7 +565,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [94.241.143.161]",
+      "tag": "🌍 Yandex/Max [94.241.143.161:9871 #76186f1e]",
       "settings": {
         "vnext": [
           {
@@ -599,7 +599,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [91.224.87.22]",
+      "tag": "🌍 Yandex/Max [91.224.87.22:9873 #76186f1e]",
       "settings": {
         "vnext": [
           {
@@ -633,7 +633,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [176.108.246.58]",
+      "tag": "🌍 Yandex/Max [176.108.246.58:9881 #5d16ac22]",
       "settings": {
         "vnext": [
           {
@@ -667,7 +667,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [176.108.246.110]",
+      "tag": "🌍 Yandex/Max [176.108.246.110:9830 #5d16ac22]",
       "settings": {
         "vnext": [
           {
@@ -701,7 +701,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [176.108.246.73]",
+      "tag": "🌍 Yandex/Max [176.108.246.73:9873 #5d16ac22]",
       "settings": {
         "vnext": [
           {
@@ -735,7 +735,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [82.202.143.37]",
+      "tag": "🌍 Yandex/Max [82.202.143.37:9830 #76186f1e]",
       "settings": {
         "vnext": [
           {
@@ -769,7 +769,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [176.109.104.195]",
+      "tag": "🌍 Yandex/Max [176.109.104.195:9873 #5d16ac22]",
       "settings": {
         "vnext": [
           {
@@ -803,7 +803,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [176.123.161.222]",
+      "tag": "🌍 Yandex/Max [176.123.161.222:9892 #5d16ac22]",
       "settings": {
         "vnext": [
           {
@@ -837,7 +837,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [176.123.162.100]",
+      "tag": "🌍 Yandex/Max [176.123.162.100:9880 #5d16ac22]",
       "settings": {
         "vnext": [
           {
@@ -871,7 +871,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [179.198.49.43]",
+      "tag": "🌍 Yandex/Max [179.198.49.43:443 #d72f05b0]",
       "settings": {
         "vnext": [
           {
@@ -902,7 +902,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [est.vrsvpn.com]",
+      "tag": "🌍 Yandex/Max [est.vrsvpn.com:443 #0b9bcbc1]",
       "settings": {
         "vnext": [
           {
@@ -933,7 +933,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [185.141.227.180]",
+      "tag": "🌍 Yandex/Max [185.141.227.180:2053 #2c634977]",
       "settings": {
         "vnext": [
           {
@@ -965,7 +965,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [185.229.9.175]",
+      "tag": "🌍 Yandex/Max [185.229.9.175:443 #c5694dc5]",
       "settings": {
         "vnext": [
           {
@@ -996,7 +996,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [188.225.82.184]",
+      "tag": "🌍 Yandex/Max [188.225.82.184:8443 #0efd1a54]",
       "settings": {
         "vnext": [
           {
@@ -1027,7 +1027,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [193.163.203.170]",
+      "tag": "🌍 Yandex/Max [193.163.203.170:443 #11aabba0]",
       "settings": {
         "vnext": [
           {
@@ -1058,7 +1058,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [194.150.166.228]",
+      "tag": "🌍 Yandex/Max [194.150.166.228:9443 #ff6d2dda]",
       "settings": {
         "vnext": [
           {
@@ -1089,7 +1089,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [194.150.166.108]",
+      "tag": "🌍 Yandex/Max [194.150.166.108:9443 #ff6d2dda]",
       "settings": {
         "vnext": [
           {
@@ -1120,7 +1120,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [194.61.31.126]",
+      "tag": "🌍 Yandex/Max [194.61.31.126:2053 #1d4e18bd]",
       "settings": {
         "vnext": [
           {
@@ -1150,7 +1150,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [85.208.86.91]",
+      "tag": "🌍 Yandex/Max [85.208.86.91:9872 #5d16ac22]",
       "settings": {
         "vnext": [
           {
@@ -1184,7 +1184,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [217.19.122.65]",
+      "tag": "🌍 Yandex/Max [217.19.122.65:443 #bc5ec86c]",
       "settings": {
         "vnext": [
           {
@@ -1220,7 +1220,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [31.58.181.88]",
+      "tag": "🌍 Yandex/Max [31.58.181.88:8443 #64532781]",
       "settings": {
         "vnext": [
           {
@@ -1251,7 +1251,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [31.58.181.88]",
+      "tag": "🌍 Yandex/Max [31.58.181.88:8443 #731079ad]",
       "settings": {
         "vnext": [
           {
@@ -1282,7 +1282,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [31.58.181.88]",
+      "tag": "🌍 Yandex/Max [31.58.181.88:8443 #70bd60b1]",
       "settings": {
         "vnext": [
           {
@@ -1313,7 +1313,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [31.58.181.88]",
+      "tag": "🌍 Yandex/Max [31.58.181.88:8443 #83045f64]",
       "settings": {
         "vnext": [
           {
@@ -1344,7 +1344,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [31.58.181.88]",
+      "tag": "🌍 Yandex/Max [31.58.181.88:8443 #757e753e]",
       "settings": {
         "vnext": [
           {
@@ -1375,7 +1375,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [31.58.181.88]",
+      "tag": "🌍 Yandex/Max [31.58.181.88:8443 #86562a3a]",
       "settings": {
         "vnext": [
           {
@@ -1406,7 +1406,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [31.58.181.88]",
+      "tag": "🌍 Yandex/Max [31.58.181.88:8443 #93a8f0b3]",
       "settings": {
         "vnext": [
           {
@@ -1437,7 +1437,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [31.58.181.88]",
+      "tag": "🌍 Yandex/Max [31.58.181.88:8443 #b8fca50e]",
       "settings": {
         "vnext": [
           {
@@ -1468,7 +1468,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [31.58.181.88]",
+      "tag": "🌍 Yandex/Max [31.58.181.88:8443 #d0da19f1]",
       "settings": {
         "vnext": [
           {
@@ -1499,7 +1499,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [31.58.181.88]",
+      "tag": "🌍 Yandex/Max [31.58.181.88:8443 #c50a60fe]",
       "settings": {
         "vnext": [
           {
@@ -1530,7 +1530,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [31.58.181.88]",
+      "tag": "🌍 Yandex/Max [31.58.181.88:8443 #d25940f6]",
       "settings": {
         "vnext": [
           {
@@ -1561,7 +1561,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [31.58.181.88]",
+      "tag": "🌍 Yandex/Max [31.58.181.88:8443 #f0394424]",
       "settings": {
         "vnext": [
           {
@@ -1592,7 +1592,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [31.58.181.88]",
+      "tag": "🌍 Yandex/Max [31.58.181.88:8443 #21d11336]",
       "settings": {
         "vnext": [
           {
@@ -1623,7 +1623,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [31.58.181.88]",
+      "tag": "🌍 Yandex/Max [31.58.181.88:8443 #010158f4]",
       "settings": {
         "vnext": [
           {
@@ -1654,7 +1654,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [31.58.181.88]",
+      "tag": "🌍 Yandex/Max [31.58.181.88:8443 #75efda17]",
       "settings": {
         "vnext": [
           {
@@ -1685,7 +1685,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [31.58.181.88]",
+      "tag": "🌍 Yandex/Max [31.58.181.88:8443 #67018597]",
       "settings": {
         "vnext": [
           {
@@ -1716,7 +1716,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [31.58.181.88]",
+      "tag": "🌍 Yandex/Max [31.58.181.88:8443 #7dc78e93]",
       "settings": {
         "vnext": [
           {
@@ -1747,7 +1747,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [31.58.181.88]",
+      "tag": "🌍 Yandex/Max [31.58.181.88:8443 #9109d755]",
       "settings": {
         "vnext": [
           {
@@ -1778,7 +1778,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [31.58.181.88]",
+      "tag": "🌍 Yandex/Max [31.58.181.88:8443 #87057278]",
       "settings": {
         "vnext": [
           {
@@ -1809,7 +1809,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [31.58.181.88]",
+      "tag": "🌍 Yandex/Max [31.58.181.88:8443 #94f1b60a]",
       "settings": {
         "vnext": [
           {
@@ -1840,7 +1840,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [31.58.181.88]",
+      "tag": "🌍 Yandex/Max [31.58.181.88:8443 #8e7df32a]",
       "settings": {
         "vnext": [
           {
@@ -1871,7 +1871,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [31.58.181.88]",
+      "tag": "🌍 Yandex/Max [31.58.181.88:8443 #98983e4e]",
       "settings": {
         "vnext": [
           {
@@ -1902,7 +1902,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [31.58.181.88]",
+      "tag": "🌍 Yandex/Max [31.58.181.88:8443 #b77411ca]",
       "settings": {
         "vnext": [
           {
@@ -1933,7 +1933,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [31.58.181.88]",
+      "tag": "🌍 Yandex/Max [31.58.181.88:8443 #ceaf462e]",
       "settings": {
         "vnext": [
           {
@@ -1964,7 +1964,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [31.58.181.88]",
+      "tag": "🌍 Yandex/Max [31.58.181.88:8443 #e45762cb]",
       "settings": {
         "vnext": [
           {
@@ -1995,7 +1995,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [31.58.181.88]",
+      "tag": "🌍 Yandex/Max [31.58.181.88:8443 #c0c5a312]",
       "settings": {
         "vnext": [
           {
@@ -2026,7 +2026,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [31.58.181.88]",
+      "tag": "🌍 Yandex/Max [31.58.181.88:8443 #fa34a94b]",
       "settings": {
         "vnext": [
           {
@@ -2057,7 +2057,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [31.58.181.88]",
+      "tag": "🌍 Yandex/Max [31.58.181.88:8443 #fabd51c7]",
       "settings": {
         "vnext": [
           {
@@ -2088,7 +2088,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [31.58.181.88]",
+      "tag": "🌍 Yandex/Max [31.58.181.88:8443 #febfeec2]",
       "settings": {
         "vnext": [
           {
@@ -2119,7 +2119,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [31.58.181.88]",
+      "tag": "🌍 Yandex/Max [31.58.181.88:8443 #cc422436]",
       "settings": {
         "vnext": [
           {
@@ -2150,7 +2150,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [31.58.181.88]",
+      "tag": "🌍 Yandex/Max [31.58.181.88:8443 #8a4c1e5d]",
       "settings": {
         "vnext": [
           {
@@ -2181,7 +2181,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [31.58.181.88]",
+      "tag": "🌍 Yandex/Max [31.58.181.88:8443 #17e85193]",
       "settings": {
         "vnext": [
           {
@@ -2212,7 +2212,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [31.58.181.88]",
+      "tag": "🌍 Yandex/Max [31.58.181.88:8443 #0cfc5fac]",
       "settings": {
         "vnext": [
           {
@@ -2243,7 +2243,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [31.58.50.200]",
+      "tag": "🌍 Yandex/Max [31.58.50.200:8443 #00dda8ac]",
       "settings": {
         "vnext": [
           {
@@ -2274,7 +2274,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [31.58.50.200]",
+      "tag": "🌍 Yandex/Max [31.58.50.200:8443 #719e2e27]",
       "settings": {
         "vnext": [
           {
@@ -2305,7 +2305,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [31.58.50.200]",
+      "tag": "🌍 Yandex/Max [31.58.50.200:8443 #77d4bb66]",
       "settings": {
         "vnext": [
           {
@@ -2336,7 +2336,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [31.58.50.200]",
+      "tag": "🌍 Yandex/Max [31.58.50.200:8443 #7e3f04d4]",
       "settings": {
         "vnext": [
           {
@@ -2367,7 +2367,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [31.58.50.200]",
+      "tag": "🌍 Yandex/Max [31.58.50.200:8443 #7f111a18]",
       "settings": {
         "vnext": [
           {
@@ -2398,7 +2398,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [31.58.50.200]",
+      "tag": "🌍 Yandex/Max [31.58.50.200:8443 #80cb54cd]",
       "settings": {
         "vnext": [
           {
@@ -2429,7 +2429,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [31.58.50.200]",
+      "tag": "🌍 Yandex/Max [31.58.50.200:8443 #8ed35e81]",
       "settings": {
         "vnext": [
           {
@@ -2460,7 +2460,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [31.58.50.200]",
+      "tag": "🌍 Yandex/Max [31.58.50.200:8443 #9109d755]",
       "settings": {
         "vnext": [
           {
@@ -2491,7 +2491,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [31.58.50.200]",
+      "tag": "🌍 Yandex/Max [31.58.50.200:8443 #9327c85f]",
       "settings": {
         "vnext": [
           {
@@ -2522,7 +2522,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [31.58.50.200]",
+      "tag": "🌍 Yandex/Max [31.58.50.200:8443 #94648954]",
       "settings": {
         "vnext": [
           {
@@ -2553,7 +2553,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [31.58.50.200]",
+      "tag": "🌍 Yandex/Max [31.58.50.200:8443 #94f1b60a]",
       "settings": {
         "vnext": [
           {
@@ -2584,7 +2584,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [31.58.50.200]",
+      "tag": "🌍 Yandex/Max [31.58.50.200:8443 #a4b34b65]",
       "settings": {
         "vnext": [
           {
@@ -2615,7 +2615,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [31.58.50.200]",
+      "tag": "🌍 Yandex/Max [31.58.50.200:8443 #a7ab9b00]",
       "settings": {
         "vnext": [
           {
@@ -2646,7 +2646,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [31.58.50.200]",
+      "tag": "🌍 Yandex/Max [31.58.50.200:8443 #b222ebc7]",
       "settings": {
         "vnext": [
           {
@@ -2677,7 +2677,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [31.58.50.200]",
+      "tag": "🌍 Yandex/Max [31.58.50.200:8443 #b2c282ed]",
       "settings": {
         "vnext": [
           {
@@ -2708,7 +2708,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [31.58.50.200]",
+      "tag": "🌍 Yandex/Max [31.58.50.200:8443 #b5f27d9a]",
       "settings": {
         "vnext": [
           {
@@ -2739,7 +2739,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [31.58.50.200]",
+      "tag": "🌍 Yandex/Max [31.58.50.200:8443 #b555fe25]",
       "settings": {
         "vnext": [
           {
@@ -2770,7 +2770,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [31.58.50.200]",
+      "tag": "🌍 Yandex/Max [31.58.50.200:8443 #b8fca50e]",
       "settings": {
         "vnext": [
           {
@@ -2801,7 +2801,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [31.58.50.200]",
+      "tag": "🌍 Yandex/Max [31.58.50.200:8443 #d25940f6]",
       "settings": {
         "vnext": [
           {
@@ -2832,7 +2832,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [31.58.50.200]",
+      "tag": "🌍 Yandex/Max [31.58.50.200:8443 #e042b105]",
       "settings": {
         "vnext": [
           {
@@ -2863,7 +2863,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [31.58.50.200]",
+      "tag": "🌍 Yandex/Max [31.58.50.200:8443 #e45762cb]",
       "settings": {
         "vnext": [
           {
@@ -2894,7 +2894,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [31.58.50.200]",
+      "tag": "🌍 Yandex/Max [31.58.50.200:8443 #4b2fbd30]",
       "settings": {
         "vnext": [
           {
@@ -2925,7 +2925,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [31.58.50.200]",
+      "tag": "🌍 Yandex/Max [31.58.50.200:8443 #d5f1aa27]",
       "settings": {
         "vnext": [
           {
@@ -2956,7 +2956,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [31.58.50.200]",
+      "tag": "🌍 Yandex/Max [31.58.50.200:8443 #880e605a]",
       "settings": {
         "vnext": [
           {
@@ -2987,7 +2987,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [31.58.50.200]",
+      "tag": "🌍 Yandex/Max [31.58.50.200:8443 #62d2db25]",
       "settings": {
         "vnext": [
           {
@@ -3018,7 +3018,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [31.58.50.200]",
+      "tag": "🌍 Yandex/Max [31.58.50.200:8443 #6ae3c57a]",
       "settings": {
         "vnext": [
           {
@@ -3049,7 +3049,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [31.58.50.200]",
+      "tag": "🌍 Yandex/Max [31.58.50.200:8443 #72109745]",
       "settings": {
         "vnext": [
           {
@@ -3080,7 +3080,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [31.58.50.200]",
+      "tag": "🌍 Yandex/Max [31.58.50.200:8443 #8a02c9f7]",
       "settings": {
         "vnext": [
           {
@@ -3111,7 +3111,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [31.58.50.200]",
+      "tag": "🌍 Yandex/Max [31.58.50.200:8443 #ec83e1b5]",
       "settings": {
         "vnext": [
           {
@@ -3142,7 +3142,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [31.58.50.200]",
+      "tag": "🌍 Yandex/Max [31.58.50.200:8443 #f9bd8170]",
       "settings": {
         "vnext": [
           {
@@ -3173,7 +3173,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [31.58.50.200]",
+      "tag": "🌍 Yandex/Max [31.58.50.200:8443 #fbe3ec44]",
       "settings": {
         "vnext": [
           {
@@ -3204,7 +3204,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [31.58.50.200]",
+      "tag": "🌍 Yandex/Max [31.58.50.200:8443 #06e00e3d]",
       "settings": {
         "vnext": [
           {
@@ -3235,7 +3235,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [31.58.50.200]",
+      "tag": "🌍 Yandex/Max [31.58.50.200:8443 #53b46d3b]",
       "settings": {
         "vnext": [
           {
@@ -3266,7 +3266,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [31.58.50.200]",
+      "tag": "🌍 Yandex/Max [31.58.50.200:8443 #315adcfd]",
       "settings": {
         "vnext": [
           {
@@ -3297,7 +3297,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [31.58.50.200]",
+      "tag": "🌍 Yandex/Max [31.58.50.200:8443 #9775116b]",
       "settings": {
         "vnext": [
           {
@@ -3328,7 +3328,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [31.58.50.200]",
+      "tag": "🌍 Yandex/Max [31.58.50.200:8443 #5a398cfd]",
       "settings": {
         "vnext": [
           {
@@ -3359,7 +3359,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [31.76.100.41]",
+      "tag": "🌍 Yandex/Max [31.76.100.41:443 #d72f05b0]",
       "settings": {
         "vnext": [
           {
@@ -3390,7 +3390,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [31.76.245.63]",
+      "tag": "🌍 Yandex/Max [31.76.245.63:443 #d72f05b0]",
       "settings": {
         "vnext": [
           {
@@ -3421,7 +3421,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [45.12.75.242]",
+      "tag": "🌍 Yandex/Max [45.12.75.242:26424 #633f424e]",
       "settings": {
         "vnext": [
           {
@@ -3451,7 +3451,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [46.250.250.149]",
+      "tag": "🌍 Yandex/Max [46.250.250.149:2053 #b4caaf57]",
       "settings": {
         "vnext": [
           {
@@ -3481,7 +3481,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [91.240.86.12]",
+      "tag": "🌍 Yandex/Max [91.240.86.12:443 #c5694dc5]",
       "settings": {
         "vnext": [
           {
@@ -3512,7 +3512,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [77.110.104.125]",
+      "tag": "🌍 Yandex/Max [77.110.104.125:8443 #e0b9fb0f]",
       "settings": {
         "vnext": [
           {
@@ -3546,7 +3546,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [193.56.135.137]",
+      "tag": "🌍 Yandex/Max [193.56.135.137:9543 #ff6d2dda]",
       "settings": {
         "vnext": [
           {
@@ -3577,7 +3577,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [91.240.86.186]",
+      "tag": "🌍 Yandex/Max [91.240.86.186:443 #c5694dc5]",
       "settings": {
         "vnext": [
           {
@@ -3608,7 +3608,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [91.240.87.166]",
+      "tag": "🌍 Yandex/Max [91.240.87.166:443 #c5694dc5]",
       "settings": {
         "vnext": [
           {
@@ -3639,7 +3639,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [185.229.9.74]",
+      "tag": "🌍 Yandex/Max [185.229.9.74:443 #ee342bdb]",
       "settings": {
         "vnext": [
           {
@@ -3670,7 +3670,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [185.134.200.180]",
+      "tag": "🌍 Yandex/Max [185.134.200.180:443 #ee342bdb]",
       "settings": {
         "vnext": [
           {
@@ -3701,7 +3701,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [5.42.96.76]",
+      "tag": "🌍 Yandex/Max [5.42.96.76:443 #f96d53bc]",
       "settings": {
         "vnext": [
           {
@@ -3732,7 +3732,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [185.229.9.234]",
+      "tag": "🌍 Yandex/Max [185.229.9.234:443 #ee342bdb]",
       "settings": {
         "vnext": [
           {
@@ -3763,7 +3763,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [185.229.9.175]",
+      "tag": "🌍 Yandex/Max [185.229.9.175:443 #ee342bdb]",
       "settings": {
         "vnext": [
           {
@@ -3794,7 +3794,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [95.163.232.171]",
+      "tag": "🌍 Yandex/Max [95.163.232.171:14443 #365de9e9]",
       "settings": {
         "vnext": [
           {
@@ -3830,7 +3830,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [95.85.224.51]",
+      "tag": "🌍 Yandex/Max [95.85.224.51:443 #342ab7e4]",
       "settings": {
         "vnext": [
           {
@@ -3861,7 +3861,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [prep.wwwinternetvideo.click]",
+      "tag": "🌍 Yandex/Max [prep.wwwinternetvideo.click:443 #1c332eae]",
       "settings": {
         "vnext": [
           {
@@ -3892,7 +3892,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [144.31.93.231]",
+      "tag": "🌍 Yandex/Max [144.31.93.231:443 #3710fc0f]",
       "settings": {
         "vnext": [
           {
@@ -3923,7 +3923,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [bl3fk52.sysopnova.art]",
+      "tag": "🌍 Yandex/Max [bl3fk52.sysopnova.art:443 #441afe11]",
       "settings": {
         "vnext": [
           {
@@ -3954,7 +3954,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [85.192.48.236]",
+      "tag": "🌍 Yandex/Max [85.192.48.236:8443 #cfd29242]",
       "settings": {
         "vnext": [
           {
@@ -3989,7 +3989,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [server.slavkiti.monster]",
+      "tag": "🌍 Yandex/Max [server.slavkiti.monster:443 #4d017db2]",
       "settings": {
         "vnext": [
           {
@@ -4020,7 +4020,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [server.slavkiti.monster]",
+      "tag": "🌍 Yandex/Max [server.slavkiti.monster:443 #6dfc9149]",
       "settings": {
         "vnext": [
           {
@@ -4051,7 +4051,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [185.229.9.236]",
+      "tag": "🌍 Yandex/Max [185.229.9.236:43005 #ee342bdb]",
       "settings": {
         "vnext": [
           {
@@ -4082,7 +4082,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [185.86.144.101]",
+      "tag": "🌍 Yandex/Max [185.86.144.101:443 #b17bda93]",
       "settings": {
         "vnext": [
           {
@@ -4113,7 +4113,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [185.22.235.181]",
+      "tag": "🌍 Yandex/Max [185.22.235.181:443 #24cd00f5]",
       "settings": {
         "vnext": [
           {
@@ -4147,7 +4147,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [185.22.235.63]",
+      "tag": "🌍 Yandex/Max [185.22.235.63:443 #24cd00f5]",
       "settings": {
         "vnext": [
           {
@@ -4181,7 +4181,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [87.242.127.110]",
+      "tag": "🌍 Yandex/Max [87.242.127.110:9443 #24cd00f5]",
       "settings": {
         "vnext": [
           {
@@ -4215,7 +4215,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [78.159.247.235]",
+      "tag": "🌍 Yandex/Max [78.159.247.235:30023 #20b53251]",
       "settings": {
         "vnext": [
           {
@@ -4246,7 +4246,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [45.11.27.86]",
+      "tag": "🌍 Yandex/Max [45.11.27.86:443 #a2738d8d]",
       "settings": {
         "vnext": [
           {
@@ -4277,7 +4277,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [78.159.247.151]",
+      "tag": "🌍 Yandex/Max [78.159.247.151:30073 #20b53251]",
       "settings": {
         "vnext": [
           {
@@ -4308,7 +4308,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [178.248.232.207]",
+      "tag": "🌍 Yandex/Max [178.248.232.207:60443 #954f495f]",
       "settings": {
         "vnext": [
           {
@@ -4339,7 +4339,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [178.248.232.207]",
+      "tag": "🌍 Yandex/Max [178.248.232.207:14443 #954f495f]",
       "settings": {
         "vnext": [
           {
@@ -4370,7 +4370,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [79.174.92.85]",
+      "tag": "🌍 Yandex/Max [79.174.92.85:6443 #2324f230]",
       "settings": {
         "vnext": [
           {
@@ -4404,7 +4404,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [217.16.27.113]",
+      "tag": "🌍 Yandex/Max [217.16.27.113:443 #49e15e17]",
       "settings": {
         "vnext": [
           {
@@ -4435,7 +4435,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [91.107.122.217]",
+      "tag": "🌍 Yandex/Max [91.107.122.217:443 #39d927a4]",
       "settings": {
         "vnext": [
           {
@@ -4469,7 +4469,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [schkyydshktbgwxx.cfooov.xyz]",
+      "tag": "🌍 Yandex/Max [schkyydshktbgwxx.cfooov.xyz:46899 #f8738084]",
       "settings": {
         "vnext": [
           {
@@ -4500,7 +4500,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [nether.velqixa.ir]",
+      "tag": "🌍 Yandex/Max [nether.velqixa.ir:8448 #4143a135]",
       "settings": {
         "vnext": [
           {
@@ -4530,7 +4530,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [95.143.190.125]",
+      "tag": "🌍 Yandex/Max [95.143.190.125:9895 #76186f1e]",
       "settings": {
         "vnext": [
           {
@@ -4564,7 +4564,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [ns.o11111o.club]",
+      "tag": "🌍 Yandex/Max [ns.o11111o.club:443 #39d927a4]",
       "settings": {
         "vnext": [
           {
@@ -4598,7 +4598,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [178.72.167.151]",
+      "tag": "🌍 Yandex/Max [178.72.167.151:443 #d7ff1a6d]",
       "settings": {
         "vnext": [
           {
@@ -4633,7 +4633,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [78.159.240.41]",
+      "tag": "🌍 Yandex/Max [78.159.240.41:443 #39d927a4]",
       "settings": {
         "vnext": [
           {
@@ -4667,7 +4667,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [46.243.142.239]",
+      "tag": "🌍 Yandex/Max [46.243.142.239:8443 #3013f09a]",
       "settings": {
         "vnext": [
           {
@@ -4698,7 +4698,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [91.224.86.107]",
+      "tag": "🌍 Yandex/Max [91.224.86.107:9830 #76186f1e]",
       "settings": {
         "vnext": [
           {
@@ -4732,7 +4732,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [188.124.47.34]",
+      "tag": "🌍 Yandex/Max [188.124.47.34:9891 #76186f1e]",
       "settings": {
         "vnext": [
           {
@@ -4766,7 +4766,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [usagem-sgood.wopd.butnorwa.butter.whooisthebest.ir]",
+      "tag": "🌍 Yandex/Max [usagem-sgood.wopd.butnorwa.butter.whooisthebest.ir:10000 #13a2964e]",
       "settings": {
         "vnext": [
           {
@@ -4796,7 +4796,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [78.159.247.170]",
+      "tag": "🌍 Yandex/Max [78.159.247.170:443 #5a92a9d2]",
       "settings": {
         "vnext": [
           {
@@ -4827,7 +4827,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [78.159.247.214]",
+      "tag": "🌍 Yandex/Max [78.159.247.214:443 #5a92a9d2]",
       "settings": {
         "vnext": [
           {
@@ -4858,7 +4858,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [185.229.9.151]",
+      "tag": "🌍 Yandex/Max [185.229.9.151:40001 #3882f374]",
       "settings": {
         "vnext": [
           {
@@ -4889,7 +4889,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [185.229.9.74]",
+      "tag": "🌍 Yandex/Max [185.229.9.74:443 #3882f374]",
       "settings": {
         "vnext": [
           {
@@ -4920,7 +4920,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [185.86.144.101]",
+      "tag": "🌍 Yandex/Max [185.86.144.101:443 #93822dc5]",
       "settings": {
         "vnext": [
           {
@@ -4951,7 +4951,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [213.219.214.33]",
+      "tag": "🌍 Yandex/Max [213.219.214.33:443 #93822dc5]",
       "settings": {
         "vnext": [
           {
@@ -4982,7 +4982,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [176.109.88.216]",
+      "tag": "🌍 Yandex/Max [176.109.88.216:443 #2c7f1414]",
       "settings": {
         "vnext": [
           {
@@ -5013,7 +5013,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [217.16.27.113]",
+      "tag": "🌍 Yandex/Max [217.16.27.113:443 #2423f4d6]",
       "settings": {
         "vnext": [
           {
@@ -5044,7 +5044,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [87.242.127.240]",
+      "tag": "🌍 Yandex/Max [87.242.127.240:443 #cf222b71]",
       "settings": {
         "vnext": [
           {
@@ -5078,7 +5078,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [5.42.109.42]",
+      "tag": "🌍 Yandex/Max [5.42.109.42:8443 #11f3e7b1]",
       "settings": {
         "vnext": [
           {
@@ -5111,7 +5111,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [run5.wba-pn.ru]",
+      "tag": "🌍 Yandex/Max [run5.wba-pn.ru:8443 #11f3e7b1]",
       "settings": {
         "vnext": [
           {
@@ -5144,7 +5144,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [89.34.90.68]",
+      "tag": "🌍 Yandex/Max [89.34.90.68:8443 #fe8e2ffb]",
       "settings": {
         "vnext": [
           {
@@ -5178,7 +5178,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [200.165.234.62]",
+      "tag": "🌍 Yandex/Max [200.165.234.62:4100 #5383fb97]",
       "settings": {
         "vnext": [
           {
@@ -5207,7 +5207,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [178.72.147.249]",
+      "tag": "🌍 Yandex/Max [178.72.147.249:4100 #6bd3e20b]",
       "settings": {
         "vnext": [
           {
@@ -5236,7 +5236,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [201.24.49.117]",
+      "tag": "🌍 Yandex/Max [201.24.49.117:2200 #2e228435]",
       "settings": {
         "vnext": [
           {
@@ -5265,7 +5265,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [200.165.234.119]",
+      "tag": "🌍 Yandex/Max [200.165.234.119:2200 #936b7663]",
       "settings": {
         "vnext": [
           {
@@ -5294,7 +5294,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [178.72.147.249]",
+      "tag": "🌍 Yandex/Max [178.72.147.249:2200 #7ee53e03]",
       "settings": {
         "vnext": [
           {
@@ -5323,7 +5323,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [178.72.147.249]",
+      "tag": "🌍 Yandex/Max [178.72.147.249:4100 #7ee53e03]",
       "settings": {
         "vnext": [
           {
@@ -5352,7 +5352,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [201.24.49.79]",
+      "tag": "🌍 Yandex/Max [201.24.49.79:2200 #3b4274c1]",
       "settings": {
         "vnext": [
           {
@@ -5381,7 +5381,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [201.24.49.79]",
+      "tag": "🌍 Yandex/Max [201.24.49.79:4100 #3b4274c1]",
       "settings": {
         "vnext": [
           {
@@ -5410,7 +5410,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [178.72.147.249]",
+      "tag": "🌍 Yandex/Max [178.72.147.249:4100 #d0685701]",
       "settings": {
         "vnext": [
           {
@@ -5439,7 +5439,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [201.51.8.235]",
+      "tag": "🌍 Yandex/Max [201.51.8.235:2200 #099c6e3f]",
       "settings": {
         "vnext": [
           {
@@ -5468,7 +5468,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [46.19.69.201]",
+      "tag": "🌍 Yandex/Max [46.19.69.201:443 #053440e6]",
       "settings": {
         "vnext": [
           {
@@ -5501,7 +5501,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [185.141.227.150]",
+      "tag": "🌍 Yandex/Max [185.141.227.150:9001 #2c634977]",
       "settings": {
         "vnext": [
           {
@@ -5535,7 +5535,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [46.243.234.72]",
+      "tag": "🌍 Yandex/Max [46.243.234.72:2053 #24708d62]",
       "settings": {
         "vnext": [
           {
@@ -5569,7 +5569,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [bz9.wba-pn.ru]",
+      "tag": "🌍 Yandex/Max [bz9.wba-pn.ru:2053 #9a47a8ff]",
       "settings": {
         "vnext": [
           {
@@ -5602,7 +5602,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [45.131.212.17]",
+      "tag": "🌍 Yandex/Max [45.131.212.17:443 #2ae1bbd2]",
       "settings": {
         "vnext": [
           {
@@ -5633,7 +5633,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [79.174.92.85]",
+      "tag": "🌍 Yandex/Max [79.174.92.85:6443 #545d7cfe]",
       "settings": {
         "vnext": [
           {
@@ -5667,7 +5667,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [46.243.234.143]",
+      "tag": "🌍 Yandex/Max [46.243.234.143:2053 #9d635464]",
       "settings": {
         "vnext": [
           {
@@ -5701,7 +5701,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [77.110.104.125]",
+      "tag": "🌍 Yandex/Max [77.110.104.125:6443 #235fab16]",
       "settings": {
         "vnext": [
           {
@@ -5735,7 +5735,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [nlxy.korgivps.ru]",
+      "tag": "🌍 Yandex/Max [nlxy.korgivps.ru:8443 #a3f59a62]",
       "settings": {
         "vnext": [
           {
@@ -5771,7 +5771,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [78.159.250.104]",
+      "tag": "🌍 Yandex/Max [78.159.250.104:443 #99e7fe72]",
       "settings": {
         "vnext": [
           {
@@ -5806,7 +5806,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [78.159.250.104]",
+      "tag": "🌍 Yandex/Max [78.159.250.104:1443 #99e7fe72]",
       "settings": {
         "vnext": [
           {
@@ -5841,7 +5841,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [45.11.26.99]",
+      "tag": "🌍 Yandex/Max [45.11.26.99:443 #a58f5798]",
       "settings": {
         "vnext": [
           {
@@ -5876,7 +5876,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [45.11.26.99]",
+      "tag": "🌍 Yandex/Max [45.11.26.99:8001 #a58f5798]",
       "settings": {
         "vnext": [
           {
@@ -5911,7 +5911,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [45.11.26.99]",
+      "tag": "🌍 Yandex/Max [45.11.26.99:8002 #a58f5798]",
       "settings": {
         "vnext": [
           {
@@ -5946,7 +5946,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [45.11.26.99]",
+      "tag": "🌍 Yandex/Max [45.11.26.99:443 #0f240308]",
       "settings": {
         "vnext": [
           {
@@ -5981,7 +5981,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [45.11.26.99]",
+      "tag": "🌍 Yandex/Max [45.11.26.99:8001 #0f240308]",
       "settings": {
         "vnext": [
           {
@@ -6016,7 +6016,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [45.11.26.99]",
+      "tag": "🌍 Yandex/Max [45.11.26.99:8002 #0f240308]",
       "settings": {
         "vnext": [
           {
@@ -6051,7 +6051,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [205.237.104.142]",
+      "tag": "🌍 Yandex/Max [205.237.104.142:8443 #cfd29242]",
       "settings": {
         "vnext": [
           {
@@ -6086,7 +6086,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [89.124.86.6]",
+      "tag": "🌍 Yandex/Max [89.124.86.6:8443 #cfd29242]",
       "settings": {
         "vnext": [
           {
@@ -6121,7 +6121,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [77.110.105.223]",
+      "tag": "🌍 Yandex/Max [77.110.105.223:443 #cfd29242]",
       "settings": {
         "vnext": [
           {
@@ -6156,7 +6156,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [188.214.129.163]",
+      "tag": "🌍 Yandex/Max [188.214.129.163:8443 #cfd29242]",
       "settings": {
         "vnext": [
           {
@@ -6191,7 +6191,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [205.237.104.131]",
+      "tag": "🌍 Yandex/Max [205.237.104.131:8443 #cfd29242]",
       "settings": {
         "vnext": [
           {
@@ -6226,7 +6226,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [144.31.78.35]",
+      "tag": "🌍 Yandex/Max [144.31.78.35:443 #fe0afb65]",
       "settings": {
         "vnext": [
           {
@@ -6261,7 +6261,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [2.26.90.204]",
+      "tag": "🌍 Yandex/Max [2.26.90.204:443 #fe0afb65]",
       "settings": {
         "vnext": [
           {
@@ -6296,7 +6296,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [31.76.88.150]",
+      "tag": "🌍 Yandex/Max [31.76.88.150:443 #fe0afb65]",
       "settings": {
         "vnext": [
           {
@@ -6331,7 +6331,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [212.233.121.186]",
+      "tag": "🌍 Yandex/Max [212.233.121.186:443 #d0ca7166]",
       "settings": {
         "vnext": [
           {
@@ -6362,7 +6362,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [213.219.214.33]",
+      "tag": "🌍 Yandex/Max [213.219.214.33:443 #d0ca7166]",
       "settings": {
         "vnext": [
           {
@@ -6393,7 +6393,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [185.86.144.101]",
+      "tag": "🌍 Yandex/Max [185.86.144.101:443 #d0ca7166]",
       "settings": {
         "vnext": [
           {
@@ -6424,7 +6424,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [158.160.139.156]",
+      "tag": "🌍 Yandex/Max [158.160.139.156:443 #d0ca7166]",
       "settings": {
         "vnext": [
           {
@@ -6455,7 +6455,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [185.229.9.137]",
+      "tag": "🌍 Yandex/Max [185.229.9.137:443 #1e8a04c0]",
       "settings": {
         "vnext": [
           {
@@ -6486,7 +6486,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [217.16.27.113]",
+      "tag": "🌍 Yandex/Max [217.16.27.113:443 #ca996537]",
       "settings": {
         "vnext": [
           {
@@ -6517,7 +6517,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [87.242.127.240]",
+      "tag": "🌍 Yandex/Max [87.242.127.240:443 #e0724d6a]",
       "settings": {
         "vnext": [
           {
@@ -6551,7 +6551,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [tg.riotvpn.eu]",
+      "tag": "🌍 Yandex/Max [tg.riotvpn.eu:443 #a18f7c2d]",
       "settings": {
         "vnext": [
           {
@@ -6581,7 +6581,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [83.168.71.216]",
+      "tag": "🌍 Yandex/Max [83.168.71.216:443 #a18f7c2d]",
       "settings": {
         "vnext": [
           {
@@ -6611,7 +6611,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [31.130.155.114]",
+      "tag": "🌍 Yandex/Max [31.130.155.114:443 #6ed6162d]",
       "settings": {
         "vnext": [
           {
@@ -6642,7 +6642,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [31.130.155.114]",
+      "tag": "🌍 Yandex/Max [31.130.155.114:443 #3c23a041]",
       "settings": {
         "vnext": [
           {
@@ -6673,7 +6673,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [188.225.39.107]",
+      "tag": "🌍 Yandex/Max [188.225.39.107:14443 #238e492b]",
       "settings": {
         "vnext": [
           {
@@ -6704,7 +6704,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [188.72.103.3]",
+      "tag": "🌍 Yandex/Max [188.72.103.3:443 #02722550]",
       "settings": {
         "vnext": [
           {
@@ -6740,7 +6740,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [95.163.214.43]",
+      "tag": "🌍 Yandex/Max [95.163.214.43:443 #88ce17fc]",
       "settings": {
         "vnext": [
           {
@@ -6775,7 +6775,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [178.248.236.209]",
+      "tag": "🌍 Yandex/Max [178.248.236.209:10443 #7c8ec0f2]",
       "settings": {
         "vnext": [
           {
@@ -6806,7 +6806,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [46.182.24.147]",
+      "tag": "🌍 Yandex/Max [46.182.24.147:443 #953358cb]",
       "settings": {
         "vnext": [
           {
@@ -6841,7 +6841,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [64.188.79.106]",
+      "tag": "🌍 Yandex/Max [64.188.79.106:443 #94006a20]",
       "settings": {
         "vnext": [
           {
@@ -6872,7 +6872,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [194.150.166.229]",
+      "tag": "🌍 Yandex/Max [194.150.166.229:9443 #ff6d2dda]",
       "settings": {
         "vnext": [
           {
@@ -6903,7 +6903,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [176.108.243.18]",
+      "tag": "🌍 Yandex/Max [176.108.243.18:9872 #5d16ac22]",
       "settings": {
         "vnext": [
           {
@@ -6937,7 +6937,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [213.171.25.178]",
+      "tag": "🌍 Yandex/Max [213.171.25.178:9830 #5d16ac22]",
       "settings": {
         "vnext": [
           {
@@ -6971,7 +6971,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [193.163.203.253]",
+      "tag": "🌍 Yandex/Max [193.163.203.253:443 #441afe11]",
       "settings": {
         "vnext": [
           {
@@ -7002,7 +7002,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [31.76.101.39]",
+      "tag": "🌍 Yandex/Max [31.76.101.39:443 #d72f05b0]",
       "settings": {
         "vnext": [
           {
@@ -7033,7 +7033,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [45.195.137.5]",
+      "tag": "🌍 Yandex/Max [45.195.137.5:8443 #06bcd513]",
       "settings": {
         "vnext": [
           {
@@ -7064,7 +7064,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [ch-gt-02.com]",
+      "tag": "🌍 Yandex/Max [ch-gt-02.com:8443 #06bcd513]",
       "settings": {
         "vnext": [
           {
@@ -7095,7 +7095,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [45.206.5.122]",
+      "tag": "🌍 Yandex/Max [45.206.5.122:443 #11e57eeb]",
       "settings": {
         "vnext": [
           {
@@ -7126,7 +7126,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [93.152.205.216]",
+      "tag": "🌍 Yandex/Max [93.152.205.216:444 #0b9bcbc1]",
       "settings": {
         "vnext": [
           {
@@ -7160,7 +7160,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [195.74.93.254]",
+      "tag": "🌍 Yandex/Max [195.74.93.254:443 #146eb6cf]",
       "settings": {
         "vnext": [
           {
@@ -7191,7 +7191,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [132.243.242.97]",
+      "tag": "🌍 Yandex/Max [132.243.242.97:9543 #ff6d2dda]",
       "settings": {
         "vnext": [
           {
@@ -7222,7 +7222,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [89.222.123.211]",
+      "tag": "🌍 Yandex/Max [89.222.123.211:16923 #c065e1bb]",
       "settings": {
         "vnext": [
           {
@@ -7256,7 +7256,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [152.233.43.77]",
+      "tag": "🌍 Yandex/Max [152.233.43.77:16923 #c065e1bb]",
       "settings": {
         "vnext": [
           {
@@ -7290,7 +7290,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [152.233.41.30]",
+      "tag": "🌍 Yandex/Max [152.233.41.30:16923 #c065e1bb]",
       "settings": {
         "vnext": [
           {
@@ -7324,7 +7324,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [de-dp-01.com]",
+      "tag": "🌍 Yandex/Max [de-dp-01.com:8443 #aa5b231c]",
       "settings": {
         "vnext": [
           {
@@ -7355,7 +7355,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [185.138.90.95]",
+      "tag": "🌍 Yandex/Max [185.138.90.95:8443 #a56a3bda]",
       "settings": {
         "vnext": [
           {
@@ -7390,7 +7390,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [147.45.152.37]",
+      "tag": "🌍 Yandex/Max [147.45.152.37:443 #744110a3]",
       "settings": {
         "vnext": [
           {
@@ -7420,7 +7420,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [154.83.159.240]",
+      "tag": "🌍 Yandex/Max [154.83.159.240:8443 #0047a8bc]",
       "settings": {
         "vnext": [
           {
@@ -7451,7 +7451,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [147.45.253.97]",
+      "tag": "🌍 Yandex/Max [147.45.253.97:4100 #9b44bfb4]",
       "settings": {
         "vnext": [
           {
@@ -7480,7 +7480,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [161.97.160.224]",
+      "tag": "🌍 Yandex/Max [161.97.160.224:443 #b81b4d1b]",
       "settings": {
         "vnext": [
           {
@@ -7511,7 +7511,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [91.224.87.22]",
+      "tag": "🌍 Yandex/Max [91.224.87.22:9882 #76186f1e]",
       "settings": {
         "vnext": [
           {
@@ -7545,7 +7545,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [179.254.111.0]",
+      "tag": "🌍 Yandex/Max [179.254.111.0:8443 #94006a20]",
       "settings": {
         "vnext": [
           {
@@ -7580,7 +7580,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [188.72.103.4]",
+      "tag": "🌍 Yandex/Max [188.72.103.4:443 #6e58f644]",
       "settings": {
         "vnext": [
           {
@@ -7616,7 +7616,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [185.229.9.175]",
+      "tag": "🌍 Yandex/Max [185.229.9.175:443 #2cf7be8d]",
       "settings": {
         "vnext": [
           {
@@ -7647,7 +7647,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [185.134.200.180]",
+      "tag": "🌍 Yandex/Max [185.134.200.180:443 #2cf7be8d]",
       "settings": {
         "vnext": [
           {
@@ -7678,7 +7678,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [185.229.9.74]",
+      "tag": "🌍 Yandex/Max [185.229.9.74:443 #2cf7be8d]",
       "settings": {
         "vnext": [
           {
@@ -7709,7 +7709,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [91.240.87.166]",
+      "tag": "🌍 Yandex/Max [91.240.87.166:443 #2cf7be8d]",
       "settings": {
         "vnext": [
           {
@@ -7740,7 +7740,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [185.229.9.236]",
+      "tag": "🌍 Yandex/Max [185.229.9.236:43005 #2cf7be8d]",
       "settings": {
         "vnext": [
           {
@@ -7771,7 +7771,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [185.229.9.234]",
+      "tag": "🌍 Yandex/Max [185.229.9.234:443 #2cf7be8d]",
       "settings": {
         "vnext": [
           {
@@ -7802,7 +7802,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [31.129.42.37]",
+      "tag": "🌍 Yandex/Max [31.129.42.37:443 #60091412]",
       "settings": {
         "vnext": [
           {
@@ -7838,7 +7838,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [188.68.218.110]",
+      "tag": "🌍 Yandex/Max [188.68.218.110:443 #60091412]",
       "settings": {
         "vnext": [
           {
@@ -7874,7 +7874,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [188.72.103.4]",
+      "tag": "🌍 Yandex/Max [188.72.103.4:443 #77acb784]",
       "settings": {
         "vnext": [
           {
@@ -7910,7 +7910,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [185.86.144.101]",
+      "tag": "🌍 Yandex/Max [185.86.144.101:443 #77acb784]",
       "settings": {
         "vnext": [
           {
@@ -7941,7 +7941,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [46.254.18.60]",
+      "tag": "🌍 Yandex/Max [46.254.18.60:443 #77acb784]",
       "settings": {
         "vnext": [
           {
@@ -7977,7 +7977,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [188.225.72.20]",
+      "tag": "🌍 Yandex/Max [188.225.72.20:443 #77acb784]",
       "settings": {
         "vnext": [
           {
@@ -8013,7 +8013,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [5.178.85.132]",
+      "tag": "🌍 Yandex/Max [5.178.85.132:443 #77acb784]",
       "settings": {
         "vnext": [
           {
@@ -8049,7 +8049,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [188.225.24.73]",
+      "tag": "🌍 Yandex/Max [188.225.24.73:443 #77acb784]",
       "settings": {
         "vnext": [
           {
@@ -8085,7 +8085,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [188.68.218.160]",
+      "tag": "🌍 Yandex/Max [188.68.218.160:443 #60091412]",
       "settings": {
         "vnext": [
           {
@@ -8121,7 +8121,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [37.9.4.128]",
+      "tag": "🌍 Yandex/Max [37.9.4.128:443 #60091412]",
       "settings": {
         "vnext": [
           {
@@ -8157,7 +8157,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [185.22.235.63]",
+      "tag": "🌍 Yandex/Max [185.22.235.63:443 #98a83537]",
       "settings": {
         "vnext": [
           {
@@ -8191,7 +8191,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [87.242.127.110]",
+      "tag": "🌍 Yandex/Max [87.242.127.110:9443 #98a83537]",
       "settings": {
         "vnext": [
           {
@@ -8225,7 +8225,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [185.22.235.181]",
+      "tag": "🌍 Yandex/Max [185.22.235.181:443 #98a83537]",
       "settings": {
         "vnext": [
           {
@@ -8259,7 +8259,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [188.225.25.142]",
+      "tag": "🌍 Yandex/Max [188.225.25.142:443 #7cde4592]",
       "settings": {
         "vnext": [
           {
@@ -8290,7 +8290,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [188.225.25.195]",
+      "tag": "🌍 Yandex/Max [188.225.25.195:443 #7cde4592]",
       "settings": {
         "vnext": [
           {
@@ -8321,7 +8321,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [188.225.24.201]",
+      "tag": "🌍 Yandex/Max [188.225.24.201:443 #7cde4592]",
       "settings": {
         "vnext": [
           {
@@ -8352,7 +8352,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [188.225.35.207]",
+      "tag": "🌍 Yandex/Max [188.225.35.207:443 #7cde4592]",
       "settings": {
         "vnext": [
           {
@@ -8383,7 +8383,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [188.225.44.89]",
+      "tag": "🌍 Yandex/Max [188.225.44.89:443 #7cde4592]",
       "settings": {
         "vnext": [
           {
@@ -8414,7 +8414,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [188.225.77.241]",
+      "tag": "🌍 Yandex/Max [188.225.77.241:443 #7cde4592]",
       "settings": {
         "vnext": [
           {
@@ -8445,7 +8445,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [95.129.236.216]",
+      "tag": "🌍 Yandex/Max [95.129.236.216:443 #1bff4d69]",
       "settings": {
         "vnext": [
           {
@@ -8481,7 +8481,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [84.201.146.8]",
+      "tag": "🌍 Yandex/Max [84.201.146.8:443 #1e2b9c0c]",
       "settings": {
         "vnext": [
           {
@@ -8516,7 +8516,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [188.225.45.152]",
+      "tag": "🌍 Yandex/Max [188.225.45.152:12096 #a95b3155]",
       "settings": {
         "vnext": [
           {
@@ -8547,7 +8547,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [188.225.57.78]",
+      "tag": "🌍 Yandex/Max [188.225.57.78:443 #7cde4592]",
       "settings": {
         "vnext": [
           {
@@ -8578,7 +8578,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [188.225.42.6]",
+      "tag": "🌍 Yandex/Max [188.225.42.6:443 #7cde4592]",
       "settings": {
         "vnext": [
           {
@@ -8609,7 +8609,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [188.225.58.238]",
+      "tag": "🌍 Yandex/Max [188.225.58.238:443 #7cde4592]",
       "settings": {
         "vnext": [
           {
@@ -8640,7 +8640,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [46.243.142.184]",
+      "tag": "🌍 Yandex/Max [46.243.142.184:8444 #6bc202b4]",
       "settings": {
         "vnext": [
           {
@@ -8674,7 +8674,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [188.72.103.4]",
+      "tag": "🌍 Yandex/Max [188.72.103.4:443 #6bc202b4]",
       "settings": {
         "vnext": [
           {
@@ -8709,7 +8709,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [81.94.148.178]",
+      "tag": "🌍 Yandex/Max [81.94.148.178:7445 #1bff4d69]",
       "settings": {
         "vnext": [
           {
@@ -8740,7 +8740,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [185.241.195.151]",
+      "tag": "🌍 Yandex/Max [185.241.195.151:9444 #1bff4d69]",
       "settings": {
         "vnext": [
           {
@@ -8771,7 +8771,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [87.242.94.69]",
+      "tag": "🌍 Yandex/Max [87.242.94.69:1443 #939d6cd7]",
       "settings": {
         "vnext": [
           {
@@ -8805,7 +8805,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [95.129.236.239]",
+      "tag": "🌍 Yandex/Max [95.129.236.239:443 #939d6cd7]",
       "settings": {
         "vnext": [
           {
@@ -8841,7 +8841,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [dostavitos.stroymatdv.cc]",
+      "tag": "🌍 Yandex/Max [dostavitos.stroymatdv.cc:443 #365de9e9]",
       "settings": {
         "vnext": [
           {
@@ -8877,7 +8877,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [104.171.138.229]",
+      "tag": "🌍 Yandex/Max [104.171.138.229:443 #8057eabc]",
       "settings": {
         "vnext": [
           {
@@ -8911,7 +8911,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [191.44.38.143]",
+      "tag": "🌍 Yandex/Max [191.44.38.143:8443 #e9ba7694]",
       "settings": {
         "vnext": [
           {
@@ -8941,7 +8941,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [188.72.103.4]",
+      "tag": "🌍 Yandex/Max [188.72.103.4:443 #4628e434]",
       "settings": {
         "vnext": [
           {
@@ -8977,7 +8977,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [188.225.72.20]",
+      "tag": "🌍 Yandex/Max [188.225.72.20:443 #4628e434]",
       "settings": {
         "vnext": [
           {
@@ -9013,7 +9013,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [185.141.227.155]",
+      "tag": "🌍 Yandex/Max [185.141.227.155:20002 #2b3e8750]",
       "settings": {
         "vnext": [
           {
@@ -9044,7 +9044,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [87.242.94.69]",
+      "tag": "🌍 Yandex/Max [87.242.94.69:1443 #a65afb43]",
       "settings": {
         "vnext": [
           {
@@ -9078,7 +9078,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [78.159.247.246]",
+      "tag": "🌍 Yandex/Max [78.159.247.246:443 #1852b02c]",
       "settings": {
         "vnext": [
           {
@@ -9114,7 +9114,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [185.134.200.180]",
+      "tag": "🌍 Yandex/Max [185.134.200.180:443 #c34617a9]",
       "settings": {
         "vnext": [
           {
@@ -9145,7 +9145,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [188.225.57.78]",
+      "tag": "🌍 Yandex/Max [188.225.57.78:443 #026f58a9]",
       "settings": {
         "vnext": [
           {
@@ -9176,7 +9176,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [37.139.42.138]",
+      "tag": "🌍 Yandex/Max [37.139.42.138:443 #c34617a9]",
       "settings": {
         "vnext": [
           {
@@ -9212,7 +9212,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [46.243.142.184]",
+      "tag": "🌍 Yandex/Max [46.243.142.184:8444 #2fcbd9ff]",
       "settings": {
         "vnext": [
           {
@@ -9246,7 +9246,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [87.249.49.87]",
+      "tag": "🌍 Yandex/Max [87.249.49.87:443 #9bbd487f]",
       "settings": {
         "vnext": [
           {
@@ -9277,7 +9277,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [5.178.85.132]",
+      "tag": "🌍 Yandex/Max [5.178.85.132:443 #4628e434]",
       "settings": {
         "vnext": [
           {
@@ -9313,7 +9313,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [31.129.42.37]",
+      "tag": "🌍 Yandex/Max [31.129.42.37:443 #74e3469f]",
       "settings": {
         "vnext": [
           {
@@ -9345,7 +9345,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [188.68.218.205]",
+      "tag": "🌍 Yandex/Max [188.68.218.205:443 #6aaa7d1d]",
       "settings": {
         "vnext": [
           {
@@ -9379,7 +9379,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [185.134.200.9]",
+      "tag": "🌍 Yandex/Max [185.134.200.9:443 #b7b8d377]",
       "settings": {
         "vnext": [
           {
@@ -9410,7 +9410,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [188.225.83.133]",
+      "tag": "🌍 Yandex/Max [188.225.83.133:443 #8c7e1e4d]",
       "settings": {
         "vnext": [
           {
@@ -9444,7 +9444,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [185.229.9.74]",
+      "tag": "🌍 Yandex/Max [185.229.9.74:443 #c34617a9]",
       "settings": {
         "vnext": [
           {
@@ -9475,7 +9475,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [188.225.77.241]",
+      "tag": "🌍 Yandex/Max [188.225.77.241:443 #026f58a9]",
       "settings": {
         "vnext": [
           {
@@ -9506,7 +9506,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [188.225.24.73]",
+      "tag": "🌍 Yandex/Max [188.225.24.73:443 #4628e434]",
       "settings": {
         "vnext": [
           {
@@ -9542,7 +9542,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [81.94.148.178]",
+      "tag": "🌍 Yandex/Max [81.94.148.178:7445 #45d434d0]",
       "settings": {
         "vnext": [
           {
@@ -9573,7 +9573,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [46.254.18.60]",
+      "tag": "🌍 Yandex/Max [46.254.18.60:443 #4628e434]",
       "settings": {
         "vnext": [
           {
@@ -9609,7 +9609,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [212.233.121.169]",
+      "tag": "🌍 Yandex/Max [212.233.121.169:443 #4628e434]",
       "settings": {
         "vnext": [
           {
@@ -9640,7 +9640,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [185.22.235.181]",
+      "tag": "🌍 Yandex/Max [185.22.235.181:443 #40840a6b]",
       "settings": {
         "vnext": [
           {
@@ -9674,7 +9674,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [95.129.236.216]",
+      "tag": "🌍 Yandex/Max [95.129.236.216:443 #45d434d0]",
       "settings": {
         "vnext": [
           {
@@ -9710,7 +9710,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [87.242.127.110]",
+      "tag": "🌍 Yandex/Max [87.242.127.110:9443 #40840a6b]",
       "settings": {
         "vnext": [
           {
@@ -9744,7 +9744,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [185.22.235.63]",
+      "tag": "🌍 Yandex/Max [185.22.235.63:443 #40840a6b]",
       "settings": {
         "vnext": [
           {
@@ -9778,7 +9778,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [217.19.122.17]",
+      "tag": "🌍 Yandex/Max [217.19.122.17:10654 #953358cb]",
       "settings": {
         "vnext": [
           {
@@ -9813,7 +9813,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [185.229.9.236]",
+      "tag": "🌍 Yandex/Max [185.229.9.236:43005 #c34617a9]",
       "settings": {
         "vnext": [
           {
@@ -9844,7 +9844,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [188.225.33.141]",
+      "tag": "🌍 Yandex/Max [188.225.33.141:443 #ff0b6ba8]",
       "settings": {
         "vnext": [
           {
@@ -9877,7 +9877,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [185.229.9.234]",
+      "tag": "🌍 Yandex/Max [185.229.9.234:443 #c34617a9]",
       "settings": {
         "vnext": [
           {
@@ -9908,7 +9908,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [201.24.50.94]",
+      "tag": "🌍 Yandex/Max [201.24.50.94:443 #8057eabc]",
       "settings": {
         "vnext": [
           {
@@ -9942,7 +9942,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [192.200.160.89]",
+      "tag": "🌍 Yandex/Max [192.200.160.89:443 #48198295]",
       "settings": {
         "vnext": [
           {
@@ -9975,7 +9975,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [62.133.62.179]",
+      "tag": "🌍 Yandex/Max [62.133.62.179:443 #d67af820]",
       "settings": {
         "vnext": [
           {
@@ -10006,7 +10006,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [obl1.finiki.lol]",
+      "tag": "🌍 Yandex/Max [obl1.finiki.lol:443 #9e4d44c2]",
       "settings": {
         "vnext": [
           {
@@ -10042,7 +10042,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [147.45.148.6]",
+      "tag": "🌍 Yandex/Max [147.45.148.6:443 #974f2c7e]",
       "settings": {
         "vnext": [
           {
@@ -10073,7 +10073,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [34.118.70.195]",
+      "tag": "🌍 Yandex/Max [34.118.70.195:443 #d518b4e2]",
       "settings": {
         "vnext": [
           {
@@ -10103,7 +10103,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [212.46.33.90]",
+      "tag": "🌍 Yandex/Max [212.46.33.90:443 #dac0bd30]",
       "settings": {
         "vnext": [
           {
@@ -10134,7 +10134,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [88.218.170.236]",
+      "tag": "🌍 Yandex/Max [88.218.170.236:443 #b872771d]",
       "settings": {
         "vnext": [
           {
@@ -10165,7 +10165,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [159.194.209.203]",
+      "tag": "🌍 Yandex/Max [159.194.209.203:2083 #6796f262]",
       "settings": {
         "vnext": [
           {
@@ -10196,7 +10196,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [qq.utiltools.site]",
+      "tag": "🌍 Yandex/Max [qq.utiltools.site:443 #4054fdc2]",
       "settings": {
         "vnext": [
           {
@@ -10227,7 +10227,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [185.79.138.71]",
+      "tag": "🌍 Yandex/Max [185.79.138.71:448 #0b0915d7]",
       "settings": {
         "vnext": [
           {
@@ -10257,7 +10257,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [slowkd.sadiepinki.com]",
+      "tag": "🌍 Yandex/Max [slowkd.sadiepinki.com:443 #71091100]",
       "settings": {
         "vnext": [
           {
@@ -10288,7 +10288,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [167.104.223.209]",
+      "tag": "🌍 Yandex/Max [167.104.223.209:443 #44e1105d]",
       "settings": {
         "vnext": [
           {
@@ -10319,7 +10319,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [tgfree.rush-server.com]",
+      "tag": "🌍 Yandex/Max [tgfree.rush-server.com:443 #ebd1c0d6]",
       "settings": {
         "vnext": [
           {
@@ -10350,7 +10350,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [merkos.mervi.icu]",
+      "tag": "🌍 Yandex/Max [merkos.mervi.icu:8443 #0efd1a54]",
       "settings": {
         "vnext": [
           {
@@ -10381,7 +10381,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [34.155.10.226]",
+      "tag": "🌍 Yandex/Max [34.155.10.226:443 #d619964d]",
       "settings": {
         "vnext": [
           {
@@ -10411,7 +10411,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [196.240.109.117]",
+      "tag": "🌍 Yandex/Max [196.240.109.117:443 #f495298f]",
       "settings": {
         "vnext": [
           {
@@ -10442,7 +10442,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [arturito.nxxzxaw.beer]",
+      "tag": "🌍 Yandex/Max [arturito.nxxzxaw.beer:443 #f495298f]",
       "settings": {
         "vnext": [
           {
@@ -10473,7 +10473,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [213.171.25.29]",
+      "tag": "🌍 Yandex/Max [213.171.25.29:9889 #5d16ac22]",
       "settings": {
         "vnext": [
           {
@@ -10507,7 +10507,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [159.194.209.203]",
+      "tag": "🌍 Yandex/Max [159.194.209.203:2053 #6796f262]",
       "settings": {
         "vnext": [
           {
@@ -10538,7 +10538,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [84.32.101.70]",
+      "tag": "🌍 Yandex/Max [84.32.101.70:443 #7cde4592]",
       "settings": {
         "vnext": [
           {
@@ -10572,7 +10572,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [germanz.ruletka.study]",
+      "tag": "🌍 Yandex/Max [germanz.ruletka.study:443 #f495298f]",
       "settings": {
         "vnext": [
           {
@@ -10603,7 +10603,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [31.76.7.154]",
+      "tag": "🌍 Yandex/Max [31.76.7.154:7443 #d7cad038]",
       "settings": {
         "vnext": [
           {
@@ -10634,7 +10634,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [88.216.220.87]",
+      "tag": "🌍 Yandex/Max [88.216.220.87:443 #a8e3155b]",
       "settings": {
         "vnext": [
           {
@@ -10668,7 +10668,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [pl1.chromevpn.cc]",
+      "tag": "🌍 Yandex/Max [pl1.chromevpn.cc:8444 #02bd8b5a]",
       "settings": {
         "vnext": [
           {
@@ -10699,7 +10699,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [31.76.39.153]",
+      "tag": "🌍 Yandex/Max [31.76.39.153:443 #c5694dc5]",
       "settings": {
         "vnext": [
           {
@@ -10730,7 +10730,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [34.85.179.6]",
+      "tag": "🌍 Yandex/Max [34.85.179.6:443 #8ea1a178]",
       "settings": {
         "vnext": [
           {
@@ -10760,7 +10760,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [fra.loozerp.wiki]",
+      "tag": "🌍 Yandex/Max [fra.loozerp.wiki:443 #4bdeee92]",
       "settings": {
         "vnext": [
           {
@@ -10791,7 +10791,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [5.157.10.250]",
+      "tag": "🌍 Yandex/Max [5.157.10.250:443 #f495298f]",
       "settings": {
         "vnext": [
           {
@@ -10822,7 +10822,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [88.216.195.135]",
+      "tag": "🌍 Yandex/Max [88.216.195.135:443 #7cde4592]",
       "settings": {
         "vnext": [
           {
@@ -10853,7 +10853,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [185.171.202.105]",
+      "tag": "🌍 Yandex/Max [185.171.202.105:443 #4bdeee92]",
       "settings": {
         "vnext": [
           {
@@ -10884,7 +10884,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [polka.stopingiphatered.shop]",
+      "tag": "🌍 Yandex/Max [polka.stopingiphatered.shop:443 #4bdeee92]",
       "settings": {
         "vnext": [
           {
@@ -10915,7 +10915,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [135.106.221.177]",
+      "tag": "🌍 Yandex/Max [135.106.221.177:11801 #eaa3e093]",
       "settings": {
         "vnext": [
           {
@@ -10946,7 +10946,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [176.108.246.58]",
+      "tag": "🌍 Yandex/Max [176.108.246.58:9889 #5d16ac22]",
       "settings": {
         "vnext": [
           {
@@ -10980,7 +10980,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [168.222.255.91]",
+      "tag": "🌍 Yandex/Max [168.222.255.91:443 #fc47db0c]",
       "settings": {
         "vnext": [
           {
@@ -11011,7 +11011,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [89.169.171.202]",
+      "tag": "🌍 Yandex/Max [89.169.171.202:8444 #b3a11068]",
       "settings": {
         "vnext": [
           {
@@ -11045,7 +11045,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [yaruss.stopingiphatered.shop]",
+      "tag": "🌍 Yandex/Max [yaruss.stopingiphatered.shop:443 #4bdeee92]",
       "settings": {
         "vnext": [
           {
@@ -11076,7 +11076,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [31.76.39.141]",
+      "tag": "🌍 Yandex/Max [31.76.39.141:443 #c5694dc5]",
       "settings": {
         "vnext": [
           {
@@ -11107,7 +11107,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [95.85.254.153]",
+      "tag": "🌍 Yandex/Max [95.85.254.153:443 #4bdeee92]",
       "settings": {
         "vnext": [
           {
@@ -11138,7 +11138,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [4.kiska.lol]",
+      "tag": "🌍 Yandex/Max [4.kiska.lol:443 #3c092bd5]",
       "settings": {
         "vnext": [
           {
@@ -11169,7 +11169,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [159.194.209.203]",
+      "tag": "🌍 Yandex/Max [159.194.209.203:2087 #6796f262]",
       "settings": {
         "vnext": [
           {
@@ -11200,7 +11200,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [31.76.84.174]",
+      "tag": "🌍 Yandex/Max [31.76.84.174:443 #4bdeee92]",
       "settings": {
         "vnext": [
           {
@@ -11231,7 +11231,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [45.151.182.160]",
+      "tag": "🌍 Yandex/Max [45.151.182.160:443 #3c092bd5]",
       "settings": {
         "vnext": [
           {
@@ -11262,7 +11262,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [185.33.24.85]",
+      "tag": "🌍 Yandex/Max [185.33.24.85:443 #933eb45b]",
       "settings": {
         "vnext": [
           {
@@ -11292,7 +11292,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [176.109.104.195]",
+      "tag": "🌍 Yandex/Max [176.109.104.195:9882 #5d16ac22]",
       "settings": {
         "vnext": [
           {
@@ -11326,7 +11326,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [13.143.164.40]",
+      "tag": "🌍 Yandex/Max [13.143.164.40:443 #933eb45b]",
       "settings": {
         "vnext": [
           {
@@ -11356,7 +11356,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [159.194.209.203]",
+      "tag": "🌍 Yandex/Max [159.194.209.203:2096 #6796f262]",
       "settings": {
         "vnext": [
           {
@@ -11387,7 +11387,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [176.118.166.100]",
+      "tag": "🌍 Yandex/Max [176.118.166.100:58888 #de71c0cd]",
       "settings": {
         "vnext": [
           {
@@ -11418,7 +11418,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [144.31.40.96]",
+      "tag": "🌍 Yandex/Max [144.31.40.96:2053 #7ab9fe4f]",
       "settings": {
         "vnext": [
           {
@@ -11449,7 +11449,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [150.241.101.17]",
+      "tag": "🌍 Yandex/Max [150.241.101.17:8443 #47d9b534]",
       "settings": {
         "vnext": [
           {
@@ -11480,7 +11480,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [178.176.128.128]",
+      "tag": "🌍 Yandex/Max [178.176.128.128:443 #d2e00857]",
       "settings": {
         "vnext": [
           {
@@ -11511,7 +11511,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [185.229.9.74]",
+      "tag": "🌍 Yandex/Max [185.229.9.74:443 #5254e414]",
       "settings": {
         "vnext": [
           {
@@ -11542,7 +11542,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [31.177.82.251]",
+      "tag": "🌍 Yandex/Max [31.177.82.251:443 #8f67e374]",
       "settings": {
         "vnext": [
           {
@@ -11573,7 +11573,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [84.201.169.241]",
+      "tag": "🌍 Yandex/Max [84.201.169.241:443 #1e2b9c0c]",
       "settings": {
         "vnext": [
           {
@@ -11604,7 +11604,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [185.229.9.234]",
+      "tag": "🌍 Yandex/Max [185.229.9.234:443 #5254e414]",
       "settings": {
         "vnext": [
           {
@@ -11635,7 +11635,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [87.199.205.28]",
+      "tag": "🌍 Yandex/Max [87.199.205.28:443 #501a2da5]",
       "settings": {
         "vnext": [
           {
@@ -11666,7 +11666,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [185.134.200.180]",
+      "tag": "🌍 Yandex/Max [185.134.200.180:443 #5254e414]",
       "settings": {
         "vnext": [
           {
@@ -11697,7 +11697,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [81.94.148.178]",
+      "tag": "🌍 Yandex/Max [81.94.148.178:7445 #166da8d7]",
       "settings": {
         "vnext": [
           {
@@ -11728,7 +11728,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [185.229.9.236]",
+      "tag": "🌍 Yandex/Max [185.229.9.236:43005 #5254e414]",
       "settings": {
         "vnext": [
           {
@@ -11759,7 +11759,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [94.183.224.45]",
+      "tag": "🌍 Yandex/Max [94.183.224.45:443 #d72f05b0]",
       "settings": {
         "vnext": [
           {
@@ -11790,7 +11790,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [2.27.54.106]",
+      "tag": "🌍 Yandex/Max [2.27.54.106:60016 #3c092bd5]",
       "settings": {
         "vnext": [
           {
@@ -11821,7 +11821,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [185.241.195.151]",
+      "tag": "🌍 Yandex/Max [185.241.195.151:9444 #166da8d7]",
       "settings": {
         "vnext": [
           {
@@ -11852,7 +11852,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [37.139.42.138]",
+      "tag": "🌍 Yandex/Max [37.139.42.138:443 #5254e414]",
       "settings": {
         "vnext": [
           {
@@ -11885,7 +11885,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [31.77.140.4]",
+      "tag": "🌍 Yandex/Max [31.77.140.4:8443 #9fd994ad]",
       "settings": {
         "vnext": [
           {
@@ -11916,7 +11916,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [95.129.236.216]",
+      "tag": "🌍 Yandex/Max [95.129.236.216:443 #166da8d7]",
       "settings": {
         "vnext": [
           {
@@ -11949,7 +11949,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [212.113.120.174]",
+      "tag": "🌍 Yandex/Max [212.113.120.174:443 #72f8e59f]",
       "settings": {
         "vnext": [
           {
@@ -11980,7 +11980,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [150.241.101.80]",
+      "tag": "🌍 Yandex/Max [150.241.101.80:8443 #47d9b534]",
       "settings": {
         "vnext": [
           {
@@ -12011,7 +12011,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [av513u.sysopnova.art]",
+      "tag": "🌍 Yandex/Max [av513u.sysopnova.art:443 #3710fc0f]",
       "settings": {
         "vnext": [
           {
@@ -12042,7 +12042,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [91.108.240.205]",
+      "tag": "🌍 Yandex/Max [91.108.240.205:443 #c795bdd5]",
       "settings": {
         "vnext": [
           {
@@ -12073,7 +12073,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [194.48.142.103]",
+      "tag": "🌍 Yandex/Max [194.48.142.103:443 #59d1cc91]",
       "settings": {
         "vnext": [
           {
@@ -12104,7 +12104,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [46.243.142.184]",
+      "tag": "🌍 Yandex/Max [46.243.142.184:8444 #81487c7b]",
       "settings": {
         "vnext": [
           {
@@ -12138,7 +12138,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [2.27.54.106]",
+      "tag": "🌍 Yandex/Max [2.27.54.106:50098 #3c092bd5]",
       "settings": {
         "vnext": [
           {
@@ -12169,7 +12169,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [88.218.248.89]",
+      "tag": "🌍 Yandex/Max [88.218.248.89:443 #a56a3bda]",
       "settings": {
         "vnext": [
           {
@@ -12200,7 +12200,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [144.31.243.240]",
+      "tag": "🌍 Yandex/Max [144.31.243.240:443 #d72f05b0]",
       "settings": {
         "vnext": [
           {
@@ -12231,7 +12231,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [91.240.87.166]",
+      "tag": "🌍 Yandex/Max [91.240.87.166:443 #5254e414]",
       "settings": {
         "vnext": [
           {
@@ -12262,7 +12262,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [179.254.111.0]",
+      "tag": "🌍 Yandex/Max [179.254.111.0:443 #94006a20]",
       "settings": {
         "vnext": [
           {
@@ -12293,7 +12293,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [199.232.237.245]",
+      "tag": "🌍 Yandex/Max [199.232.237.245:443 #8e9cbf76]",
       "settings": {
         "vnext": [
           {
@@ -12328,7 +12328,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [62.233.39.3]",
+      "tag": "🌍 Yandex/Max [62.233.39.3:8443 #5e243126]",
       "settings": {
         "vnext": [
           {
@@ -12362,7 +12362,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [46.8.200.91]",
+      "tag": "🌍 Yandex/Max [46.8.200.91:443 #0a2dde28]",
       "settings": {
         "vnext": [
           {
@@ -12395,7 +12395,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [46.8.200.91]",
+      "tag": "🌍 Yandex/Max [46.8.200.91:443 #b8201bab]",
       "settings": {
         "vnext": [
           {
@@ -12428,7 +12428,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [46.173.17.19]",
+      "tag": "🌍 Yandex/Max [46.173.17.19:443 #fc47db0c]",
       "settings": {
         "vnext": [
           {
@@ -12459,7 +12459,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [31.128.39.89]",
+      "tag": "🌍 Yandex/Max [31.128.39.89:443 #fc47db0c]",
       "settings": {
         "vnext": [
           {
@@ -12490,7 +12490,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [168.222.194.138]",
+      "tag": "🌍 Yandex/Max [168.222.194.138:9880 #5d16ac22]",
       "settings": {
         "vnext": [
           {
@@ -12524,7 +12524,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [37.139.42.138]",
+      "tag": "🌍 Yandex/Max [37.139.42.138:443 #365de9e9]",
       "settings": {
         "vnext": [
           {
@@ -12557,7 +12557,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [176.109.85.83]",
+      "tag": "🌍 Yandex/Max [176.109.85.83:443 #9e4d44c2]",
       "settings": {
         "vnext": [
           {
@@ -12590,7 +12590,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [45.134.12.133]",
+      "tag": "🌍 Yandex/Max [45.134.12.133:443 #fc47db0c]",
       "settings": {
         "vnext": [
           {
@@ -12621,7 +12621,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [130.49.218.208]",
+      "tag": "🌍 Yandex/Max [130.49.218.208:5432 #cc01f435]",
       "settings": {
         "vnext": [
           {
@@ -12649,7 +12649,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [89.125.43.121]",
+      "tag": "🌍 Yandex/Max [89.125.43.121:443 #9bbd487f]",
       "settings": {
         "vnext": [
           {
@@ -12680,7 +12680,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [hyhhuh.mervi.icu]",
+      "tag": "🌍 Yandex/Max [hyhhuh.mervi.icu:443 #9bbd487f]",
       "settings": {
         "vnext": [
           {
@@ -12711,7 +12711,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [2.59.134.226]",
+      "tag": "🌍 Yandex/Max [2.59.134.226:443 #88281d02]",
       "settings": {
         "vnext": [
           {
@@ -12742,7 +12742,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [82.118.16.187]",
+      "tag": "🌍 Yandex/Max [82.118.16.187:443 #dc2259c4]",
       "settings": {
         "vnext": [
           {
@@ -12773,7 +12773,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [144.31.131.38]",
+      "tag": "🌍 Yandex/Max [144.31.131.38:443 #adc11f30]",
       "settings": {
         "vnext": [
           {
@@ -12804,7 +12804,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [est1313.ggisopi.su]",
+      "tag": "🌍 Yandex/Max [est1313.ggisopi.su:443 #d0f0a880]",
       "settings": {
         "vnext": [
           {
@@ -12835,7 +12835,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [78.111.89.171]",
+      "tag": "🌍 Yandex/Max [78.111.89.171:443 #0370b162]",
       "settings": {
         "vnext": [
           {
@@ -12865,7 +12865,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [167.17.69.171]",
+      "tag": "🌍 Yandex/Max [167.17.69.171:443 #00144519]",
       "settings": {
         "vnext": [
           {
@@ -12896,7 +12896,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [5.199.170.34]",
+      "tag": "🌍 Yandex/Max [5.199.170.34:443 #7cde4592]",
       "settings": {
         "vnext": [
           {
@@ -12927,7 +12927,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [50.7.95.170]",
+      "tag": "🌍 Yandex/Max [50.7.95.170:443 #7cde4592]",
       "settings": {
         "vnext": [
           {
@@ -12958,7 +12958,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [212.46.33.90]",
+      "tag": "🌍 Yandex/Max [212.46.33.90:443 #71091100]",
       "settings": {
         "vnext": [
           {
@@ -12989,7 +12989,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [88.119.176.131]",
+      "tag": "🌍 Yandex/Max [88.119.176.131:443 #4bdeee92]",
       "settings": {
         "vnext": [
           {
@@ -13020,7 +13020,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [litter.propper.beauty]",
+      "tag": "🌍 Yandex/Max [litter.propper.beauty:443 #4bdeee92]",
       "settings": {
         "vnext": [
           {
@@ -13051,7 +13051,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [trust.betust.net]",
+      "tag": "🌍 Yandex/Max [trust.betust.net:443 #7cde4592]",
       "settings": {
         "vnext": [
           {
@@ -13082,7 +13082,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [95.217.24.236]",
+      "tag": "🌍 Yandex/Max [95.217.24.236:2087 #10d85f65]",
       "settings": {
         "vnext": [
           {
@@ -13113,7 +13113,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [sw.shhflow.xyz]",
+      "tag": "🌍 Yandex/Max [sw.shhflow.xyz:443 #129799e0]",
       "settings": {
         "vnext": [
           {
@@ -13144,7 +13144,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [159.195.240.82]",
+      "tag": "🌍 Yandex/Max [159.195.240.82:443 #75079a7f]",
       "settings": {
         "vnext": [
           {
@@ -13175,7 +13175,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [kazak.koniki.beer]",
+      "tag": "🌍 Yandex/Max [kazak.koniki.beer:443 #f495298f]",
       "settings": {
         "vnext": [
           {
@@ -13206,7 +13206,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [fbsv6.guardora.pro]",
+      "tag": "🌍 Yandex/Max [fbsv6.guardora.pro:443 #bc5ec86c]",
       "settings": {
         "vnext": [
           {
@@ -13242,7 +13242,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [5.78.159.214]",
+      "tag": "🌍 Yandex/Max [5.78.159.214:80 #52ecd83b]",
       "settings": {
         "vnext": [
           {
@@ -13273,7 +13273,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [5.78.139.175]",
+      "tag": "🌍 Yandex/Max [5.78.139.175:80 #695fdf80]",
       "settings": {
         "vnext": [
           {
@@ -13304,7 +13304,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [94.228.214.90]",
+      "tag": "🌍 Yandex/Max [94.228.214.90:8443 #721bacfe]",
       "settings": {
         "vnext": [
           {
@@ -13339,7 +13339,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [platform113.golnamakcert.top]",
+      "tag": "🌍 Yandex/Max [platform113.golnamakcert.top:80 #e13cf851]",
       "settings": {
         "vnext": [
           {
@@ -13368,7 +13368,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [media-se.compressor.work]",
+      "tag": "🌍 Yandex/Max [media-se.compressor.work:14443 #365de9e9]",
       "settings": {
         "vnext": [
           {
@@ -13404,7 +13404,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [201.10.90.24]",
+      "tag": "🌍 Yandex/Max [201.10.90.24:2027 #a6b29052]",
       "settings": {
         "vnext": [
           {
@@ -13439,7 +13439,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [swebz.loozerp.wiki]",
+      "tag": "🌍 Yandex/Max [swebz.loozerp.wiki:443 #f495298f]",
       "settings": {
         "vnext": [
           {
@@ -13470,7 +13470,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [194.77.71.152]",
+      "tag": "🌍 Yandex/Max [194.77.71.152:443 #8f67e374]",
       "settings": {
         "vnext": [
           {
@@ -13501,7 +13501,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [66.90.104.42]",
+      "tag": "🌍 Yandex/Max [66.90.104.42:2083 #cd3bb7d9]",
       "settings": {
         "vnext": [
           {
@@ -13528,7 +13528,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [179.254.115.49]",
+      "tag": "🌍 Yandex/Max [179.254.115.49:443 #2ac46dc3]",
       "settings": {
         "vnext": [
           {
@@ -13559,7 +13559,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [rover.sassi.surf]",
+      "tag": "🌍 Yandex/Max [rover.sassi.surf:443 #9e4d44c2]",
       "settings": {
         "vnext": [
           {
@@ -13595,7 +13595,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [188.72.103.3]",
+      "tag": "🌍 Yandex/Max [188.72.103.3:443 #7cde4592]",
       "settings": {
         "vnext": [
           {
@@ -13631,7 +13631,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [kilka2.mervi.icu]",
+      "tag": "🌍 Yandex/Max [kilka2.mervi.icu:443 #0efd1a54]",
       "settings": {
         "vnext": [
           {
@@ -13667,7 +13667,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [amus.konus.buzz]",
+      "tag": "🌍 Yandex/Max [amus.konus.buzz:443 #9e4d44c2]",
       "settings": {
         "vnext": [
           {
@@ -13703,7 +13703,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [ssjs1.refcapmap.pro]",
+      "tag": "🌍 Yandex/Max [ssjs1.refcapmap.pro:443 #6e58f644]",
       "settings": {
         "vnext": [
           {
@@ -13739,7 +13739,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [178.16.22.36]",
+      "tag": "🌍 Yandex/Max [178.16.22.36:443 #0a6f92f6]",
       "settings": {
         "vnext": [
           {
@@ -13770,7 +13770,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [5.39.202.140]",
+      "tag": "🌍 Yandex/Max [5.39.202.140:443 #4bdeee92]",
       "settings": {
         "vnext": [
           {
@@ -13801,7 +13801,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [merkos.mervi.icu]",
+      "tag": "🌍 Yandex/Max [merkos.mervi.icu:8446 #0efd1a54]",
       "settings": {
         "vnext": [
           {
@@ -13832,7 +13832,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [spanish67.kovsh.lol]",
+      "tag": "🌍 Yandex/Max [spanish67.kovsh.lol:443 #4bdeee92]",
       "settings": {
         "vnext": [
           {
@@ -13863,7 +13863,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [fra2.loozerp.wiki]",
+      "tag": "🌍 Yandex/Max [fra2.loozerp.wiki:443 #f495298f]",
       "settings": {
         "vnext": [
           {
@@ -13894,7 +13894,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [germoff.nxxzxaw.beer]",
+      "tag": "🌍 Yandex/Max [germoff.nxxzxaw.beer:443 #4bdeee92]",
       "settings": {
         "vnext": [
           {
@@ -13925,7 +13925,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [cze1.somiki.best]",
+      "tag": "🌍 Yandex/Max [cze1.somiki.best:443 #f495298f]",
       "settings": {
         "vnext": [
           {
@@ -13956,7 +13956,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [gerwai1488.vvzzkontaktezzvv.garden]",
+      "tag": "🌍 Yandex/Max [gerwai1488.vvzzkontaktezzvv.garden:443 #4bdeee92]",
       "settings": {
         "vnext": [
           {
@@ -13987,7 +13987,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [greatbritain.lavivas.org]",
+      "tag": "🌍 Yandex/Max [greatbritain.lavivas.org:7443 #44e1105d]",
       "settings": {
         "vnext": [
           {
@@ -14018,7 +14018,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [est1.loozerp.wiki]",
+      "tag": "🌍 Yandex/Max [est1.loozerp.wiki:443 #f495298f]",
       "settings": {
         "vnext": [
           {
@@ -14049,7 +14049,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [5.181.201.43]",
+      "tag": "🌍 Yandex/Max [5.181.201.43:443 #f495298f]",
       "settings": {
         "vnext": [
           {
@@ -14080,7 +14080,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [146.75.117.242]",
+      "tag": "🌍 Yandex/Max [146.75.117.242:443 #11e6c528]",
       "settings": {
         "vnext": [
           {
@@ -14113,7 +14113,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [surstreming.vvzzkontaktezzvv.garden]",
+      "tag": "🌍 Yandex/Max [surstreming.vvzzkontaktezzvv.garden:443 #4bdeee92]",
       "settings": {
         "vnext": [
           {
@@ -14144,7 +14144,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [93.123.101.203]",
+      "tag": "🌍 Yandex/Max [93.123.101.203:443 #4bdeee92]",
       "settings": {
         "vnext": [
           {
@@ -14175,7 +14175,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [109.73.201.148]",
+      "tag": "🌍 Yandex/Max [109.73.201.148:9443 #0a6f92f6]",
       "settings": {
         "vnext": [
           {
@@ -14206,7 +14206,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [152.53.229.168]",
+      "tag": "🌍 Yandex/Max [152.53.229.168:443 #0a6f92f6]",
       "settings": {
         "vnext": [
           {
@@ -14237,7 +14237,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [2.26.53.224]",
+      "tag": "🌍 Yandex/Max [2.26.53.224:5432 #cc01f435]",
       "settings": {
         "vnext": [
           {
@@ -14265,7 +14265,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [polkakurvich.hohoterz.beer]",
+      "tag": "🌍 Yandex/Max [polkakurvich.hohoterz.beer:443 #4bdeee92]",
       "settings": {
         "vnext": [
           {
@@ -14296,7 +14296,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [31.77.12.112]",
+      "tag": "🌍 Yandex/Max [31.77.12.112:443 #9bbd487f]",
       "settings": {
         "vnext": [
           {
@@ -14327,7 +14327,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [89.22.232.117]",
+      "tag": "🌍 Yandex/Max [89.22.232.117:443 #d929e993]",
       "settings": {
         "vnext": [
           {
@@ -14357,7 +14357,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [148.135.185.51]",
+      "tag": "🌍 Yandex/Max [148.135.185.51:443 #0a6f92f6]",
       "settings": {
         "vnext": [
           {
@@ -14388,7 +14388,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [171.22.114.98]",
+      "tag": "🌍 Yandex/Max [171.22.114.98:443 #d929e993]",
       "settings": {
         "vnext": [
           {
@@ -14418,7 +14418,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [89.125.156.51]",
+      "tag": "🌍 Yandex/Max [89.125.156.51:2027 #a6b29052]",
       "settings": {
         "vnext": [
           {
@@ -14449,7 +14449,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [tewfd.mervi.icu]",
+      "tag": "🌍 Yandex/Max [tewfd.mervi.icu:443 #9bbd487f]",
       "settings": {
         "vnext": [
           {
@@ -14480,7 +14480,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [fintanil228.vvzzkontaktezzvv.garden]",
+      "tag": "🌍 Yandex/Max [fintanil228.vvzzkontaktezzvv.garden:2053 #f495298f]",
       "settings": {
         "vnext": [
           {
@@ -14511,7 +14511,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [77.91.76.156]",
+      "tag": "🌍 Yandex/Max [77.91.76.156:57160 #68ad9a6d]",
       "settings": {
         "vnext": [
           {
@@ -14542,7 +14542,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [tomaz1337shellbuy.vvzzkontaktezzvv.garden]",
+      "tag": "🌍 Yandex/Max [tomaz1337shellbuy.vvzzkontaktezzvv.garden:443 #4bdeee92]",
       "settings": {
         "vnext": [
           {
@@ -14573,7 +14573,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [192.177.26.53]",
+      "tag": "🌍 Yandex/Max [192.177.26.53:2027 #a6b29052]",
       "settings": {
         "vnext": [
           {
@@ -14608,7 +14608,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [200.165.230.213]",
+      "tag": "🌍 Yandex/Max [200.165.230.213:443 #0a6f92f6]",
       "settings": {
         "vnext": [
           {
@@ -14639,7 +14639,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [fintanil228.vvzzkontaktezzvv.garden]",
+      "tag": "🌍 Yandex/Max [fintanil228.vvzzkontaktezzvv.garden:443 #4bdeee92]",
       "settings": {
         "vnext": [
           {
@@ -14670,7 +14670,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [verfg.mervi.icu]",
+      "tag": "🌍 Yandex/Max [verfg.mervi.icu:443 #9bbd487f]",
       "settings": {
         "vnext": [
           {
@@ -14701,7 +14701,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [solih.mervi.icu]",
+      "tag": "🌍 Yandex/Max [solih.mervi.icu:443 #9bbd487f]",
       "settings": {
         "vnext": [
           {
@@ -14732,7 +14732,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [sujik.mervi.icu]",
+      "tag": "🌍 Yandex/Max [sujik.mervi.icu:443 #9bbd487f]",
       "settings": {
         "vnext": [
           {
@@ -14763,7 +14763,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [200.169.182.75]",
+      "tag": "🌍 Yandex/Max [200.169.182.75:443 #0a6f92f6]",
       "settings": {
         "vnext": [
           {
@@ -14794,7 +14794,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [angldril.pumpkinpie.study]",
+      "tag": "🌍 Yandex/Max [angldril.pumpkinpie.study:443 #f495298f]",
       "settings": {
         "vnext": [
           {
@@ -14825,7 +14825,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [163.245.207.43]",
+      "tag": "🌍 Yandex/Max [163.245.207.43:443 #0a6f92f6]",
       "settings": {
         "vnext": [
           {
@@ -14856,7 +14856,7 @@
     },
     {
       "protocol": "vless",
-      "tag": "🌍 Yandex/Max [111.111.111.111]",
+      "tag": "🌍 Yandex/Max [111.111.111.111:111 #21160a7a]",
       "settings": {
         "vnext": [
           {
