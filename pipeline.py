@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-pipeline.py — единый скрипт: скачивание + парсинг + фильтр + зачистка + сохранение.
-Результат: output/sub_1212.json и output/sub_1212.txt
+pipeline.py — единый скрипт: скачивание + парсинг + гео-фильтр + зачистка мусора + сохранение.
+Гарантирует уникальные tag'и (иначе Xray падает с "existing tag found").
 """
 
 import os
@@ -316,7 +316,8 @@ class VPNAggregator:
     def process_and_filter(self):
         print("🔧 Гео-фильтрация + зачистка мусора...")
         filtered = []
-        seen = set()
+        seen = set()         # дедупликация по address:port:uuid
+        used_tags = set()    # гарантия уникальности tag
 
         for ob in self.outbounds:
             try:
@@ -334,7 +335,7 @@ class VPNAggregator:
             if address in ("0.0.0.0", "127.0.0.1"):
                 continue
 
-            # Проверка транспорта ещё раз (на случай, если что-то проскочило)
+            # Повторная проверка транспорта
             stream = ob.get("streamSettings", {})
             network = stream.get("network", "tcp")
             if network in FORBIDDEN_NETWORKS:
@@ -349,7 +350,6 @@ class VPNAggregator:
                 self.skipped["invalid"] += 1
                 continue
 
-            # Reality без publicKey
             if stream.get("security") == "reality":
                 if not stream.get("realitySettings", {}).get("publicKey"):
                     self.skipped["invalid"] += 1
@@ -374,7 +374,18 @@ class VPNAggregator:
                 continue
             seen.add(key)
 
-            ob["tag"] = f"🌍 Yandex/Max [{address}]"
+            # === УНИКАЛЬНЫЙ TAG: address + port + короткий UUID ===
+            short_id = user_id.split("-")[0]
+            new_tag = f"🌍 Yandex/Max [{address}:{port} #{short_id}]"
+
+            base_tag = new_tag
+            suffix = 2
+            while new_tag in used_tags:
+                new_tag = f"{base_tag} ({suffix})"
+                suffix += 1
+            used_tags.add(new_tag)
+
+            ob["tag"] = new_tag
             filtered.append(ob)
 
         print(f"🔍 Валидных узлов: {len(filtered)}")
@@ -451,7 +462,7 @@ class VPNAggregator:
             f.write(b64)
         print(f"🎉 Подписка сохранена: {FINAL_LINKS_FILE} (ссылок: {len(links)})")
 
-        # 2) JSON без inbounds (клиентский конфиг, не панельный)
+        # 2) JSON без inbounds (клиентский конфиг)
         final_json = {
             "remarks": "🇷🇺 Yandex/Max",
             "outbounds": selected + [
@@ -478,6 +489,20 @@ class VPNAggregator:
                     strip_remarks(item)
 
         strip_remarks(final_json["outbounds"])
+
+        # === ФИНАЛЬНАЯ ГАРАНТИЯ УНИКАЛЬНОСТИ TAG'ОВ ===
+        seen_tags = set()
+        for ob in final_json["outbounds"]:
+            t = ob.get("tag")
+            if t is None:
+                continue
+            base = t
+            suffix = 2
+            while t in seen_tags:
+                t = f"{base} ({suffix})"
+                suffix += 1
+            ob["tag"] = t
+            seen_tags.add(t)
 
         with open(FINAL_OUTPUT_FILE, "w", encoding="utf-8") as f:
             json.dump(final_json, f, indent=2, ensure_ascii=False)
