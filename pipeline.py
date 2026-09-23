@@ -90,6 +90,7 @@ class VPNAggregator:
         self.ssl_ctx.verify_mode = ssl.CERT_NONE
         self.outbounds = []
         self.skipped_invalid = 0
+        self.skipped_old_http = 0
 
     # ---------------------------------------------------------------- utils
     def decode_base64(self, text: str) -> str:
@@ -173,14 +174,13 @@ class VPNAggregator:
                 return None
             user_info, host_port = rest.rsplit("@", 1)
 
-            # === ЖЁСТКАЯ ВАЛИДАЦИЯ ===
-            # 1. UUID обязателен (иначе панель требует password)
+            # === ВАЛИДАЦИЯ UUID ===
             if not is_valid_uuid(user_info):
                 self.skipped_invalid += 1
                 return None
 
-            # 2. Фейковые и пустые ID
-            if user_info.lower() in ("dummy", "none", "null", "00000000-0000-0000-0000-000000000000"):
+            if user_info.lower() in ("dummy", "none", "null",
+                                     "00000000-0000-0000-0000-000000000000"):
                 self.skipped_invalid += 1
                 return None
 
@@ -200,12 +200,10 @@ class VPNAggregator:
                     return None
                 port = int(port_str)
 
-            # 3. Пустые/фейковые адреса
             if not address or address in ("0.0.0.0", "127.0.0.1", "localhost"):
                 self.skipped_invalid += 1
                 return None
 
-            # 4. Порт в допустимом диапазоне
             if not (1 <= port <= 65535):
                 self.skipped_invalid += 1
                 return None
@@ -213,18 +211,12 @@ class VPNAggregator:
             network = params.get("type", "raw")
             security = params.get("security", "none")
 
-            stream = {"network": network, "security": security}
-
+            # === ВЫРЕЗАЕМ СТАРЫЙ HTTP-ТРАНСПОРТ (Xray удалил его) ===
             if network in ("tcp", "raw") and params.get("headerType") == "http":
-                stream["tcpSettings"] = {
-                    "header": {
-                        "type": "http",
-                        "request": {
-                            "path": [params.get("path", "/")],
-                            "headers": {"Host": [params.get("host", address)]},
-                        },
-                    }
-                }
+                self.skipped_old_http += 1
+                return None
+
+            stream = {"network": network, "security": security}
 
             if network == "ws":
                 stream["wsSettings"] = {
@@ -244,6 +236,7 @@ class VPNAggregator:
                     "host": params.get("host", address),
                     "mode": params.get("mode", "auto"),
                 }
+
             if network == "httpupgrade":
                 stream["httpupgradeSettings"] = {
                     "path": params.get("path", "/"),
@@ -261,7 +254,6 @@ class VPNAggregator:
                 stream["tlsSettings"] = {k: v for k, v in tls_settings.items() if v is not None}
 
             if security == "reality":
-                # Reality ОБЯЗАТЕЛЬНО требует pbk — иначе конфиг нерабочий
                 pbk = params.get("pbk") or params.get("publicKey", "")
                 if not pbk:
                     self.skipped_invalid += 1
@@ -313,7 +305,6 @@ class VPNAggregator:
             except (KeyError, IndexError, TypeError):
                 continue
 
-            # Повторная проверка UUID (на всякий)
             if not is_valid_uuid(user_id):
                 continue
 
@@ -336,8 +327,9 @@ class VPNAggregator:
             ob["tag"] = f"🌍 Yandex/Max [{address}]"
             filtered_obs.append(ob)
 
-        print(f"🔍 Фильтр завершён. Валидных серверов: {len(filtered_obs)} "
-              f"(отброшено невалидных: {self.skipped_invalid})")
+        print(f"🔍 Фильтр завершён. Валидных серверов: {len(filtered_obs)}")
+        print(f"   Отброшено невалидных: {self.skipped_invalid}")
+        print(f"   Отброшено со старым HTTP-транспортом: {self.skipped_old_http}")
         self.outbounds = filtered_obs
 
     # ---------------------------------------------------------------- saver
@@ -408,9 +400,7 @@ class VPNAggregator:
             f.write(b64_subscription)
         print(f"🎉 Подписка сохранена: {FINAL_LINKS_FILE} (серверов: {len(links)})")
 
-        # === 2) JSON БЕЗ inbounds, но с явным outbounds ===
-        # Это формат, который не содержит ни одного inbound с ожиданием password.
-        # Если панель всё ещё требует password — значит она читает не тот файл.
+        # === 2) JSON без inbounds (клиентский конфиг) ===
         final_json = {
             "remarks": "🇷🇺 Yandex/Max",
             "outbounds": selected_obs + [
@@ -447,6 +437,7 @@ class VPNAggregator:
         print(f"🎉 Итоговый конфиг сохранён: {FINAL_OUTPUT_FILE} "
               f"(серверов: {len(links)}, "
               f"отброшено невалидных: {self.skipped_invalid}, "
+              f"отброшено старых HTTP: {self.skipped_old_http}, "
               f"дата: {datetime.now():%Y-%m-%d %H:%M:%S})")
 
 
