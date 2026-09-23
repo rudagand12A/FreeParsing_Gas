@@ -1194,7 +1194,6 @@
         },
         "tlsSettings": {
           "serverName": "speedtest.tinkoff.ru",
-          "allowInsecure": true,
           "fingerprint": "android"
         }
       }
@@ -1228,7 +1227,6 @@
         },
         "tlsSettings": {
           "serverName": "speedtest.tinkoff.ru",
-          "allowInsecure": true,
           "fingerprint": "firefox"
         }
       }
@@ -1470,7 +1468,6 @@
         },
         "tlsSettings": {
           "serverName": "vk.com",
-          "allowInsecure": true,
           "fingerprint": "chrome"
         }
       }
@@ -1572,7 +1569,6 @@
         },
         "tlsSettings": {
           "serverName": "speedtest.tinkoff.ru",
-          "allowInsecure": true,
           "fingerprint": "chrome"
         }
       }
@@ -1705,7 +1701,6 @@
         },
         "tlsSettings": {
           "serverName": "speedtest.tinkoff.ru",
-          "allowInsecure": true,
           "fingerprint": "chrome",
           "alpn": [
             "http/1.1"
@@ -2455,7 +2450,6 @@
         },
         "tlsSettings": {
           "serverName": "cdnapi.streamru15.net",
-          "allowInsecure": false,
           "fingerprint": "chrome",
           "alpn": [
             "h2",
@@ -2662,7 +2656,6 @@
         },
         "tlsSettings": {
           "serverName": "ke859ch2gse1iery3hiz.e3q4a5mjld11kpj0zj8dq.workers.dev",
-          "allowInsecure": false,
           "fingerprint": "chrome"
         }
       }
@@ -3782,7 +3775,6 @@
         },
         "tlsSettings": {
           "serverName": "fbsv6.guardora.pro",
-          "allowInsecure": false,
           "fingerprint": "firefox",
           "alpn": [
             "http/1.1"
@@ -3918,7 +3910,6 @@
         },
         "tlsSettings": {
           "serverName": "media-se.compressor.work",
-          "allowInsecure": false,
           "fingerprint": "chrome",
           "alpn": [
             "http/1.1"
@@ -3955,7 +3946,6 @@
         },
         "tlsSettings": {
           "serverName": "dostavitos.stroymatdv.cc",
-          "allowInsecure": false,
           "fingerprint": "edge",
           "alpn": [
             "http/1.1"
@@ -3991,7 +3981,6 @@
         },
         "tlsSettings": {
           "serverName": "forward-change.datapull.cc",
-          "allowInsecure": false,
           "fingerprint": "safari",
           "alpn": [
             "h2",
@@ -4028,7 +4017,6 @@
         },
         "tlsSettings": {
           "serverName": "ob3.floatingcars.net",
-          "allowInsecure": false,
           "fingerprint": "firefox",
           "alpn": [
             "h2",
@@ -4096,7 +4084,6 @@
         },
         "tlsSettings": {
           "serverName": "cdnyan3.floatingcars.net",
-          "allowInsecure": false,
           "fingerprint": "firefox",
           "alpn": [
             "h2",
@@ -4133,7 +4120,6 @@
         },
         "tlsSettings": {
           "serverName": "ob1.floatingcars.net",
-          "allowInsecure": false,
           "fingerprint": "firefox",
           "alpn": [
             "h2",
@@ -4170,7 +4156,6 @@
         },
         "tlsSettings": {
           "serverName": "ihcbs1.luxusvpn.app",
-          "allowInsecure": false,
           "fingerprint": "firefox",
           "alpn": [
             "h2",
@@ -4207,7 +4192,6 @@
         },
         "tlsSettings": {
           "serverName": "selbs3.luxusvpn.app",
-          "allowInsecure": false,
           "fingerprint": "firefox",
           "alpn": [
             "h2",
@@ -4441,7 +4425,6 @@
         },
         "tlsSettings": {
           "serverName": "dostavitos.stroymatdv.cc",
-          "allowInsecure": false,
           "fingerprint": "android",
           "alpn": [
             "http/1.1"
@@ -6442,7 +6425,6 @@
         },
         "tlsSettings": {
           "serverName": "edge3.statiqedge.com",
-          "allowInsecure": false,
           "fingerprint": "firefox"
         }
       }
@@ -6723,7 +6705,6 @@
         },
         "tlsSettings": {
           "serverName": "crm.hourtley.com",
-          "allowInsecure": false,
           "fingerprint": "firefox"
         }
       }
@@ -6942,7 +6923,6 @@
         },
         "tlsSettings": {
           "serverName": "dismissaltree.net",
-          "allowInsecure": false,
           "fingerprint": "firefox"
         }
       }
@@ -6976,7 +6956,6 @@
         },
         "tlsSettings": {
           "serverName": "cf3.rumedia-cdn.com",
-          "allowInsecure": false,
           "fingerprint": "firefox"
         }
       }
@@ -7223,7 +7202,6 @@
         "security": "tls",
         "tlsSettings": {
           "serverName": "ru-1.brodvpn.com",
-          "allowInsecure": false,
           "fingerprint": "chrome"
         }
       }
@@ -7764,7 +7742,6 @@
         },
         "tlsSettings": {
           "serverName": "fbsv6.guardora.pro",
-          "allowInsecure": false,
           "fingerprint": "firefox",
           "alpn": [
             "http/1.1"
@@ -7800,7 +7777,6 @@
         },
         "tlsSettings": {
           "serverName": "ssjs1.refcapmap.pro",
-          "allowInsecure": false,
           "fingerprint": "chrome",
           "alpn": [
             "h2",
@@ -7837,7 +7813,6 @@
         },
         "tlsSettings": {
           "serverName": "cdnv2.green-tg.com",
-          "allowInsecure": false,
           "fingerprint": "firefox"
         }
       }
@@ -7871,7 +7846,6 @@
         },
         "tlsSettings": {
           "serverName": "media-se.compressor.work",
-          "allowInsecure": false,
           "fingerprint": "chrome",
           "alpn": [
             "http/1.1"
@@ -7907,7 +7881,6 @@
         },
         "tlsSettings": {
           "serverName": "balls.yewest.icu",
-          "allowInsecure": false,
           "fingerprint": "qq",
           "alpn": [
             "h2",
@@ -7944,7 +7917,6 @@
         },
         "tlsSettings": {
           "serverName": "gm3.greencdn.org",
-          "allowInsecure": false,
           "fingerprint": "firefox"
         }
       }
@@ -8040,7 +8012,6 @@
         },
         "tlsSettings": {
           "serverName": "x.zahar.top",
-          "allowInsecure": false,
           "fingerprint": "firefox",
           "alpn": [
             "http/1.1"
@@ -8077,7 +8048,6 @@
         },
         "tlsSettings": {
           "serverName": "ws-gb.spacev67.com",
-          "allowInsecure": false,
           "fingerprint": "qq",
           "alpn": [
             "http/1.1"
@@ -8113,7 +8083,6 @@
         },
         "tlsSettings": {
           "serverName": "istn.seretikturbo.live",
-          "allowInsecure": false,
           "fingerprint": "chrome",
           "alpn": [
             "h2",
@@ -8181,7 +8150,6 @@
         },
         "tlsSettings": {
           "serverName": "ist-fr.v2speed.digital",
-          "allowInsecure": false,
           "fingerprint": "firefox",
           "alpn": [
             "h2",
@@ -8219,7 +8187,6 @@
         },
         "tlsSettings": {
           "serverName": "fr3.green-tg.com",
-          "allowInsecure": false,
           "fingerprint": "firefox"
         }
       }
@@ -8248,7 +8215,6 @@
         "security": "tls",
         "tlsSettings": {
           "serverName": "193.23.201.65",
-          "allowInsecure": false,
           "fingerprint": "chrome"
         }
       }
@@ -8339,7 +8305,6 @@
         "security": "tls",
         "tlsSettings": {
           "serverName": "2.26.53.224",
-          "allowInsecure": false,
           "fingerprint": "chrome"
         }
       }
@@ -8368,7 +8333,6 @@
         "security": "tls",
         "tlsSettings": {
           "serverName": "193.23.201.133",
-          "allowInsecure": false,
           "fingerprint": "chrome"
         }
       }
@@ -8402,7 +8366,6 @@
         },
         "tlsSettings": {
           "serverName": "fraa.spacev67.com",
-          "allowInsecure": false,
           "fingerprint": "qq",
           "alpn": [
             "http/1.1"
@@ -8470,7 +8433,6 @@
         },
         "tlsSettings": {
           "serverName": "gm1.green-tg.com",
-          "allowInsecure": false,
           "fingerprint": "firefox"
         }
       }
@@ -8504,7 +8466,6 @@
         },
         "tlsSettings": {
           "serverName": "de-hn.spacev67.com",
-          "allowInsecure": false,
           "fingerprint": "qq",
           "alpn": [
             "http/1.1"
@@ -8570,7 +8531,6 @@
         },
         "tlsSettings": {
           "serverName": "greatbritain.lavivas.org",
-          "allowInsecure": true,
           "fingerprint": "firefox"
         }
       }
@@ -8630,7 +8590,6 @@
         "security": "tls",
         "tlsSettings": {
           "serverName": "178.215.236.95",
-          "allowInsecure": false,
           "fingerprint": "chrome"
         }
       }
@@ -8664,7 +8623,6 @@
         },
         "tlsSettings": {
           "serverName": "wsfr.spacev67.com",
-          "allowInsecure": false,
           "fingerprint": "qq",
           "alpn": [
             "http/1.1"
@@ -8732,7 +8690,6 @@
         },
         "tlsSettings": {
           "serverName": "a.cwvps.eu.org",
-          "allowInsecure": false,
           "fingerprint": "chrome"
         }
       }
