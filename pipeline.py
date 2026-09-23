@@ -20,6 +20,7 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 URL_FILE = os.path.join(BASE_DIR, "url.txt")
 OUTPUT_DIR = os.path.join(BASE_DIR, "output")
 FINAL_OUTPUT_FILE = os.path.join(OUTPUT_DIR, "sub_1212.json")
+FINAL_LINKS_FILE = os.path.join(OUTPUT_DIR, "sub_1212.txt")
 
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
@@ -68,7 +69,7 @@ ALLOWED_FLAGS = [
     "🇵🇱", "🇱🇹", "🇱🇻", "🇺🇸", "🇨🇿", "🇮🇹", "🇪🇸", "🇳🇴",
 ]
 
-# Страны, которые ВСЁ РАВНО отсекаем
+# Страны, которые ВСЕ РАВНО отсекаем
 FOREIGN_WORDS = [
     "US", "USA", "США", "AMERICA", "АМЕРИКА",
     "PL", "POLAND", "ПОЛЬША",
@@ -303,7 +304,7 @@ class VPNAggregator:
             except (KeyError, IndexError, TypeError):
                 continue
 
-            # Дополнительная проверка на мертвый хост
+            # Дополнительная проверка на мёртвый хост
             if address in ("0.0.0.0", "127.0.0.1"):
                 continue
 
@@ -329,82 +330,104 @@ class VPNAggregator:
             ob["tag"] = f"🌍 Yandex/Max [{address}]"
             filtered_obs.append(ob)
 
-        print(f"🗑 Фильтр завершён. Найдено серверов (RU+разрешённые): {len(filtered_obs)}")
+        print(f"🔍 Фильтр завершён. Найдено серверов (RU+разрешённые): {len(filtered_obs)}")
         self.outbounds = filtered_obs
 
     # ---------------------------------------------------------------- saver
+    def _build_link(self, ob) -> str:
+        """Собирает обратно VLESS-ссылку из распарсенного объекта."""
+        settings = ob["settings"]["vnext"][0]
+        address = settings["address"]
+        port = settings["port"]
+        user = settings["users"][0]
+        user_id = user["id"]
+        stream = ob.get("streamSettings", {})
+        network = stream.get("network", "tcp")
+        security = stream.get("security", "none")
+
+        params = {}
+        if security == "tls":
+            tls = stream.get("tlsSettings", {})
+            if tls.get("serverName"): params["sni"] = tls["serverName"]
+            if tls.get("fingerprint"): params["fp"] = tls["fingerprint"]
+            if tls.get("alpn"): params["alpn"] = ",".join(tls["alpn"])
+        elif security == "reality":
+            reality = stream.get("realitySettings", {})
+            if reality.get("serverName"): params["sni"] = reality["serverName"]
+            if reality.get("fingerprint"): params["fp"] = reality["fingerprint"]
+            if reality.get("publicKey"): params["pbk"] = reality["publicKey"]
+            if reality.get("shortId"): params["sid"] = reality["shortId"]
+            if reality.get("spiderX"): params["spx"] = reality["spiderX"]
+
+        if network == "ws":
+            ws = stream.get("wsSettings", {})
+            if ws.get("path"): params["path"] = ws["path"]
+            if ws.get("headers", {}).get("Host"): params["host"] = ws["headers"]["Host"]
+        elif network == "grpc":
+            grpc = stream.get("grpcSettings", {})
+            if grpc.get("serviceName"): params["serviceName"] = grpc["serviceName"]
+            if grpc.get("multiMode"): params["mode"] = "multi"
+        elif network == "xhttp":
+            xhttp = stream.get("xhttpSettings", {})
+            if xhttp.get("path"): params["path"] = xhttp["path"]
+            if xhttp.get("host"): params["host"] = xhttp["host"]
+            if xhttp.get("mode"): params["mode"] = xhttp["mode"]
+        elif network == "httpupgrade":
+            hu = stream.get("httpupgradeSettings", {})
+            if hu.get("path"): params["path"] = hu["path"]
+            if hu.get("host"): params["host"] = hu["host"]
+
+        params["type"] = network
+        params["security"] = security
+
+        if user.get("flow"):
+            params["flow"] = user["flow"]
+
+        query = urllib.parse.urlencode(params)
+        tag = urllib.parse.quote(ob.get("tag", address))
+        return f"vless://{user_id}@{address}:{port}?{query}#{tag}"
+
     def save_final_config(self):
         # Увеличили лимит до 100 тысяч, чтобы ничего не резалось
         selected_obs = self.outbounds[:100000]
-        tags = [o["tag"] for o in selected_obs]
 
-        # Служебные выходы
-        selected_obs.append({
-            "protocol": "freedom",
-            "settings": {"domainStrategy": "UseIP"},
-            "tag": "direct",
-        })
-        selected_obs.append({
-            "protocol": "blackhole",
-            "settings": {"response": {"type": "http"}},
-            "tag": "block",
-        })
+        # Собираем ссылки
+        links = []
+        for ob in selected_obs:
+            try:
+                links.append(self._build_link(ob))
+            except Exception as e:
+                print(f"⚠️ Ошибка при формировании ссылки: {e}")
+                continue
 
+        # 1) Сохраняем txt-подписку (base64 от списка ссылок) — это универсальный формат
+        b64_subscription = base64.b64encode("\n".join(links).encode("utf-8")).decode("utf-8")
+        with open(FINAL_LINKS_FILE, "w", encoding="utf-8") as f:
+            f.write(b64_subscription)
+        print(f"🎉 Подписка сохранена: {FINAL_LINKS_FILE} (серверов: {len(links)})")
+
+        # 2) Сохраняем JSON — но НЕ полный конфиг Xray, а совместимый с клиентами
+        #    (список outbounds БЕЗ inbounds, чтобы не было ошибки empty "password")
         final_json = {
-            "log": {"loglevel": "warning"},
-            "inbounds": [
+            "remarks": "🇷🇺 Yandex/Max",
+            "outbounds": selected_obs + [
                 {
-                    "port": 10808,
-                    "protocol": "socks",
-                    "settings": {"auth": "noauth", "udp": True},
-                    "sniffing": {
-                        "enabled": True,
-                        "destOverride": ["http", "tls", "quic"],
-                    },
-                    "tag": "socks-in",
+                    "protocol": "freedom",
+                    "settings": {"domainStrategy": "UseIP"},
+                    "tag": "direct",
                 },
                 {
-                    "port": 10809,
-                    "protocol": "http",
-                    "settings": {},
-                    "tag": "http-in",
+                    "protocol": "blackhole",
+                    "settings": {"response": {"type": "http"}},
+                    "tag": "block",
                 },
             ],
-            "outbounds": selected_obs,
             "routing": {
                 "domainStrategy": "IPIfNonMatch",
-                "balancers": [
-                    {
-                        "tag": "Auto_Balancer",
-                        "selector": tags,
-                        "strategy": {
-                            "type": "leastLoad",
-                            "settings": {
-                                "baselines": ["200ms", "500ms"],
-                                "expected": 2,
-                                "maxRTT": "1500ms",
-                                "tolerance": 0,
-                            },
-                        },
-                    }
-                ] if tags else [],
                 "rules": [
-                    # Торренты качаем напрямую
                     {"type": "field", "protocol": ["bittorrent"], "outboundTag": "direct"},
-                    # Локальную сеть открываем напрямую
                     {"type": "field", "ip": ["geoip:private"], "outboundTag": "direct"},
-                    # Всё остальное отправляем в балансировщик!
-                    {"type": "field", "balancerTag": "Auto_Balancer", "network": "tcp,udp"},
                 ],
-            },
-            "burstObservatory": {
-                "pingConfig": {
-                    "destination": "http://gstatic.com",
-                    "interval": "2m",
-                    "sampling": 3,
-                    "timeout": "3s",
-                },
-                "subjectSelector": tags,
             },
         }
 
@@ -419,8 +442,6 @@ class VPNAggregator:
                     strip_remarks(item)
 
         strip_remarks(final_json)
-
-        # Добавляем ЕДИНСТВЕННУЮ строку remarks на верхнем уровне
         final_json = {"remarks": "🇷🇺 Yandex/Max", **final_json}
 
         with open(FINAL_OUTPUT_FILE, "w", encoding="utf-8") as f:
@@ -430,8 +451,8 @@ class VPNAggregator:
         with open(FINAL_OUTPUT_FILE, "r", encoding="utf-8") as f:
             count = f.read().count('"remarks"')
         print(f"🔍 Проверка: строк 'remarks' в JSON = {count}")
-        print(f"🎉 Итоговый конфиг успешно сохранен: {FINAL_OUTPUT_FILE} "
-              f"(Всего рабочих серверов добавлено: {len(tags)}, "
+        print(f"🎉 Итоговый конфиг успешно сохранён: {FINAL_OUTPUT_FILE} "
+              f"(Всего рабочих серверов: {len(links)}, "
               f"дата обновления: {datetime.now():%Y-%m-%d %H:%M:%S})")
 
 
