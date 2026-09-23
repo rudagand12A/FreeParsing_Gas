@@ -211,8 +211,10 @@ class VPNAggregator:
             network = params.get("type", "raw")
             security = params.get("security", "none")
 
-            # === ВЫРЕЗАЕМ СТАРЫЙ HTTP-ТРАНСПОРТ (Xray удалил его) ===
-            if network in ("tcp", "raw") and params.get("headerType") == "http":
+            # === ЖЁСТКАЯ ЗАЧИСТКА: выбрасываем ЛЮБОЙ VLESS с tcp/raw ===
+            # Транспорт tcp/raw был полностью удалён из Xray-core.
+            # Современные узлы используют ws, grpc, xhttp или httpupgrade.
+            if network in ("tcp", "raw"):
                 self.skipped_old_http += 1
                 return None
 
