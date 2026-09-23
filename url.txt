@@ -1,34 +1,34 @@
-https://subrostunnel.vercel.app/gen.txt LTE
+https://subrostunnel.vercel.app/gen.txt
 https://raw.githubusercontent.com/flaafix/AetrisVPN/refs/heads/main/AetrisVPN.txt
 https://raw.githubusercontent.com/zieng2/wl/refs/heads/main/vless_lite.txt
-https://raw.githubusercontent.com/Maskkost93/kizyak-vpn-4.0/refs/heads/main/kizyakbeta6.txt LTE
+https://raw.githubusercontent.com/Maskkost93/kizyak-vpn-4.0/refs/heads/main/kizyakbeta6.txt
 https://raw.githubusercontent.com/flaafix/AetrisVPN-white-list-lite/refs/heads/main/AetrisVPN.txt
 https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/WHITE-CIDR-RU-checked.txt
 https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/Vless-Reality-White-Lists-Rus-Mobile.txt
 https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/WHITE-SNI-RU-all.txt
-https://raw.githubusercontent.com/gooseteam-hackers/GooseVPN/refs/heads/main/configs/balanced.txt wLTE
+https://raw.githubusercontent.com/gooseteam-hackers/GooseVPN/refs/heads/main/configs/balanced.txt
 https://raw.githubusercontent.com/dequar/deqwl/refs/heads/main/deray.txt
 https://raw.githubusercontent.com/LimeHi/LimeVPN/refs/heads/main/whitelist.txt
 https://raw.githubusercontent.com/OceaniaVPN/StekloVPN/main/configs/whitelist.txt
 https://etoneya.su/whitelist
-https://raw.githubusercontent.com/gooseteam-hackers/GooseVPN/refs/heads/main/configs/plus.txt wLTE
+https://raw.githubusercontent.com/gooseteam-hackers/GooseVPN/refs/heads/main/configs/plus.txt
 https://raw.githubusercontent.com/zieng2/wl/refs/heads/main/vless_universal.txt
 https://gitverse.ru/api/repos/272/wl/raw/branch/master/whitelist
 https://gitverse.ru/api/repos/Akres/VPN/raw/branch/master/bwl
 https://raw.githubusercontent.com/RKPchannel/RKP_bypass_configs/refs/heads/main/whitelist.txt
 https://raw.githubusercontent.com/Diversan313/apex-parser/main/subs/main/alive_bs.txt
-https://raw.githubusercontent.com/VansFenix/vpnparser/refs/heads/main/configs.txt 🏳️ Белый айпи
-https://raw.githubusercontent.com/VansFenix/vpnparser/refs/heads/main/good.txt 🏳️ Белый айпи
-https://raw.githubusercontent.com/VansFenix/vpnparser/refs/heads/main/speed.txt 🏳️ Белый айпи
-https://raw.githubusercontent.com/VansFenix/vpnparser/refs/heads/main/stable.txt 🏳️ Белый айпи
-https://raw.githubusercontent.com/VansFenix/vpnparser/refs/heads/main/vless.txt 🏳️ Белый айпи
-https://raw.githubusercontent.com/VansFenix/vpnparser/refs/heads/main/hy2.txt 🏳️ Белый айпи
-https://raw.githubusercontent.com/VansFenix/vpnparser/refs/heads/main/ss.txt 🏳️ Белый айпи
-https://raw.githubusercontent.com/VansFenix/vpnparser/refs/heads/main/vmess.txt 🏳️ Белый айпи
+https://raw.githubusercontent.com/VansFenix/vpnparser/refs/heads/main/configs.txt
+https://raw.githubusercontent.com/VansFenix/vpnparser/refs/heads/main/good.txt
+https://raw.githubusercontent.com/VansFenix/vpnparser/refs/heads/main/speed.txt
+https://raw.githubusercontent.com/VansFenix/vpnparser/refs/heads/main/stable.txt
+https://raw.githubusercontent.com/VansFenix/vpnparser/refs/heads/main/vless.txt
+https://raw.githubusercontent.com/VansFenix/vpnparser/refs/heads/main/hy2.txt
+https://raw.githubusercontent.com/VansFenix/vpnparser/refs/heads/main/ss.txt
+https://raw.githubusercontent.com/VansFenix/vpnparser/refs/heads/main/vmess.txt
 https://raw.githubusercontent.com/VansFenix/vpnparser/main/white.txt
 https://gitverse.ru/api/repos/gidro/white/raw/branch/master/subscription.txt
 https://gitverse.ru/api/repos/Pizduk/PizdukVPN/raw/branch/master/WlSubPiz.txt
-https://sub.vlessfo.ru/vlessforu/working_configs.txt SNi LTE 5G Все операторы
+https://sub.vlessfo.ru/vlessforu/working_configs.txt
 https://raw.githubusercontent.com/AirLinkVPN1/AirLinkVPN/refs/heads/main/rkn_white_list
 https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/WHITE-CIDR-RU-all.txt
 https://gitverse.ru/api/repos/Pizduk/PizdukVPN/raw/branch/master/WLAutoPiz.txt
